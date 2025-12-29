@@ -64,9 +64,6 @@ export default function GameScreen() {
   }, [id, reset, getLevelProgress, _hasHydrated]);
 
   // Debounced save function
-  const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const lastSavedProgressRef = useRef<number>(0);
-
   const saveCurrentProgress = useCallback(() => {
     if (!id || !canvasRef.current) return;
 

@@ -39,6 +39,7 @@ export default function HomeScreen() {
           const savedProgress = getLevelProgress(level.id);
           const isComplete = isLevelComplete(level.id);
           const progressPercent = savedProgress?.progress ?? 0;
+          const lastUpdated = savedProgress?.lastUpdated;
 
           return (
             <LevelCard
@@ -46,6 +47,7 @@ export default function HomeScreen() {
               level={level}
               isComplete={isComplete}
               progressPercent={progressPercent}
+              lastUpdated={lastUpdated}
               onPress={() => handleLevelPress(level.id)}
             />
           );
@@ -59,10 +61,11 @@ interface LevelCardProps {
   level: LevelPreview;
   isComplete: boolean;
   progressPercent: number;
+  lastUpdated?: number;
   onPress: () => void;
 }
 
-function LevelCard({ level, isComplete, progressPercent, onPress }: LevelCardProps) {
+function LevelCard({ level, isComplete, progressPercent, lastUpdated, onPress }: LevelCardProps) {
   const [hasPreview, setHasPreview] = useState(false);
   const [previewPath, setPreviewPath] = useState<string | null>(null);
 
@@ -76,7 +79,9 @@ function LevelCard({ level, isComplete, progressPercent, onPress }: LevelCardPro
         if (mounted) {
           setHasPreview(exists);
           if (exists) {
-            setPreviewPath(getPreviewPath(level.id));
+            // Add timestamp as cache buster to force reload when preview changes
+            const basePath = getPreviewPath(level.id);
+            setPreviewPath(lastUpdated ? `${basePath}?t=${lastUpdated}` : basePath);
           }
         }
       } else {
@@ -87,7 +92,7 @@ function LevelCard({ level, isComplete, progressPercent, onPress }: LevelCardPro
 
     checkPreview();
     return () => { mounted = false; };
-  }, [level.id, progressPercent]);
+  }, [level.id, progressPercent, lastUpdated]);
 
   // Use preview if available, otherwise use original thumbnail
   const imageSource = hasPreview && previewPath

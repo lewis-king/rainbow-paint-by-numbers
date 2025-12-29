@@ -114,15 +114,35 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
   useImperativeHandle(ref, () => ({
     getPaintedPixels: () => paintedPixelsRef.current,
     getCanvasSnapshot: () => {
-      if (!userCanvasImage) return null;
+      if (!userCanvasImage || !linesImage) return null;
       try {
-        return userCanvasImage.encodeToBase64(ImageFormat.PNG);
+        // Create an offscreen surface to composite the layers
+        const surface = Skia.Surface.Make(imgWidth, imgHeight);
+        if (!surface) return null;
+
+        const canvas = surface.getCanvas();
+
+        // Draw the painted canvas (layer 1)
+        canvas.drawImage(userCanvasImage, 0, 0);
+
+        // Draw the lines overlay (layer 2)
+        canvas.drawImage(linesImage, 0, 0);
+
+        // Get the composited image and encode
+        const compositeImage = surface.makeImageSnapshot();
+        const result = compositeImage.encodeToBase64(ImageFormat.PNG);
+
+        // Clean up
+        compositeImage.dispose();
+        surface.dispose();
+
+        return result;
       } catch (error) {
         console.warn('Failed to encode canvas snapshot:', error);
         return null;
       }
     },
-  }), [userCanvasImage]);
+  }), [userCanvasImage, linesImage, imgWidth, imgHeight]);
 
   // Throttled image creation to prevent memory issues
   const createCanvasImage = useCallback((data: Uint8Array, immediate = false) => {

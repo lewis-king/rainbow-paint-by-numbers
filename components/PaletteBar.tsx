@@ -68,12 +68,13 @@ export function PaletteBar({ palette }: PaletteBarProps) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2d2d44',
-    paddingVertical: 12,
+    paddingVertical: 16,
     borderRadius: 16,
     marginHorizontal: 8,
   },
   scrollContent: {
     paddingHorizontal: 12,
+    paddingVertical: 4,
     gap: 10,
   },
   swatch: {

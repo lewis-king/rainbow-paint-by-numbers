@@ -7,6 +7,8 @@ interface LevelProgress {
   isComplete: boolean;
   // Store painted pixel indices (much smaller than full canvas data)
   paintedPixels: number[];
+  // Timestamp for cache-busting preview images
+  lastUpdated: number;
 }
 
 interface LevelProgressState {
@@ -47,6 +49,7 @@ export const useLevelProgressStore = create<LevelProgressState>()(
               progress,
               isComplete,
               paintedPixels: Array.from(paintedPixels),
+              lastUpdated: Date.now(),
             },
           },
         }));
