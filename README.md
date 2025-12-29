@@ -14,7 +14,7 @@ All the artwork in this app is generated using AI, then post-processed into pain
 
 ### Text-to-Image: Flux2 Dev
 
-We use [Flux2 Dev](https://github.com/black-forest-labs/flux) to generate the base artwork.
+We use [Flux2 Dev](https://github.com/black-forest-labs/flux2) to generate the base artwork.
 
 **Positive Prompt:**
 ```
