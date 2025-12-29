@@ -10,7 +10,7 @@ This app is tailored specifically to her taste, featuring cute designs that come
 
 ## Asset Generation
 
-All the artwork in this app is generated using AI, then post-processed into paintable segments.
+All artwork and animations in this app are AI-generated and post-processed into paintable segments. The entire pipeline runs locally on an **NVIDIA RTX 5090** using [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
 
 ### Text-to-Image: Flux2 Dev
 
