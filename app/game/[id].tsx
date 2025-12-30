@@ -26,11 +26,14 @@ export default function GameScreen() {
   const [initialPaintedPixels, setInitialPaintedPixels] = useState<number[] | undefined>(undefined);
 
   const { reset, isComplete } = useGameStore();
-  const { getLevelProgress, saveLevelProgress, resetLevel, isLevelComplete, _hasHydrated } = useLevelProgressStore();
+  const { getLevelProgress, saveProgress, saveFullState, resetLevel, _hasHydrated } = useLevelProgressStore();
 
   // Refs for debounced saving
   const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastSavedProgressRef = useRef<number>(0);
+  // Store latest snapshot and pixels for cleanup (since canvasRef may be null during unmount)
+  const latestSnapshotRef = useRef<string | null>(null);
+  const latestPaintedPixelsRef = useRef<Set<number>>(new Set());
 
   // Load level assets and saved progress
   useEffect(() => {
@@ -63,37 +66,73 @@ export default function GameScreen() {
     reset();
   }, [id, reset, getLevelProgress, _hasHydrated]);
 
-  // Debounced save function
-  const saveCurrentProgress = useCallback(() => {
-    if (!id || !canvasRef.current) return;
+  // Quick save - just progress percentage (no pixel data)
+  const saveQuickProgress = useCallback(() => {
+    if (!id) return;
 
-    const paintedPixels = canvasRef.current.getPaintedPixels();
     const currentProgress = useGameStore.getState().progress;
     const complete = currentProgress >= 98;
 
-    saveLevelProgress(id, currentProgress, complete, paintedPixels);
+    saveProgress(id, currentProgress, complete);
+    lastSavedProgressRef.current = currentProgress;
+  }, [id, saveProgress]);
+
+  // Update cached snapshot and pixels (called periodically during painting)
+  const updateCachedData = useCallback(() => {
+    if (!canvasRef.current) return;
+
+    latestPaintedPixelsRef.current = canvasRef.current.getPaintedPixels();
+    const snapshot = canvasRef.current.getCanvasSnapshot();
+    if (snapshot) {
+      latestSnapshotRef.current = snapshot;
+    }
+  }, []);
+
+  // Full save with pixel data - only called on exit
+  const saveFullProgress = useCallback(() => {
+    if (!id) return;
+
+    const currentProgress = useGameStore.getState().progress;
+    const complete = currentProgress >= 98;
+
+    // Try to get fresh data from canvas, fall back to cached refs
+    let paintedPixels: Set<number>;
+    let snapshot: string | null;
+
+    if (canvasRef.current) {
+      paintedPixels = canvasRef.current.getPaintedPixels();
+      snapshot = canvasRef.current.getCanvasSnapshot();
+      if (snapshot) {
+        latestSnapshotRef.current = snapshot;
+      }
+    } else {
+      // Canvas already unmounted, use cached data
+      paintedPixels = latestPaintedPixelsRef.current;
+      snapshot = latestSnapshotRef.current;
+    }
+
+    saveFullState(id, currentProgress, complete, paintedPixels);
     lastSavedProgressRef.current = currentProgress;
 
     // Save preview image
-    const snapshot = canvasRef.current.getCanvasSnapshot();
     if (snapshot) {
       savePreview(id, snapshot);
     }
-  }, [id, saveLevelProgress]);
+  }, [id, saveFullState]);
 
-  // Save progress when it changes (debounced)
+  // Save progress percentage when it changes (debounced, no pixels)
+  // Also update cached snapshot for reliable unmount saving
   useEffect(() => {
-    // Don't save if progress hasn't actually changed
     if (progress === lastSavedProgressRef.current || progress === 0) return;
 
-    // Clear existing timeout
     if (saveTimeoutRef.current) {
       clearTimeout(saveTimeoutRef.current);
     }
 
-    // Debounce save by 500ms
     saveTimeoutRef.current = setTimeout(() => {
-      saveCurrentProgress();
+      saveQuickProgress();
+      // Update cached snapshot whenever we save progress
+      updateCachedData();
     }, 500);
 
     return () => {
@@ -101,26 +140,26 @@ export default function GameScreen() {
         clearTimeout(saveTimeoutRef.current);
       }
     };
-  }, [progress, saveCurrentProgress]);
+  }, [progress, saveQuickProgress, updateCachedData]);
 
-  // Save when app goes to background
+  // Full save when app goes to background
   useEffect(() => {
     const handleAppStateChange = (nextAppState: AppStateStatus) => {
       if (nextAppState === 'background' || nextAppState === 'inactive') {
-        saveCurrentProgress();
+        saveFullProgress();
       }
     };
 
     const subscription = AppState.addEventListener('change', handleAppStateChange);
     return () => subscription.remove();
-  }, [saveCurrentProgress]);
+  }, [saveFullProgress]);
 
-  // Also save on unmount as a fallback
+  // Full save on unmount (leaving screen)
   useEffect(() => {
     return () => {
-      saveCurrentProgress();
+      saveFullProgress();
     };
-  }, [saveCurrentProgress]);
+  }, [saveFullProgress]);
 
   // Handle victory
   useEffect(() => {
@@ -143,6 +182,9 @@ export default function GameScreen() {
     setProgress(0);
     setShowVictory(false);
     setInitialPaintedPixels(undefined);
+    // Clear cached snapshot and pixels
+    latestSnapshotRef.current = null;
+    latestPaintedPixelsRef.current = new Set();
     // Force re-mount of canvas by toggling loading
     setLoading(true);
     setTimeout(() => setLoading(false), 100);

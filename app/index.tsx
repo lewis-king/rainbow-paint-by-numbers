@@ -1,12 +1,23 @@
 import { useState, useEffect } from 'react';
-import { View, StyleSheet, Pressable, Dimensions, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import * as Haptics from 'expo-haptics';
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+  FadeIn,
+} from 'react-native-reanimated';
+import MaskedView from '@react-native-masked-view/masked-view';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import { getLevelPreviews, type LevelPreview } from '@/utils/level-loader';
 import { useLevelProgressStore } from '@/store/level-progress-store';
 import { getPreviewPath, previewExists } from '@/utils/preview-manager';
+import { colors, fonts, shadows, rainbowArray } from '@/theme';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const GRID_PADDING = 20;
@@ -14,12 +25,44 @@ const GRID_GAP = 16;
 const COLUMNS = 2;
 const CARD_SIZE = (SCREEN_WIDTH - GRID_PADDING * 2 - GRID_GAP * (COLUMNS - 1)) / COLUMNS;
 
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+
+// Rainbow gradient title component
+function RainbowTitle() {
+  return (
+    <MaskedView
+      maskElement={
+        <View style={styles.titleMaskContainer}>
+          <Text style={styles.titleMask}>Rainbow</Text>
+          <Text style={styles.titleMaskSmall}>Paint by Numbers</Text>
+        </View>
+      }
+    >
+      <LinearGradient
+        colors={[
+          rainbowArray[0], // red
+          rainbowArray[1], // orange
+          rainbowArray[2], // yellow
+          rainbowArray[3], // green
+          rainbowArray[4], // blue
+          rainbowArray[5], // indigo
+          rainbowArray[6], // violet
+        ]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0.5 }}
+        style={styles.titleGradient}
+      />
+    </MaskedView>
+  );
+}
+
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const levels = getLevelPreviews();
   const { isLevelComplete, getLevelProgress, _hasHydrated } = useLevelProgressStore();
 
   const handleLevelPress = (levelId: string) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     router.push(`/game/${levelId}`);
   };
 
@@ -27,15 +70,26 @@ export default function HomeScreen() {
   if (!_hasHydrated) {
     return (
       <View style={[styles.container, styles.loadingContainer, { paddingTop: insets.top + 20 }]}>
-        <ActivityIndicator size="large" color="#fff" />
+        <ActivityIndicator size="large" color={colors.rainbow.blue} />
       </View>
     );
   }
 
   return (
-    <View style={[styles.container, { paddingTop: insets.top + 20 }]}>
-      <View style={[styles.grid, { paddingBottom: Math.max(insets.bottom, GRID_PADDING) }]}>
-        {levels.map((level) => {
+    <View style={[styles.container, { paddingTop: insets.top + 16 }]}>
+      {/* Rainbow Title */}
+      <Animated.View
+        entering={FadeIn.delay(100).duration(400)}
+        style={styles.titleContainer}
+      >
+        <RainbowTitle />
+      </Animated.View>
+
+      <ScrollView
+        contentContainerStyle={[styles.grid, { paddingBottom: Math.max(insets.bottom, GRID_PADDING) }]}
+        showsVerticalScrollIndicator={false}
+      >
+        {levels.map((level, index) => {
           const savedProgress = getLevelProgress(level.id);
           const isComplete = isLevelComplete(level.id);
           const progressPercent = savedProgress?.progress ?? 0;
@@ -45,6 +99,7 @@ export default function HomeScreen() {
             <LevelCard
               key={level.id}
               level={level}
+              index={index}
               isComplete={isComplete}
               progressPercent={progressPercent}
               lastUpdated={lastUpdated}
@@ -52,22 +107,24 @@ export default function HomeScreen() {
             />
           );
         })}
-      </View>
+      </ScrollView>
     </View>
   );
 }
 
 interface LevelCardProps {
   level: LevelPreview;
+  index: number;
   isComplete: boolean;
   progressPercent: number;
   lastUpdated?: number;
   onPress: () => void;
 }
 
-function LevelCard({ level, isComplete, progressPercent, lastUpdated, onPress }: LevelCardProps) {
+function LevelCard({ level, index, isComplete, progressPercent, lastUpdated, onPress }: LevelCardProps) {
   const [hasPreview, setHasPreview] = useState(false);
   const [previewPath, setPreviewPath] = useState<string | null>(null);
+  const scale = useSharedValue(1);
 
   // Check if preview exists when progress changes
   useEffect(() => {
@@ -94,18 +151,37 @@ function LevelCard({ level, isComplete, progressPercent, lastUpdated, onPress }:
     return () => { mounted = false; };
   }, [level.id, progressPercent, lastUpdated]);
 
-  // Use preview if available, otherwise use original thumbnail
-  const imageSource = hasPreview && previewPath
-    ? { uri: previewPath }
-    : level.thumbnailSource;
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: withSpring(scale.value, { damping: 12 }) }],
+  }));
+
+  const handlePressIn = () => {
+    scale.value = 0.95;
+  };
+
+  const handlePressOut = () => {
+    scale.value = 1;
+  };
+
+  // For completed levels, show the original colored image
+  // For in-progress levels with preview, show the preview
+  // Otherwise show the lines thumbnail
+  const imageSource = isComplete
+    ? level.originalSource
+    : hasPreview && previewPath
+      ? { uri: previewPath }
+      : level.thumbnailSource;
+
+  // Rainbow border color for completed levels
+  const borderColor = isComplete ? rainbowArray[index % rainbowArray.length] : 'transparent';
 
   return (
-    <Pressable
-      style={({ pressed }) => [
-        styles.card,
-        pressed && styles.cardPressed,
-      ]}
+    <AnimatedPressable
+      style={[styles.card, animatedStyle, { borderColor }]}
       onPress={onPress}
+      onPressIn={handlePressIn}
+      onPressOut={handlePressOut}
+      entering={FadeIn.delay(150 + index * 100).duration(400)}
     >
       <Image
         source={imageSource}
@@ -116,28 +192,62 @@ function LevelCard({ level, isComplete, progressPercent, lastUpdated, onPress }:
       {/* Progress bar for in-progress levels */}
       {progressPercent > 0 && !isComplete && (
         <View style={styles.progressBarContainer}>
-          <View style={[styles.progressBar, { width: `${progressPercent}%` }]} />
+          <View
+            style={[
+              styles.progressBar,
+              {
+                width: `${progressPercent}%`,
+                backgroundColor: rainbowArray[Math.floor((progressPercent / 100) * (rainbowArray.length - 1))],
+              },
+            ]}
+          />
         </View>
       )}
 
       {/* Completion indicator */}
       {isComplete && (
-        <View style={styles.completeBadge}>
-          <Ionicons name="checkmark-circle" size={36} color="#4CAF50" />
+        <View style={[styles.completeBadge, { backgroundColor: borderColor }]}>
+          <Ionicons name="star" size={24} color={colors.celebration.gold} />
         </View>
       )}
-    </Pressable>
+    </AnimatedPressable>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a1a2e',
+    backgroundColor: colors.backgrounds.primary,
   },
   loadingContainer: {
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  titleContainer: {
+    alignItems: 'center',
+    paddingBottom: 12,
+  },
+  titleMaskContainer: {
+    alignItems: 'center',
+  },
+  titleMask: {
+    fontFamily: fonts.heading,
+    fontSize: 38,
+    fontWeight: 'bold',
+    color: 'black', // Color is used as mask - black = visible
+    textAlign: 'center',
+  },
+  titleMaskSmall: {
+    fontFamily: fonts.heading,
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'center',
+    marginTop: -4,
+  },
+  titleGradient: {
+    height: 80,
+    width: SCREEN_WIDTH,
   },
   grid: {
     flexDirection: 'row',
@@ -148,18 +258,11 @@ const styles = StyleSheet.create({
   card: {
     width: CARD_SIZE,
     height: CARD_SIZE,
-    borderRadius: 20,
+    borderRadius: 24,
     overflow: 'hidden',
-    backgroundColor: '#2d2d44',
-    elevation: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-  },
-  cardPressed: {
-    transform: [{ scale: 0.95 }],
-    opacity: 0.9,
+    backgroundColor: colors.backgrounds.card,
+    borderWidth: 4,
+    ...shadows.medium,
   },
   thumbnail: {
     width: '100%',
@@ -170,19 +273,22 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 6,
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    height: 8,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
   },
   progressBar: {
     height: '100%',
-    backgroundColor: '#4CAF50',
+    borderRadius: 4,
   },
   completeBadge: {
     position: 'absolute',
-    top: 8,
-    right: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    borderRadius: 18,
-    padding: 2,
+    top: 10,
+    right: 10,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    ...shadows.small,
   },
 });

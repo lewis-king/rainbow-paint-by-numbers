@@ -1,12 +1,22 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView, Pressable, Text } from 'react-native';
+import Animated, {
+  useAnimatedStyle,
+  withSpring,
+  useSharedValue,
+} from 'react-native-reanimated';
+import * as Haptics from 'expo-haptics';
+
 import { useGameStore } from '@/store/game-store';
+import { colors, fonts, shadows } from '@/theme';
 
 interface PaletteBarProps {
   palette: string[];
 }
 
-const SWATCH_SIZE = 56;
+const SWATCH_SIZE = 58;
+
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 // Helper to determine if a color is light or dark
 function isLightColor(hex: string): boolean {
@@ -20,6 +30,60 @@ function isLightColor(hex: string): boolean {
   return luminance > 0.5;
 }
 
+function ColorSwatch({
+  color,
+  index,
+  isSelected,
+  onPress,
+}: {
+  color: string;
+  index: number;
+  isSelected: boolean;
+  onPress: () => void;
+}) {
+  const scale = useSharedValue(isSelected ? 1.15 : 1);
+  const isLight = isLightColor(color);
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: withSpring(scale.value, { damping: 12, stiffness: 150 }) }],
+  }));
+
+  React.useEffect(() => {
+    scale.value = isSelected ? 1.15 : 1;
+  }, [isSelected]);
+
+  const handlePressIn = () => {
+    scale.value = 0.9;
+  };
+
+  const handlePressOut = () => {
+    scale.value = isSelected ? 1.15 : 1;
+  };
+
+  return (
+    <AnimatedPressable
+      style={[
+        styles.swatch,
+        { backgroundColor: color },
+        isSelected && styles.selectedSwatch,
+        animatedStyle,
+      ]}
+      onPress={onPress}
+      onPressIn={handlePressIn}
+      onPressOut={handlePressOut}
+    >
+      <Text
+        style={[
+          styles.numberText,
+          { color: isLight ? colors.text.onLight : colors.text.primary },
+        ]}
+      >
+        {index + 1}
+      </Text>
+    </AnimatedPressable>
+  );
+}
+
 export function PaletteBar({ palette }: PaletteBarProps) {
   const { selectedColorIndex, setColor, selectedTool } = useGameStore();
 
@@ -28,6 +92,11 @@ export function PaletteBar({ palette }: PaletteBarProps) {
     return null;
   }
 
+  const handleColorPress = (index: number) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    setColor(index);
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView
@@ -35,31 +104,15 @@ export function PaletteBar({ palette }: PaletteBarProps) {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
-        {palette.map((color, index) => {
-          const isLight = isLightColor(color);
-          const isSelected = selectedColorIndex === index;
-
-          return (
-            <Pressable
-              key={`${color}-${index}`}
-              style={[
-                styles.swatch,
-                { backgroundColor: color },
-                isSelected && styles.selectedSwatch,
-              ]}
-              onPress={() => setColor(index)}
-            >
-              <Text
-                style={[
-                  styles.numberText,
-                  { color: isLight ? '#333' : '#fff' },
-                ]}
-              >
-                {index + 1}
-              </Text>
-            </Pressable>
-          );
-        })}
+        {palette.map((color, index) => (
+          <ColorSwatch
+            key={`${color}-${index}`}
+            color={color}
+            index={index}
+            isSelected={selectedColorIndex === index}
+            onPress={() => handleColorPress(index)}
+          />
+        ))}
       </ScrollView>
     </View>
   );
@@ -67,15 +120,16 @@ export function PaletteBar({ palette }: PaletteBarProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#2d2d44',
+    backgroundColor: colors.backgrounds.card,
     paddingVertical: 16,
-    borderRadius: 16,
+    borderRadius: 20,
     marginHorizontal: 8,
+    ...shadows.small,
   },
   scrollContent: {
-    paddingHorizontal: 12,
+    paddingHorizontal: 14,
     paddingVertical: 4,
-    gap: 10,
+    gap: 12,
   },
   swatch: {
     width: SWATCH_SIZE,
@@ -85,13 +139,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 3,
     borderColor: 'transparent',
+    ...shadows.small,
   },
   selectedSwatch: {
-    borderColor: '#fff',
-    transform: [{ scale: 1.1 }],
+    borderColor: colors.text.primary,
+    ...shadows.medium,
   },
   numberText: {
+    fontFamily: fonts.bodyBold,
+    fontWeight: 'bold' as const,
     fontSize: 16,
-    fontWeight: 'bold',
   },
 });

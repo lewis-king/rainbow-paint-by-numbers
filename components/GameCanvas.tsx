@@ -238,11 +238,12 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
         const pixelData = pixels instanceof Uint8Array ? pixels : new Uint8Array(pixels.buffer);
         mapPixelDataRef.current = pixelData;
 
-        // Count only paintable pixels (where map value is NOT 255)
+        // Count only paintable pixels (exclude special IDs)
         // 255 = background/outside boundary that doesn't need painting
+        // 254 = lines that don't need painting
         let paintableCount = 0;
         for (let i = 0; i < pixelData.length; i += 4) {
-          if (pixelData[i] !== 255) {
+          if (pixelData[i] !== 255 && pixelData[i] !== 254) {
             paintableCount++;
           }
         }
@@ -268,8 +269,8 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       const mapIdx = pixelKey * 4;
       const colorIdx = mapPixelData[mapIdx];
 
-      // Skip invalid pixels
-      if (colorIdx === 255 || colorIdx < 0 || colorIdx >= palette.length) continue;
+      // Skip invalid pixels (255 = background, 254 = lines)
+      if (colorIdx === 255 || colorIdx === 254 || colorIdx < 0 || colorIdx >= palette.length) continue;
 
       const hex = palette[colorIdx];
       const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -339,8 +340,11 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     const currentTranslateY = translateY.value;
 
     // Convert screen coordinates to canvas coordinates
-    const adjustedX = (canvasX - currentTranslateX) / currentScale;
-    const adjustedY = (canvasY - currentTranslateY) / currentScale;
+    // Note: React Native scale transform is applied from the center of the view
+    const centerX = canvasWidth / 2;
+    const centerY = canvasHeight / 2;
+    const adjustedX = (canvasX - currentTranslateX - centerX) / currentScale + centerX;
+    const adjustedY = (canvasY - currentTranslateY - centerY) / currentScale + centerY;
 
     const imgX = Math.floor(adjustedX / scale);
     const imgY = Math.floor(adjustedY / scale);
@@ -366,8 +370,8 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
         const mapIdx = (py * imgWidth + px) * 4;
         const mapColorIdx = mapPixelData[mapIdx];
 
-        // Skip background pixels (255) and invalid indices
-        if (mapColorIdx === 255 || mapColorIdx < 0 || mapColorIdx >= palette.length) continue;
+        // Skip background (255), lines (254), and invalid indices
+        if (mapColorIdx === 255 || mapColorIdx === 254 || mapColorIdx < 0 || mapColorIdx >= palette.length) continue;
 
         const dataIdx = (py * imgWidth + px) * 4;
         const pixelKey = py * imgWidth + px;
@@ -411,7 +415,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
         createCanvasImage(userCanvasData, true);
       }
 
-      if (centerColorIdx !== 255 && centerColorIdx >= 0 && centerColorIdx < palette.length) {
+      if (centerColorIdx !== 255 && centerColorIdx !== 254 && centerColorIdx >= 0 && centerColorIdx < palette.length) {
         const strokeColor = isMagicBrush ? palette[currentSelectedColorIndex] : palette[centerColorIdx];
         const newStroke = { x: adjustedX, y: adjustedY, color: strokeColor, radius: radius * scale };
 
@@ -430,7 +434,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       }
       updateProgress();
     }
-  }, [mapReady, scale, brushSize, levelData.palette, hexToRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, zoomScale, translateX, translateY]);
+  }, [mapReady, scale, brushSize, levelData.palette, hexToRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, canvasWidth, canvasHeight, zoomScale, translateX, translateY]);
 
   // Flood fill for bucket tool
   const floodFill = useCallback((
@@ -445,8 +449,12 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     const currentTranslateX = translateX.value;
     const currentTranslateY = translateY.value;
 
-    const adjustedX = (canvasX - currentTranslateX) / currentScale;
-    const adjustedY = (canvasY - currentTranslateY) / currentScale;
+    // Convert screen coordinates to canvas coordinates
+    // Note: React Native scale transform is applied from the center of the view
+    const centerX = canvasWidth / 2;
+    const centerY = canvasHeight / 2;
+    const adjustedX = (canvasX - currentTranslateX - centerX) / currentScale + centerX;
+    const adjustedY = (canvasY - currentTranslateY - centerY) / currentScale + centerY;
 
     const startX = Math.floor(adjustedX / scale);
     const startY = Math.floor(adjustedY / scale);
@@ -456,8 +464,8 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     const startMapIdx = (startY * imgWidth + startX) * 4;
     const targetColorIndex = mapPixelData[startMapIdx];
 
-    // Don't fill background pixels (255)
-    if (targetColorIndex === 255) return;
+    // Don't fill background (255) or lines (254)
+    if (targetColorIndex === 255 || targetColorIndex === 254) return;
 
     const currentSelectedColorIndex = useGameStore.getState().selectedColorIndex;
 
@@ -513,7 +521,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
 
     createCanvasImage(userCanvasData, true); // immediate for bucket fill
     updateProgress();
-  }, [mapReady, scale, levelData.palette, hexToRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, zoomScale, translateX, translateY]);
+  }, [mapReady, scale, levelData.palette, hexToRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, canvasWidth, canvasHeight, zoomScale, translateX, translateY]);
 
   // Wrapper functions for runOnJS
   const handlePan = useCallback((x: number, y: number) => {

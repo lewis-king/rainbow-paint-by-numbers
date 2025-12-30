@@ -1,0 +1,411 @@
+{
+  "id": "5",
+  "palette": [
+    "#030401",
+    "#2c6315",
+    "#128310",
+    "#2ab60f",
+    "#7a8c05",
+    "#686657",
+    "#4fd308",
+    "#f86b00",
+    "#908b81",
+    "#d2de46",
+    "#aeb5b7",
+    "#f6f75e",
+    "#fdfdfd"
+  ],
+  "numbers": [
+    {
+      "number": 1,
+      "x": 1268,
+      "y": 547,
+      "color_index": 0
+    },
+    {
+      "number": 1,
+      "x": 1631,
+      "y": 539,
+      "color_index": 0
+    },
+    {
+      "number": 1,
+      "x": 1355,
+      "y": 1416,
+      "color_index": 0
+    },
+    {
+      "number": 2,
+      "x": 1294,
+      "y": 606,
+      "color_index": 1
+    },
+    {
+      "number": 3,
+      "x": 1442,
+      "y": 1165,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 1223,
+      "y": 1670,
+      "color_index": 2
+    },
+    {
+      "number": 4,
+      "x": 1061,
+      "y": 886,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 1124,
+      "y": 1229,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 410,
+      "y": 1464,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 649,
+      "y": 1488,
+      "color_index": 3
+    },
+    {
+      "number": 5,
+      "x": 1039,
+      "y": 340,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 992,
+      "y": 360,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 966,
+      "y": 437,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 992,
+      "y": 506,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 938,
+      "y": 506,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 978,
+      "y": 560,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 1011,
+      "y": 952,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 784,
+      "y": 1022,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 811,
+      "y": 1072,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 798,
+      "y": 1155,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 681,
+      "y": 1154,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 634,
+      "y": 1268,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 552,
+      "y": 1284,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 313,
+      "y": 1329,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 917,
+      "y": 1352,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 854,
+      "y": 1386,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 425,
+      "y": 1421,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 902,
+      "y": 1475,
+      "color_index": 4
+    },
+    {
+      "number": 6,
+      "x": 1427,
+      "y": 936,
+      "color_index": 5
+    },
+    {
+      "number": 7,
+      "x": 1471,
+      "y": 548,
+      "color_index": 6
+    },
+    {
+      "number": 7,
+      "x": 841,
+      "y": 1622,
+      "color_index": 6
+    },
+    {
+      "number": 7,
+      "x": 291,
+      "y": 1306,
+      "color_index": 6
+    },
+    {
+      "number": 8,
+      "x": 1294,
+      "y": 258,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 1071,
+      "y": 317,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 1370,
+      "y": 280,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 962,
+      "y": 406,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 977,
+      "y": 491,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 927,
+      "y": 572,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 862,
+      "y": 1068,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 721,
+      "y": 1069,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 767,
+      "y": 1161,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 644,
+      "y": 1205,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 515,
+      "y": 1326,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 368,
+      "y": 1349,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 942,
+      "y": 1412,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 805,
+      "y": 1414,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 452,
+      "y": 1404,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 873,
+      "y": 1483,
+      "color_index": 7
+    },
+    {
+      "number": 8,
+      "x": 936,
+      "y": 1507,
+      "color_index": 7
+    },
+    {
+      "number": 10,
+      "x": 1325,
+      "y": 990,
+      "color_index": 9
+    },
+    {
+      "number": 10,
+      "x": 641,
+      "y": 1595,
+      "color_index": 9
+    },
+    {
+      "number": 10,
+      "x": 1118,
+      "y": 1547,
+      "color_index": 9
+    },
+    {
+      "number": 11,
+      "x": 1528,
+      "y": 1207,
+      "color_index": 10
+    },
+    {
+      "number": 11,
+      "x": 1462,
+      "y": 1246,
+      "color_index": 10
+    },
+    {
+      "number": 11,
+      "x": 1388,
+      "y": 1705,
+      "color_index": 10
+    },
+    {
+      "number": 11,
+      "x": 1324,
+      "y": 1720,
+      "color_index": 10
+    },
+    {
+      "number": 12,
+      "x": 1201,
+      "y": 1388,
+      "color_index": 11
+    },
+    {
+      "number": 13,
+      "x": 1169,
+      "y": 507,
+      "color_index": 12
+    },
+    {
+      "number": 13,
+      "x": 1245,
+      "y": 468,
+      "color_index": 12
+    },
+    {
+      "number": 13,
+      "x": 1320,
+      "y": 1231,
+      "color_index": 12
+    },
+    {
+      "number": 13,
+      "x": 1289,
+      "y": 1275,
+      "color_index": 12
+    },
+    {
+      "number": 13,
+      "x": 1060,
+      "y": 1803,
+      "color_index": 12
+    },
+    {
+      "number": 13,
+      "x": 990,
+      "y": 1810,
+      "color_index": 12
+    },
+    {
+      "number": 13,
+      "x": 909,
+      "y": 1815,
+      "color_index": 12
+    }
+  ],
+  "dimensions": {
+    "w": 2048,
+    "h": 2048
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}

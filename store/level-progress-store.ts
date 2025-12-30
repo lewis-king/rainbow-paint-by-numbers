@@ -5,8 +5,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 interface LevelProgress {
   progress: number;
   isComplete: boolean;
-  // Store painted pixel indices (much smaller than full canvas data)
-  paintedPixels: number[];
+  // Store painted pixel indices for restoration (only saved on exit)
+  paintedPixels?: number[];
   // Timestamp for cache-busting preview images
   lastUpdated: number;
 }
@@ -18,8 +18,11 @@ interface LevelProgressState {
   // Get progress for a level
   getLevelProgress: (levelId: string) => LevelProgress | null;
 
-  // Save progress for a level
-  saveLevelProgress: (levelId: string, progress: number, isComplete: boolean, paintedPixels: Set<number>) => void;
+  // Save progress (without pixel data - for quick updates)
+  saveProgress: (levelId: string, progress: number, isComplete: boolean) => void;
+
+  // Save full state with pixels (only called on exit)
+  saveFullState: (levelId: string, progress: number, isComplete: boolean, paintedPixels: Set<number>) => void;
 
   // Reset a specific level
   resetLevel: (levelId: string) => void;
@@ -41,14 +44,34 @@ export const useLevelProgressStore = create<LevelProgressState>()(
         return get().levels[levelId] || null;
       },
 
-      saveLevelProgress: (levelId: string, progress: number, isComplete: boolean, paintedPixels: Set<number>) => {
+      // Quick save - just progress percentage (called frequently)
+      saveProgress: (levelId: string, progress: number, isComplete: boolean) => {
+        set((state) => {
+          const existing = state.levels[levelId];
+          return {
+            levels: {
+              ...state.levels,
+              [levelId]: {
+                ...existing,
+                progress,
+                isComplete,
+                lastUpdated: Date.now(),
+              },
+            },
+          };
+        });
+      },
+
+      // Full save with pixels - only called when exiting (back button, app background)
+      saveFullState: (levelId: string, progress: number, isComplete: boolean, paintedPixels: Set<number>) => {
         set((state) => ({
           levels: {
             ...state.levels,
             [levelId]: {
               progress,
               isComplete,
-              paintedPixels: Array.from(paintedPixels),
+              // Don't store pixels for completed levels - they show victory screen anyway
+              paintedPixels: isComplete ? undefined : Array.from(paintedPixels),
               lastUpdated: Date.now(),
             },
           },
