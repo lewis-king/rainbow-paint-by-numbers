@@ -3,6 +3,7 @@ import { View, StyleSheet, ActivityIndicator, AppState, AppStateStatus } from 'r
 import { useLocalSearchParams } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useKeepAwake } from 'expo-keep-awake';
 
 import { GameCanvas, GameCanvasHandle } from '@/components/GameCanvas';
 import { PaletteBar } from '@/components/PaletteBar';
@@ -16,6 +17,7 @@ import { useLevelProgressStore } from '@/store/level-progress-store';
 import { savePreview, deletePreview } from '@/utils/preview-manager';
 
 export default function GameScreen() {
+  useKeepAwake();
   const { id } = useLocalSearchParams<{ id: string }>();
   const insets = useSafeAreaInsets();
   const canvasRef = useRef<GameCanvasHandle>(null);

@@ -17,7 +17,7 @@ export interface LevelAssets {
  * 2. Include: data.json, original.png, lines.png, map.png, reward.mp4
  * 3. Add the ID to this array:
  */
-const LEVEL_IDS = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;
+const LEVEL_IDS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'] as const;
 
 // Metro requires static imports - this maps IDs to their assets
 // Each level must have these files in assets/images/levels/{id}/
@@ -90,6 +90,41 @@ const levelRegistry: Record<string, {
     lines: require('@/assets/images/levels/9/lines.png'),
     map: require('@/assets/images/levels/9/map.png'),
     reward: require('@/assets/images/levels/9/reward.mp4'),
+  },
+  '10': {
+    data: require('@/assets/images/levels/10/data.json'),
+    original: require('@/assets/images/levels/10/original.png'),
+    lines: require('@/assets/images/levels/10/lines.png'),
+    map: require('@/assets/images/levels/10/map.png'),
+    reward: require('@/assets/images/levels/10/reward.mp4'),
+  },
+  '11': {
+    data: require('@/assets/images/levels/11/data.json'),
+    original: require('@/assets/images/levels/11/original.png'),
+    lines: require('@/assets/images/levels/11/lines.png'),
+    map: require('@/assets/images/levels/11/map.png'),
+    reward: require('@/assets/images/levels/11/reward.mp4'),
+  },
+  '12': {
+    data: require('@/assets/images/levels/12/data.json'),
+    original: require('@/assets/images/levels/12/original.png'),
+    lines: require('@/assets/images/levels/12/lines.png'),
+    map: require('@/assets/images/levels/12/map.png'),
+    reward: require('@/assets/images/levels/12/reward.mp4'),
+  },
+  '13': {
+    data: require('@/assets/images/levels/13/data.json'),
+    original: require('@/assets/images/levels/13/original.png'),
+    lines: require('@/assets/images/levels/13/lines.png'),
+    map: require('@/assets/images/levels/13/map.png'),
+    reward: require('@/assets/images/levels/13/reward.mp4'),
+  },
+  '14': {
+    data: require('@/assets/images/levels/14/data.json'),
+    original: require('@/assets/images/levels/14/original.png'),
+    lines: require('@/assets/images/levels/14/lines.png'),
+    map: require('@/assets/images/levels/14/map.png'),
+    reward: require('@/assets/images/levels/14/reward.mp4'),
   },
 };
 

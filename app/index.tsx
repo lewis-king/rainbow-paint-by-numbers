@@ -9,6 +9,9 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withSpring,
+  withRepeat,
+  withTiming,
+  Easing,
   FadeIn,
 } from 'react-native-reanimated';
 import MaskedView from '@react-native-masked-view/masked-view';
@@ -27,39 +30,60 @@ const CARD_SIZE = (SCREEN_WIDTH - GRID_PADDING * 2 - GRID_GAP * (COLUMNS - 1)) /
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
-// Rainbow gradient title with subtle color cycling
+// Extended rainbow with bright shades visible on dark background
+const EXTENDED_RAINBOW = [
+  '#FF6B6B', // red
+  '#FF7B5B', '#FF8B4B', '#FF9B4B', '#FFA94D', // red to orange
+  '#FFB84D', '#FFC74D', '#FFD64D', '#FFE066', // orange to yellow
+  '#E0F060', '#C0E060', '#A0D060', '#80D070', // yellow to green
+  '#69DB7C', // green
+  '#60DBA0', '#60DBC0', '#60DBE0', '#60DBFF', // green to cyan
+  '#70D0FF', '#74C0FC', // cyan to blue
+  '#80B0FC', '#8AA0FC', '#9490FC', '#9775FA', // blue to indigo
+  '#A080FA', '#B080F0', '#C080E8', '#DA77F2', // indigo to violet
+  '#E070E0', '#F060D0', '#FF60C0', '#FF60A0', // violet to pink
+  '#FF6090', '#FF6080', '#FF6B6B', // pink back to red
+];
+
+// Rainbow gradient title with smooth color cycling
 function RainbowTitle() {
-  const [colorOffset, setColorOffset] = useState(0);
+  const translateX = useSharedValue(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setColorOffset((prev) => (prev + 1) % rainbowArray.length);
-    }, 2000); // Shift colors every 2 seconds
-    return () => clearInterval(interval);
+    // Smoothly shift gradient back and forth for continuous color cycling
+    translateX.value = withRepeat(
+      withTiming(-SCREEN_WIDTH * 3, { duration: 30000, easing: Easing.linear }),
+      -1,
+      true // reverse direction each cycle for seamless looping
+    );
   }, []);
 
-  // Rotate the rainbow colors based on offset
-  const shiftedColors = [
-    ...rainbowArray.slice(colorOffset),
-    ...rainbowArray.slice(0, colorOffset),
-  ];
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: translateX.value }],
+  }));
 
   return (
-    <MaskedView
-      maskElement={
-        <View style={styles.titleMaskContainer}>
-          <Text style={styles.titleMask}>Rainbow</Text>
-          <Text style={styles.titleMaskSmall}>Paint by Numbers</Text>
-        </View>
-      }
-    >
-      <LinearGradient
-        colors={shiftedColors}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0.5 }}
-        style={styles.titleGradient}
-      />
-    </MaskedView>
+    <View style={styles.titleClipContainer}>
+      <MaskedView
+        maskElement={
+          <View style={styles.titleMaskContainer}>
+            <View style={styles.titleMaskInner}>
+              <Text style={styles.titleMask}>Rainbow</Text>
+              <Text style={styles.titleMaskSmall}>Paint by Numbers</Text>
+            </View>
+          </View>
+        }
+      >
+        <Animated.View style={[styles.titleGradientWrapper, animatedStyle]}>
+          <LinearGradient
+            colors={EXTENDED_RAINBOW}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={styles.titleGradientAnimated}
+          />
+        </Animated.View>
+      </MaskedView>
+    </View>
   );
 }
 
@@ -234,8 +258,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 12,
   },
+  titleClipContainer: {
+    width: SCREEN_WIDTH,
+    height: 80,
+    overflow: 'hidden',
+  },
   titleMaskContainer: {
+    width: SCREEN_WIDTH * 4,
+    height: 80,
+  },
+  titleMaskInner: {
+    width: SCREEN_WIDTH,
+    height: 80,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   titleMask: {
     fontFamily: fonts.heading,
@@ -252,9 +288,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: -4,
   },
-  titleGradient: {
+  titleGradientWrapper: {
+    width: SCREEN_WIDTH * 4,
     height: 80,
-    width: SCREEN_WIDTH,
+  },
+  titleGradientAnimated: {
+    width: SCREEN_WIDTH * 4,
+    height: 80,
   },
   grid: {
     flexDirection: 'row',
