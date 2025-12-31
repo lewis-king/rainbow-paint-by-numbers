@@ -17,7 +17,7 @@ export interface LevelAssets {
  * 2. Include: data.json, original.png, lines.png, map.png, reward.mp4
  * 3. Add the ID to this array:
  */
-const LEVEL_IDS = ['1', '2', '3', '4', '5', '6'] as const;
+const LEVEL_IDS = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;
 
 // Metro requires static imports - this maps IDs to their assets
 // Each level must have these files in assets/images/levels/{id}/
@@ -69,6 +69,27 @@ const levelRegistry: Record<string, {
     lines: require('@/assets/images/levels/6/lines.png'),
     map: require('@/assets/images/levels/6/map.png'),
     reward: require('@/assets/images/levels/6/reward.mp4'),
+  },
+  '7': {
+    data: require('@/assets/images/levels/7/data.json'),
+    original: require('@/assets/images/levels/7/original.png'),
+    lines: require('@/assets/images/levels/7/lines.png'),
+    map: require('@/assets/images/levels/7/map.png'),
+    reward: require('@/assets/images/levels/7/reward.mp4'),
+  },
+  '8': {
+    data: require('@/assets/images/levels/8/data.json'),
+    original: require('@/assets/images/levels/8/original.png'),
+    lines: require('@/assets/images/levels/8/lines.png'),
+    map: require('@/assets/images/levels/8/map.png'),
+    reward: require('@/assets/images/levels/8/reward.mp4'),
+  },
+  '9': {
+    data: require('@/assets/images/levels/9/data.json'),
+    original: require('@/assets/images/levels/9/original.png'),
+    lines: require('@/assets/images/levels/9/lines.png'),
+    map: require('@/assets/images/levels/9/map.png'),
+    reward: require('@/assets/images/levels/9/reward.mp4'),
   },
 };
 

@@ -25,7 +25,7 @@ export default function GameScreen() {
   const [showVictory, setShowVictory] = useState(false);
   const [initialPaintedPixels, setInitialPaintedPixels] = useState<number[] | undefined>(undefined);
 
-  const { reset, isComplete } = useGameStore();
+  const reset = useGameStore((state) => state.reset);
   const { getLevelProgress, saveProgress, saveFullState, resetLevel, _hasHydrated } = useLevelProgressStore();
 
   // Refs for debounced saving
@@ -34,10 +34,18 @@ export default function GameScreen() {
   // Store latest snapshot and pixels for cleanup (since canvasRef may be null during unmount)
   const latestSnapshotRef = useRef<string | null>(null);
   const latestPaintedPixelsRef = useRef<Set<number>>(new Set());
+  // Track if any painting happened this session (to avoid overwriting completed levels on unmount)
+  const hasPaintedRef = useRef<boolean>(false);
 
   // Load level assets and saved progress
   useEffect(() => {
     if (!id || !_hasHydrated) return;
+
+    // Reset tool state immediately to prevent stale isComplete from previous level
+    reset();
+
+    // Reset painting tracker for new level
+    hasPaintedRef.current = false;
 
     setLoading(true);
 
@@ -47,9 +55,8 @@ export default function GameScreen() {
       setProgress(savedProgress.progress);
       setInitialPaintedPixels(savedProgress.paintedPixels);
       lastSavedProgressRef.current = savedProgress.progress;
-      if (savedProgress.isComplete) {
-        setShowVictory(true);
-      }
+      // Only show victory if this level is actually complete
+      setShowVictory(savedProgress.isComplete);
     } else {
       setProgress(0);
       setInitialPaintedPixels(undefined);
@@ -61,9 +68,6 @@ export default function GameScreen() {
       setLevelAssets(assets);
       setLoading(false);
     });
-
-    // Reset tool state (but not level progress)
-    reset();
   }, [id, reset, getLevelProgress, _hasHydrated]);
 
   // Quick save - just progress percentage (no pixel data)
@@ -91,6 +95,10 @@ export default function GameScreen() {
   // Full save with pixel data - only called on exit
   const saveFullProgress = useCallback(() => {
     if (!id) return;
+
+    // Only save if the user actually painted something this session
+    // This prevents overwriting completed levels when just viewing them
+    if (!hasPaintedRef.current) return;
 
     const currentProgress = useGameStore.getState().progress;
     const complete = currentProgress >= 98;
@@ -161,14 +169,16 @@ export default function GameScreen() {
     };
   }, [saveFullProgress]);
 
-  // Handle victory
+  // Handle victory - use local progress state to avoid stale global state issues
   useEffect(() => {
-    if (isComplete && !showVictory) {
+    if (progress >= 98 && !showVictory) {
       setShowVictory(true);
     }
-  }, [isComplete, showVictory]);
+  }, [progress, showVictory]);
 
   const handleProgressChange = useCallback((newProgress: number) => {
+    // Mark that painting happened this session
+    hasPaintedRef.current = true;
     setProgress(newProgress);
     useGameStore.getState().setProgress(newProgress);
   }, []);
@@ -185,6 +195,8 @@ export default function GameScreen() {
     // Clear cached snapshot and pixels
     latestSnapshotRef.current = null;
     latestPaintedPixelsRef.current = new Set();
+    // Reset painting tracker since we're starting fresh
+    hasPaintedRef.current = false;
     // Force re-mount of canvas by toggling loading
     setLoading(true);
     setTimeout(() => setLoading(false), 100);

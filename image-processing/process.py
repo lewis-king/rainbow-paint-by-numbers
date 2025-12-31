@@ -3,6 +3,8 @@ import numpy as np
 import os
 import json
 import shutil
+import argparse
+import re
 from sklearn.cluster import KMeans
 
 # CONFIG
@@ -251,8 +253,24 @@ def process_level(filename):
     with open(os.path.join(save_path, "data.json"), 'w') as f:
         json.dump(level_data, f, indent=2)
 
-if not os.path.exists(INPUT_DIR): os.makedirs(INPUT_DIR)
-if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process paint-by-numbers images")
+    parser.add_argument("--from", dest="start_from", type=int, default=1,
+                        help="Start processing from this number (default: 1)")
+    args = parser.parse_args()
 
-files = [f for f in os.listdir(INPUT_DIR) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
-for f in files: process_level(f)
+    if not os.path.exists(INPUT_DIR): os.makedirs(INPUT_DIR)
+    if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
+
+    files = [f for f in os.listdir(INPUT_DIR) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+
+    # Filter files based on starting number
+    def get_file_number(filename):
+        match = re.match(r'^(\d+)', filename)
+        return int(match.group(1)) if match else 0
+
+    files = [f for f in files if get_file_number(f) >= args.start_from]
+    files.sort(key=get_file_number)
+
+    print(f"Processing {len(files)} files starting from {args.start_from}...")
+    for f in files: process_level(f)

@@ -27,8 +27,23 @@ const CARD_SIZE = (SCREEN_WIDTH - GRID_PADDING * 2 - GRID_GAP * (COLUMNS - 1)) /
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
-// Rainbow gradient title component
+// Rainbow gradient title with subtle color cycling
 function RainbowTitle() {
+  const [colorOffset, setColorOffset] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setColorOffset((prev) => (prev + 1) % rainbowArray.length);
+    }, 2000); // Shift colors every 2 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  // Rotate the rainbow colors based on offset
+  const shiftedColors = [
+    ...rainbowArray.slice(colorOffset),
+    ...rainbowArray.slice(0, colorOffset),
+  ];
+
   return (
     <MaskedView
       maskElement={
@@ -39,15 +54,7 @@ function RainbowTitle() {
       }
     >
       <LinearGradient
-        colors={[
-          rainbowArray[0], // red
-          rainbowArray[1], // orange
-          rainbowArray[2], // yellow
-          rainbowArray[3], // green
-          rainbowArray[4], // blue
-          rainbowArray[5], // indigo
-          rainbowArray[6], // violet
-        ]}
+        colors={shiftedColors}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0.5 }}
         style={styles.titleGradient}

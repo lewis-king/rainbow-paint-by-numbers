@@ -182,8 +182,7 @@ export function VictoryOverlay({ rewardUri, visible, onReset }: VictoryOverlayPr
               ]}
               onPress={handleReset}
             >
-              <Ionicons name="refresh" size={28} color="#fff" />
-              <Text style={styles.buttonText}>Again!</Text>
+              <Ionicons name="refresh" size={32} color="#fff" />
             </Pressable>
           </Animated.View>
 
@@ -196,8 +195,7 @@ export function VictoryOverlay({ rewardUri, visible, onReset }: VictoryOverlayPr
               ]}
               onPress={handleBackToGallery}
             >
-              <Ionicons name="home" size={28} color="#fff" />
-              <Text style={styles.buttonText}>Home</Text>
+              <Ionicons name="home" size={32} color="#fff" />
             </Pressable>
           </Animated.View>
         </View>
@@ -266,12 +264,11 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   actionButton: {
-    flexDirection: 'row',
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
-    paddingHorizontal: 24,
-    paddingVertical: 14,
-    borderRadius: 50,
     elevation: 5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -287,12 +284,6 @@ const styles = StyleSheet.create({
   buttonPressed: {
     transform: [{ scale: 0.95 }],
     opacity: 0.9,
-  },
-  buttonText: {
-    fontFamily: fonts.bodyBold,
-    fontWeight: 'bold' as const,
-    fontSize: 16,
-    color: '#fff',
   },
 });
 
