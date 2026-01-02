@@ -102,7 +102,6 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
   const paintedPixelsRef = useRef<Set<number>>(new Set());
   const totalPaintablePixelsRef = useRef<number>(0);
   
-  const lastRestoredDataRef = useRef<number[] | null>(null);
   const hasRestoredRef = useRef(false);
 
   const imgWidth = levelData.dimensions.w;
@@ -110,22 +109,18 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
 
   useImperativeHandle(ref, () => ({
     getPaintedPixels: () => {
-      if (!hasRestoredRef.current) {
-        return initialPaintedPixels && initialPaintedPixels.length > 0 
-          ? new Set(initialPaintedPixels) 
-          : new Set();
+      // If user has painted this session, return current pixels
+      if (paintedPixelsRef.current.size > 0) {
+        return paintedPixelsRef.current;
       }
 
-      if (
-        paintedPixelsRef.current.size === 0 && 
-        initialPaintedPixels && 
-        initialPaintedPixels.length > 0
-      ) {
-        console.warn("Restoration sanity check triggered: Preserving original save data.");
+      // If no painting happened but we have saved data, preserve it
+      if (initialPaintedPixels && initialPaintedPixels.length > 0) {
         return new Set(initialPaintedPixels);
       }
 
-      return paintedPixelsRef.current;
+      // No pixels to return
+      return new Set();
     },
     getCanvasSnapshot: () => {
       if (!userCanvasImage || !linesImage) return null;
@@ -208,11 +203,10 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     }
     userCanvasDataRef.current = data;
     paintedPixelsRef.current = new Set();
-    
-    hasRestoredRef.current = false; 
-    lastRestoredDataRef.current = null;
 
-    createCanvasImage(data, true); 
+    hasRestoredRef.current = false;
+
+    createCanvasImage(data, true);
   }, [imgWidth, imgHeight, createCanvasImage]);
 
   useEffect(() => {
@@ -245,14 +239,24 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
 
   useEffect(() => {
     if (!mapReady || !userCanvasDataRef.current || !mapPixelDataRef.current) return;
-    if (!initialPaintedPixels) return;
-
-    if (initialPaintedPixels === lastRestoredDataRef.current) return;
+    if (!initialPaintedPixels || initialPaintedPixels.length === 0) return;
 
     const userCanvasData = userCanvasDataRef.current;
     const mapPixelData = mapPixelDataRef.current;
     const palette = levelData.palette;
 
+    // Clear and rebuild - makes this effect idempotent
+    paintedPixelsRef.current = new Set();
+
+    // First, reset canvas to unpainted state
+    for (let i = 0; i < userCanvasData.length; i += 4) {
+      userCanvasData[i] = UNPAINTED_COLOR.r;
+      userCanvasData[i + 1] = UNPAINTED_COLOR.g;
+      userCanvasData[i + 2] = UNPAINTED_COLOR.b;
+      userCanvasData[i + 3] = 255;
+    }
+
+    // Then restore saved pixels
     for (const pixelKey of initialPaintedPixels) {
       const mapIdx = pixelKey * 4;
       const colorIdx = mapPixelData[mapIdx];
@@ -276,9 +280,8 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       paintedPixelsRef.current.add(pixelKey);
     }
 
-    lastRestoredDataRef.current = initialPaintedPixels;
     hasRestoredRef.current = true;
-    
+
     createCanvasImage(userCanvasData, true);
 
     if (totalPaintablePixelsRef.current > 0) {

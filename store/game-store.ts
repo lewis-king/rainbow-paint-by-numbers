@@ -17,7 +17,7 @@ interface GameState {
 
 export const useGameStore = create<GameState>((set) => ({
   selectedColorIndex: 0,
-  selectedTool: 'rainbow',
+  selectedTool: 'brush',
   brushSize: 'large',
   progress: 0,
   isComplete: false,
@@ -37,7 +37,7 @@ export const useGameStore = create<GameState>((set) => ({
 
   reset: () => set({
     selectedColorIndex: 0,
-    selectedTool: 'rainbow',
+    selectedTool: 'brush',
     brushSize: 'large',
     progress: 0,
     isComplete: false,
@@ -46,6 +46,6 @@ export const useGameStore = create<GameState>((set) => ({
 
 // Brush radius in pixels (at full resolution)
 export const BRUSH_SIZES = {
-  large: 28,
-  medium: 14,
+  large: 20,
+  medium: 10,
 } as const;

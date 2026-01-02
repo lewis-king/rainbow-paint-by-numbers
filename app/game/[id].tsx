@@ -57,12 +57,17 @@ export default function GameScreen() {
       setProgress(savedProgress.progress);
       setInitialPaintedPixels(savedProgress.paintedPixels);
       lastSavedProgressRef.current = savedProgress.progress;
+      // Pre-populate cache with saved data so it's available even if canvas unmounts before we can read it
+      if (savedProgress.paintedPixels && savedProgress.paintedPixels.length > 0) {
+        latestPaintedPixelsRef.current = new Set(savedProgress.paintedPixels);
+      }
       // Only show victory if this level is actually complete
       setShowVictory(savedProgress.isComplete);
     } else {
       setProgress(0);
       setInitialPaintedPixels(undefined);
       lastSavedProgressRef.current = 0;
+      latestPaintedPixelsRef.current = new Set();
       setShowVictory(false);
     }
 
