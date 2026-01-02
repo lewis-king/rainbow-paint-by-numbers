@@ -18,62 +18,14 @@
   "numbers": [
     {
       "number": 1,
-      "x": 1038,
-      "y": 830,
-      "color_index": 0
-    },
-    {
-      "number": 1,
-      "x": 323,
-      "y": 1317,
-      "color_index": 0
-    },
-    {
-      "number": 1,
-      "x": 1733,
-      "y": 1433,
-      "color_index": 0
-    },
-    {
-      "number": 1,
-      "x": 306,
-      "y": 1439,
-      "color_index": 0
-    },
-    {
-      "number": 1,
-      "x": 352,
-      "y": 1566,
-      "color_index": 0
-    },
-    {
-      "number": 1,
-      "x": 1503,
-      "y": 1579,
+      "x": 1045,
+      "y": 825,
       "color_index": 0
     },
     {
       "number": 6,
-      "x": 1166,
-      "y": 836,
-      "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 900,
-      "y": 925,
-      "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 413,
-      "y": 1442,
-      "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 1589,
-      "y": 1441,
+      "x": 1167,
+      "y": 829,
       "color_index": 5
     },
     {
@@ -83,27 +35,9 @@
       "color_index": 5
     },
     {
-      "number": 6,
-      "x": 544,
-      "y": 1481,
-      "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 1662,
-      "y": 1572,
-      "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 1359,
-      "y": 1778,
-      "color_index": 5
-    },
-    {
       "number": 8,
-      "x": 1007,
-      "y": 954,
+      "x": 993,
+      "y": 952,
       "color_index": 7
     },
     {
@@ -122,12 +56,6 @@
       "number": 8,
       "x": 590,
       "y": 1440,
-      "color_index": 7
-    },
-    {
-      "number": 8,
-      "x": 1539,
-      "y": 1364,
       "color_index": 7
     },
     {
@@ -188,12 +116,6 @@
       "number": 13,
       "x": 1230,
       "y": 848,
-      "color_index": 12
-    },
-    {
-      "number": 13,
-      "x": 949,
-      "y": 729,
       "color_index": 12
     }
   ],

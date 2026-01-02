@@ -19,14 +19,14 @@
   "numbers": [
     {
       "number": 1,
-      "x": 949,
-      "y": 710,
+      "x": 952,
+      "y": 709,
       "color_index": 0
     },
     {
       "number": 1,
-      "x": 596,
-      "y": 713,
+      "x": 593,
+      "y": 710,
       "color_index": 0
     },
     {
@@ -37,20 +37,14 @@
     },
     {
       "number": 3,
-      "x": 1191,
-      "y": 787,
+      "x": 1146,
+      "y": 1077,
       "color_index": 2
     },
     {
       "number": 3,
       "x": 1900,
       "y": 488,
-      "color_index": 2
-    },
-    {
-      "number": 3,
-      "x": 1146,
-      "y": 1077,
       "color_index": 2
     },
     {
@@ -67,12 +61,6 @@
     },
     {
       "number": 3,
-      "x": 985,
-      "y": 1067,
-      "color_index": 2
-    },
-    {
-      "number": 3,
       "x": 1613,
       "y": 1234,
       "color_index": 2
@@ -85,20 +73,8 @@
     },
     {
       "number": 3,
-      "x": 1714,
-      "y": 1253,
-      "color_index": 2
-    },
-    {
-      "number": 3,
       "x": 598,
       "y": 1419,
-      "color_index": 2
-    },
-    {
-      "number": 3,
-      "x": 1074,
-      "y": 1398,
       "color_index": 2
     },
     {
@@ -120,27 +96,9 @@
       "color_index": 2
     },
     {
-      "number": 3,
-      "x": 1320,
-      "y": 1662,
-      "color_index": 2
-    },
-    {
       "number": 4,
       "x": 841,
       "y": 272,
-      "color_index": 3
-    },
-    {
-      "number": 4,
-      "x": 986,
-      "y": 257,
-      "color_index": 3
-    },
-    {
-      "number": 4,
-      "x": 1069,
-      "y": 296,
       "color_index": 3
     },
     {
@@ -151,20 +109,8 @@
     },
     {
       "number": 4,
-      "x": 1275,
-      "y": 565,
-      "color_index": 3
-    },
-    {
-      "number": 4,
       "x": 1133,
       "y": 976,
-      "color_index": 3
-    },
-    {
-      "number": 4,
-      "x": 1139,
-      "y": 1009,
       "color_index": 3
     },
     {
@@ -199,39 +145,9 @@
     },
     {
       "number": 6,
-      "x": 489,
-      "y": 715,
-      "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 743,
-      "y": 1035,
-      "color_index": 5
-    },
-    {
-      "number": 6,
       "x": 1144,
       "y": 1642,
       "color_index": 5
-    },
-    {
-      "number": 6,
-      "x": 976,
-      "y": 1537,
-      "color_index": 5
-    },
-    {
-      "number": 7,
-      "x": 1570,
-      "y": 500,
-      "color_index": 6
-    },
-    {
-      "number": 7,
-      "x": 1564,
-      "y": 629,
-      "color_index": 6
     },
     {
       "number": 7,
@@ -247,26 +163,14 @@
     },
     {
       "number": 7,
-      "x": 438,
-      "y": 879,
-      "color_index": 6
-    },
-    {
-      "number": 7,
       "x": 674,
       "y": 1040,
       "color_index": 6
     },
     {
       "number": 9,
-      "x": 1762,
-      "y": 613,
-      "color_index": 8
-    },
-    {
-      "number": 9,
-      "x": 1678,
-      "y": 827,
+      "x": 1495,
+      "y": 987,
       "color_index": 8
     },
     {
@@ -277,20 +181,8 @@
     },
     {
       "number": 9,
-      "x": 1495,
-      "y": 987,
-      "color_index": 8
-    },
-    {
-      "number": 9,
       "x": 492,
       "y": 947,
-      "color_index": 8
-    },
-    {
-      "number": 9,
-      "x": 1617,
-      "y": 1034,
       "color_index": 8
     },
     {
@@ -356,37 +248,13 @@
     {
       "number": 14,
       "x": 915,
-      "y": 652,
-      "color_index": 13
-    },
-    {
-      "number": 14,
-      "x": 591,
       "y": 653,
       "color_index": 13
     },
     {
       "number": 14,
-      "x": 830,
-      "y": 1462,
-      "color_index": 13
-    },
-    {
-      "number": 14,
-      "x": 619,
-      "y": 1475,
-      "color_index": 13
-    },
-    {
-      "number": 14,
       "x": 590,
-      "y": 1487,
-      "color_index": 13
-    },
-    {
-      "number": 14,
-      "x": 879,
-      "y": 1501,
+      "y": 655,
       "color_index": 13
     },
     {
@@ -397,8 +265,8 @@
     },
     {
       "number": 14,
-      "x": 550,
-      "y": 1843,
+      "x": 619,
+      "y": 1475,
       "color_index": 13
     },
     {
@@ -409,26 +277,8 @@
     },
     {
       "number": 14,
-      "x": 664,
-      "y": 1864,
-      "color_index": 13
-    },
-    {
-      "number": 14,
-      "x": 959,
-      "y": 1871,
-      "color_index": 13
-    },
-    {
-      "number": 14,
       "x": 1021,
       "y": 1886,
-      "color_index": 13
-    },
-    {
-      "number": 14,
-      "x": 1093,
-      "y": 1892,
       "color_index": 13
     }
   ],
