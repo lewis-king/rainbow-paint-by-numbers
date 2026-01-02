@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "rainbow-paint-by-numbers",
+    "name": "Rainbow Paint by Numbers",
     "slug": "rainbow-paint-by-numbers",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,7 +20,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "king.e.rainbowpaintbynumbers",
+      "package": "king.meezy.rainbowpaintbynumbers",
       "permissions": [
         "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"

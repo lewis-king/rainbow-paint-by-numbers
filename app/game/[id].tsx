@@ -82,7 +82,7 @@ export default function GameScreen() {
     if (!id) return;
 
     const currentProgress = useGameStore.getState().progress;
-    const complete = currentProgress >= 98;
+    const complete = currentProgress >= 99;
 
     saveProgress(id, currentProgress, complete);
     lastSavedProgressRef.current = currentProgress;
@@ -108,7 +108,7 @@ export default function GameScreen() {
     if (!hasPaintedRef.current) return;
 
     const currentProgress = useGameStore.getState().progress;
-    const complete = currentProgress >= 98;
+    const complete = currentProgress >= 99;
 
     // Try to get fresh data from canvas, fall back to cached refs
     let paintedPixels: Set<number>;
@@ -178,7 +178,7 @@ export default function GameScreen() {
 
   // Handle victory - use local progress state to avoid stale global state issues
   useEffect(() => {
-    if (progress >= 98 && !showVictory) {
+    if (progress >= 99 && !showVictory) {
       setShowVictory(true);
     }
   }, [progress, showVictory]);
