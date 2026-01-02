@@ -10,25 +10,28 @@ from sklearn.cluster import KMeans
 # CONFIG
 INPUT_DIR = "raw_assets"
 OUTPUT_DIR = "app_assets"
+# UPDATED: 1024x1024 is the perfect balance of sharpness vs size.
+TARGET_SIZE = (1024, 1024) 
+
 INITIAL_K = 24       
 MERGE_THRESHOLD = 40 
 BACKGROUND_ID = 255  
 LINE_ID = 254        
 
-# === CRITICAL UPDATES ===
-# 1. Bumped from 25 -> 50. 
-# This ensures those thick Owl outlines are treated as "Walls" (Lines), 
-# not "Rooms" (Paintable Regions). The '1's will disappear.
-OUTLINE_THICKNESS_THRESHOLD = 50
+# === RE-CALIBRATED THRESHOLDS FOR 1024px ===
+# We doubled these from the 512px version.
 
-# 2. Bumped from 25 -> 30.
-# Since lines are thicker, we need a slightly wider 'Reach' to group 
-# the colors on either side of them.
-NEIGHBOR_GAP = 30  
+# Catches lines up to ~30px wide (was 15).
+OUTLINE_THICKNESS_THRESHOLD = 30
 
-# 3. Standard settings
-MIN_REGION_AREA = 50
-DESPECKLE_SIZE = 5
+# Bridges gaps of ~15px (was 8).
+NEIGHBOR_GAP = 15  
+
+# Removes specks smaller than 20px (was 10).
+MIN_REGION_AREA = 20
+
+# Median blur kernel (must be odd). 3 or 5 is good for 1024.
+DESPECKLE_SIZE = 3
 
 def rgb_to_hex(rgb):
     return '#{:02x}{:02x}{:02x}'.format(int(rgb[0]), int(rgb[1]), int(rgb[2]))
@@ -46,11 +49,7 @@ def get_pole_of_inaccessibility(mask):
 
 # --- GROUPING LOGIC ---
 def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
-    """
-    Groups regions by simulating a 'flood' that bridges gaps (black lines).
-    """
     mask = np.uint8(map_img == color_idx) * 255
-    
     num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
     original_regions = []
     
@@ -90,7 +89,6 @@ def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
     result_groups = []
     for gid, region_list in groups.items():
         total_area = sum(r['area'] for r in region_list)
-        # Label placement logic
         largest_region = max(region_list, key=lambda x: x['area'])
         cx, cy, _ = get_pole_of_inaccessibility(largest_region['mask'])
         
@@ -140,8 +138,12 @@ def process_level(filename):
     img = cv2.imread(img_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
+    # 1. RESIZE (Downscaling to 1024x1024)
+    print(f"   - Resizing from {img.shape[:2]} to {TARGET_SIZE}...")
+    img = cv2.resize(img, TARGET_SIZE, interpolation=cv2.INTER_AREA)
+
     print("   - Ironing gradients...")
-    img = cv2.pyrMeanShiftFiltering(img, sp=40, sr=80)
+    img = cv2.pyrMeanShiftFiltering(img, sp=25, sr=60) 
     img = cv2.bilateralFilter(img, 9, 75, 75) 
 
     pixels = img.reshape((-1, 3))
@@ -193,13 +195,11 @@ def process_level(filename):
             darkest_idx = idx
             
     has_black_outline = False
-    if min_lum < 50: 
+    if min_lum < 60: 
         print(f"   - Analyzing Darkest Color (ID: {darkest_idx}, Lum: {min_lum:.1f})...")
         dark_mask = np.uint8(map_img == darkest_idx) * 255
         
-        # Here is the magic: We try to 'Open' (Erode then Dilate) the black mask.
-        # Only shapes THICKER than 50px will survive.
-        # Everything else (your Owl lines) is subtracted and becomes a 'Line'.
+        # Using 1024px calibrated threshold
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (OUTLINE_THICKNESS_THRESHOLD, OUTLINE_THICKNESS_THRESHOLD))
         paintable_dark_parts = cv2.morphologyEx(dark_mask, cv2.MORPH_OPEN, kernel)
         detected_lines = dark_mask - paintable_dark_parts
@@ -207,7 +207,7 @@ def process_level(filename):
         num_l, labels_l, stats_l, _ = cv2.connectedComponentsWithStats(detected_lines, connectivity=8)
         cleaned_lines = np.zeros_like(detected_lines)
         for i in range(1, num_l):
-            if stats_l[i, cv2.CC_STAT_AREA] > 20: 
+            if stats_l[i, cv2.CC_STAT_AREA] > 10: # Min line size
                 cleaned_lines[labels_l == i] = 255
         
         if np.count_nonzero(cleaned_lines) > 0:
@@ -244,7 +244,6 @@ def process_level(filename):
 
     print("   - Grouping neighbors and placing labels...")
     for color_idx in unique_ids:
-        # SKIP lines and background
         if color_idx == BACKGROUND_ID or color_idx == LINE_ID:
             continue
 
@@ -277,10 +276,10 @@ def process_level(filename):
     
     debug_img = cv2.cvtColor(clean_img, cv2.COLOR_RGB2BGR)
     for item in number_data:
-        cv2.putText(debug_img, str(item['number']), (item['x']-10, item['y']+5), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255), 4)
-        cv2.putText(debug_img, str(item['number']), (item['x']-10, item['y']+5), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,0), 2)
+        cv2.putText(debug_img, str(item['number']), (item['x']-5, item['y']+3), 
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 2) # Font size 0.5 for 1024px
+        cv2.putText(debug_img, str(item['number']), (item['x']-5, item['y']+3), 
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 1)
         
     cv2.imwrite(os.path.join(save_path, "debug_preview.png"), debug_img)
 

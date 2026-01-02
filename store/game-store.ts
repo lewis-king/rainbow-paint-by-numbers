@@ -46,6 +46,6 @@ export const useGameStore = create<GameState>((set) => ({
 
 // Brush radius in pixels (at full resolution)
 export const BRUSH_SIZES = {
-  large: 40,
-  medium: 25,
+  large: 28,
+  medium: 14,
 } as const;
