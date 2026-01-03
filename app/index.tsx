@@ -299,6 +299,7 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     padding: GRID_PADDING,
     gap: GRID_GAP,
   },
