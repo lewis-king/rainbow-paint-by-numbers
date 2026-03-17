@@ -17,7 +17,7 @@ export interface LevelAssets {
  * 2. Include: data.json, original.png, lines.png, map.png, reward.mp4
  * 3. Add the ID to this array:
  */
-const LEVEL_IDS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'] as const;
+const LEVEL_IDS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21'] as const;
 
 // Metro requires static imports - this maps IDs to their assets
 // Each level must have these files in assets/images/levels/{id}/
@@ -125,6 +125,55 @@ const levelRegistry: Record<string, {
     lines: require('@/assets/images/levels/14/lines.png'),
     map: require('@/assets/images/levels/14/map.png'),
     reward: require('@/assets/images/levels/14/reward.mp4'),
+  },
+  '15': {
+    data: require('@/assets/images/levels/15/data.json'),
+    original: require('@/assets/images/levels/15/original.png'),
+    lines: require('@/assets/images/levels/15/lines.png'),
+    map: require('@/assets/images/levels/15/map.png'),
+    reward: require('@/assets/images/levels/15/reward.mp4'),
+  },
+  '16': {
+    data: require('@/assets/images/levels/16/data.json'),
+    original: require('@/assets/images/levels/16/original.png'),
+    lines: require('@/assets/images/levels/16/lines.png'),
+    map: require('@/assets/images/levels/16/map.png'),
+    reward: require('@/assets/images/levels/16/reward.mp4'),
+  },
+  '17': {
+    data: require('@/assets/images/levels/17/data.json'),
+    original: require('@/assets/images/levels/17/original.png'),
+    lines: require('@/assets/images/levels/17/lines.png'),
+    map: require('@/assets/images/levels/17/map.png'),
+    reward: require('@/assets/images/levels/17/reward.mp4'),
+  },
+  '18': {
+    data: require('@/assets/images/levels/18/data.json'),
+    original: require('@/assets/images/levels/18/original.png'),
+    lines: require('@/assets/images/levels/18/lines.png'),
+    map: require('@/assets/images/levels/18/map.png'),
+    reward: require('@/assets/images/levels/18/reward.mp4'),
+  },
+  '19': {
+    data: require('@/assets/images/levels/19/data.json'),
+    original: require('@/assets/images/levels/19/original.png'),
+    lines: require('@/assets/images/levels/19/lines.png'),
+    map: require('@/assets/images/levels/19/map.png'),
+    reward: require('@/assets/images/levels/19/reward.mp4'),
+  },
+  '20': {
+    data: require('@/assets/images/levels/20/data.json'),
+    original: require('@/assets/images/levels/20/original.png'),
+    lines: require('@/assets/images/levels/20/lines.png'),
+    map: require('@/assets/images/levels/20/map.png'),
+    reward: require('@/assets/images/levels/20/reward.mp4'),
+  },
+  '21': {
+    data: require('@/assets/images/levels/21/data.json'),
+    original: require('@/assets/images/levels/21/original.png'),
+    lines: require('@/assets/images/levels/21/lines.png'),
+    map: require('@/assets/images/levels/21/map.png'),
+    reward: require('@/assets/images/levels/21/reward.mp4'),
   },
 };
 

@@ -65,19 +65,46 @@ Built with modern React Native tooling for a smooth, performant experience:
 This app uses native modules (Skia, Reanimated, etc.) and requires a development build.
 
 1. Install dependencies:
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 2. Build and run on Android:
-   ```bash
-   npx expo run:android
-   ```
+    ```bash
+    npx expo run:android
+    ```
 
-   Or build and run on iOS:
-   ```bash
-   npx expo run:ios
-   ```
+    Or build and run on iOS:
+    ```bash
+    npx expo run:ios
+    ```
+
+## Deploying to Production
+
+### For Development & Testing
+
+Build and install to a connected Android device:
+```bash
+npx expo run:android
+```
+
+### For Production Release
+
+1. Commit and push your code to GitHub:
+    ```bash
+    git add .
+    git commit -m "Your changes"
+    git push origin main
+    ```
+
+2. Build the Android App Bundle via EAS:
+    ```bash
+    npx eas build --platform android --profile production
+    ```
+
+3. Download the `.aab` file from the build output (saved to `~/Downloads/`) and upload it to Google Play Console.
+
+**Note:** EAS Build pulls your code from GitHub, so make sure all changes are pushed before building.
 
 ## License
 
