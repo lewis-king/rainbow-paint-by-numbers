@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, Pressable, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
@@ -90,7 +90,20 @@ function RainbowTitle() {
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const levels = getLevelPreviews();
-  const { isLevelComplete, getLevelProgress, _hasHydrated } = useLevelProgressStore();
+  const { isLevelComplete, getLevelProgress, _hasHydrated, forceHydrated } = useLevelProgressStore();
+  const [hydrationTimeout, setHydrationTimeout] = useState(false);
+  const forceHydratedRef = useRef(forceHydrated);
+
+  forceHydratedRef.current = forceHydrated;
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.warn('Store hydration timeout (>3s), forcing hydrated state');
+      forceHydratedRef.current();
+      setHydrationTimeout(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleLevelPress = (levelId: string) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -98,7 +111,7 @@ export default function HomeScreen() {
   };
 
   // Wait for store to hydrate from AsyncStorage
-  if (!_hasHydrated) {
+  if (!_hasHydrated && !hydrationTimeout) {
     return (
       <View style={[styles.container, styles.loadingContainer, { paddingTop: insets.top + 20 }]}>
         <ActivityIndicator size="large" color={colors.rainbow.blue} />

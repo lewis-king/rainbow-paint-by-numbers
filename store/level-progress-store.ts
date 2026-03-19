@@ -2,6 +2,32 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+// Wrap AsyncStorage to handle errors gracefully
+const safeAsyncStorage = {
+  getItem: async (key: string) => {
+    try {
+      return await AsyncStorage.getItem(key);
+    } catch (error) {
+      console.error('AsyncStorage.getItem error:', key, error);
+      return null;
+    }
+  },
+  setItem: async (key: string, value: string) => {
+    try {
+      await AsyncStorage.setItem(key, value);
+    } catch (error) {
+      console.error('AsyncStorage.setItem error:', key, error);
+    }
+  },
+  removeItem: async (key: string) => {
+    try {
+      await AsyncStorage.removeItem(key);
+    } catch (error) {
+      console.error('AsyncStorage.removeItem error:', key, error);
+    }
+  },
+};
+
 interface LevelProgress {
   progress: number;
   isComplete: boolean;
@@ -32,6 +58,7 @@ interface LevelProgressState {
 
   // Hydration status
   setHasHydrated: (state: boolean) => void;
+  forceHydrated: () => void;
 }
 
 export const useLevelProgressStore = create<LevelProgressState>()(
@@ -39,6 +66,9 @@ export const useLevelProgressStore = create<LevelProgressState>()(
     (set, get) => ({
       levels: {},
       _hasHydrated: false,
+
+      // Force hydration complete (used as fallback)
+      forceHydrated: () => set({ _hasHydrated: true }),
 
       getLevelProgress: (levelId: string) => {
         return get().levels[levelId] || null;
@@ -96,7 +126,7 @@ export const useLevelProgressStore = create<LevelProgressState>()(
     }),
     {
       name: 'level-progress-storage',
-      storage: createJSONStorage(() => AsyncStorage),
+      storage: createJSONStorage(() => safeAsyncStorage),
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true);
       },
