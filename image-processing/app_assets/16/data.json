@@ -56,12 +56,6 @@
     },
     {
       "number": 2,
-      "x": 853,
-      "y": 274,
-      "color_index": 1
-    },
-    {
-      "number": 2,
       "x": 470,
       "y": 265,
       "color_index": 1
@@ -76,18 +70,6 @@
       "number": 2,
       "x": 650,
       "y": 384,
-      "color_index": 1
-    },
-    {
-      "number": 2,
-      "x": 573,
-      "y": 396,
-      "color_index": 1
-    },
-    {
-      "number": 2,
-      "x": 657,
-      "y": 430,
       "color_index": 1
     },
     {
@@ -116,8 +98,8 @@
     },
     {
       "number": 2,
-      "x": 699,
-      "y": 953,
+      "x": 718,
+      "y": 949,
       "color_index": 1
     },
     {
@@ -169,18 +151,6 @@
       "color_index": 4
     },
     {
-      "number": 5,
-      "x": 696,
-      "y": 147,
-      "color_index": 4
-    },
-    {
-      "number": 5,
-      "x": 559,
-      "y": 186,
-      "color_index": 4
-    },
-    {
       "number": 6,
       "x": 463,
       "y": 571,
@@ -188,8 +158,8 @@
     },
     {
       "number": 6,
-      "x": 544,
-      "y": 542,
+      "x": 543,
+      "y": 541,
       "color_index": 5
     },
     {
@@ -197,12 +167,6 @@
       "x": 488,
       "y": 906,
       "color_index": 5
-    },
-    {
-      "number": 7,
-      "x": 663,
-      "y": 516,
-      "color_index": 6
     },
     {
       "number": 7,
@@ -215,30 +179,6 @@
       "x": 701,
       "y": 798,
       "color_index": 6
-    },
-    {
-      "number": 7,
-      "x": 662,
-      "y": 818,
-      "color_index": 6
-    },
-    {
-      "number": 7,
-      "x": 752,
-      "y": 831,
-      "color_index": 6
-    },
-    {
-      "number": 7,
-      "x": 803,
-      "y": 860,
-      "color_index": 6
-    },
-    {
-      "number": 8,
-      "x": 568,
-      "y": 725,
-      "color_index": 7
     },
     {
       "number": 9,
@@ -257,12 +197,6 @@
       "x": 741,
       "y": 792,
       "color_index": 9
-    },
-    {
-      "number": 12,
-      "x": 634,
-      "y": 622,
-      "color_index": 11
     },
     {
       "number": 12,
@@ -293,12 +227,6 @@
       "x": 699,
       "y": 434,
       "color_index": 12
-    },
-    {
-      "number": 14,
-      "x": 457,
-      "y": 69,
-      "color_index": 13
     },
     {
       "number": 15,

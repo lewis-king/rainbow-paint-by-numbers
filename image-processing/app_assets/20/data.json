@@ -92,12 +92,6 @@
       "color_index": 8
     },
     {
-      "number": 9,
-      "x": 751,
-      "y": 809,
-      "color_index": 8
-    },
-    {
       "number": 10,
       "x": 512,
       "y": 767,
@@ -137,12 +131,6 @@
       "number": 13,
       "x": 414,
       "y": 845,
-      "color_index": 12
-    },
-    {
-      "number": 13,
-      "x": 456,
-      "y": 846,
       "color_index": 12
     },
     {
@@ -189,20 +177,14 @@
     },
     {
       "number": 16,
-      "x": 287,
-      "y": 904,
-      "color_index": 15
-    },
-    {
-      "number": 16,
       "x": 736,
       "y": 900,
       "color_index": 15
     },
     {
       "number": 16,
-      "x": 582,
-      "y": 915,
+      "x": 287,
+      "y": 904,
       "color_index": 15
     }
   ],

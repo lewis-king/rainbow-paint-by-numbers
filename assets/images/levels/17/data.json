@@ -23,33 +23,9 @@
   ],
   "numbers": [
     {
-      "number": 2,
-      "x": 566,
-      "y": 325,
-      "color_index": 1
-    },
-    {
-      "number": 2,
-      "x": 390,
-      "y": 598,
-      "color_index": 1
-    },
-    {
-      "number": 2,
-      "x": 505,
-      "y": 758,
-      "color_index": 1
-    },
-    {
       "number": 5,
-      "x": 456,
-      "y": 499,
-      "color_index": 4
-    },
-    {
-      "number": 5,
-      "x": 844,
-      "y": 769,
+      "x": 847,
+      "y": 763,
       "color_index": 4
     },
     {
@@ -83,12 +59,6 @@
       "color_index": 5
     },
     {
-      "number": 6,
-      "x": 500,
-      "y": 753,
-      "color_index": 5
-    },
-    {
       "number": 8,
       "x": 496,
       "y": 347,
@@ -119,15 +89,9 @@
       "color_index": 9
     },
     {
-      "number": 11,
-      "x": 551,
-      "y": 274,
-      "color_index": 10
-    },
-    {
       "number": 12,
-      "x": 270,
-      "y": 612,
+      "x": 400,
+      "y": 621,
       "color_index": 11
     },
     {
@@ -162,14 +126,8 @@
     },
     {
       "number": 13,
-      "x": 418,
-      "y": 798,
-      "color_index": 12
-    },
-    {
-      "number": 13,
-      "x": 763,
-      "y": 818,
+      "x": 426,
+      "y": 803,
       "color_index": 12
     },
     {
@@ -177,18 +135,6 @@
       "x": 694,
       "y": 823,
       "color_index": 12
-    },
-    {
-      "number": 14,
-      "x": 484,
-      "y": 225,
-      "color_index": 13
-    },
-    {
-      "number": 14,
-      "x": 530,
-      "y": 229,
-      "color_index": 13
     },
     {
       "number": 14,
@@ -222,33 +168,9 @@
     },
     {
       "number": 16,
-      "x": 847,
-      "y": 761,
-      "color_index": 15
-    },
-    {
-      "number": 16,
       "x": 801,
       "y": 820,
       "color_index": 15
-    },
-    {
-      "number": 17,
-      "x": 550,
-      "y": 232,
-      "color_index": 16
-    },
-    {
-      "number": 17,
-      "x": 551,
-      "y": 285,
-      "color_index": 16
-    },
-    {
-      "number": 17,
-      "x": 378,
-      "y": 505,
-      "color_index": 16
     },
     {
       "number": 17,
@@ -269,21 +191,9 @@
       "color_index": 17
     },
     {
-      "number": 18,
-      "x": 437,
-      "y": 814,
-      "color_index": 17
-    },
-    {
       "number": 19,
       "x": 514,
       "y": 210,
-      "color_index": 18
-    },
-    {
-      "number": 19,
-      "x": 654,
-      "y": 381,
       "color_index": 18
     },
     {

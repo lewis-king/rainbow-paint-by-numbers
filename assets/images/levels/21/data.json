@@ -29,12 +29,6 @@
       "color_index": 1
     },
     {
-      "number": 2,
-      "x": 390,
-      "y": 888,
-      "color_index": 1
-    },
-    {
       "number": 4,
       "x": 357,
       "y": 151,
@@ -85,14 +79,14 @@
     {
       "number": 6,
       "x": 334,
-      "y": 763,
+      "y": 687,
       "color_index": 5
     },
     {
-      "number": 8,
-      "x": 422,
-      "y": 184,
-      "color_index": 7
+      "number": 6,
+      "x": 334,
+      "y": 763,
+      "color_index": 5
     },
     {
       "number": 8,

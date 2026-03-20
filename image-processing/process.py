@@ -13,6 +13,12 @@ OUTPUT_DIR = "app_assets"
 # UPDATED: 1024x1024 is the perfect balance of sharpness vs size.
 TARGET_SIZE = (1024, 1024) 
 
+# CONFIG
+INPUT_DIR = "raw_assets"
+OUTPUT_DIR = "app_assets"
+# UPDATED: 1024x1024 is the perfect balance of sharpness vs size.
+TARGET_SIZE = (1024, 1024) 
+
 INITIAL_K = 24       
 MERGE_THRESHOLD = 40 
 BACKGROUND_ID = 255  
@@ -30,6 +36,13 @@ NEIGHBOR_GAP = 15
 # Removes specks smaller than 20px (was 10).
 MIN_REGION_AREA = 20
 
+# CRITICAL: NEW - Minimum width/height to catch ONLY the thinnest strips
+# The really thin frustrating strips are probably 3-5px wide
+# We want to keep small circular/compact features (eyes ~8-12px diameter)
+# A 8x8 square = 64px area passes
+# A 3x100 strip = 300px area FAILS (too thin)
+MIN_REGION_WIDTH = 8
+
 # Median blur kernel (must be odd). 3 or 5 is good for 1024.
 DESPECKLE_SIZE = 3
 
@@ -45,7 +58,17 @@ def get_luminance(rgb):
 def get_pole_of_inaccessibility(mask):
     dist_transform = cv2.distanceTransform(mask, cv2.DIST_L2, 5)
     _, max_val, _, max_loc = cv2.minMaxLoc(dist_transform)
-    return max_loc[0], max_loc[1], max_val 
+    return max_loc[0], max_loc[1], max_val
+
+def check_region_width_height(mask):
+    """Check if a region has reasonable width and height (not just area)
+    This catches thin strips that would be frustrating to color."""
+    ys, xs = np.where(mask > 0)
+    if len(ys) == 0 or len(xs) == 0:
+        return False, 0, 0
+    width = np.max(xs) - np.min(xs)
+    height = np.max(ys) - np.min(ys)
+    return width >= MIN_REGION_WIDTH and height >= MIN_REGION_WIDTH, width, height 
 
 # --- GROUPING LOGIC ---
 def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
@@ -55,7 +78,11 @@ def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
     
     for i in range(1, num_labels):
         if stats[i, cv2.CC_STAT_AREA] >= min_area:
-            original_regions.append(i) 
+            # NEW: Check width/height too - catches thin strips
+            region_mask = np.uint8(labels == i) * 255
+            is_valid, w, h = check_region_width_height(region_mask)
+            if is_valid:
+                original_regions.append(i) 
 
     if not original_regions:
         return []
@@ -112,7 +139,11 @@ def remove_small_regions(map_img, min_area):
         
         for i in range(1, num_labels):
             area = stats[i, cv2.CC_STAT_AREA]
-            if area < min_area:
+            region_mask = np.uint8(labels == i) * 255
+            
+            # Check if region is too small OR too thin
+            is_valid, w, h = check_region_width_height(region_mask)
+            if area < min_area or not is_valid:
                 blob_mask = np.uint8(labels == i) * 255
                 dilated = cv2.dilate(blob_mask, np.ones((3,3), np.uint8))
                 neighbor_mask = cv2.bitwise_xor(dilated, blob_mask)
