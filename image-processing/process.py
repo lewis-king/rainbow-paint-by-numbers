@@ -10,41 +10,19 @@ from sklearn.cluster import KMeans
 # CONFIG
 INPUT_DIR = "raw_assets"
 OUTPUT_DIR = "app_assets"
-# UPDATED: 1024x1024 is the perfect balance of sharpness vs size.
-TARGET_SIZE = (1024, 1024) 
-
-# CONFIG
-INPUT_DIR = "raw_assets"
-OUTPUT_DIR = "app_assets"
-# UPDATED: 1024x1024 is the perfect balance of sharpness vs size.
 TARGET_SIZE = (1024, 1024) 
 
 INITIAL_K = 24       
-MERGE_THRESHOLD = 40 
+MERGE_THRESHOLD = 60  # IMPROVED: was 40 - better color merging
 BACKGROUND_ID = 255  
 LINE_ID = 254        
 
-# === RE-CALIBRATED THRESHOLDS FOR 1024px ===
-# We doubled these from the 512px version.
-
-# Catches lines up to ~30px wide (was 15).
+# === IMPROVED THRESHOLDS ===
 OUTLINE_THICKNESS_THRESHOLD = 30
-
-# Bridges gaps of ~15px (was 8).
-NEIGHBOR_GAP = 15  
-
-# Removes specks smaller than 20px (was 10).
+NEIGHBOR_GAP = 20     # IMPROVED: was 15 - better region grouping  
 MIN_REGION_AREA = 20
-
-# CRITICAL: NEW - Minimum width/height to catch ONLY the thinnest strips
-# The really thin frustrating strips are probably 3-5px wide
-# We want to keep small circular/compact features (eyes ~8-12px diameter)
-# A 8x8 square = 64px area passes
-# A 3x100 strip = 300px area FAILS (too thin)
 MIN_REGION_WIDTH = 8
-
-# Median blur kernel (must be odd). 3 or 5 is good for 1024.
-DESPECKLE_SIZE = 3
+DESPECKLE_SIZE = 5    # IMPROVED: was 3 - smoother regions
 
 def rgb_to_hex(rgb):
     return '#{:02x}{:02x}{:02x}'.format(int(rgb[0]), int(rgb[1]), int(rgb[2]))
@@ -61,8 +39,6 @@ def get_pole_of_inaccessibility(mask):
     return max_loc[0], max_loc[1], max_val
 
 def check_region_width_height(mask):
-    """Check if a region has reasonable width and height (not just area)
-    This catches thin strips that would be frustrating to color."""
     ys, xs = np.where(mask > 0)
     if len(ys) == 0 or len(xs) == 0:
         return False, 0, 0
@@ -70,7 +46,6 @@ def check_region_width_height(mask):
     height = np.max(ys) - np.min(ys)
     return width >= MIN_REGION_WIDTH and height >= MIN_REGION_WIDTH, width, height 
 
-# --- GROUPING LOGIC ---
 def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
     mask = np.uint8(map_img == color_idx) * 255
     num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
@@ -78,7 +53,6 @@ def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
     
     for i in range(1, num_labels):
         if stats[i, cv2.CC_STAT_AREA] >= min_area:
-            # NEW: Check width/height too - catches thin strips
             region_mask = np.uint8(labels == i) * 255
             is_valid, w, h = check_region_width_height(region_mask)
             if is_valid:
@@ -87,7 +61,6 @@ def group_neighboring_regions(map_img, color_idx, min_area, neighbor_gap):
     if not original_regions:
         return []
 
-    # Dilate mask to bridge gaps
     kernel_size = max(3, neighbor_gap)
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (kernel_size, kernel_size))
     bridged_mask = cv2.dilate(mask, kernel)
@@ -141,7 +114,6 @@ def remove_small_regions(map_img, min_area):
             area = stats[i, cv2.CC_STAT_AREA]
             region_mask = np.uint8(labels == i) * 255
             
-            # Check if region is too small OR too thin
             is_valid, w, h = check_region_width_height(region_mask)
             if area < min_area or not is_valid:
                 blob_mask = np.uint8(labels == i) * 255
@@ -169,7 +141,6 @@ def process_level(filename):
     img = cv2.imread(img_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    # 1. RESIZE (Downscaling to 1024x1024)
     print(f"   - Resizing from {img.shape[:2]} to {TARGET_SIZE}...")
     img = cv2.resize(img, TARGET_SIZE, interpolation=cv2.INTER_AREA)
 
@@ -216,7 +187,6 @@ def process_level(filename):
     map_img = cv2.morphologyEx(map_img, cv2.MORPH_CLOSE, kernel)
     map_img = cv2.medianBlur(map_img, DESPECKLE_SIZE) 
 
-    # --- LINE DETECTION ---
     min_lum = 255
     darkest_idx = -1
     for idx, color in enumerate(final_centers):
@@ -230,7 +200,6 @@ def process_level(filename):
         print(f"   - Analyzing Darkest Color (ID: {darkest_idx}, Lum: {min_lum:.1f})...")
         dark_mask = np.uint8(map_img == darkest_idx) * 255
         
-        # Using 1024px calibrated threshold
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (OUTLINE_THICKNESS_THRESHOLD, OUTLINE_THICKNESS_THRESHOLD))
         paintable_dark_parts = cv2.morphologyEx(dark_mask, cv2.MORPH_OPEN, kernel)
         detected_lines = dark_mask - paintable_dark_parts
@@ -238,7 +207,7 @@ def process_level(filename):
         num_l, labels_l, stats_l, _ = cv2.connectedComponentsWithStats(detected_lines, connectivity=8)
         cleaned_lines = np.zeros_like(detected_lines)
         for i in range(1, num_l):
-            if stats_l[i, cv2.CC_STAT_AREA] > 10: # Min line size
+            if stats_l[i, cv2.CC_STAT_AREA] > 10:
                 cleaned_lines[labels_l == i] = 255
         
         if np.count_nonzero(cleaned_lines) > 0:
@@ -308,7 +277,7 @@ def process_level(filename):
     debug_img = cv2.cvtColor(clean_img, cv2.COLOR_RGB2BGR)
     for item in number_data:
         cv2.putText(debug_img, str(item['number']), (item['x']-5, item['y']+3), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 2) # Font size 0.5 for 1024px
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 2)
         cv2.putText(debug_img, str(item['number']), (item['x']-5, item['y']+3), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 1)
         
@@ -333,8 +302,9 @@ def process_level(filename):
         json.dump(level_data, f, indent=2)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process paint-by-numbers images")
+    parser = argparse.ArgumentParser(description="Process paint-by-numbers images (IMPROVED)")
     parser.add_argument("--from", dest="start_from", type=int, default=1, help="Start from")
+    parser.add_argument("--to", dest="end_at", type=int, default=100, help="End at")
     args = parser.parse_args()
 
     if not os.path.exists(INPUT_DIR): os.makedirs(INPUT_DIR)
@@ -345,8 +315,9 @@ if __name__ == "__main__":
         return int(match.group(1)) if match else 0
 
     files = [f for f in os.listdir(INPUT_DIR) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
-    files = [f for f in files if get_file_number(f) >= args.start_from]
+    files = [f for f in files if get_file_number(f) >= args.start_from and get_file_number(f) <= args.end_at]
     files.sort(key=get_file_number)
 
-    print(f"Processing {len(files)} files...")
+    print(f"Processing {len(files)} files (levels {args.start_from} to {args.end_at})...")
+    print(f"Using IMPROVED settings: MERGE={MERGE_THRESHOLD}, GAP={NEIGHBOR_GAP}, DESPECKLE={DESPECKLE_SIZE}")
     for f in files: process_level(f)
