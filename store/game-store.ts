@@ -32,7 +32,7 @@ export const useGameStore = create<GameState>((set) => ({
 
   setProgress: (progress) => set({
     progress,
-    isComplete: progress >= 98
+    isComplete: progress >= 99
   }),
 
   reset: () => set({

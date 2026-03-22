@@ -19,7 +19,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { getLevelPreviews, type LevelPreview } from '@/utils/level-loader';
 import { useLevelProgressStore } from '@/store/level-progress-store';
+import { useReviewStore } from '@/store/review-store';
 import { getPreviewPath, previewExists } from '@/utils/preview-manager';
+import { ReviewPrompt } from '@/components/ReviewPrompt';
 import { colors, fonts, shadows, rainbowArray } from '@/theme';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -91,10 +93,20 @@ export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const levels = getLevelPreviews();
   const { isLevelComplete, getLevelProgress, _hasHydrated, forceHydrated } = useLevelProgressStore();
+  const { shouldShowReview, _hasHydrated: reviewHydrated } = useReviewStore();
   const [hydrationTimeout, setHydrationTimeout] = useState(false);
+  const [showReviewPrompt, setShowReviewPrompt] = useState(false);
   const forceHydratedRef = useRef(forceHydrated);
 
   forceHydratedRef.current = forceHydrated;
+
+  // Check if we should show review prompt when dashboard loads
+  // Only check after BOTH stores are hydrated to avoid race conditions
+  useEffect(() => {
+    if (_hasHydrated && reviewHydrated && shouldShowReview()) {
+      setShowReviewPrompt(true);
+    }
+  }, [_hasHydrated, reviewHydrated, shouldShowReview]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -152,6 +164,12 @@ export default function HomeScreen() {
           );
         })}
       </ScrollView>
+
+      {/* Review Prompt - shown on dashboard, not during victory */}
+      <ReviewPrompt
+        visible={showReviewPrompt}
+        onClose={() => setShowReviewPrompt(false)}
+      />
     </View>
   );
 }

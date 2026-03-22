@@ -14,6 +14,7 @@ import { VictoryOverlay } from '@/components/VictoryOverlay';
 import { loadLevelAssets, type LevelAssets } from '@/utils/level-loader';
 import { useGameStore } from '@/store/game-store';
 import { useLevelProgressStore } from '@/store/level-progress-store';
+import { useReviewStore } from '@/store/review-store';
 import { savePreview, deletePreview } from '@/utils/preview-manager';
 
 export default function GameScreen() {
@@ -28,7 +29,8 @@ export default function GameScreen() {
   const [initialPaintedPixels, setInitialPaintedPixels] = useState<number[] | undefined>(undefined);
 
   const reset = useGameStore((state) => state.reset);
-  const { getLevelProgress, saveProgress, saveFullState, resetLevel, _hasHydrated } = useLevelProgressStore();
+  const { getLevelProgress, saveProgress, saveFullState, resetLevel, _hasHydrated, isLevelComplete } = useLevelProgressStore();
+  const { incrementCompletedLevels } = useReviewStore();
 
   // Refs for debounced saving
   const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -180,8 +182,11 @@ export default function GameScreen() {
   useEffect(() => {
     if (progress >= 99 && !showVictory) {
       setShowVictory(true);
+      
+      // Increment completed levels counter (review prompt will show on dashboard)
+      incrementCompletedLevels();
     }
-  }, [progress, showVictory]);
+  }, [progress, showVictory, incrementCompletedLevels]);
 
   const handleProgressChange = useCallback((newProgress: number) => {
     // Mark that painting happened this session
