@@ -2,7 +2,15 @@
 
 A wholesome paint-by-numbers app made with love, by a dad and daughter, for that daughter.
 
+
+https://github.com/user-attachments/assets/452ce7af-f55c-423f-9a9c-9bdb2b1e5a4b
+
+
+**Available on**
+[Google Play](https://play.google.com/store/apps/details?id=king.meezy.rainbowpaintbynumbers)
+
 ## Why This Exists
+
 
 Like many parents, I got tired of watching my daughter navigate through ad-riddled, in-app-purchase-laden colouring apps that seemed more interested in monetisation than providing a good experience. So we decided to make our own.
 
@@ -19,7 +27,8 @@ We use [Flux2 Dev](https://github.com/black-forest-labs/flux2) to generate the b
 **Positive Prompt:**
 ```
 (masterpiece), flat vector art, children's coloring book style, cute [SUBJECT], simple shapes, thick bold outlines, cel shaded, vibrant solid colors, white background, minimalist, high contrast, 2d game asset, no dithering
-```
+```![Uploading unnamed.webp…]()
+
 
 **Negative Prompt:**
 ```
