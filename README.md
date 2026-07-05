@@ -53,6 +53,31 @@ The generated images go through a post-processing pipeline to become usable game
 
 The result is a set of clearly defined regions that players can tap to fill, with the app tracking progress toward the original colored design.
 
+### Running the Post-Processing Script
+
+Raw source files live in `image-processing/raw_assets/` and are named by level, for example `22.png` and optional `22.mp4`.
+
+On a fresh clone, create the Python virtual environment and install the processing dependencies first:
+```bash
+cd image-processing
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+To process from a level number inclusive, run:
+```bash
+python process.py --from 22
+```
+
+That processes every numbered image from `22` upward. To process a bounded inclusive range:
+```bash
+python process.py --from 22 --to 28
+```
+
+Generated files are written to `image-processing/app_assets/{level}/`. Copy the finished level folders into `assets/images/levels/`, then add the new level IDs and static `require(...)` entries in `utils/level-loader.ts`.
+
 ## Tech Stack
 
 Built with modern React Native tooling for a smooth, performant experience:
@@ -111,7 +136,28 @@ npx expo run:android
     npx eas build --platform android --profile production
     ```
 
-3. Download the `.aab` file from the build output (saved to `~/Downloads/`) and upload it to Google Play Console.
+3. Build the iOS app via EAS:
+    ```bash
+    npx eas build --platform ios --profile production
+    ```
+
+4. Download the `.aab` or `.ipa` file from the build output (saved to `~/Downloads/`) and verify it does not contain raw image-processing assets:
+    ```bash
+    npm run verify:dist -- ~/Downloads/your-build.aab
+    npm run verify:dist -- ~/Downloads/your-build.ipa
+    ```
+
+5. Upload the verified Android App Bundle manually in Google Play Console.
+
+6. Submit the verified iOS app to App Store Connect using EAS Submit:
+    ```bash
+    npx eas submit --platform ios --path ~/Downloads/your-build.ipa
+    ```
+
+    If you want EAS to prompt you to choose a recent build instead, you can run:
+    ```bash
+    npx eas submit --platform ios
+    ```
 
 **Note:** EAS Build pulls your code from GitHub, so make sure all changes are pushed before building.
 

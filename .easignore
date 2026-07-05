@@ -1,0 +1,39 @@
+# Processing sources are not needed to build the app binary.
+image-processing/
+
+# Dependencies and Expo output.
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Native build output, but keep android/ and ios/ source checked in.
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/.cxx/
+android/app/build/
+ios/build/
+ios/Pods/
+
+# Local/generated output.
+/build/
+/build-*/
+*.tsbuildinfo
+.metro-health-check*
+
+# Credentials and local environment.
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+.env*.local
+
+# Logs and OS/editor metadata.
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+.vscode/

@@ -56,6 +56,19 @@
       "expo-video",
       "expo-audio"
     ],
+    "updates": {
+      "assetPatternsToBeBundled": [
+        "assets/images/levels/**/original.png",
+        "assets/images/levels/**/lines.png",
+        "assets/images/levels/**/map.png",
+        "assets/images/levels/**/reward.mp4",
+        "assets/fonts/*.ttf",
+        "assets/sounds/*.mp3",
+        "node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf",
+        "node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf",
+        "node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"
+      ]
+    },
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
