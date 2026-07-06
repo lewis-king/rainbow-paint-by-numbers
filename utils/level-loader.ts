@@ -15,10 +15,8 @@ export interface LevelAssets {
  * To add a new level:
  * 1. Add folder to assets/images/levels/{id}/
  * 2. Include: data.json, original.png, lines.png, map.png, reward.mp4
- * 3. Add the ID to this array:
+ * 3. Add static require entries to levelRegistry below
  */
-const LEVEL_IDS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21'] as const;
-
 // Metro requires static imports - this maps IDs to their assets
 // Each level must have these files in assets/images/levels/{id}/
 const levelRegistry: Record<string, {
@@ -175,9 +173,58 @@ const levelRegistry: Record<string, {
     map: require('@/assets/images/levels/21/map.png'),
     reward: require('@/assets/images/levels/21/reward.mp4'),
   },
+  '22': {
+    data: require('@/assets/images/levels/22/data.json'),
+    original: require('@/assets/images/levels/22/original.png'),
+    lines: require('@/assets/images/levels/22/lines.png'),
+    map: require('@/assets/images/levels/22/map.png'),
+    reward: require('@/assets/images/levels/22/reward.mp4'),
+  },
+  '23': {
+    data: require('@/assets/images/levels/23/data.json'),
+    original: require('@/assets/images/levels/23/original.png'),
+    lines: require('@/assets/images/levels/23/lines.png'),
+    map: require('@/assets/images/levels/23/map.png'),
+    reward: require('@/assets/images/levels/23/reward.mp4'),
+  },
+  '24': {
+    data: require('@/assets/images/levels/24/data.json'),
+    original: require('@/assets/images/levels/24/original.png'),
+    lines: require('@/assets/images/levels/24/lines.png'),
+    map: require('@/assets/images/levels/24/map.png'),
+    reward: require('@/assets/images/levels/24/reward.mp4'),
+  },
+  '25': {
+    data: require('@/assets/images/levels/25/data.json'),
+    original: require('@/assets/images/levels/25/original.png'),
+    lines: require('@/assets/images/levels/25/lines.png'),
+    map: require('@/assets/images/levels/25/map.png'),
+    reward: require('@/assets/images/levels/25/reward.mp4'),
+  },
+  '26': {
+    data: require('@/assets/images/levels/26/data.json'),
+    original: require('@/assets/images/levels/26/original.png'),
+    lines: require('@/assets/images/levels/26/lines.png'),
+    map: require('@/assets/images/levels/26/map.png'),
+    reward: require('@/assets/images/levels/26/reward.mp4'),
+  },
+  '27': {
+    data: require('@/assets/images/levels/27/data.json'),
+    original: require('@/assets/images/levels/27/original.png'),
+    lines: require('@/assets/images/levels/27/lines.png'),
+    map: require('@/assets/images/levels/27/map.png'),
+    reward: require('@/assets/images/levels/27/reward.mp4'),
+  },
+  '28': {
+    data: require('@/assets/images/levels/28/data.json'),
+    original: require('@/assets/images/levels/28/original.png'),
+    lines: require('@/assets/images/levels/28/lines.png'),
+    map: require('@/assets/images/levels/28/map.png'),
+    reward: require('@/assets/images/levels/28/reward.mp4'),
+  },
 };
 
-export { LEVEL_IDS };
+export const LEVEL_IDS = Object.keys(levelRegistry).sort((a, b) => Number(a) - Number(b));
 
 export interface LevelPreview {
   id: string;

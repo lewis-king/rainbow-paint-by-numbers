@@ -76,7 +76,7 @@ That processes every numbered image from `22` upward. To process a bounded inclu
 python process.py --from 22 --to 28
 ```
 
-Generated files are written to `image-processing/app_assets/{level}/`. Copy the finished level folders into `assets/images/levels/`, then add the new level IDs and static `require(...)` entries in `utils/level-loader.ts`.
+Generated files are written to `image-processing/app_assets/{level}/`. Copy the finished level folders into `assets/images/levels/`, then add the static `require(...)` entries in `utils/level-loader.ts`.
 
 ## Tech Stack
 
