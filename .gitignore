@@ -45,6 +45,7 @@ image-processing/venv/
 /ios
 /android
 build*
+!image-processing/generation/build_workflows.py
 
 # Local Python caches and generation work products
 __pycache__/

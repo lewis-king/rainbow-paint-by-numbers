@@ -6,7 +6,7 @@ python batch.py sheets           # contact sheets for review
 """
 import argparse, hashlib, json, shutil, sys, time, urllib.request, urllib.error
 from pathlib import Path
-from build_workflows import qwen_graph, h3_graph, ui_graph
+from build_workflows import qwen_graph, qwen_original_graph, h3_graph, video_graph, ui_graph
 from durable_io import save_json, copy_file
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT.parent))
@@ -22,7 +22,11 @@ def save(path, value):
     save_json(path, value)
 
 @serialized_work
-def generate(stage, rows):
+def generate(stage, rows, model=None):
+    model = model or ('qwen-original' if stage == 'image' else 'wan22')
+    allowed = ('qwen-original', 'qwen21-research') if stage == 'image' else ('wan22', 'minimax-h3-research')
+    if model not in allowed:
+        raise ValueError(f'{stage} model must be one of {allowed}')
     for level in rows:
         level_id=level['id'];folder=ROOT/'runs'/level_id;folder.mkdir(parents=True,exist_ok=True)
         record=folder/f'{stage}-job.json'
@@ -33,16 +37,23 @@ def generate(stage, rows):
             if job['status']=='error':raise RuntimeError(f'{record} failed; inspect before making a new attempt')
         else:
             prefix=f"rainbow-paint-by-numbers/{stage}/{level_id}-{level['slug']}"
+            if model.endswith('-research'):
+                prefix=f"rainbow-paint-by-numbers/research/{stage}/{level_id}-{level['slug']}"
             if stage=='image':
                 reference=None
-                if level.get('image_reference'):
+                if level.get('image_reference') and model == 'qwen21-research':
                     source_reference=ROOT/level['image_reference']
                     if level.get('image_reference_sha256') and hashlib.sha256(source_reference.read_bytes()).hexdigest()!=level['image_reference_sha256']:
                         raise RuntimeError(f'Image edit reference changed: {level_id}')
                     inp=COMFY/'input'/'rainbow-paint-by-numbers'/'references';inp.mkdir(parents=True,exist_ok=True)
                     shutil.copyfile(source_reference,inp/f'{level_id}.png')
                     reference=f'rainbow-paint-by-numbers/references/{level_id}.png'
-                graph=qwen_graph(level['image_prompt'],level['seed'],prefix,reference=reference)
+                if model == 'qwen21-research':
+                    graph=qwen_graph(level['image_prompt'],level['seed'],prefix,reference=reference)
+                else:
+                    if level.get('image_reference'):
+                        print(f'{level_id}: Qwen original generates from the text prompt; historical Qwen 2.1 edit reference is not used', flush=True)
+                    graph=qwen_original_graph(level['image_prompt'],level['seed'],prefix)
             else:
                 approval=ROOT/'reviews'/f'{level_id}-image.json'
                 if not approval.exists() or json.loads(approval.read_text()).get('verdict')!='PASS' or json.loads(approval.read_text()).get('engagement_revision')!=2:raise RuntimeError(f'Image {level_id} not approved')
@@ -51,10 +62,11 @@ def generate(stage, rows):
                 if hashlib.sha256(image.read_bytes()).hexdigest()!=json.loads(approval.read_text())['sha256']:raise RuntimeError('Image changed after approval')
                 inp=COMFY/'input'/'rainbow-paint-by-numbers';inp.mkdir(exist_ok=True)
                 shutil.copyfile(image,inp/f'{level_id}.png')
-                graph=h3_graph(f'rainbow-paint-by-numbers/{level_id}.png',level['video_prompt'],level.get('video_seed',level['seed']),prefix)
+                factory = h3_graph if model == 'minimax-h3-research' else video_graph
+                graph=factory(f'rainbow-paint-by-numbers/{level_id}.png',level['video_prompt'],level.get('video_seed',level['seed']),prefix)
             save(folder/f'{stage}.api.json',graph)
             result=request('/prompt',{'prompt':graph,'client_id':'rainbow-paint-by-numbers'})
-            job={'id':level_id,'stage':stage,'prompt_id':result['prompt_id'],'status':'queued','started_at':time.time()}
+            job={'id':level_id,'stage':stage,'model':model,'purpose':'research' if model.endswith('-research') else 'default','prompt_id':result['prompt_id'],'status':'queued','started_at':time.time()}
             save(record,job)
         pid=job['prompt_id'];print(stage,level_id,pid,flush=True)
         while True:
@@ -95,8 +107,10 @@ def sheets():
         target=ROOT/'reviews'/f'images-{group[0]["id"]}-{group[-1]["id"]}.jpg';canvas.save(target,quality=95);print(target)
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=['image','video','sheets']);p.add_argument('first',type=int,nargs='?',default=29);p.add_argument('last',type=int,nargs='?',default=58);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=['image','video','sheets']);p.add_argument('first',type=int,nargs='?',default=29);p.add_argument('last',type=int,nargs='?',default=58)
+    p.add_argument('--model', choices=['qwen-original','wan22','qwen21-research','minimax-h3-research'], help='Default: qwen-original for images, wan22 for videos; research models require explicit selection')
+    args=p.parse_args()
     if args.stage=='sheets':sheets()
     else:
         rows=json.loads((ROOT/'manifest.json').read_text())['levels']
-        generate(args.stage,[r for r in rows if args.first<=int(r['id'])<=args.last])
+        generate(args.stage,[r for r in rows if args.first<=int(r['id'])<=args.last],model=args.model)

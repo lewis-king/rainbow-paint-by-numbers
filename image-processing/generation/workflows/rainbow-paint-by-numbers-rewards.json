@@ -1,6 +1,6 @@
 {
-  "last_node_id": 13,
-  "last_link_id": 15,
+  "last_node_id": 15,
+  "last_link_id": 20,
   "nodes": [
     {
       "id": 1,
@@ -22,8 +22,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            4,
-            5
+            3
           ]
         }
       ],
@@ -31,13 +30,13 @@
         "Node name for S&R": "UNETLoader"
       },
       "widgets_values": [
-        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
         "default"
       ]
     },
     {
       "id": 2,
-      "type": "CLIPLoader",
+      "type": "UNETLoader",
       "pos": [
         380,
         0
@@ -52,25 +51,24 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "CLIP",
-          "type": "CLIP",
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            1
+            4
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPLoader"
+        "Node name for S&R": "UNETLoader"
       },
       "widgets_values": [
-        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
-        "minimax",
+        "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
         "default"
       ]
     },
     {
       "id": 3,
-      "type": "VAELoader",
+      "type": "CLIPLoader",
       "pos": [
         760,
         0
@@ -85,24 +83,26 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "VAE",
-          "type": "VAE",
+          "name": "CLIP",
+          "type": "CLIP",
           "links": [
-            2,
-            13
+            1,
+            2
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "VAELoader"
+        "Node name for S&R": "CLIPLoader"
       },
       "widgets_values": [
-        "minimax_h3_video_vae_int8_convrot.safetensors"
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
       ]
     },
     {
       "id": 4,
-      "type": "LoadImage",
+      "type": "VAELoader",
       "pos": [
         1140,
         0
@@ -117,10 +117,42 @@
       "inputs": [],
       "outputs": [
         {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            7,
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        350
+      ],
+      "size": [
+        340,
+        260
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            3
+            8
           ]
         },
         {
@@ -138,65 +170,8 @@
       ]
     },
     {
-      "id": 5,
-      "type": "MiniMaxH3ImageToVideo",
-      "pos": [
-        0,
-        350
-      ],
-      "size": [
-        340,
-        260
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 1
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 2
-        },
-        {
-          "name": "first_frame",
-          "type": "IMAGE",
-          "link": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            6
-          ]
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            11
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniMaxH3ImageToVideo"
-      },
-      "widgets_values": [
-        "A charming flat 2D cartoon animation for young children. The seated puppy gently tilts its head left and right and blinks its eyes, keeping the turquoise slipper firmly in its mouth. Its paws and body remain seated. Preserve the exact anatomy, bright solid colors and black outlines of the input illustration. Fixed camera, whole subject visible, plain white background. No new objects, no text, no speech, no cuts. End in the starting pose.",
-        640,
-        640,
-        124
-      ]
-    },
-    {
       "id": 6,
-      "type": "RandomNoise",
+      "type": "CLIPTextEncode",
       "pos": [
         380,
         350
@@ -208,27 +183,32 @@
       "flags": {},
       "order": 5,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
       "outputs": [
         {
-          "name": "NOISE",
-          "type": "NOISE",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
           "links": [
-            7
+            5
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "RandomNoise"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        2026111429,
-        "fixed"
+        "A charming flat 2D cartoon animation for young children. The seated puppy gently tilts its head left and right and blinks its eyes, keeping the turquoise slipper firmly in its mouth. Its paws and body remain seated. Preserve the exact anatomy, bright solid colors and black outlines of the input illustration. Fixed camera, whole subject visible, plain white background. No new objects, no text, no speech, no cuts. End in the starting pose."
       ]
     },
     {
       "id": 7,
-      "type": "KSamplerSelect",
+      "type": "CLIPTextEncode",
       "pos": [
         760,
         350
@@ -240,26 +220,32 @@
       "flags": {},
       "order": 6,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
       "outputs": [
         {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
           "links": [
-            9
+            6
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "KSamplerSelect"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "res_multistep"
+        "static, still image, camera movement, zoom, cuts, morphing, extra limbs, distorted face, text, watermark, flicker, gradients, realistic, scary, violence"
       ]
     },
     {
       "id": 8,
-      "type": "BasicScheduler",
+      "type": "ModelSamplingSD3",
       "pos": [
         1140,
         350
@@ -275,30 +261,28 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 4
+          "link": 3
         }
       ],
       "outputs": [
         {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            10
+            9
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "BasicScheduler"
+        "Node name for S&R": "ModelSamplingSD3"
       },
       "widgets_values": [
-        "simple",
-        20,
-        1
+        8
       ]
     },
     {
       "id": 9,
-      "type": "BasicGuider",
+      "type": "ModelSamplingSD3",
       "pos": [
         0,
         700
@@ -314,31 +298,28 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 5
-        },
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 6
+          "link": 4
         }
       ],
       "outputs": [
         {
-          "name": "GUIDER",
-          "type": "GUIDER",
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            8
+            13
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "BasicGuider"
+        "Node name for S&R": "ModelSamplingSD3"
       },
-      "widgets_values": []
+      "widgets_values": [
+        8
+      ]
     },
     {
       "id": 10,
-      "type": "SamplerCustomAdvanced",
+      "type": "WanImageToVideo",
       "pos": [
         380,
         700
@@ -352,53 +333,64 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "noise",
-          "type": "NOISE",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
           "link": 7
         },
         {
-          "name": "guider",
-          "type": "GUIDER",
+          "name": "start_image",
+          "type": "IMAGE",
           "link": 8
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 9
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 10
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 11
         }
       ],
       "outputs": [
         {
-          "name": "output",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            10,
+            14
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            11,
+            15
+          ]
+        },
+        {
+          "name": "latent",
           "type": "LATENT",
           "links": [
             12
           ]
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": []
         }
       ],
       "properties": {
-        "Node name for S&R": "SamplerCustomAdvanced"
+        "Node name for S&R": "WanImageToVideo"
       },
-      "widgets_values": []
+      "widgets_values": [
+        640,
+        640,
+        81,
+        1
+      ]
     },
     {
       "id": 11,
-      "type": "VAEDecode",
+      "type": "KSamplerAdvanced",
       "pos": [
         760,
         700
@@ -412,33 +404,54 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 12
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
         },
         {
-          "name": "vae",
-          "type": "VAE",
-          "link": 13
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 10
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 11
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 12
         }
       ],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            14
+            16
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode"
+        "Node name for S&R": "KSamplerAdvanced"
       },
-      "widgets_values": []
+      "widgets_values": [
+        "enable",
+        2026111429,
+        "fixed",
+        20,
+        3.5,
+        "euler",
+        "simple",
+        0,
+        10,
+        "enable"
+      ]
     },
     {
       "id": 12,
-      "type": "CreateVideo",
+      "type": "KSamplerAdvanced",
       "pos": [
         1140,
         700
@@ -452,30 +465,54 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
+          "name": "model",
+          "type": "MODEL",
+          "link": 13
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
           "link": 14
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 16
         }
       ],
       "outputs": [
         {
-          "name": "VIDEO",
-          "type": "VIDEO",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            15
+            17
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "CreateVideo"
+        "Node name for S&R": "KSamplerAdvanced"
       },
       "widgets_values": [
-        24
+        "disable",
+        0,
+        "fixed",
+        20,
+        3.5,
+        "euler",
+        "simple",
+        10,
+        20,
+        "disable"
       ]
     },
     {
       "id": 13,
-      "type": "SaveVideo",
+      "type": "VAEDecode",
       "pos": [
         0,
         1050
@@ -489,9 +526,86 @@
       "mode": 0,
       "inputs": [
         {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 17
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "CreateVideo",
+      "pos": [
+        380,
+        1050
+      ],
+      "size": [
+        340,
+        260
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        16
+      ]
+    },
+    {
+      "id": 15,
+      "type": "SaveVideo",
+      "pos": [
+        760,
+        1050
+      ],
+      "size": [
+        340,
+        260
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
           "name": "video",
           "type": "VIDEO",
-          "link": 15
+          "link": 20
         }
       ],
       "outputs": [
@@ -514,9 +628,9 @@
   "links": [
     [
       1,
-      2,
+      3,
       0,
-      5,
+      6,
       0,
       "CLIP"
     ],
@@ -524,20 +638,12 @@
       2,
       3,
       0,
-      5,
-      1,
-      "VAE"
+      7,
+      0,
+      "CLIP"
     ],
     [
       3,
-      4,
-      0,
-      5,
-      2,
-      "IMAGE"
-    ],
-    [
-      4,
       1,
       0,
       8,
@@ -545,90 +651,138 @@
       "MODEL"
     ],
     [
-      5,
-      1,
+      4,
+      2,
       0,
       9,
       0,
       "MODEL"
     ],
     [
-      6,
       5,
+      6,
       0,
-      9,
+      10,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      7,
+      0,
+      10,
       1,
       "CONDITIONING"
     ],
     [
       7,
-      6,
-      0,
-      10,
-      0,
-      "NOISE"
-    ],
-    [
-      8,
-      9,
-      0,
-      10,
-      1,
-      "GUIDER"
-    ],
-    [
-      9,
-      7,
+      4,
       0,
       10,
       2,
-      "SAMPLER"
+      "VAE"
     ],
     [
-      10,
       8,
+      5,
       0,
       10,
       3,
-      "SIGMAS"
+      "IMAGE"
+    ],
+    [
+      9,
+      8,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      10,
+      0,
+      11,
+      1,
+      "CONDITIONING"
     ],
     [
       11,
-      5,
-      1,
       10,
-      4,
-      "LATENT"
+      1,
+      11,
+      2,
+      "CONDITIONING"
     ],
     [
       12,
       10,
-      0,
+      2,
       11,
-      0,
+      3,
       "LATENT"
     ],
     [
       13,
-      3,
+      9,
       0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      14,
+      10,
+      0,
+      12,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      10,
+      1,
+      12,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      16,
       11,
+      0,
+      12,
+      3,
+      "LATENT"
+    ],
+    [
+      17,
+      12,
+      0,
+      13,
+      0,
+      "LATENT"
+    ],
+    [
+      18,
+      4,
+      0,
+      13,
       1,
       "VAE"
     ],
     [
-      14,
-      11,
+      19,
+      13,
       0,
-      12,
+      14,
       0,
       "IMAGE"
     ],
     [
-      15,
-      12,
+      20,
+      14,
       0,
-      13,
+      15,
       0,
       "VIDEO"
     ]
@@ -642,7 +796,8 @@
         30,
         30
       ]
-    }
+    },
+    "rainbow_model_purpose": "established generation workflow"
   },
   "version": 0.4
 }

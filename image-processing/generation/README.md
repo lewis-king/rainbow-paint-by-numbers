@@ -6,10 +6,12 @@ contains editable copies of the workflows; it is not their only home.
 
 ## Saved files
 
-- `workflows/rainbow-paint-by-numbers.json`: editable Qwen Image 2.1 workflow.
-- `workflows/rainbow-paint-by-numbers-rewards.json`: editable MiniMax H3 video workflow.
+- `workflows/rainbow-paint-by-numbers.json`: default original Qwen-Image workflow.
+- `workflows/rainbow-paint-by-numbers-rewards.json`: default Wan 2.2 video workflow.
 - Matching `.api.json` files: executable API graphs.
-- Explicitly named Flux2 and Wan2.2 fallback workflows.
+- `workflows/rainbow-paint-by-numbers-qwen21-research.json`: optional Qwen 2.1 research workflow.
+- `workflows/rainbow-paint-by-numbers-minimax-h3-research.json`: optional MiniMax H3 research workflow.
+- Existing Flux2 and Wan2.2 fallback filenames remain available for compatibility.
 - `manifest.json`: current subjects, prompts, seeds, motion prompts and engagement criteria.
 - `sources/<id>/`: approved image, exact API graph, job receipt, review and prompt recipe.
   Image-edit references are copied here too. `source-index.json` records image hashes.
@@ -50,6 +52,26 @@ python image-processing/generation/batch.py sheets
 python image-processing/generation/checkpoint.py
 ```
 
+Ordinary image generation uses the installed original `qwen_image_fp8_e4m3fn.safetensors`
+checkpoint; ordinary video generation uses Wan 2.2. The original Qwen graph uses
+its matching Qwen 2.5 VL encoder and VAE, without a distillation LoRA. It generates
+from text; historical Qwen 2.1 image-edit references are not used by this graph.
+The base models are Apache 2.0: [Qwen-Image](https://huggingface.co/Qwen/Qwen-Image)
+and [Wan 2.2](https://github.com/Wan-Video/Wan2.2).
+
+For research/testing, open the explicitly named research workflow in ComfyUI,
+or select the model on the command line:
+
+```bash
+python image-processing/generation/batch.py image 29 29 --model qwen21-research
+python image-processing/generation/batch.py video 29 29 --model minimax-h3-research
+```
+
+These examples skip existing completed jobs; they do not replace approved assets.
+Archive a previous attempt before intentionally regenerating it. Changing a
+workflow does not change existing assets or their applicable model terms.
+Research labels are organisational, not a waiver of model restrictions.
+
 Generation resumes from job receipts. Inspect a failed or stale job before
 retrying; archive its image, graph, receipt and review before another attempt.
 The checkpoint command saves only current, hash-matched Astra source approvals.
@@ -79,7 +101,7 @@ Historical experimental processed-image reviews are not current release gates.
 
 ## Current checkpoint
 
-As of 2026-10-04, all 30 Qwen Image 2.1 source images and all 30 MiniMax H3
+As of 2026-10-04, all 30 source images and all 30
 reward videos are accepted and saved under `sources/29/` through `sources/58/`.
 Each directory contains `image.png`, `video.mp4`, exact API graphs, job receipts,
 recipes and reviews. `provenance/generation-completion.json` records the final

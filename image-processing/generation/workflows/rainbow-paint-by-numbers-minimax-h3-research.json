@@ -1,6 +1,6 @@
 {
   "last_node_id": 13,
-  "last_link_id": 12,
+  "last_link_id": 15,
   "nodes": [
     {
       "id": 1,
@@ -22,7 +22,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            3
+            4,
+            5
           ]
         }
       ],
@@ -30,7 +31,7 @@
         "Node name for S&R": "UNETLoader"
       },
       "widgets_values": [
-        "flux2_dev_fp8mixed.safetensors",
+        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
         "default"
       ]
     },
@@ -62,8 +63,8 @@
         "Node name for S&R": "CLIPLoader"
       },
       "widgets_values": [
-        "mistral_3_small_flux2_bf16.safetensors",
-        "flux2",
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
         "default"
       ]
     },
@@ -87,7 +88,8 @@
           "name": "VAE",
           "type": "VAE",
           "links": [
-            11
+            2,
+            13
           ]
         }
       ],
@@ -95,12 +97,12 @@
         "Node name for S&R": "VAELoader"
       },
       "widgets_values": [
-        "flux2-vae.safetensors"
+        "minimax_h3_video_vae_int8_convrot.safetensors"
       ]
     },
     {
       "id": 4,
-      "type": "CLIPTextEncode",
+      "type": "LoadImage",
       "pos": [
         1140,
         0
@@ -112,32 +114,32 @@
       "flags": {},
       "order": 3,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 1
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            2
+            3
           ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncode"
+        "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "(masterpiece), flat vector art, children's coloring book style, cute a happy tan puppy with chocolate-brown floppy ears, a bright red collar and a large golden yellow round tag, holding a deep blue slipper with a turquoise sole in its mouth, sitting beside a round green and orange striped ball. Four clear paws and friendly eyes, simple shapes, thick bold outlines, cel shaded, vibrant solid colors, white background, minimalist, high contrast, 2d game asset, no dithering. Designed as an engaging paint-by-numbers activity for school-age beginners aged 4 and up: use every named contrasting color in substantial clearly enclosed areas. About 18 to 35 medium-to-large paintable regions, repeat some colors in separate regions. Keep all objects fully visible with a generous white margin. No text, no numerals, no gradients, no shadows, no texture, no tiny details. Uniform thick BLACK contours, no colored outline strokes. Every animal has a complete friendly face with clearly visible eyes and pupils."
+        "rainbow-paint-by-numbers/29.png",
+        "image"
       ]
     },
     {
       "id": 5,
-      "type": "FluxGuidance",
+      "type": "MiniMaxH3ImageToVideo",
       "pos": [
         0,
         350
@@ -151,30 +153,50 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "conditioning",
-          "type": "CONDITIONING",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
           "link": 2
+        },
+        {
+          "name": "first_frame",
+          "type": "IMAGE",
+          "link": 3
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
+          "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            4
+            6
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            11
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "FluxGuidance"
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
       },
       "widgets_values": [
-        3.5
+        "A charming flat 2D cartoon animation for young children. The seated puppy gently tilts its head left and right and blinks its eyes, keeping the turquoise slipper firmly in its mouth. Its paws and body remain seated. Preserve the exact anatomy, bright solid colors and black outlines of the input illustration. Fixed camera, whole subject visible, plain white background. No new objects, no text, no speech, no cuts. End in the starting pose.",
+        640,
+        640,
+        124
       ]
     },
     {
       "id": 6,
-      "type": "BasicGuider",
+      "type": "RandomNoise",
       "pos": [
         380,
         350
@@ -186,35 +208,27 @@
       "flags": {},
       "order": 5,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 3
-        },
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 4
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "name": "GUIDER",
-          "type": "GUIDER",
+          "name": "NOISE",
+          "type": "NOISE",
           "links": [
-            6
+            7
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "BasicGuider"
+        "Node name for S&R": "RandomNoise"
       },
-      "widgets_values": []
+      "widgets_values": [
+        2026111429,
+        "fixed"
+      ]
     },
     {
       "id": 7,
-      "type": "EmptyFlux2LatentImage",
+      "type": "KSamplerSelect",
       "pos": [
         760,
         350
@@ -229,25 +243,23 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "SAMPLER",
+          "type": "SAMPLER",
           "links": [
             9
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "EmptyFlux2LatentImage"
+        "Node name for S&R": "KSamplerSelect"
       },
       "widgets_values": [
-        1024,
-        1024,
-        1
+        "res_multistep"
       ]
     },
     {
       "id": 8,
-      "type": "RandomNoise",
+      "type": "BasicScheduler",
       "pos": [
         1140,
         350
@@ -259,27 +271,34 @@
       "flags": {},
       "order": 7,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        }
+      ],
       "outputs": [
         {
-          "name": "NOISE",
-          "type": "NOISE",
+          "name": "SIGMAS",
+          "type": "SIGMAS",
           "links": [
-            5
+            10
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "RandomNoise"
+        "Node name for S&R": "BasicScheduler"
       },
       "widgets_values": [
-        2026111429,
-        "fixed"
+        "simple",
+        20,
+        1
       ]
     },
     {
       "id": 9,
-      "type": "KSamplerSelect",
+      "type": "BasicGuider",
       "pos": [
         0,
         700
@@ -291,26 +310,35 @@
       "flags": {},
       "order": 8,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 5
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 6
+        }
+      ],
       "outputs": [
         {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
+          "name": "GUIDER",
+          "type": "GUIDER",
           "links": [
-            7
+            8
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "KSamplerSelect"
+        "Node name for S&R": "BasicGuider"
       },
-      "widgets_values": [
-        "euler"
-      ]
+      "widgets_values": []
     },
     {
       "id": 10,
-      "type": "Flux2Scheduler",
+      "type": "SamplerCustomAdvanced",
       "pos": [
         380,
         700
@@ -322,64 +350,31 @@
       "flags": {},
       "order": 9,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            8
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Flux2Scheduler"
-      },
-      "widgets_values": [
-        20,
-        1024,
-        1024
-      ]
-    },
-    {
-      "id": 11,
-      "type": "SamplerCustomAdvanced",
-      "pos": [
-        760,
-        700
-      ],
-      "size": [
-        340,
-        260
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
       "inputs": [
         {
           "name": "noise",
           "type": "NOISE",
-          "link": 5
+          "link": 7
         },
         {
           "name": "guider",
           "type": "GUIDER",
-          "link": 6
+          "link": 8
         },
         {
           "name": "sampler",
           "type": "SAMPLER",
-          "link": 7
+          "link": 9
         },
         {
           "name": "sigmas",
           "type": "SIGMAS",
-          "link": 8
+          "link": 10
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 9
+          "link": 11
         }
       ],
       "outputs": [
@@ -387,7 +382,7 @@
           "name": "output",
           "type": "LATENT",
           "links": [
-            10
+            12
           ]
         },
         {
@@ -402,8 +397,48 @@
       "widgets_values": []
     },
     {
-      "id": 12,
+      "id": 11,
       "type": "VAEDecode",
+      "pos": [
+        760,
+        700
+      ],
+      "size": [
+        340,
+        260
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 12
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "CreateVideo",
       "pos": [
         1140,
         700
@@ -417,33 +452,30 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 10
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 11
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
         }
       ],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
+          "name": "VIDEO",
+          "type": "VIDEO",
           "links": [
-            12
+            15
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode"
+        "Node name for S&R": "CreateVideo"
       },
-      "widgets_values": []
+      "widgets_values": [
+        24
+      ]
     },
     {
       "id": 13,
-      "type": "SaveImage",
+      "type": "SaveVideo",
       "pos": [
         0,
         1050
@@ -457,23 +489,25 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 12
+          "name": "video",
+          "type": "VIDEO",
+          "link": 15
         }
       ],
       "outputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
+          "name": "video",
+          "type": "VIDEO",
           "links": []
         }
       ],
       "properties": {
-        "Node name for S&R": "SaveImage"
+        "Node name for S&R": "SaveVideo"
       },
       "widgets_values": [
-        "rainbow-paint-by-numbers/fallback/29-puppy"
+        "rainbow-paint-by-numbers/research/video/29-puppy",
+        "mp4",
+        "h264"
       ]
     }
   ],
@@ -482,97 +516,121 @@
       1,
       2,
       0,
-      4,
+      5,
       0,
       "CLIP"
     ],
     [
       2,
-      4,
-      0,
-      5,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      3,
-      1,
-      0,
-      6,
-      0,
-      "MODEL"
-    ],
-    [
-      4,
-      5,
-      0,
-      6,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      5,
-      8,
-      0,
-      11,
-      0,
-      "NOISE"
-    ],
-    [
-      6,
-      6,
-      0,
-      11,
-      1,
-      "GUIDER"
-    ],
-    [
-      7,
-      9,
-      0,
-      11,
-      2,
-      "SAMPLER"
-    ],
-    [
-      8,
-      10,
-      0,
-      11,
-      3,
-      "SIGMAS"
-    ],
-    [
-      9,
-      7,
-      0,
-      11,
-      4,
-      "LATENT"
-    ],
-    [
-      10,
-      11,
-      0,
-      12,
-      0,
-      "LATENT"
-    ],
-    [
-      11,
       3,
       0,
-      12,
+      5,
       1,
       "VAE"
     ],
     [
+      3,
+      4,
+      0,
+      5,
+      2,
+      "IMAGE"
+    ],
+    [
+      4,
+      1,
+      0,
+      8,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      1,
+      0,
+      9,
+      0,
+      "MODEL"
+    ],
+    [
+      6,
+      5,
+      0,
+      9,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      6,
+      0,
+      10,
+      0,
+      "NOISE"
+    ],
+    [
+      8,
+      9,
+      0,
+      10,
+      1,
+      "GUIDER"
+    ],
+    [
+      9,
+      7,
+      0,
+      10,
+      2,
+      "SAMPLER"
+    ],
+    [
+      10,
+      8,
+      0,
+      10,
+      3,
+      "SIGMAS"
+    ],
+    [
+      11,
+      5,
+      1,
+      10,
+      4,
+      "LATENT"
+    ],
+    [
       12,
+      10,
+      0,
+      11,
+      0,
+      "LATENT"
+    ],
+    [
+      13,
+      3,
+      0,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      14,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
       12,
       0,
       13,
       0,
-      "IMAGE"
+      "VIDEO"
     ]
   ],
   "groups": [],
@@ -585,7 +643,7 @@
         30
       ]
     },
-    "rainbow_model_purpose": "established generation workflow"
+    "rainbow_model_purpose": "research/testing; review model terms before use"
   },
   "version": 0.4
 }
