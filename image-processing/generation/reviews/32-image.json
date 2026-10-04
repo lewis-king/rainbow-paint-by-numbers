@@ -1,0 +1,21 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
+  "image": "image-processing/generation/runs/32/image.png",
+  "subject": "Snail",
+  "verdict": "PASS",
+  "observations": [
+    "One recognizable snail with two stalked eyes, a coherent foot/body and a large spiral shell beside a simple mushroom.",
+    "Green body, yellow and purple shell, orange shell sector, red mushroom cap, turquoise spots, cream stalk and blue ground provide roughly eight meaningful color families without counting white highlights or darker shadows.",
+    "Five substantial turquoise mushroom spots repeat the same color across cap and stalk. Broad shell bands/sectors, cap, stalk and ground offer varied accessible painting shapes.",
+    "Large shapes and strong contrasting props make this substantially more engaging than the original three-color snail. Some gloss highlights and shadow bands remain; they are not needed to make the activity colorful."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Verify the spiral remains usable toward its center and faint shell subdivision lines do not create slivers.",
+    "Suppress tiny gloss highlights and mushroom underside detail as required; retain the five large turquoise spots."
+  ],
+  "method": "Individual current image visually inspected with view_image; decisions consider substantial contrasting colors, meaningful repeated regions, anatomy and cleanliness against user-approved 35/37 benchmarks.",
+  "scope": "Source-image visual gate for this exact hash only. PASS permits processor evaluation; it does not approve extracted regions, final number placement, gameplay assets or video."
+}

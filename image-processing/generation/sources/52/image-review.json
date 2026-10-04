@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "259b49bd6135b796663898034d80024b088ae8d52c400e388244684b7e2dd8bf",
+  "image": "image-processing/generation/runs/52/image.png",
+  "subject": "Rain boots and umbrella",
+  "observations": [
+    "Eyes and smiles removed from both boots; umbrella and puddle also have no character features. Purple oval spots are ordinary boot decoration.",
+    "Yellow boots, turquoise cuffs/handle, purple spots, blue soles and red/orange/green/pink umbrella panels preserve broad contrasting areas and repeated paired regions."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Current full source inspected individually: no anthropomorphic eyes, mouths or character features on objects, props or motifs."
+  },
+  "processed_gate_checks": [
+    "Separate processor QA must check tiny highlights, narrow trim, background holes and readable numbers while preserving large color regions."
+  ],
+  "scope": "Exact-current-hash source visual engagement and no-faces approval only. Supersedes the archived faced image; no processed-output or motion approval implied."
+}

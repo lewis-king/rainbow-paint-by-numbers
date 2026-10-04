@@ -1,0 +1,14 @@
+{
+  "id": "42",
+  "slug": "hot-air-balloon",
+  "title": "Hot Air Balloon",
+  "category": "adventures",
+  "seed": 2026100442,
+  "image_prompt": "Flat vector illustration for a young child's paint-by-numbers game. A large round hot air balloon with six wide solid red orange yellow green blue and purple vertical panels and a simple brown basket below. One large  subject, rounded simple shapes, recognizable real-world construction. Thick smooth uniform black outlines, closed clean shapes, 7 to 9 vibrant solid flat colors, large easy-to-paint color areas, clean pure white background, centered whole subject with generous white margin on all sides. Simple 2D cartoon clipart. No lettering, no patterns of tiny shapes, no gradients, no shading, no textures, no shadows. Real objects with recognizable physical structure. No anthropomorphic features: no faces, no eyes, no pupils, no mouths, no eyebrows, no smiles, no limbs on any object, food, plant or decoration.",
+  "video_prompt": "A gentle flat 2D illustration animation. The complete rainbow hot-air balloon and its basket remain centered and fully visible in EXACTLY the starting position for the entire clip. The envelope rotates only three degrees left and right, and the attached basket sways slightly beneath it. NO rising, NO upward travel, NO translation, NO zoom. Preserve generous empty margin above the balloon and below the basket in every frame. Keep the original shape, colors, ropes and black outlines. Plain white background, fixed camera, no new objects, no faces, no eyes, no mouths. End at the original centered pose.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "planned",
+  "object_realism_revision": 1,
+  "video_seed": 2026101442
+}

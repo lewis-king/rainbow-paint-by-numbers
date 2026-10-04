@@ -1,0 +1,108 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "(masterpiece), flat vector art, children's coloring book style, cute a cheerful fluffy cream sheep with a tan face, pink inner ears and brown hooves, wearing a broad bright red scarf with a large golden yellow patch. The sheep stands on a small fresh green meadow oval beside two large simple flowers, one turquoise blue and one purple, both with orange centers and broad leaves. Four visible legs, large wool lobes, no fine texture, simple shapes, thick bold outlines, cel shaded, vibrant solid colors, white background, minimalist, high contrast, 2d game asset, no dithering. Designed as an engaging paint-by-numbers activity for school-age beginners aged 4 and up: use every named contrasting color in substantial clearly enclosed areas. About 18 to 35 medium-to-large paintable regions, repeat some colors in separate regions. Keep all objects fully visible with a generous white margin. No text, no numerals, no gradients, no shadows, no texture, no tiny details. The sheep has TWO clearly visible solid BLACK OVAL EYES well apart on the upper tan face, above its smiling mouth. All four legs visible. THICK BLACK outlines throughout. No missing eyes. No colored outlines.",
+      "negative_prompt": "gradients, shading, texture, text, watermark, realistic, tiny details",
+      "resolution": 1024,
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 2026110535,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/image/36-sheep"
+    }
+  }
+}

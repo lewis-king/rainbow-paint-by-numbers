@@ -1,0 +1,19 @@
+{
+  "frames": 124,
+  "fps": 24.0,
+  "duration_seconds": 5.166666666666667,
+  "sampled_frame_mean_absolute_differences": [
+    4.773225911458334,
+    3.8523404947916666,
+    5.699736328125,
+    5.305660807291667,
+    7.158883463541667,
+    3.203916015625,
+    11.086702473958333,
+    6.16494140625,
+    4.689850260416667,
+    2.8550390625,
+    2.9837109375
+  ],
+  "sheet": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/reviews/29-video-frames.jpg"
+}

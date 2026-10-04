@@ -1,0 +1,17 @@
+{
+  "streamMappings": [
+    {
+      "app": "projects/rainbow-paint-by-numbers/androidApps/1:1019486698587:android:7740926da78a17ec4fd37e",
+      "streamId": "16038899973"
+    },
+    {
+      "app": "projects/rainbow-paint-by-numbers/iosApps/1:1019486698587:ios:2bcb661acd05bd074fd37e",
+      "streamId": "16038997970"
+    }
+  ],
+  "analyticsProperty": {
+    "id": "557245199",
+    "displayName": "rainbow-paint-by-numbers",
+    "analyticsAccountId": "154924733"
+  }
+}

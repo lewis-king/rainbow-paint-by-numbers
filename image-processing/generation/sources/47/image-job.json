@@ -1,0 +1,11 @@
+{
+  "id": "47",
+  "stage": "image",
+  "prompt_id": "e83beebc-74bb-42c0-9e44-9da404e3754c",
+  "status": "completed",
+  "started_at": 1791101557.9610121,
+  "finished_at": 1791101577.9680526,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/47/image.png",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/image/47-beach-bucket_00003_.png",
+  "sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07"
+}

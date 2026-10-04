@@ -1,0 +1,11 @@
+{
+  "id": "53",
+  "stage": "image",
+  "prompt_id": "076be50a-f0b6-49fd-b233-c5fc7cbd3327",
+  "status": "completed",
+  "started_at": 1791102383.5690832,
+  "finished_at": 1791102403.5762813,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/53/image.png",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/image/53-present_00003_.png",
+  "sha256": "60d1a7dee351cc4435eab26e542aaba9b4608d5f3611850cbc72100fb6fb951c"
+}

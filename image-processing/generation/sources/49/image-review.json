@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "2950e069d4c9f49dac6314a509a15b4cb5d100d0984b4147841f60f1d4f7eeff",
+  "image": "image-processing/generation/runs/49/image.png",
+  "subject": "Ice cream sundae",
+  "observations": [
+    "All three scoop faces are removed; scoops, cherry, wafer, spoon and bowl are ordinary recognizable food/tableware.",
+    "Broad pink, mint, pale-yellow scoops, brown sauce, red cherry, orange/gold wafer/spoon, cyan bowl and purple stem retain engaging large regions; shade variants and highlights are not extra palette credit."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Current full source inspected individually: no anthropomorphic eyes, mouths or character features on objects, props or motifs."
+  },
+  "processed_gate_checks": [
+    "Separate processor QA must check tiny highlights, narrow trim, background holes and readable numbers while preserving large color regions."
+  ],
+  "scope": "Exact-current-hash source visual engagement and no-faces approval only. Supersedes the archived faced image; no processed-output or motion approval implied."
+}

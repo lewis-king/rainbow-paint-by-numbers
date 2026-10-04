@@ -1,0 +1,19 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "verdict": "PASS",
+  "sha256": "9cf1d40bf412cd278785362cba7d41c07242e4f29e11e32cdfd6374c69d9f650",
+  "image": "image-processing/generation/runs/38/image.png",
+  "subject": "Hedgehog",
+  "observations": [
+    "Recognizable hedgehog with two eyes, ears and feet; a leaf plausibly occludes one forelimb.",
+    "Brown spines, tan face/body, turquoise scarf, large yellow leaf, red apple, purple mushroom cap, orange stalk and green vegetation supply substantial contrasting colors.",
+    "Separate scarf ends, paired feet/ears and green plants repeat colors; large props improve engagement beyond the old brown animal/apple. Leaf veins and gloss do not count as extra regions."
+  ],
+  "defects": [],
+  "suggestions": [
+    "Keep broad shapes; suppress gloss slivers, thin leaf veins and scarf-fringe microregions in processing."
+  ],
+  "scope": "Source visual engagement/anatomy/cleanliness gate for ages 4+, judged against user-approved 35/37. Source PASS is not playable-output approval.",
+  "method": "Current full source inspected individually with view_image; palette excludes background, ink, tiny highlights and neighboring shade inflation."
+}

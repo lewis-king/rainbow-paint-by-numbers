@@ -1,0 +1,11 @@
+{
+  "id": "45",
+  "stage": "video",
+  "prompt_id": "3f383ed7-a93d-46b6-8d34-432c1f975821",
+  "status": "completed",
+  "started_at": 1791122119.7326946,
+  "finished_at": 1791122274.7948568,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/45/video.mp4",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/video/45-excavator_00001_.mp4",
+  "sha256": "ae1fa4a68f43ebe1792e72416441794255af33e98a88678d592cb019de28b86c"
+}

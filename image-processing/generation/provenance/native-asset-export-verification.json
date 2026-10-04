@@ -1,0 +1,12 @@
+[
+  {
+    "platform": "android",
+    "export_directory": "/tmp/rainbow-assets-android-20261004",
+    "verified_new_image_video_assets": 120
+  },
+  {
+    "platform": "ios",
+    "export_directory": "/tmp/rainbow-assets-ios-20261004",
+    "verified_new_image_video_assets": 120
+  }
+]

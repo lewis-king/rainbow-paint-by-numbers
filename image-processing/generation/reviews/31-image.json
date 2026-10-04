@@ -1,0 +1,33 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "sha256": "bb620ce157ce0432d07d8380c6622bf3a24c34458077b599cc0bbef98d8bde5a",
+  "image": "image-processing/generation/runs/31/image.png",
+  "subject": "Kangaroo",
+  "verdict": "PASS",
+  "observations": [
+    "Coherent mother kangaroo with long ears, two eyes, long tail, bent hind legs and a joey emerging from a pouch. The ball plausibly occludes part of the far hind foot.",
+    "Orange animal, cream pouch/belly, pink inner ears, turquoise scarf, purple joey hat, brown paws and broad red/yellow ball panels provide roughly eight meaningful color families. Tiny grass and shading do not justify the palette.",
+    "Paired ears and paws plus repeated broad red/yellow ball panels offer repeated color regions; large scarf, pouch and hat keep the main activities substantial.",
+    "The composition is substantially more engaging than the old orange/tan kangaroo. Cel shading, scarf fringe and small joey facial details are less clean than the flat butterfly benchmark but do not obscure the main subject or its broad paintable areas."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Inspect joey face/paws and scarf fringe for tiny extracted regions; retain facial ink rather than numbering every highlight.",
+    "Merge unnecessary shadow shades; verify the substantial scarf/hat/ball palette remains distinct."
+  ],
+  "method": "Individual current image visually inspected with view_image; decisions consider substantial contrasting colors, meaningful repeated regions, anatomy and cleanliness against user-approved 35/37 benchmarks.",
+  "scope": "Source-image visual gate for this exact hash only. PASS permits processor evaluation; it does not approve extracted regions, final number placement, gameplay assets or video.",
+  "processed_visual_review": {
+    "verdict": "FAIL",
+    "source_sha256": "bb620ce157ce0432d07d8380c6622bf3a24c34458077b599cc0bbef98d8bde5a",
+    "unpainted": "image-processing/generation/paintability-candidates/processed/31/unpainted.png",
+    "unpainted_sha256": "a0f45e29e279f1b1181184b17ffec6d59c350f8b2b7a836ddaa1e082741efc23",
+    "number_labels": 80,
+    "observations": [
+      "80 labels: many sit on narrow ear/face/tail contours and tiny joey features; several overlap eyes or adjacent regions. Broad source colors do not make this output usable.",
+      "Merge shade and edge fragments; simplify joey/fringe details if needed, preserve ink, then regenerate labels."
+    ],
+    "playable_approval": false
+  }
+}

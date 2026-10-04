@@ -1,0 +1,74 @@
+{
+  "reviewer": "gpt6astra",
+  "verdict": "FAIL",
+  "status": "FAIL",
+  "review_date": "2026-10-04",
+  "acceptance_basis": "Preserve substantial painting engagement and readable phone labels; no mandatory six-color rule. Small fixed details are acceptable; prominent colored features must not be removed from play merely to meet clearance.",
+  "limitations": [
+    "Static visual review only; no native UI or touch test. Reward video not independently reviewed.",
+    "No generation, processor, audit, build or emulator run. Only requested review JSON files written."
+  ],
+  "id": "37",
+  "scope": "Final processed visual gate for this exact bundle only.",
+  "asset_directory": "image-processing/app_assets/37",
+  "source_sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+  "sha256": "94c720b1dbbb0be970114d69f3929e2d0774933a10c1148ade410c0a2239177d",
+  "bundle_sha256": "94c720b1dbbb0be970114d69f3929e2d0774933a10c1148ade410c0a2239177d",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256; concatenate each filename encoded UTF-8 then its raw file bytes, in bundle_file_order; no delimiters",
+  "artifact_sha256": {
+    "data.json": "33cf06d4ecd81c46896403299330343d92445cacdea91392bafee9231d041ff0",
+    "original.png": "e2943ee6fffd23cc6c245020cb0315b3c4ce2152804e797ffc27a58c6b5b53d4",
+    "lines.png": "1e9f969af77d7abdde097bf51e8f4a38fc8e55b68d3e28931a094b4e97caf9a8",
+    "map.png": "ced439893288d096fb1d75c349bd7667c16f113dd406b105427164acd889ad74",
+    "reward.mp4": "a9f29a56aa7200f4633e51d9952bba2f85467c7d1ba9f9a86676e8e6e68e96f0"
+  },
+  "phone_preview_sha256": "97e3aeae37404780e4ff072d42557c259d3af4267689a7447430c8c1afff488a",
+  "processing_receipt": {
+    "image_sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+    "video_sha256": "a9f29a56aa7200f4633e51d9952bba2f85467c7d1ba9f9a86676e8e6e68e96f0",
+    "processor_sha256": "97c871e7614260eabf78f325b91261d1a29132ad8cf84cfb1c4e6598c07c520d",
+    "bundle_sha256": "94c720b1dbbb0be970114d69f3929e2d0774933a10c1148ade410c0a2239177d",
+    "beginner_mode": true
+  },
+  "palette_entries": 5,
+  "number_labels": 10,
+  "inspection_method": "Individually viewed current run source, final processed original and existing 344px phone-preview.png. Compared visible label numbers with current data.json. Phone rendering is an approximation.",
+  "prior_revision_reassessment": "Revision 5 rejection based solely on fewer than six meaningful colors is not adopted. Current verdict is based on lost substantial paintable features.",
+  "source_widening_necessary": true,
+  "meaningful_color_groups": 4,
+  "meaningful_color_groups_details": [
+    "brown patches",
+    "gold bell",
+    "pink muzzle and ears",
+    "cream body plus similar shaded cream rear leg; not counted as two contrasting families"
+  ],
+  "observations": [
+    "The user-approved cow benchmark remains attractive and recognizable. Keep its pose, face, patches, bell and overall design.",
+    "Ten remaining labels appear distinguishable at phone scale; broad body, muzzle and patches remain paintable.",
+    "Five palette entries include two cream shades. This is not a six-color policy failure. The prominent teal collar, its only cool contrasting feature, is entirely prefilled; hooves and tail tip are also fixed small details."
+  ],
+  "defects": [
+    {
+      "code": "PROMINENT_COLLAR_PREFILLED",
+      "severity": "blocking",
+      "description": "The substantial teal collar is already colored, removing a meaningful contrasting paint action from the benchmark design.",
+      "action": "Widen only the main teal collar band enough to become a comfortable numbered region. Small connectors, hooves and tail details may stay fixed."
+    }
+  ],
+  "geometry_evidence": {
+    "provenance": "Measurement supplied in task; not recomputed by an audit.",
+    "teal_collar_max_radius_image_px": 15.4,
+    "processor_min_radius_image_px": 20,
+    "phone_glyph_height_px": 10,
+    "image_height_for_10px_glyph_at_344px": 29.77,
+    "interpretation": "Current collar fails the radius filter and leaves little glyph margin. Locally widen it rather than adding unrelated colors or redesigning the cow."
+  },
+  "minimal_qwen_image_edit": "Use the current cow image as the benchmark and preserve its design, pose, friendly animal face, horns, four legs, brown patches, cream body, pink muzzle, yellow bell and white background. Change only the main teal collar: broaden its lower/right arc enough to leave an uninterrupted interior roughly 50-60 image pixels across at one label site after outlining. Keep the collar curved and the bell in place; small attachment details may remain small. Do not add decorations, new colors, text, numbers or faces on the bell or any object. Preserve the overall cow silhouette. Re-review processed extraction and phone labels later; do not execute now."
+}

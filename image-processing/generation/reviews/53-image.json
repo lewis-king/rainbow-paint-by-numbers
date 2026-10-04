@@ -1,0 +1,23 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "60d1a7dee351cc4435eab26e542aaba9b4608d5f3611850cbc72100fb6fb951c",
+  "image": "image-processing/generation/runs/53/image.png",
+  "subject": "Present",
+  "observations": [
+    "All balloon motifs are face-free, including the small rear balloon on the right panel; bow, stars and wrapping contain no character features.",
+    "Red bow, yellow ribbon, blue lid, turquoise front, purple side, orange stars, green balloon and pink balloons retain eight meaningful colors and repeated stars/ribbon/balloon regions.",
+    "The former orange rear balloon is now pink; orange remains substantial in three large stars, so the palette remains engaging."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Current full source inspected individually: no anthropomorphic eyes, mouths or character features on objects, props or motifs."
+  },
+  "processed_gate_checks": [
+    "Separate processor QA must check tiny highlights, narrow trim, background holes and readable numbers while preserving large color regions."
+  ],
+  "scope": "Exact-current-hash source visual engagement and no-faces approval only. Supersedes the archived faced image; no processed-output or motion approval implied."
+}

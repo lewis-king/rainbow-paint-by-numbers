@@ -1,0 +1,92 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "d7a5807d4b80379ef28ceeb098254eaf97890b5220631c599ae8c17b5cd0e38a",
+  "video": "image-processing/generation/runs/42/video.mp4",
+  "source_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+  "source_image": "image-processing/generation/runs/42/image.png",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "overview_frame_indices": [
+      0,
+      11,
+      22,
+      34,
+      45,
+      56,
+      67,
+      78,
+      89,
+      101,
+      112,
+      123
+    ],
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "overview_sample_count": 12,
+    "dense_sample_count": 32,
+    "description": "Individually inspected chronological overview sheet of 12 evenly spaced frames plus denser sheets sampling every fourth frame and final frame. Compared against previously visually inspected exact-hash source. Metadata verified with ffprobe. No realtime playback claimed."
+  },
+  "observations": [
+    "Replacement uses bounded side-to-side rocking with mild basket/rope sway rather than sustained upward travel.",
+    "Entire balloon envelope and basket stay inside the frame across all overview and dense samples, resolving the previous cropped-envelope failure.",
+    "Orange, yellow, green, blue and purple panels remain ordered and stable; brown basket and suspension ropes remain connected and coherent.",
+    "Visible restrained swaying is appropriate to a balloon, with no face, character features, unexpected objects or obvious morphing."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampling cannot guarantee frame-perfect smoothness, absence of every inter-sample artifact or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

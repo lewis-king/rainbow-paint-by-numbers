@@ -1,0 +1,108 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "Flat vector art, children's coloring book style. ONE friendly golden yellow camel in side view with two rounded humps, four simple broad legs and a long curved neck. It wears a large turquoise saddle blanket with a broad red border and three large purple diamonds. An orange halter around its cream muzzle. ONE separate green cactus with ONE pink flower grows on the ground to the left of the camel with a clear white gap between cactus and animal. No objects on its back except the blanket. ONE large central composition, generous white margin. Very simple bold shapes, thick uniform BLACK outlines, vibrant SOLID flat colors, white background, high contrast, 2d game asset. Large enclosed color areas for age 4 paint by numbers. No collage, no sticker sheet, no grid, no repeated subjects, no text, no numbers, no shading, no highlights, no gradients, no texture.",
+      "negative_prompt": "shading, gradients, noise, texture, realistic, photography, 3d, rendering, complex details, fuzzy, sketch, watermark, text, greyscale, missing eyes, extra limbs, cropped subject",
+      "resolution": 1024,
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 2026110540,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/image/40-camel"
+    }
+  }
+}

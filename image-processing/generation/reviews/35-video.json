@@ -1,0 +1,84 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "3e1ba167a3f2cfe76474c5ee33c35e92fa45620d3ffd2e022588353437070d29",
+  "video": "image-processing/generation/runs/35/video.mp4",
+  "source_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+  "source_image": "image-processing/generation/runs/35/image.png",
+  "prompt_id": "1d3c7e17-c76f-4cb1-9d3c-1f55603a421a",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "dense_sample_count": 32,
+    "description": "Actually visually inspected four chronological sheets using view_image, every fourth frame plus last, against individually viewed exact-hash approved source. FFmpeg decoding limited to two CPU threads; no GPU submission or painting processor. Live Comfy history verified successful generation.",
+    "evidence_sheets": [
+      "/tmp/astra-qa35/dense-1.jpg",
+      "/tmp/astra-qa35/dense-2.jpg",
+      "/tmp/astra-qa35/dense-3.jpg",
+      "/tmp/astra-qa35/dense-4.jpg"
+    ]
+  },
+  "observations": [
+    "Toucan performs a bounded wing lift and lowering with beak opening, subtle body bobbing and blinking; meaningful character motion is visible across samples.",
+    "One visible wing extends coherently from the body and folds back; both blue feet retain their grip on the branch. Head, eye, beak and tail remain coherent without observed extra or malformed anatomy.",
+    "Black body, white throat, yellow eye patch and orange two-part beak preserve the approved source appearance.",
+    "Branch and all three green leaves persist, with no faces on props. Bird, extended wing, beak, tail and branch remain fully inside the image throughout sampled frames; no cropping or unintended morphing observed."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled visual inspection is not realtime playback or inspection of every frame. Sampling cannot guarantee frame-perfect smoothness, absence of inter-sample artifacts or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

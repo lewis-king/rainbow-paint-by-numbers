@@ -1,0 +1,315 @@
+{
+  "sha256": "1e6a5504fbd0a18d9c94bdcf39f8faa242bb79cc76be7db7fb84aca9cef1f4ea",
+  "artifact_sha256": {
+    "data.json": "d4e873eaf19225f8a27f8261a335a03e568f445d1cb980c3daddb15408b23329",
+    "original.png": "3aeb7bc93dc4c2bbfdd08caa90eb78bf8f6350fdc4b4b4c3f97df77e5edfae87",
+    "lines.png": "efde29f7eec8e1d5e496217e069f30192a24eb1f7e1709e1f6a903e501040323",
+    "map.png": "24c005c0957a1746ebc894e7fc35e0da3650a56410c6e5b50114b255573d046c",
+    "reward.mp4": "ace604389e0bbed8f9b971456880eb6208be001d111a3e7867591eaf4a06d35e"
+  },
+  "file_sizes": {
+    "data.json": 1247,
+    "original.png": 39131,
+    "lines.png": 26705,
+    "map.png": 18835,
+    "reward.mp4": 493484
+  },
+  "source_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "0c8e55ec36d643e6ca1712f3943d8e6385348c8b6bb86893e57cd335eaf3caa5",
+      "artifact_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+      "review_path": "image-processing/generation/reviews/41-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "7011dba617619877863950b256479f9c6504fe74642885dae68c1836e1417e32",
+      "artifact_sha256": "ace604389e0bbed8f9b971456880eb6208be001d111a3e7867591eaf4a06d35e",
+      "review_path": "image-processing/generation/reviews/41-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 8,
+  "number_labels": 11,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": {
+    "area_cutoff": 1800,
+    "entries": [
+      {
+        "index": 0,
+        "hex": "#e3201a",
+        "area": 13792,
+        "radius": 48.4,
+        "substantial": true,
+        "lab": [
+          48.724365234375,
+          69.78125,
+          53.765625
+        ]
+      },
+      {
+        "index": 1,
+        "hex": "#2cb15c",
+        "area": 29117,
+        "radius": 49.0,
+        "substantial": true,
+        "lab": [
+          63.8916015625,
+          -53.859375,
+          33.609375
+        ]
+      },
+      {
+        "index": 2,
+        "hex": "#f57b01",
+        "area": 32688,
+        "radius": 48.57,
+        "substantial": true,
+        "lab": [
+          64.4775390625,
+          41.46875,
+          71.5625
+        ]
+      },
+      {
+        "index": 3,
+        "hex": "#7a45c0",
+        "area": 37572,
+        "radius": 56.15,
+        "substantial": true,
+        "lab": [
+          41.424560546875,
+          47.703125,
+          -56.34375
+        ]
+      },
+      {
+        "index": 4,
+        "hex": "#03befe",
+        "area": 14892,
+        "radius": 50.57,
+        "substantial": true,
+        "lab": [
+          72.15576171875,
+          -17.28125,
+          -42.609375
+        ]
+      },
+      {
+        "index": 5,
+        "hex": "#fdc602",
+        "area": 13238,
+        "radius": 54.0,
+        "substantial": true,
+        "lab": [
+          82.415771484375,
+          5.859375,
+          83.671875
+        ]
+      },
+      {
+        "index": 6,
+        "hex": "#fc75bf",
+        "area": 2596,
+        "radius": 20.77,
+        "substantial": true,
+        "lab": [
+          67.27294921875,
+          59.40625,
+          -14.09375
+        ]
+      },
+      {
+        "index": 7,
+        "hex": "#f9eaca",
+        "area": 38704,
+        "radius": 42.0,
+        "substantial": true,
+        "lab": [
+          92.98095703125,
+          0.046875,
+          17.328125
+        ]
+      }
+    ],
+    "meaningful_color_groups": 8,
+    "groups": [
+      [
+        7
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        4
+      ],
+      [
+        0
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ]
+    ]
+  },
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 524,
+      "y": 120,
+      "color_index": 0,
+      "screen_radius_px_at_344": 16.26
+    },
+    {
+      "number": 2,
+      "x": 339,
+      "y": 561,
+      "color_index": 1,
+      "screen_radius_px_at_344": 16.46
+    },
+    {
+      "number": 2,
+      "x": 674,
+      "y": 562,
+      "color_index": 1,
+      "screen_radius_px_at_344": 16.39
+    },
+    {
+      "number": 3,
+      "x": 506,
+      "y": 520,
+      "color_index": 2,
+      "screen_radius_px_at_344": 8.73
+    },
+    {
+      "number": 3,
+      "x": 508,
+      "y": 854,
+      "color_index": 2,
+      "screen_radius_px_at_344": 16.32
+    },
+    {
+      "number": 4,
+      "x": 586,
+      "y": 469,
+      "color_index": 3,
+      "screen_radius_px_at_344": 18.86
+    },
+    {
+      "number": 5,
+      "x": 514,
+      "y": 295,
+      "color_index": 4,
+      "screen_radius_px_at_344": 16.99
+    },
+    {
+      "number": 5,
+      "x": 379,
+      "y": 744,
+      "color_index": 4,
+      "screen_radius_px_at_344": 6.85
+    },
+    {
+      "number": 6,
+      "x": 500,
+      "y": 722,
+      "color_index": 5,
+      "screen_radius_px_at_344": 18.14
+    },
+    {
+      "number": 7,
+      "x": 634,
+      "y": 751,
+      "color_index": 6,
+      "screen_radius_px_at_344": 6.98
+    },
+    {
+      "number": 8,
+      "x": 614,
+      "y": 361,
+      "color_index": 7,
+      "screen_radius_px_at_344": 14.11
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 11,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 14498,
+  "fixed_color_mismatch_pixels": 0,
+  "paintable_pixels_obscured_by_overlay": 8926,
+  "enclosed_unpaintable_transparent_regions": [],
+  "phone_preview_sha256": "9b41cea58931404c7cc7e2c3933e9fbdc75154ab919ed88bbe73b0ed58737079",
+  "id": "41",
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "processor_revision": 7,
+  "reviewed_at": "2026-10-04T09:33:28.498108+00:00",
+  "verdict": "PASS",
+  "status": "PASS",
+  "bundle_sha256": "1e6a5504fbd0a18d9c94bdcf39f8faa242bb79cc76be7db7fb84aca9cef1f4ea",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/41",
+  "scope": "Current final processed visual artifact gate only; no native UI play or new video visual review. Existing source/video PASS gates verified against current bytes using promote.approved.",
+  "inspection_method": "Individually viewed current original.png, lines.png and fresh generation/phone_previews.py --final 344px preview. Current single-thread OpenCV/PIL checks measure map components, substantial palette area/radius, label clearance and fixed RGB; no processor or paintability_audit executed.",
+  "phone_preview_provenance": "image-processing/app_assets/41/phone-preview.png regenerated with python generation/phone_previews.py --final 41 42 43",
+  "meaningful_color_groups": 8,
+  "visible_region_coverage": {
+    "verdict": "PASS",
+    "unlabelled_transparent_paintable_components_at_least_20_pixels_after_overlay": 0,
+    "method": "Visual enclosure assessment plus four-connected components of (map < 254) AND (lines alpha == 0); each component >=20 pixels contains a metadata label."
+  },
+  "observations": [
+    "Face-free rocket retains nose cone, porthole, paired fins, center fin, nozzle, flame and stars. No anthropomorphic features on rocket or stars.",
+    "Eight substantial distinct paintable colors remain: red nose, green fins, orange center fin/outer flame, purple hull, blue window/star, yellow flame core, pink star and cream upper hull. Current map supports each, including pink star area 2596 pixels and maximum radius 20.77 image pixels.",
+    "Prior cramped window-ring and lower-band numbers are removed: the ring is fixed orange and both narrow bands are fixed dark purple. Prior unlabelled upper-left orange flame pocket is now visibly fixed orange.",
+    "All 11 paintable components carry exactly one label. Fresh 344px preview shows readable numbers in the two stars and center fin as well as broad body regions; minimum map-center clearance is 6.85 screen pixels. No visible unlabelled white enclosure found.",
+    "All 14498 nonblack fixed-color pixels match original.png RGB exactly, including ring, bands, highlights and formerly unlabelled orange pocket."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "sha256": "e7464dda59d7ef6ab99f37247e1f9321e6e823d218603f8f9b57b57269a8b699",
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Window-ring number 4 at (525,209) has 3.42px screen-radius clearance at 344px and visibly crowds the upper annulus contour in the 10px-font preview. Lower-band numbers 1 at (462,614) and (564,613) have only 5.03px and 4.77px clearance and crowd their band contours.",
+        "action": "Make narrow ring/band details fixed colors or provide wider label regions; repeat phone-scale visual review."
+      },
+      {
+        "code": "VISIBLE_UNLABELLED_ENCLOSED_REGION",
+        "severity": "blocking",
+        "description": "Orange flame pocket, 1340 map pixels at bbox [407,666,66,65], color index 3, is separated from labelled orange flame by nozzle/yellow core/blue star. It has no number and remains unpainted rather than fixed-colored.",
+        "action": "Assign an independently readable label if space permits, or retain this pocket as fixed orange artwork."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at 344px canvas width; this approximates actual UI/Skia glyph metrics and layout. No native UI or touch interaction tested.",
+    "Reward animation not visually re-reviewed in this pass; existing source/video PASS records were checked against exact current files."
+  ]
+}

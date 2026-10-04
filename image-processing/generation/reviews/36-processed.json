@@ -1,0 +1,235 @@
+{
+  "id": "36",
+  "sha256": "de2b90da7425290e5b8815ca6beabc0b5713a3804a59ea044c7645d50c33a688",
+  "artifact_sha256": {
+    "data.json": "be2483e2342015704e7cf69d5581a7a1d8665b14707a213acea667f5c95076f1",
+    "original.png": "30832bbf21ecb63b791450ec22a8736f024e55eb1739b5578cc2645378a999df",
+    "lines.png": "64a8b2de8fb68512ab9fd89cea7fcd1f0cce91f98712b485e246d63b7b91db3b",
+    "map.png": "be68ec550924b0007faa9086a90d3e4793ddbebf3cf15c232cbea85d4dabbaed",
+    "reward.mp4": "838701cb3762885746e24474fedf661a9a1f05a38b3145800fe6184ec0d9b9d6"
+  },
+  "file_sizes": {
+    "data.json": 1493,
+    "original.png": 50960,
+    "lines.png": 38836,
+    "map.png": 21291,
+    "reward.mp4": 1019362
+  },
+  "source_sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "d7498798cb2425f9cca187fed0286514fb53714e1ef0d5b4a6ff8ed733712dad",
+      "artifact_sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
+      "review_path": "image-processing/generation/reviews/36-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "5d8b0eedc35b66c387178be5c041d6b30368aa1f321bbfc6bd9e574b1dfc2c5f",
+      "artifact_sha256": "838701cb3762885746e24474fedf661a9a1f05a38b3145800fe6184ec0d9b9d6",
+      "review_path": "image-processing/generation/reviews/36-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 7,
+  "number_labels": 14,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": [
+    {
+      "index": 0,
+      "hex": "#f70008",
+      "area": 31930,
+      "max_screen_radius_px": 14.58
+    },
+    {
+      "index": 1,
+      "hex": "#37b712",
+      "area": 90387,
+      "max_screen_radius_px": 21.84
+    },
+    {
+      "index": 2,
+      "hex": "#f78701",
+      "area": 4685,
+      "max_screen_radius_px": 10.41
+    },
+    {
+      "index": 3,
+      "hex": "#00cefc",
+      "area": 10390,
+      "max_screen_radius_px": 7.99
+    },
+    {
+      "index": 4,
+      "hex": "#f9817b",
+      "area": 3104,
+      "max_screen_radius_px": 7.12
+    },
+    {
+      "index": 5,
+      "hex": "#f1c086",
+      "area": 47738,
+      "max_screen_radius_px": 17.8
+    },
+    {
+      "index": 6,
+      "hex": "#e9dac1",
+      "area": 159165,
+      "max_screen_radius_px": 46.36
+    }
+  ],
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 563,
+      "y": 403,
+      "color_index": 0,
+      "screen_radius_px_at_344": 14.58
+    },
+    {
+      "number": 2,
+      "x": 237,
+      "y": 724,
+      "color_index": 1,
+      "screen_radius_px_at_344": 7.52
+    },
+    {
+      "number": 2,
+      "x": 120,
+      "y": 736,
+      "color_index": 1,
+      "screen_radius_px_at_344": 7.92
+    },
+    {
+      "number": 2,
+      "x": 299,
+      "y": 816,
+      "color_index": 1,
+      "screen_radius_px_at_344": 21.84
+    },
+    {
+      "number": 3,
+      "x": 422,
+      "y": 564,
+      "color_index": 2,
+      "screen_radius_px_at_344": 10.41
+    },
+    {
+      "number": 4,
+      "x": 177,
+      "y": 583,
+      "color_index": 3,
+      "screen_radius_px_at_344": 7.99
+    },
+    {
+      "number": 5,
+      "x": 617,
+      "y": 306,
+      "color_index": 4,
+      "screen_radius_px_at_344": 7.12
+    },
+    {
+      "number": 6,
+      "x": 400,
+      "y": 318,
+      "color_index": 5,
+      "screen_radius_px_at_344": 17.8
+    },
+    {
+      "number": 6,
+      "x": 678,
+      "y": 716,
+      "color_index": 5,
+      "screen_radius_px_at_344": 8.53
+    },
+    {
+      "number": 6,
+      "x": 407,
+      "y": 742,
+      "color_index": 5,
+      "screen_radius_px_at_344": 8.73
+    },
+    {
+      "number": 6,
+      "x": 755,
+      "y": 737,
+      "color_index": 5,
+      "screen_radius_px_at_344": 8.73
+    },
+    {
+      "number": 6,
+      "x": 496,
+      "y": 752,
+      "color_index": 5,
+      "screen_radius_px_at_344": 9.41
+    },
+    {
+      "number": 7,
+      "x": 419,
+      "y": 180,
+      "color_index": 6,
+      "screen_radius_px_at_344": 20.2
+    },
+    {
+      "number": 7,
+      "x": 720,
+      "y": 509,
+      "color_index": 6,
+      "screen_radius_px_at_344": 46.36
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 14,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 37705,
+  "fixed_color_mismatch_pixels": 0,
+  "enclosed_unpaintable_transparent_regions": [],
+  "phone_preview_current": true,
+  "phone_preview_sha256": "7257c2ee9f2ff39d65b0796ee302b01ac73defdbcf88db339089e29bff0b8676",
+  "verdict": "PASS",
+  "meaningful_color_groups": 7,
+  "observations": [
+    "Full 1024px colored original and native 344px phone preview inspected individually. Sheep retains two eyes, complete nose/mouth, two ears, woolly body, tail and all four legs/hooves. Both flowers retain coherent shapes.",
+    "Seven meaningful paintable colors: red scarf, green leaves/ground, orange scarf patch, cyan left flower, coral right inner ear, tan face/four legs and cream wool. Each occupies 3104 or more map pixels. Fixed purple flower, brown hooves, left inner ear and orange flower centers are not counted as additional paint choices.",
+    "All 14 four-connected paintable components have exactly one matching label. The native 10px numbers are readable, including right ear, left flower and four legs; minimum map-center clearance 7.12 screen pixels.",
+    "Every visible enclosed unfilled region is numbered. Small wool-edge pockets, spaces between the legs, flower centers, hooves and left inner ear are fixed rather than blank unlabeled paint targets. No enclosed transparent unpaintable components were found.",
+    "Fixed colored pixels match the current original exactly (zero RGB mismatches). Asymmetric fixed/paintable ears and flowers reduce repetition somewhat but still leave seven substantial varied colors and 14 accessible numbered regions."
+  ],
+  "defects": [],
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "reviewed_at": "2026-10-04T13:12:54.531382+00:00",
+  "status": "PASS",
+  "bundle_sha256": "de2b90da7425290e5b8815ca6beabc0b5713a3804a59ea044c7645d50c33a688",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/36",
+  "scope": "Current final processed visual artifact gate only. Existing exact-hash source/video PASS records checked via promote.approved. No integration or new video visual approval.",
+  "inspection_method": "Individually viewed full-size original.png, native-size unpainted phone-preview.png and full-size lines.png. Also viewed approved source for 39. Existing phone previews verified pixel-for-pixel against current data/lines; missing 39 preview generated with phone_previews.py --final. Sequential lightweight NumPy/PIL/OpenCV checks, cv2 threads capped at 2.",
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at a 344px canvas width; native UI/Skia and touch interaction not tested.",
+    "Reward videos not visually re-reviewed; relied on current exact-hash source/video PASS records."
+  ],
+  "heavywork": false,
+  "review_dispatch": {
+    "tool": "multi_agent_v1.spawn_agent",
+    "requested_model": "gpt-6-astra",
+    "agent_id": "01a10708-bd1d-7152-aadb-45a313fdb14f",
+    "nickname": "Fermat",
+    "nested_reviewer_used": false
+  }
+}

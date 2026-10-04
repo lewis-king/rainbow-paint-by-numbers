@@ -1,0 +1,16 @@
+{
+  "id": "52",
+  "slug": "rain-boots",
+  "title": "Rain Boots",
+  "category": "everyday",
+  "seed": 2026111452,
+  "image_prompt": "Edit this existing illustration. Remove both faces on the boots. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Rain Boots, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A pair of cheerful patterned yellow rain boots takes two small alternating steps beside an open colorful umbrella. The open umbrella gently rocks. Preserve all colors, patterns and shapes. Fixed camera, white background, smooth motion, no new objects, no text. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "image_reference": "sources/52/reference.png",
+  "image_reference_sha256": "d670b54c7452b5a01d660406332b8550c6ee6b4d449d136c463e716c7c581d14"
+}

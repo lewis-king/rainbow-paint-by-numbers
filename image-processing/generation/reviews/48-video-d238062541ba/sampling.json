@@ -1,0 +1,67 @@
+{
+  "id": 48,
+  "source_image": "image-processing/generation/runs/48/image.png",
+  "source_sha256": "d0a0a17ce72707007e02a1d4e3f154f742dfac45a5549e0e61b70d750887eead",
+  "video": "image-processing/generation/runs/48/video.mp4",
+  "sha256": "d238062541ba50fe0dbfafc343b51223e0294d87156c97d3b91526560a1ad0d3",
+  "video_sha256": "d238062541ba50fe0dbfafc343b51223e0294d87156c97d3b91526560a1ad0d3",
+  "prompt_id": "cd39db25-f9e2-4220-b0b5-d1318ee26b56",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "frame_indices": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    63,
+    67,
+    71,
+    75,
+    79,
+    83,
+    87,
+    91,
+    95,
+    99,
+    103,
+    107,
+    111,
+    115,
+    119,
+    123
+  ],
+  "evidence_sheets": [
+    "image-processing/generation/reviews/48-video-d238062541ba/contact-1.jpg",
+    "image-processing/generation/reviews/48-video-d238062541ba/contact-2.jpg",
+    "image-processing/generation/reviews/48-video-d238062541ba/contact-3.jpg",
+    "image-processing/generation/reviews/48-video-d238062541ba/contact-4.jpg"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "50",
+  "video": "image-processing/generation/runs/50/video.mp4",
+  "sha256": "7292a41017546b0adf7f71a4a8890620ea6b003d044ce89a0394844dbfbd9685",
+  "source_image": "image-processing/generation/runs/50/image.png",
+  "source_sha256": "4869a3d34d7de21c0cb8b65275c1a16328e7595d406a2a755da46361531daac1",
+  "job_sha256_match": true,
+  "source_approval_sha256_match": true,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "contact_sheets": [
+    {
+      "path": "image-processing/generation/reviews/50-video-contact-1.png",
+      "sha256": "7bd4f4068f149ff09e6633d1314edf44d3546e8b8ff0e7fb0e9bdbb933141e1f",
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48,
+        52,
+        56,
+        60
+      ]
+    },
+    {
+      "path": "image-processing/generation/reviews/50-video-contact-2.png",
+      "sha256": "a596e0635cc0ff35051b8529df712d5218f725952bce84c41101e3e833a600a1",
+      "frame_indices": [
+        63,
+        67,
+        71,
+        75,
+        79,
+        83,
+        87,
+        91,
+        95,
+        99,
+        103,
+        107,
+        111,
+        115,
+        119,
+        123
+      ]
+    }
+  ],
+  "prompt_id": "b0bf2640-dbdb-40da-8e32-cf22dabab17f",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_model_provenance": "Astra parent dispatch, as confirmed by user; not inferred from assistant persona.",
+  "reviewed_at": "2026-10-04T14:11:35.472847+00:00",
+  "generation_history_status": "success",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "sample_count": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "visual_inspection": "Source and both chronological contact sheets inspected with view_image.",
+    "decode": "CPU only; ffmpeg -hwaccel none; decoder/output threads 2; filter_threads and filter_complex_threads 1; sequential extraction."
+  },
+  "scope": "Exact-hash source/video visual reward gate only; no processing or integration approval.",
+  "limitations": [
+    "32 sampled frames cannot guarantee absence of every inter-sample artifact, frame-perfect smoothness, or seamless looping."
+  ],
+  "verdict": "PASS",
+  "observations": [
+    "Turquoise teapot with coral lid/knob, handle and base trim preserves its purple band and three yellow/orange flowers. Blue cup, green handle and yellow saucer remain intact and in their source arrangement.",
+    "The lid lifts a small distance in frames 12\u201336 and settles by about frame 44; the cup gently rocks over its saucer through the middle/late samples and returns upright near the end. Motion remains restrained and coherent.",
+    "All source components remain visible in-frame; no new eyes, mouths, faces, limbs, disappearing spout/handles, or color substitutions appear in the 32 samples."
+  ],
+  "defects": [],
+  "checks": {
+    "source_structure_and_colors": "PASS",
+    "gentle_coherent_motion": "PASS",
+    "no_object_faces": "PASS",
+    "no_cropping_or_disappearing_parts": "PASS"
+  }
+}

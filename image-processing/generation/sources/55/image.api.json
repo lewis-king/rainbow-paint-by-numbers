@@ -1,0 +1,118 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "Edit this colorful toy xylophone illustration to correct its construction. Keep the five large red, yellow, green, cyan and blue bars, orange wooden base, bold black outlines, plain white background and large simple flat-color shapes. Replace all visible supports beneath the base with exactly two matching SHORT squat rectangular wooden feet, one near each end. Remove the long paddle-like shape beneath the right side completely. Show exactly TWO separate complete mallets floating ABOVE the instrument with clear white gaps: one purple round head with one straight pale wooden handle, and one golden-yellow round head with one straight pale wooden handle. Both complete handles must be visible against white and must not intersect, hide behind or connect to the xylophone, its legs, or each other. The two mallets are tools clearly separate from the instrument. Preserve recognizable perspective and generous margins. No extra handles, extra legs, faces, eyes, mouths, text, numbers, gradients or shadows.",
+      "negative_prompt": "shading, gradients, noise, texture, realistic, photography, 3d, rendering, complex details, fuzzy, sketch, watermark, text, greyscale, missing eyes, extra limbs, cropped subject",
+      "resolution": 1024,
+      "vae": [
+        "3",
+        0
+      ],
+      "images.image_1": [
+        "10",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "seed": 2026101455,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/image/55-xylophone"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "rainbow-paint-by-numbers/references/55.png"
+    }
+  }
+}

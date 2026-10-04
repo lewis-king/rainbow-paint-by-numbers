@@ -1,0 +1,15 @@
+{
+  "id": "56",
+  "slug": "guitar",
+  "title": "Guitar",
+  "category": "toys",
+  "seed": 2026113556,
+  "image_prompt": "Flat vector illustration for a children's paint-by-numbers game, age four and up. A delightful colorful acoustic guitar and a separate round tambourine, arranged diagonally in one balanced playful composition on a pure white background. The guitar has a recognizable curvy hourglass body: broad coral-red upper shoulders and golden-yellow lower body divided by a smooth sweeping boundary, a thick turquoise rim around one circular dark soundhole, a small brown bridge and a slender proportionate warm-brown neck with a rounded blue headstock and six simple orange tuning pegs. Three fine straight black string lines connect bridge to headstock continuously; not giant black stripes or a rectangular colored plank. The guitar leans gently to the right. Beside it on the lower left is one tilted circular tambourine with a broad grass-green wooden frame and five clearly attached golden jingle pairs, open white center, visually separate from guitar. A folded purple fabric ribbon tied simply to the tambourine has two broad curved tails, giving another large color area; no intricate folds or patterns. Strong recognizable instrument construction, friendly rounded shapes but NO anthropomorphic faces, no eyes or mouths. Broad enclosed flat-color areas, thick clean uniform black outlines, complete objects inside generous white margins, minimalist coherent composition. No shadows, gradients, texture, musical notes, text, numbers, hands, extra instruments or duplicated parts.",
+  "video_prompt": "A lively but gentle flat 2D musical-instrument animation for young children. BOTH instruments visibly move throughout the clip, independently in place. The GREEN TAMBOURINE on the LEFT actively shakes left-right in a small rhythmic motion, tilting alternately a few degrees clockwise and counterclockwise. Its whole green ring and attached golden jingles visibly move together; the jingle pairs gently rattle in their mounting positions and the two purple ribbon tails flutter softly in response. Do not leave the tambourine frozen or motionless. At the same time the CORAL AND YELLOW GUITAR on the RIGHT gently rocks side-to-side in rhythm, with subtle string vibration. Keep motions small enough that the complete guitar headstock, all tuning keys, the entire tambourine and both ribbon tips stay inside generous white margins. Keep both instruments visually separate. Preserve exact source shapes, proportions, bright flat colors and black outlines: continuous guitar neck, intact strings and bridge, unbroken green circular tambourine frame, same attached jingles and ribbons. Fixed camera and pure white background, no zoom, no new objects or hands, no faces, eyes, mouths, limbs, text or speech. No detached parts or morphing. Finish close to the original arrangement.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "video_seed": 2026114556
+}

@@ -1,0 +1,276 @@
+{
+  "id": "31",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 6,
+  "source_sha256": "bb620ce157ce0432d07d8380c6622bf3a24c34458077b599cc0bbef98d8bde5a",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "aa29b801987042aa118b536e79af19cce91c8edcc02fde1b29122b9d72487561",
+    "original.png": "eac16b5a42ff8efc021ca20ab12345d6cba6c7d1feca3ccf7e97e61a06ee820a",
+    "lines.png": "de802cecb9528fc97f051453eb0356f736e3e564926dc33a8330d70dc43475ce",
+    "map.png": "e3ba2403c345716314c9e7d7e6c53a7a1e223f3f676900b4e6c65ca99761a7b8",
+    "unpainted.png": "55663efcc1496c5d598464c3a5d690835a1e7930b3d0367b5ac0244f38220285"
+  },
+  "phone_preview_sha256": "e1d15c6b47735460accd52f4a3083be4d4d06ebbec0291d1175935a218dc6be8",
+  "phone_preview_provenance": "Viewed fresh shared diagnostic phone preview plus independently rendered temporary snapshot at 350px using 10px bold font and GameCanvas x-4/y+3 offsets; not native UI screenshots.",
+  "inspection_method": "Viewed current individual unpainted.png, original.png and phone previews; checked map connectivity and label clearance. No UI played.",
+  "meaningful_color_groups": 7,
+  "palette_entries": 8,
+  "number_labels": 18,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 1,
+        "hex": "#cd7202",
+        "area": 91760,
+        "radius": 55.9
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#f9a913",
+        "area": 36381,
+        "radius": 47.0
+      },
+      {
+        "index": 5,
+        "hex": "#f5bd4c",
+        "area": 6220,
+        "radius": 30.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#ee1f1a",
+        "area": 32266,
+        "radius": 46.2
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#fdebb4",
+        "area": 16827,
+        "radius": 61.4
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#06c8b3",
+        "area": 8986,
+        "radius": 23.0
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#e67c6f",
+        "area": 8895,
+        "radius": 27.4
+      }
+    ],
+    [
+      {
+        "index": 7,
+        "hex": "#fcfdfd",
+        "area": 3159,
+        "radius": 25.2
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 18,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 7.03,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 256,
+        "y": 665,
+        "image_radius_px": 20.58,
+        "screen_radius_px_at_350": 7.03
+      },
+      {
+        "number": 1,
+        "x": 378,
+        "y": 765,
+        "image_radius_px": 26.17,
+        "screen_radius_px_at_350": 8.94
+      },
+      {
+        "number": 1,
+        "x": 222,
+        "y": 831,
+        "image_radius_px": 46.18,
+        "screen_radius_px_at_350": 15.78
+      },
+      {
+        "number": 2,
+        "x": 475,
+        "y": 236,
+        "image_radius_px": 43.74,
+        "screen_radius_px_at_350": 14.95
+      },
+      {
+        "number": 2,
+        "x": 621,
+        "y": 657,
+        "image_radius_px": 55.92,
+        "screen_radius_px_at_350": 19.11
+      },
+      {
+        "number": 2,
+        "x": 399,
+        "y": 529,
+        "image_radius_px": 22.77,
+        "screen_radius_px_at_350": 7.78
+      },
+      {
+        "number": 2,
+        "x": 669,
+        "y": 763,
+        "image_radius_px": 33.56,
+        "screen_radius_px_at_350": 11.47
+      },
+      {
+        "number": 2,
+        "x": 473,
+        "y": 828,
+        "image_radius_px": 25.97,
+        "screen_radius_px_at_350": 8.88
+      },
+      {
+        "number": 3,
+        "x": 440,
+        "y": 392,
+        "image_radius_px": 23.0,
+        "screen_radius_px_at_350": 7.86
+      },
+      {
+        "number": 3,
+        "x": 582,
+        "y": 434,
+        "image_radius_px": 21.8,
+        "screen_radius_px_at_350": 7.45
+      },
+      {
+        "number": 4,
+        "x": 542,
+        "y": 642,
+        "image_radius_px": 22.59,
+        "screen_radius_px_at_350": 7.72
+      },
+      {
+        "number": 4,
+        "x": 146,
+        "y": 773,
+        "image_radius_px": 28.39,
+        "screen_radius_px_at_350": 9.7
+      },
+      {
+        "number": 4,
+        "x": 319,
+        "y": 832,
+        "image_radius_px": 46.98,
+        "screen_radius_px_at_350": 16.06
+      },
+      {
+        "number": 5,
+        "x": 361,
+        "y": 131,
+        "image_radius_px": 27.36,
+        "screen_radius_px_at_350": 9.35
+      },
+      {
+        "number": 5,
+        "x": 562,
+        "y": 139,
+        "image_radius_px": 22.77,
+        "screen_radius_px_at_350": 7.78
+      },
+      {
+        "number": 6,
+        "x": 511,
+        "y": 763,
+        "image_radius_px": 30.0,
+        "screen_radius_px_at_350": 10.25
+      },
+      {
+        "number": 7,
+        "x": 453,
+        "y": 671,
+        "image_radius_px": 61.38,
+        "screen_radius_px_at_350": 20.98
+      },
+      {
+        "number": 8,
+        "x": 541,
+        "y": 820,
+        "image_radius_px": 25.17,
+        "screen_radius_px_at_350": 8.6
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Kangaroo and joey remain recognizable with preserved eyes and smiles; heavier revision6 contours are acceptable at phone size.",
+    "Ball-center disk now has a centered readable 1; it no longer depends on a distant ball-panel label.",
+    "Eighteen four-connected paint regions each have one label; seven meaningful color groups remain. Minimum label-center radius is 7.03px at 350px canvas width.",
+    "Small face/hat/paw details retain source colors as fixed artwork; no new blocking visual defect observed."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_DENSE_LABELS_AND_UNLABELLED_ENCLOSURE",
+        "severity": "blocking",
+        "description": "Joey hand/hat/muzzle labels (349,585), (456,505), (463,532) and two-digit hat label 10 at (380,464) crowd outlines at phone scale. Beach-ball center disk near (250,667) looks separately enclosed but has no number.",
+        "action": "Make the small joey details fixed source-color artwork or enlarge/simplify their paint regions. Ensure the ball center is fixed-colored or independently numbered after considering rendered boundaries, not just diagonal map connectivity."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ],
+  "revision_history": [
+    {
+      "processor_revision": 5,
+      "verdict": "FAIL",
+      "artifact_sha256": {
+        "data.json": "3bcc8853576724857803f605e16e159225e4c9bdb0e6db0dfdc55986554878c8",
+        "original.png": "0e3ec8764257d48a6ca3b27a56ce9b81246c83b084d87d596f977a0478fd7623",
+        "lines.png": "00b9b8c32aa1d3659ab43c3007999bf2b92e8940ff986a3190d73848b9b66576",
+        "map.png": "803fe01197ba737b74d824b476cbbd012a8b1f0ef042a700c2b0f130a92ea284",
+        "unpainted.png": "452a0b73596c908ba7e257e9adab6ca09f41427b637f4e5a1932880495ba2f01"
+      },
+      "observations": [
+        "Kangaroo and joey with scarf and beach ball; eyes and smiles retained, but the joey cluster is too dense at phone size.",
+        "Revision5 retains 8 meaningful color groups and 20 numbered regions; small pieces retain source color as fixed artwork.",
+        "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+        "Tiny joey labels are substantially improved, but the separately enclosed ball-center coverage defect remains.",
+        "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+      ],
+      "defects": [
+        {
+          "code": "UNLABELLED_VISIBLE_ENCLOSURE",
+          "severity": "blocking",
+          "description": "Ball center disk near (255,667) remains visibly enclosed and unnumbered. Its four-connected map region connects to the red panel with label 2 at (222,831), but the overlaid contour visually separates the disk.",
+          "action": "Prefill the center disk in source red, split and label it independently with adequate clearance, or open the rendered dividing contour enough to show its connection. Keep one label per game flood-fill region."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+  "image": "image-processing/generation/runs/37/image.png",
+  "subject": "Cow",
+  "observations": [
+    "Explicitly user-approved keeper: substantial pink muzzle and inner ears, teal collar and yellow bell add meaningful color to the cream and brown animal.",
+    "Repeated body patches, paired inner ears and four hooves provide separate regions for repeated number/color matching.",
+    "Palette breadth is borderline, but recognizable anatomy, large patches and substantial accessory colors make the activity engaging without relying on bell shading or tiny facial details."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Check bell attachment and tail regions for usable label placement."
+  ],
+  "scope": "Source-image visual engagement review for ages 4+. Supersedes the previous generic source PASS for this exact image. Processed number placement, gameplay assets and video are not approved by this review."
+}

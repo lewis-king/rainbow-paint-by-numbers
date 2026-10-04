@@ -1,0 +1,87 @@
+{
+  "source_image": "image-processing/generation/runs/47/image.png",
+  "source_sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07",
+  "video": "image-processing/generation/runs/47/video.mp4",
+  "sha256": "e9dd2fd854ce27278b54f23f0d5403c058be090685f27378af972235160f2ff5",
+  "video_sha256": "e9dd2fd854ce27278b54f23f0d5403c058be090685f27378af972235160f2ff5",
+  "prompt_id": "39dbb5ec-d8c2-479a-adee-a8c977aaa0f2",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "source_visual_verdict": "PASS",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "sample_count": 32,
+    "evidence_sheets": [
+      "image-processing/generation/reviews/47-video-e9dd2fd854ce/contact-1.jpg",
+      "image-processing/generation/reviews/47-video-e9dd2fd854ce/contact-2.jpg",
+      "image-processing/generation/reviews/47-video-e9dd2fd854ce/contact-3.jpg",
+      "image-processing/generation/reviews/47-video-e9dd2fd854ce/contact-4.jpg"
+    ],
+    "description": "Actual source and all chronological contact sheets inspected using view_image. Evenly spaced frames include 0, 4 and last. CPU FFmpeg decoding, filtering and PNG encoding limited to two threads each; no GPU or generation submission."
+  },
+  "observations": [
+    "The inspected source contains one recognizable bucket, spade, sandcastle and shell, with meaningful broad colour contrast and no object faces.",
+    "Bucket rocking and spade swinging/bobbing are readable across the 32 chronological samples. The spade remains a complete handle-and-blade object, including when it swings clear of the bucket.",
+    "The bucket handle, rim and yellow star retain recognizable structure; the sandcastle, flag and pink shell persist. Mild elastic wobble occurs during movement without abrupt sampled disintegration or missing parts.",
+    "All principal objects remain completely inside the frame from sample 0 through 123. No new faces, accumulating scene drift or sudden object losses were observed."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled still-frame inspection, not real-time playback or inspection of every frame. Motion observations describe progression across samples; frame-perfect smoothness, inter-sample artifacts and seamless looping are not guaranteed.",
+    "Contact sheets use reduced-size frames; full-resolution extracted samples are retained beside them."
+  ],
+  "scope": "Exact-source and exact-video sampled visual reward-video review only. No painting processing, build, emulator, imports or integration performed or approved."
+}

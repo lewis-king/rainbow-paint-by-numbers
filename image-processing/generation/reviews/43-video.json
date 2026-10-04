@@ -1,0 +1,71 @@
+{
+  "id": "43",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_dispatch": {
+    "tool": "multi_agent_v1__spawn_agent",
+    "model": "gpt-6-astra",
+    "agent_id": "01a10730-57cc-7912-9d9b-dae04b32bfe4"
+  },
+  "verdict": "PASS",
+  "sha256": "70cd1876bdcf9948567092e97408731c16838aca01bac513abd5d18c47405d21",
+  "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+  "video": "image-processing/generation/runs/43/video.mp4",
+  "source_image": "image-processing/generation/runs/43/image.png",
+  "selected_attempt": 2,
+  "method": {
+    "type": "chronological_sampled_visual_comparison_not_realtime_playback",
+    "sample_count_per_attempt": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "description": "Re-inspected both two-page chronological contact sheets using view_image, compared with source, and considered previously inspected full-resolution origin/edge frames. Confirmed exact MP4 and contact-sheet hashes. Original decoding CPU only, maximum two decoder threads."
+  },
+  "observations": [
+    "Steam starts visibly touching the tall left/front yellow chimney at frame 8 and develops into a rounded plume rising and drifting right. The small rounded dome remains inactive.",
+    "The full locomotive retains its source silhouette, colors, cab, boiler, fittings, three wheels, rod, cowcatcher and rail. No face, missing structural part or distracting deformation is visible.",
+    "The cloud upper outline grazes the boundary late in the clip (including frame 95), but virtually the whole cloud remains readable. It does not cover or truncate the train and reads plausibly as rising steam. This minor edge contact does not spoil the pleasant animation enough to fail the actual user needs.",
+    "Rod movement is restrained and wheel-center detail is cleaner than attempt 3. The plume drifts right rather than becoming a strongly truncated vertical bubble."
+  ],
+  "nonblocking_caveats": [
+    "Cloud outline touches/slightly clips the upper edge in later frames.",
+    "Cloud persists at the end; seamless looping is neither established nor required."
+  ],
+  "limitations": [
+    "32 samples per clip, not realtime playback; no frame-perfect smoothness or inter-sample artifact guarantee."
+  ],
+  "selection_review": "reviews/43-selection-review.json",
+  "criteria_correction": "Previous FAILs treated all steam-edge clipping and non-dissipation as mandatory gate failures. That was stricter than the clarified user requirement. Those historical records are retained; this separate review supplies the revised, explicitly scoped assessment.",
+  "scope": "Source and reward-video visual suitability only; no game processing or integration approval."
+}

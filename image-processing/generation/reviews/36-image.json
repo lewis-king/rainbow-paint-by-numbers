@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
+  "image": "image-processing/generation/runs/36/image.png",
+  "subject": "Sheep",
+  "verdict": "PASS",
+  "observations": [
+    "Current source re-inspected individually at full image resolution; hash is unchanged from the approved latest sheep.",
+    "Two clear black eyes, coherent nose/mouth, two ears, four separately visible legs with hooves and a woolly tail form a complete recognizable sheep.",
+    "Cream wool, tan face/legs, brown hooves, coral inner ears, red scarf, golden-yellow patch, cyan and purple flowers, orange flower centers and green foliage provide roughly ten meaningful color families. Ground/leaf greens count together; background and facial ink are excluded.",
+    "Paired inner ears, four tan legs, four brown hooves, two orange flower centers and repeated leaves support number/color matching. Connected petals are not counted as separate enclosed regions.",
+    "Large scarf, contrasting patch and substantial flowers materially improve engagement over the original sheep while retaining broad accessible shapes."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Source PASS does not supersede the previously reported diagnostic defects: stray tiny numbered regions and crowded labels require processor review.",
+    "Verify cream/background separation and usable ear, scarf-patch and small-flower regions; confirm processed-output provenance before assigning approval to this source."
+  ],
+  "method": "Individual current image visually inspected with view_image; decisions consider substantial contrasting colors, meaningful repeated regions, anatomy and cleanliness against user-approved 35/37 benchmarks.",
+  "scope": "Source-image visual gate for this exact hash only. PASS permits processor evaluation; it does not approve extracted regions, final number placement, gameplay assets or video."
+}

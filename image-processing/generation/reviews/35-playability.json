@@ -1,0 +1,179 @@
+{
+  "id": "35",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "acb47981514c5d2accd019d5283152288d1702efb0029184e01843c0a0f945bb",
+    "original.png": "833115ccb60c3d643de27387fa65eb08d1add69cbf53ffd5f99a66262e506965",
+    "lines.png": "53f4a6764585169ad4703f730fd8ab4d245cfbd38184fb0dc2003955d6e07fe0",
+    "map.png": "0796a467d41297f417831190a0d6f689e3e9f4f0fbf18182cdd23fb45ef48cc9",
+    "unpainted.png": "dffa52a6df6c6847233d6fe3892d4bf1609b488df86a774bc31c72c422510616"
+  },
+  "phone_preview_sha256": "78c82ca279679f5b26fad473aaf32de88e3e9dfe620b6eba8cb2946d3abee3a7",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 6,
+  "palette_entries": 6,
+  "number_labels": 11,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 0,
+        "hex": "#000000",
+        "area": 129833,
+        "radius": 128.2
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#f95d00",
+        "area": 41534,
+        "radius": 64.0
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#dcdcd9",
+        "area": 34376,
+        "radius": 80.6
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#72a334",
+        "area": 12078,
+        "radius": 29.2
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#83521f",
+        "area": 9627,
+        "radius": 25.6
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#fcd700",
+        "area": 6433,
+        "radius": 24.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 11,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 8.19,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 361,
+        "y": 565,
+        "image_radius_px": 128.22,
+        "screen_radius_px_at_350": 43.83
+      },
+      {
+        "number": 1,
+        "x": 780,
+        "y": 239,
+        "image_radius_px": 46.13,
+        "screen_radius_px_at_350": 15.77
+      },
+      {
+        "number": 1,
+        "x": 306,
+        "y": 821,
+        "image_radius_px": 56.2,
+        "screen_radius_px_at_350": 19.21
+      },
+      {
+        "number": 2,
+        "x": 202,
+        "y": 755,
+        "image_radius_px": 25.59,
+        "screen_radius_px_at_350": 8.75
+      },
+      {
+        "number": 3,
+        "x": 714,
+        "y": 607,
+        "image_radius_px": 24.97,
+        "screen_radius_px_at_350": 8.53
+      },
+      {
+        "number": 3,
+        "x": 787,
+        "y": 637,
+        "image_radius_px": 29.16,
+        "screen_radius_px_at_350": 9.97
+      },
+      {
+        "number": 3,
+        "x": 730,
+        "y": 725,
+        "image_radius_px": 25.57,
+        "screen_radius_px_at_350": 8.74
+      },
+      {
+        "number": 4,
+        "x": 625,
+        "y": 202,
+        "image_radius_px": 64.0,
+        "screen_radius_px_at_350": 21.88
+      },
+      {
+        "number": 4,
+        "x": 590,
+        "y": 301,
+        "image_radius_px": 31.0,
+        "screen_radius_px_at_350": 10.6
+      },
+      {
+        "number": 5,
+        "x": 420,
+        "y": 261,
+        "image_radius_px": 23.97,
+        "screen_radius_px_at_350": 8.19
+      },
+      {
+        "number": 6,
+        "x": 506,
+        "y": 412,
+        "image_radius_px": 80.6,
+        "screen_radius_px_at_350": 27.55
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Benchmark toucan with coherent beak, eye, feet, branch and leaves; bold readable silhouette.",
+    "Revision5 retains 6 meaningful color groups and 11 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "PASS",
+    "defects": []
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

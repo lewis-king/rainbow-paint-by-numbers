@@ -1,0 +1,108 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "Flat vector illustration for a children's paint-by-numbers game, age four and up. A delightful colorful acoustic guitar and a separate round tambourine, arranged diagonally in one balanced playful composition on a pure white background. The guitar has a recognizable curvy hourglass body: broad coral-red upper shoulders and golden-yellow lower body divided by a smooth sweeping boundary, a thick turquoise rim around one circular dark soundhole, a small brown bridge and a slender proportionate warm-brown neck with a rounded blue headstock and six simple orange tuning pegs. Three fine straight black string lines connect bridge to headstock continuously; not giant black stripes or a rectangular colored plank. The guitar leans gently to the right. Beside it on the lower left is one tilted circular tambourine with a broad grass-green wooden frame and five clearly attached golden jingle pairs, open white center, visually separate from guitar. A folded purple fabric ribbon tied simply to the tambourine has two broad curved tails, giving another large color area; no intricate folds or patterns. Strong recognizable instrument construction, friendly rounded shapes but NO anthropomorphic faces, no eyes or mouths. Broad enclosed flat-color areas, thick clean uniform black outlines, complete objects inside generous white margins, minimalist coherent composition. No shadows, gradients, texture, musical notes, text, numbers, hands, extra instruments or duplicated parts.",
+      "negative_prompt": "shading, gradients, noise, texture, realistic, photography, 3d, rendering, complex details, fuzzy, sketch, watermark, text, greyscale, missing eyes, extra limbs, cropped subject",
+      "resolution": 1024,
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 2026113556,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/image/56-guitar"
+    }
+  }
+}

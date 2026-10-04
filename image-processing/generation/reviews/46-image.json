@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "00b8584bae3ffd81eab52d036e86cc398ce2089d1f1b42cbaa52c53728d5bcb7",
+  "image": "image-processing/generation/runs/46/image.png",
+  "subject": "Camping tent",
+  "observations": [
+    "Lantern eyes and smile are removed; the yellow globe is an ordinary lamp component. Tent, mat and all props are face-free.",
+    "Broad red/yellow panels, paired cyan flaps, dark-blue interior, purple floor, green mat, orange strap and repeated blue lantern parts preserve meaningful paint variety."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "No anthropomorphic faces or character features on the object, props or decorative motifs."
+  },
+  "processed_gate_checks": [
+    "Preserve broad paint regions; do not number tiny shading, decorative strokes or background holes."
+  ],
+  "scope": "New current edit inspected individually with view_image. Exact-hash source engagement and no-faces approval only; no processed-output or motion approval is implied."
+}

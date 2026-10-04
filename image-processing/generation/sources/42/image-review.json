@@ -1,0 +1,26 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+  "image": "image-processing/generation/runs/42/image.png",
+  "subject": "Hot-air balloon",
+  "observations": [
+    "Five broad orange, yellow, green, blue and purple balloon panels plus a substantial brown basket provide six meaningful color families.",
+    "Large enclosed panels are highly accessible for ages 4+; basket and its rims repeat brown across separate regions.",
+    "Accepted as an easier entry with fewer repeated regions than the strongest keepers; background and thin suspension ropes do not inflate the palette."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Treat narrow basket suspension strokes as details or verify they do not acquire unusable labels."
+  ],
+  "scope": "Source-image visual engagement review for ages 4+. Supersedes the previous generic source PASS for this exact image. Processed number placement, gameplay assets and video are not approved by this review.",
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "source_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+    "observation": "Balloon and basket have no anthropomorphic features.",
+    "criterion": "No anthropomorphic eyes, mouths or character features on non-animal objects, props or motifs.",
+    "method": "Actual full-image visual evidence from this session, verified unchanged by exact source SHA-256."
+  },
+  "object_realism_revision": 1
+}

@@ -1,0 +1,147 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "rainbow-paint-by-numbers/56.png"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "A lively but gentle flat 2D musical-instrument animation for young children. BOTH instruments visibly move throughout the clip, independently in place. The GREEN TAMBOURINE on the LEFT actively shakes left-right in a small rhythmic motion, tilting alternately a few degrees clockwise and counterclockwise. Its whole green ring and attached golden jingles visibly move together; the jingle pairs gently rattle in their mounting positions and the two purple ribbon tails flutter softly in response. Do not leave the tambourine frozen or motionless. At the same time the CORAL AND YELLOW GUITAR on the RIGHT gently rocks side-to-side in rhythm, with subtle string vibration. Keep motions small enough that the complete guitar headstock, all tuning keys, the entire tambourine and both ribbon tips stay inside generous white margins. Keep both instruments visually separate. Preserve exact source shapes, proportions, bright flat colors and black outlines: continuous guitar neck, intact strings and bridge, unbroken green circular tambourine frame, same attached jingles and ribbons. Fixed camera and pure white background, no zoom, no new objects or hands, no faces, eyes, mouths, limbs, text or speech. No detached parts or morphing. Finish close to the original arrangement.",
+      "width": 640,
+      "height": 640,
+      "length": 124,
+      "first_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026114556
+    }
+  },
+  "7": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "8": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 20,
+      "denoise": 1
+    }
+  },
+  "9": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "6",
+        0
+      ],
+      "guider": [
+        "9",
+        0
+      ],
+      "sampler": [
+        "7",
+        0
+      ],
+      "sigmas": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "5",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24
+    }
+  },
+  "13": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "12",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/video/56-guitar",
+      "format": "mp4",
+      "codec": "h264"
+    }
+  }
+}

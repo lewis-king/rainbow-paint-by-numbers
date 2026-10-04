@@ -1,0 +1,185 @@
+{
+  "scope": "Original-processor output structural validation; not a new visual redesign or processing algorithm",
+  "levels": [
+    {
+      "id": "29",
+      "palette_entries": 16,
+      "number_labels": 21,
+      "bundle_sha256": "8a56133526f6cbcdc92c86c8c1e4a2a229b42472de7f37c865c781853ed4af4b"
+    },
+    {
+      "id": "30",
+      "palette_entries": 17,
+      "number_labels": 28,
+      "bundle_sha256": "8af57acfff34a785973bdbd3a61133fe98124064e3289453262bc9438f6807c7"
+    },
+    {
+      "id": "31",
+      "palette_entries": 15,
+      "number_labels": 80,
+      "bundle_sha256": "81765757e0e8b71882ba9ccb7d5b2665e4ce7a5306793d4199dd2a6312f56f52"
+    },
+    {
+      "id": "32",
+      "palette_entries": 16,
+      "number_labels": 32,
+      "bundle_sha256": "aee5be4ba42e51c168c4d893618bbedee4d6c5f4c1302434eea7f3a3b0670c12"
+    },
+    {
+      "id": "33",
+      "palette_entries": 19,
+      "number_labels": 83,
+      "bundle_sha256": "d39d3b68541c855b48b467a757ae355a56df5196685042b8c2d2e58a77a08e37"
+    },
+    {
+      "id": "34",
+      "palette_entries": 18,
+      "number_labels": 14,
+      "bundle_sha256": "2ac5f14632e3c4c41ffe62ceed1b87684b466b290de5e928b76f281a47dc4f67"
+    },
+    {
+      "id": "35",
+      "palette_entries": 12,
+      "number_labels": 14,
+      "bundle_sha256": "cb8c57e13bf25fae302ea0c8d96056b4bd24e1182a390b5c9db7e085b1eba111"
+    },
+    {
+      "id": "36",
+      "palette_entries": 15,
+      "number_labels": 29,
+      "bundle_sha256": "b2c4b6ada8c69cfcde3da637227f2b584cb9115cfd69aafceb12ffe3dfb980a8"
+    },
+    {
+      "id": "37",
+      "palette_entries": 10,
+      "number_labels": 23,
+      "bundle_sha256": "b1b615b01fc556f4f5de238e337bb1663409b8766588033464d9e15059f548fa"
+    },
+    {
+      "id": "38",
+      "palette_entries": 15,
+      "number_labels": 22,
+      "bundle_sha256": "ae6e81860903ef84a5d25a11aa840e69e43dab2d4917c8fec63305a975115ac3"
+    },
+    {
+      "id": "39",
+      "palette_entries": 16,
+      "number_labels": 22,
+      "bundle_sha256": "cedf60a4e1ff54f9a85eafd7eb2c2e378f0978edd29a5add978cf21e70d90f50"
+    },
+    {
+      "id": "40",
+      "palette_entries": 20,
+      "number_labels": 34,
+      "bundle_sha256": "962288a548243710d42f8041b16d1b7e3f0bcf24d8923e6a961c15e9e1eb10aa"
+    },
+    {
+      "id": "41",
+      "palette_entries": 16,
+      "number_labels": 24,
+      "bundle_sha256": "f89d238adcd1b64118e096ba500f188e8f6808176a69e1bfba219a7ce5304055"
+    },
+    {
+      "id": "42",
+      "palette_entries": 18,
+      "number_labels": 25,
+      "bundle_sha256": "22211be2ad93c982593f99cd2818a884c463c7b48309889e0ca7ce3a3a4553ec"
+    },
+    {
+      "id": "43",
+      "palette_entries": 15,
+      "number_labels": 19,
+      "bundle_sha256": "881929e5a7134d7d3a422ed1ab15d77526b3ed126d0e2c25122e2f430c8e66c5"
+    },
+    {
+      "id": "44",
+      "palette_entries": 18,
+      "number_labels": 34,
+      "bundle_sha256": "b349632933320b375d58be55d8dd1f6874c6eff9a18b47fe9a8395f6ca8c3217"
+    },
+    {
+      "id": "45",
+      "palette_entries": 17,
+      "number_labels": 12,
+      "bundle_sha256": "b02a7f46cfb49743f144b11d2e9872743755756344c0d24813c555c52314fc10"
+    },
+    {
+      "id": "46",
+      "palette_entries": 18,
+      "number_labels": 43,
+      "bundle_sha256": "6446a49fac8adfd053c413ae5d785045283507f494c60ab0bf18efe39f2d8a65"
+    },
+    {
+      "id": "47",
+      "palette_entries": 20,
+      "number_labels": 16,
+      "bundle_sha256": "aa342e8b65f8b6ef99f1495d3c997b3abb87f5244d21611600e8a9fff13b0379"
+    },
+    {
+      "id": "48",
+      "palette_entries": 16,
+      "number_labels": 32,
+      "bundle_sha256": "d6d4eb472ad6d798b0036c25d74fe1225ec327085eec1c28ff50b942835c8b9e"
+    },
+    {
+      "id": "49",
+      "palette_entries": 13,
+      "number_labels": 22,
+      "bundle_sha256": "c753408899b739d4c8fbb2f2ca79f1458a935339f2afeefb69f97e965d599c79"
+    },
+    {
+      "id": "50",
+      "palette_entries": 19,
+      "number_labels": 63,
+      "bundle_sha256": "fd8fb1f5a42a3176ea3b76126ff897c8294f80a8f998441d3c95ff6804ee635f"
+    },
+    {
+      "id": "51",
+      "palette_entries": 21,
+      "number_labels": 17,
+      "bundle_sha256": "0feb98ccbbb096812d5fb4b9850f7274ce360ae4448918283a69b9fb831d6cd2"
+    },
+    {
+      "id": "52",
+      "palette_entries": 19,
+      "number_labels": 32,
+      "bundle_sha256": "fa678111a7abe3e6ac75af001a273321fa3f9206c26c7b0db8ad71b0b0eb092c"
+    },
+    {
+      "id": "53",
+      "palette_entries": 17,
+      "number_labels": 17,
+      "bundle_sha256": "824fa6c59a70963df0f99ed79b3e7200d729ee6e45b54fd54e879874a83b4051"
+    },
+    {
+      "id": "54",
+      "palette_entries": 16,
+      "number_labels": 12,
+      "bundle_sha256": "d03cbf84f9aface969145bd1c995ca22578a8150b9cc1101cffc952d25a538de"
+    },
+    {
+      "id": "55",
+      "palette_entries": 15,
+      "number_labels": 26,
+      "bundle_sha256": "ac0aa519974b3e7f9620bab68c0339018f3d48cb5b511a801a30fb1918c6e5d1"
+    },
+    {
+      "id": "56",
+      "palette_entries": 15,
+      "number_labels": 37,
+      "bundle_sha256": "edb2c82dbe1e055a910b1da3337a562248880f2cf4be28bf92f0e9d2743161e4"
+    },
+    {
+      "id": "57",
+      "palette_entries": 19,
+      "number_labels": 114,
+      "bundle_sha256": "664169bbe7072fcb38db0ab8644e0b67f091c1274bd1309f7b901de53c48cdd9"
+    },
+    {
+      "id": "58",
+      "palette_entries": 16,
+      "number_labels": 23,
+      "bundle_sha256": "c5ba6ea9d5466aa1f7d5a11d6c78c30d8f093194986de278e1f3e42494396bc9"
+    }
+  ]
+}

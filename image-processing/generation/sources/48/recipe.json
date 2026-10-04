@@ -1,0 +1,16 @@
+{
+  "id": "48",
+  "slug": "cupcake",
+  "title": "Cupcake",
+  "category": "treats",
+  "seed": 2026111448,
+  "image_prompt": "Edit this existing illustration. Remove the face on the cherry. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Cupcake, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The cupcake gives a gentle playful bounce and the cherry wobbles on the icing. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "image_reference": "sources/48/reference.png",
+  "image_reference_sha256": "853fc8c451073be18272c7b7b6e6b3e03612051edbf7f44a8ecfabc82756ea75"
+}

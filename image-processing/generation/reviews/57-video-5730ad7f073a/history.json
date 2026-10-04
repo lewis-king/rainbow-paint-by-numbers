@@ -1,0 +1,212 @@
+{
+  "3207bcad-0210-4a22-9bc8-f0b29c011903": {
+    "prompt": [
+      22,
+      "3207bcad-0210-4a22-9bc8-f0b29c011903",
+      {
+        "1": {
+          "class_type": "UNETLoader",
+          "inputs": {
+            "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "weight_dtype": "default"
+          }
+        },
+        "2": {
+          "class_type": "CLIPLoader",
+          "inputs": {
+            "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "type": "minimax",
+            "device": "default"
+          }
+        },
+        "3": {
+          "class_type": "VAELoader",
+          "inputs": {
+            "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+          }
+        },
+        "4": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "rainbow-paint-by-numbers/57.png"
+          }
+        },
+        "5": {
+          "class_type": "MiniMaxH3ImageToVideo",
+          "inputs": {
+            "clip": [
+              "2",
+              0
+            ],
+            "vae": [
+              "3",
+              0
+            ],
+            "prompt": "A charming flat 2D animation of this exact colorful windmill. The FOUR sails rotate continuously CLOCKWISE around their fixed orange central axle, always in the SAME direction. Begin slowly, then smoothly accelerate to a lively but clearly readable speed, making approximately one and a half complete clockwise revolutions over five seconds. Never reverse, never rock back and forth, never stop and return to the starting angle. The two cyan sails remain opposite each other and the two yellow sails remain opposite each other, a rigid four-blade rotor with constant length and shape. At the beginning the camera gently pulls back by about twenty percent to provide generous white clearance above and around the complete spinning rotor, then holds steady. The initial slow rotation allows the camera to establish this wider framing before a sail reaches vertical. Keep all four sail tips completely inside the picture throughout the full rotations. The cream tower, red roof, blue door, purple shutters, fence, flowers and green hill remain still and retain their exact shapes and colors. Crisp flat colors and black outlines; no motion-blur smears, no bending or duplicated sails, no new objects, no faces, no eyes, no mouths, no text or speech.",
+            "width": 640,
+            "height": 640,
+            "length": 124,
+            "first_frame": [
+              "4",
+              0
+            ]
+          }
+        },
+        "6": {
+          "class_type": "RandomNoise",
+          "inputs": {
+            "noise_seed": 2026113457
+          }
+        },
+        "7": {
+          "class_type": "KSamplerSelect",
+          "inputs": {
+            "sampler_name": "res_multistep"
+          }
+        },
+        "8": {
+          "class_type": "BasicScheduler",
+          "inputs": {
+            "model": [
+              "1",
+              0
+            ],
+            "scheduler": "simple",
+            "steps": 20,
+            "denoise": 1.0
+          }
+        },
+        "9": {
+          "class_type": "BasicGuider",
+          "inputs": {
+            "model": [
+              "1",
+              0
+            ],
+            "conditioning": [
+              "5",
+              0
+            ]
+          }
+        },
+        "10": {
+          "class_type": "SamplerCustomAdvanced",
+          "inputs": {
+            "noise": [
+              "6",
+              0
+            ],
+            "guider": [
+              "9",
+              0
+            ],
+            "sampler": [
+              "7",
+              0
+            ],
+            "sigmas": [
+              "8",
+              0
+            ],
+            "latent_image": [
+              "5",
+              1
+            ]
+          }
+        },
+        "11": {
+          "class_type": "VAEDecode",
+          "inputs": {
+            "samples": [
+              "10",
+              0
+            ],
+            "vae": [
+              "3",
+              0
+            ]
+          }
+        },
+        "12": {
+          "class_type": "CreateVideo",
+          "inputs": {
+            "images": [
+              "11",
+              0
+            ],
+            "fps": 24.0
+          }
+        },
+        "13": {
+          "class_type": "SaveVideo",
+          "inputs": {
+            "video": [
+              "12",
+              0
+            ],
+            "filename_prefix": "rainbow-paint-by-numbers/video/57-windmill",
+            "format": "mp4",
+            "codec": "h264"
+          }
+        }
+      },
+      {
+        "client_id": "rainbow-paint-by-numbers",
+        "create_time": 1791125175948
+      },
+      [
+        "13"
+      ]
+    ],
+    "outputs": {
+      "13": {
+        "images": [
+          {
+            "filename": "57-windmill_00003_.mp4",
+            "subfolder": "rainbow-paint-by-numbers/video",
+            "type": "output"
+          }
+        ],
+        "animated": [
+          true
+        ]
+      }
+    },
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "3207bcad-0210-4a22-9bc8-f0b29c011903",
+            "timestamp": 1791125175948
+          }
+        ],
+        [
+          "execution_cached",
+          {
+            "nodes": [],
+            "prompt_id": "3207bcad-0210-4a22-9bc8-f0b29c011903",
+            "timestamp": 1791125175951
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "3207bcad-0210-4a22-9bc8-f0b29c011903",
+            "timestamp": 1791125333379
+          }
+        ]
+      ]
+    },
+    "meta": {
+      "13": {
+        "node_id": "13",
+        "display_node": "13",
+        "parent_node": null,
+        "real_node_id": "13"
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "ace604389e0bbed8f9b971456880eb6208be001d111a3e7867591eaf4a06d35e",
+  "video": "image-processing/generation/runs/41/video.mp4",
+  "source_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+  "source_image": "image-processing/generation/runs/41/image.png",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "overview_frame_indices": [
+      0,
+      11,
+      22,
+      34,
+      45,
+      56,
+      67,
+      78,
+      89,
+      101,
+      112,
+      123
+    ],
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "overview_sample_count": 12,
+    "dense_sample_count": 32,
+    "description": "Individually inspected chronological overview sheet of 12 evenly spaced frames plus denser sheets sampling every fourth frame and final frame. Compared against previously visually inspected exact-hash source. Metadata verified with ffprobe. No realtime playback claimed."
+  },
+  "observations": [
+    "Rocket remains a recognizable face-free object with red nose, cream upper hull, yellow-rimmed blue window, purple lower hull, paired green fins and central orange fin.",
+    "Flame visibly changes length and contour while the rocket gently bobs vertically; the two decorative stars shift slightly with the action. This reads as a restrained powered hover rather than a static frame.",
+    "Rigid rocket components and their colors stay coherent; flame shape changes are appropriate exhaust motion, not object morphing. No new eyes, mouth or character features appear.",
+    "White background, full-object framing and bold illustration style remain stable in sampled frames."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampling cannot guarantee frame-perfect smoothness, absence of every inter-sample artifact or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

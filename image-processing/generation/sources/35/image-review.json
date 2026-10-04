@@ -1,0 +1,18 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+  "image": "image-processing/generation/runs/35/image.png",
+  "subject": "Toucan",
+  "observations": [
+    "User-approved engagement benchmark: the oversized two-tone beak and yellow face provide strong focal color, supported by substantial green leaves, blue feet and a brown branch.",
+    "Three separate leaves and two feet repeat color choices across recognizable regions; the broad body and beak remain accessible for ages 4+.",
+    "KEEP is based on composition and meaningful paintable variety, not an inflated count of background white, black ink, highlights or neighboring orange shades."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Check dark-body/ink separation and preservation of the white chest; faint internal wing stroke need not become a numbered region."
+  ],
+  "scope": "Source-image visual engagement review for ages 4+. Supersedes the previous generic source PASS for this exact image. Processed number placement, gameplay assets and video are not approved by this review."
+}

@@ -1,0 +1,27 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "verdict": "PASS",
+  "sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+  "image": "image-processing/generation/runs/41/image.png",
+  "subject": "Rocket",
+  "observations": [
+    "One coherent rocket with nose cone, window, paired side fins, central fin and broad exhaust plume.",
+    "Substantial red, cream, blue, yellow, purple, green and orange components plus a pink star provide varied color activity.",
+    "Paired green fins and repeated yellow/orange window/flame components support matching; regions remain broad despite some glossy shading."
+  ],
+  "defects": [],
+  "suggestions": [
+    "Merge shading and highlights; preserve window surround and broad flame colors without narrow extra labels."
+  ],
+  "scope": "Source visual engagement/anatomy/cleanliness gate for ages 4+, judged against user-approved 35/37. Source PASS is not playable-output approval.",
+  "method": "Current full source inspected individually with view_image; palette excludes background, ink, tiny highlights and neighboring shade inflation.",
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "source_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+    "observation": "Rocket, stars and exhaust have no anthropomorphic features.",
+    "criterion": "No anthropomorphic eyes, mouths or character features on non-animal objects, props or motifs.",
+    "method": "Actual full-image visual evidence from this session, verified unchanged by exact source SHA-256."
+  },
+  "object_realism_revision": 1
+}

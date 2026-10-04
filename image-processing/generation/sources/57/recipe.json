@@ -1,0 +1,17 @@
+{
+  "id": "57",
+  "slug": "windmill",
+  "title": "Windmill",
+  "category": "adventures",
+  "seed": 2026111457,
+  "image_prompt": "Edit this existing illustration. Remove the eyes and mouth on the windmill building. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Windmill, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A charming flat 2D animation of this exact colorful windmill. The FOUR sails rotate continuously CLOCKWISE around their fixed orange central axle, always in the SAME direction. Begin slowly, then smoothly accelerate to a lively but clearly readable speed, making approximately one and a half complete clockwise revolutions over five seconds. Never reverse, never rock back and forth, never stop and return to the starting angle. The two cyan sails remain opposite each other and the two yellow sails remain opposite each other, a rigid four-blade rotor with constant length and shape. At the beginning the camera gently pulls back by about twenty percent to provide generous white clearance above and around the complete spinning rotor, then holds steady. The initial slow rotation allows the camera to establish this wider framing before a sail reaches vertical. Keep all four sail tips completely inside the picture throughout the full rotations. The cream tower, red roof, blue door, purple shutters, fence, flowers and green hill remain still and retain their exact shapes and colors. Crisp flat colors and black outlines; no motion-blur smears, no bending or duplicated sails, no new objects, no faces, no eyes, no mouths, no text or speech.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "image_reference": "sources/57/reference.png",
+  "image_reference_sha256": "b2b2081c9d1bcb162c09919122564a469fd937df9e905cf88ec2e838c853f354",
+  "video_seed": 2026113457
+}

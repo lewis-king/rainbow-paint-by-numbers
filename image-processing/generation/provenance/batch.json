@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-04",
+  "comfyui_commit": "f1072eb0350638a3390ddb6afbcaa8c6b237c6fd",
+  "hardware": "NVIDIA RTX 5090 32GB; system RAM128GB",
+  "models": {
+    "image": "Qwen-Image-2.1 int8 convrot",
+    "video": "MiniMax-H3 FL2VA pruned int8 convrot"
+  },
+  "license_notes": [
+    "Qwen2.1 research licence defines non-commercial as research/evaluation only; free public distribution is not automatically covered.",
+    "H3 community licence excludes UK/EU/US/Korea; inspect the saved exact licence and obtain appropriate rights before publishing.",
+    "User explicitly requested this new-model end-to-end generation after non-commercial/research caveat. No store release or claim of legal clearance is performed."
+  ],
+  "google_analytics_property": "557245199",
+  "ios_app_store_id": "6760931321",
+  "application_id": "king.meezy.rainbowpaintbynumbers",
+  "model_download_status": {
+    "qwen_image_2.1": "complete; image generation verified",
+    "minimax_h3": "complete; first video generated successfully (160 seconds), visual approval pending"
+  }
+}

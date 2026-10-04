@@ -1,0 +1,27 @@
+{
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e",
+  "source_sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e",
+  "image": "image-processing/generation/runs/56/image.png",
+  "subject": "Acoustic guitar and tambourine",
+  "prompt_id": "3a673edc-326d-4410-9a67-d5dcd3c2c36c",
+  "evidence_image": "image-processing/generation/reviews/56-source-22ecbd3e2e76/image.png",
+  "observations": [
+    "The replacement has a rounded acoustic-instrument body with a clear waist, asymmetric perspective, soundhole, wooden bridge and a slanted neck. These curves and the diagonal pose resolve the previous blocky, static appearance.",
+    "Broad coral-red and golden-yellow body sections, turquoise headstock/side, warm orange-brown neck, green tambourine and purple ribbons create lively meaningful colour variety. Shading and thin string lines are not counted as extra colour regions.",
+    "The soundhole, bridge and strings align coherently along the neck. Four schematic strings and four tuning keys are depicted; this is a simplified four-string acoustic-instrument treatment rather than a literal six-string guitar, but remains recognizable and visually coherent for the child-friendly source.",
+    "The green tambourine has a continuous rounded frame and repeated gold jingles; two purple ribbon tails add movement and substantial contrasting shapes. No faces appear on either instrument or the ribbons.",
+    "The complete instruments have clear white-space separation and remain within the canvas. Source quality does not require wider rings or any processing-radius threshold."
+  ],
+  "defects": [],
+  "method": "Fresh individual full-image inspection using view_image. Current source SHA-256 verified against completed image-job receipt and successful live Comfy history.",
+  "limitations": [
+    "Source visual quality only; no reward video, extracted paint regions, gameplay or integration is approved.",
+    "The reverted experimental 20px filter and arbitrary processing-radius thresholds are not source requirements. No generation or painting processing was run."
+  ],
+  "scope": "Fresh replacement-source review for ages 4+ and readiness for later reward-video generation. Earlier archived-source reviews do not approve this replacement."
+}

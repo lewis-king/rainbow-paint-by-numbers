@@ -1,0 +1,134 @@
+{
+  "id": "49",
+  "video": "image-processing/generation/runs/49/video.mp4",
+  "sha256": "66a80412a6e3fd0bc3fbf41ff8ad2007f5328ce4ceedf71e022ad1f86b680c9d",
+  "source_image": "image-processing/generation/runs/49/image.png",
+  "source_sha256": "2950e069d4c9f49dac6314a509a15b4cb5d100d0984b4147841f60f1d4f7eeff",
+  "job_sha256_match": true,
+  "source_approval_sha256_match": true,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "contact_sheets": [
+    {
+      "path": "image-processing/generation/reviews/49-video-contact-1.png",
+      "sha256": "c8b84b1ce8c57e0b23c76f332e20863e86e75aa52208d024e7e0fc50818bbc24",
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48,
+        52,
+        56,
+        60
+      ]
+    },
+    {
+      "path": "image-processing/generation/reviews/49-video-contact-2.png",
+      "sha256": "34342807df622abd8ccdf99ca8c35978698c1d3377d9630191bfc441a1d44d6c",
+      "frame_indices": [
+        63,
+        67,
+        71,
+        75,
+        79,
+        83,
+        87,
+        91,
+        95,
+        99,
+        103,
+        107,
+        111,
+        115,
+        119,
+        123
+      ]
+    }
+  ],
+  "prompt_id": "e982df13-be69-41f4-8af1-7f04814f2e47",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_model_provenance": "Astra parent dispatch, as confirmed by user; not inferred from assistant persona.",
+  "reviewed_at": "2026-10-04T14:09:13.824885+00:00",
+  "generation_history_status": "success",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "sample_count": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "visual_inspection": "Source and both chronological contact sheets inspected with view_image.",
+    "decode": "CPU only; ffmpeg -hwaccel none; decoder/output threads 2; filter_threads and filter_complex_threads 1; sequential extraction."
+  },
+  "scope": "Exact-hash source/video visual reward gate only; no processing or integration approval.",
+  "limitations": [
+    "32 sampled frames cannot guarantee absence of every inter-sample artifact, frame-perfect smoothness, or seamless looping."
+  ],
+  "verdict": "PASS",
+  "observations": [
+    "The turquoise cup and purple stem/base, mint/pink/yellow scoops, brown chocolate topping, red cherry with stem, yellow spoon and orange crosshatched wafer remain present with the source layout and colors.",
+    "Frames 0\u201360 and 63\u2013123 show gentle repeating lateral rocking/wobbling; toppings move coherently with the cup and settle near the starting arrangement.",
+    "No eyes, mouth, face, limbs, duplicated or disappearing components, or frame-edge cropping appear in the 32 inspected samples. White background and framing remain stable."
+  ],
+  "defects": [],
+  "checks": {
+    "source_structure_and_colors": "PASS",
+    "gentle_coherent_motion": "PASS",
+    "no_object_faces": "PASS",
+    "no_cropping_or_disappearing_parts": "PASS"
+  }
+}

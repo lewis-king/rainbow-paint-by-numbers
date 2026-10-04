@@ -1,0 +1,26 @@
+{
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "66385f972997b487705a4f5edccc6900f80fc2def7ff99ad13a6288edadee6bc",
+  "source_sha256": "66385f972997b487705a4f5edccc6900f80fc2def7ff99ad13a6288edadee6bc",
+  "image": "image-processing/generation/runs/55/image.png",
+  "subject": "Xylophone and two mallets",
+  "prompt_id": "9ef2b440-c33f-48f4-bf5f-9a1a0b346dfa",
+  "evidence_image": "image-processing/generation/reviews/55-source-66385f972997/image.png",
+  "observations": [
+    "The malformed long paddle-like support beneath the right side is removed. Two short block feet now support the wooden base and read as coherent instrument supports.",
+    "Two distinct mallets are visible: a purple round head with its shaft partly occluded behind the left bars, and a yellow round head with a separate short rounded handle above the right side. Neither mallet continues into an implausible leg below the instrument.",
+    "Five broad red, yellow, green, cyan and dark-blue bars, purple mallet head and warm wooden base provide meaningful contrasting colours. Repeated fasteners and yellow parts add visual repetition without relying on shading for palette credit.",
+    "The xylophone, bar sequence, rounded mallet heads and uncluttered composition are recognizable and child-friendly. No eyes, mouths or faces appear on any object."
+  ],
+  "defects": [],
+  "method": "Fresh individual full-image inspection using view_image. Current source SHA-256 verified against completed image-job receipt and successful live Comfy history.",
+  "limitations": [
+    "Source visual quality only; no reward video, extracted paint regions, gameplay or integration is approved.",
+    "The reverted experimental 20px filter and arbitrary processing-radius thresholds are not source requirements. No generation or painting processing was run."
+  ],
+  "scope": "Fresh replacement-source review for ages 4+ and readiness for later reward-video generation. Earlier archived-source reviews do not approve this replacement."
+}

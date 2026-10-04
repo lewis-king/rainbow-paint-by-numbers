@@ -1,0 +1,275 @@
+{
+  "id": "30",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "61483c92ad243f2a2a482569e5cafc9cfe35c857c0c864c5dc6d6ad611dc7657",
+  "scope": "final processed visual artifact gate only; no UI play; relies on exact-hash source/video PASS from their separate reviewers",
+  "artifact_sha256": {
+    "data.json": "15791f2f35815761455addfa6418bcc58b60bd2a1d69654952f9a4b3a6b6dfe6",
+    "original.png": "239db0c546412d22ee4a5dea2380cbc0753d226e00f31f0e69b381ed14f6552f",
+    "lines.png": "ae0269a01588f120ccd57860a1c503d3765704ea0a4a40e37e3e0d5d61bc6153",
+    "map.png": "fbb32445d80d4ac37592b32f02551d3ed50a276af80ca2284f6cb64bb497ab6d",
+    "reward.mp4": "baa83e4636c8b9a6666ed2e7c81c9810495ea5300e3e55e552f6dbb753ef0660"
+  },
+  "phone_preview_sha256": "fead104dd5d507d9b9733953dbb447af7d0686f89c9b0e96ee021153215d469e",
+  "phone_preview_provenance": "Viewed final processed phone preview; also assessed same map, lines and numbers at 350px/10px in independent diagnostic preview.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 7,
+  "palette_entries": 8,
+  "number_labels": 19,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 7,
+        "hex": "#c7eefe",
+        "area": 116309,
+        "radius": 90.2
+      },
+      {
+        "index": 6,
+        "hex": "#8cd2fd",
+        "area": 44339,
+        "radius": 33.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#000000",
+        "area": 50029,
+        "radius": 57.7
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#f90000",
+        "area": 33984,
+        "radius": 32.6
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#8e12b5",
+        "area": 20885,
+        "radius": 33.6
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#fccf07",
+        "area": 16074,
+        "radius": 30.6
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#07d9cf",
+        "area": 15904,
+        "radius": 34.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#f86200",
+        "area": 3531,
+        "radius": 21.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 19,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 7.18,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 490,
+        "y": 300,
+        "image_radius_px": 37.8,
+        "screen_radius_px_at_350": 12.92
+      },
+      {
+        "number": 1,
+        "x": 343,
+        "y": 362,
+        "image_radius_px": 26.36,
+        "screen_radius_px_at_350": 9.01
+      },
+      {
+        "number": 1,
+        "x": 305,
+        "y": 552,
+        "image_radius_px": 57.72,
+        "screen_radius_px_at_350": 19.73
+      },
+      {
+        "number": 1,
+        "x": 679,
+        "y": 586,
+        "image_radius_px": 31.36,
+        "screen_radius_px_at_350": 10.72
+      },
+      {
+        "number": 2,
+        "x": 389,
+        "y": 471,
+        "image_radius_px": 32.56,
+        "screen_radius_px_at_350": 11.13
+      },
+      {
+        "number": 2,
+        "x": 622,
+        "y": 614,
+        "image_radius_px": 31.56,
+        "screen_radius_px_at_350": 10.79
+      },
+      {
+        "number": 2,
+        "x": 538,
+        "y": 558,
+        "image_radius_px": 29.2,
+        "screen_radius_px_at_350": 9.98
+      },
+      {
+        "number": 3,
+        "x": 440,
+        "y": 234,
+        "image_radius_px": 33.56,
+        "screen_radius_px_at_350": 11.47
+      },
+      {
+        "number": 4,
+        "x": 380,
+        "y": 795,
+        "image_radius_px": 21.0,
+        "screen_radius_px_at_350": 7.18
+      },
+      {
+        "number": 5,
+        "x": 803,
+        "y": 755,
+        "image_radius_px": 33.98,
+        "screen_radius_px_at_350": 11.62
+      },
+      {
+        "number": 5,
+        "x": 694,
+        "y": 769,
+        "image_radius_px": 23.18,
+        "screen_radius_px_at_350": 7.92
+      },
+      {
+        "number": 6,
+        "x": 379,
+        "y": 116,
+        "image_radius_px": 28.56,
+        "screen_radius_px_at_350": 9.76
+      },
+      {
+        "number": 6,
+        "x": 413,
+        "y": 171,
+        "image_radius_px": 30.56,
+        "screen_radius_px_at_350": 10.45
+      },
+      {
+        "number": 7,
+        "x": 840,
+        "y": 830,
+        "image_radius_px": 32.98,
+        "screen_radius_px_at_350": 11.27
+      },
+      {
+        "number": 7,
+        "x": 471,
+        "y": 805,
+        "image_radius_px": 21.0,
+        "screen_radius_px_at_350": 7.18
+      },
+      {
+        "number": 7,
+        "x": 683,
+        "y": 820,
+        "image_radius_px": 23.0,
+        "screen_radius_px_at_350": 7.86
+      },
+      {
+        "number": 8,
+        "x": 398,
+        "y": 404,
+        "image_radius_px": 30.99,
+        "screen_radius_px_at_350": 10.59
+      },
+      {
+        "number": 8,
+        "x": 449,
+        "y": 683,
+        "image_radius_px": 90.18,
+        "screen_radius_px_at_350": 30.82
+      },
+      {
+        "number": 8,
+        "x": 620,
+        "y": 835,
+        "image_radius_px": 41.0,
+        "screen_radius_px_at_350": 14.01
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Penguin with hat, scarf, fish and ice floe; eyes and beak remain recognizable.",
+    "Revision5 retains 7 meaningful color groups and 19 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Lower beak label 4 at (492,417) has only 3.42px screen radius at 350px. In the phone approximation it crowds the beak divider and bottom contour; the narrow ice label 7 at (315,788) is also cramped.",
+        "action": "Prefill the small lower-beak and narrow ice details or merge them into appropriate adjacent regions; retain upper beak and the animal expression. Recheck at 10px screen font."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ],
+  "sha256": "8c8900d11efa76bfbfb110e77aedfa7f1836c2a902dabe8eaade5a4d388e38b2",
+  "bundle_sha256": "8c8900d11efa76bfbfb110e77aedfa7f1836c2a902dabe8eaade5a4d388e38b2",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/30",
+  "source_video_gate_provenance": {
+    "source_review": "reviews/30-image.json",
+    "source_review_sha256": "3d1d9b92c7f07b0659ac8b300ef4088fe2e2ba339a3bcf51e303cc644efdd057",
+    "video_review": "reviews/30-video.json",
+    "video_review_sha256": "63b0e1e1900f751b349589f9ff942f80d6d12996b6bf0717f746a802d13e228a",
+    "video_sha256": "baa83e4636c8b9a6666ed2e7c81c9810495ea5300e3e55e552f6dbb753ef0660",
+    "both_current_exact_hash_verdicts": "PASS"
+  }
+}

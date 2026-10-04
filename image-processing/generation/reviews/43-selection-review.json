@@ -1,0 +1,199 @@
+{
+  "id": "43",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_model_provenance": "Astra parent dispatch confirmed by user.",
+  "reviewed_at": "2026-10-04T14:36:12.487665+00:00",
+  "verdict": "PASS",
+  "best_choice_attempt": 2,
+  "best_choice_sha256": "70cd1876bdcf9948567092e97408731c16838aca01bac513abd5d18c47405d21",
+  "best_choice_video": "image-processing/generation/runs/43/video-attempt-02-steam-edge/video.mp4",
+  "source_image": "image-processing/generation/runs/43/image.png",
+  "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+  "scope": "Selection review against clarified user needs: steam from tall front chimney only, intact recognizable source train, pleasant gentle animation. Steam remaining fully inside the frame and seamless looping are not mandatory gates. Does not replace historical strict-prompt FAIL reviews or select/promote a root video.",
+  "method": {
+    "type": "chronological_sampled_visual_comparison_not_realtime_playback",
+    "sample_count_per_attempt": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "description": "Re-inspected both two-page chronological contact sheets using view_image, compared with source, and considered previously inspected full-resolution origin/edge frames. Confirmed exact MP4 and contact-sheet hashes. Original decoding CPU only, maximum two decoder threads."
+  },
+  "candidates": [
+    {
+      "attempt": 2,
+      "video": "image-processing/generation/runs/43/video-attempt-02-steam-edge/video.mp4",
+      "sha256": "70cd1876bdcf9948567092e97408731c16838aca01bac513abd5d18c47405d21",
+      "verdict_under_clarified_visual_gate": "PASS",
+      "preferred": true,
+      "contact_sheets": [
+        {
+          "path": "image-processing/generation/reviews/43-video-contact-1.png",
+          "sha256": "64b08c80f56402ef38fae0f240adca37dd8f26892a993c33da6a350fb01be28f",
+          "frame_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ]
+        },
+        {
+          "path": "image-processing/generation/reviews/43-video-contact-2.png",
+          "sha256": "455679e0eb7e416649b93d684ad3f71a135d99f29f315ecdf580afc14df12007",
+          "frame_indices": [
+            63,
+            67,
+            71,
+            75,
+            79,
+            83,
+            87,
+            91,
+            95,
+            99,
+            103,
+            107,
+            111,
+            115,
+            119,
+            123
+          ]
+        }
+      ],
+      "reasons": [
+        "Steam starts visibly touching the tall left/front yellow chimney at frame 8 and develops into a rounded plume rising and drifting right. The small rounded dome remains inactive.",
+        "The full locomotive retains its source silhouette, colors, cab, boiler, fittings, three wheels, rod, cowcatcher and rail. No face, missing structural part or distracting deformation is visible.",
+        "The cloud upper outline grazes the boundary late in the clip (including frame 95), but virtually the whole cloud remains readable. It does not cover or truncate the train and reads plausibly as rising steam. This minor edge contact does not spoil the pleasant animation enough to fail the actual user needs.",
+        "Rod movement is restrained and wheel-center detail is cleaner than attempt 3. The plume drifts right rather than becoming a strongly truncated vertical bubble."
+      ],
+      "nonblocking_caveats": [
+        "Cloud outline touches/slightly clips the upper edge in later frames.",
+        "Cloud persists at the end; seamless looping is neither established nor required."
+      ]
+    },
+    {
+      "attempt": 3,
+      "video": "image-processing/generation/runs/43/video.mp4",
+      "sha256": "f455ebf746d3abfa9196d4a4d2ea3561e9f665d03080afd70ccdc87d7d8dbe4f",
+      "verdict_under_clarified_visual_gate": "PASS",
+      "preferred": false,
+      "contact_sheets": [
+        {
+          "path": "image-processing/generation/reviews/43-video-f455ebf746d3-contact-1.png",
+          "sha256": "89e689df394a4ea6b0f8f793e81bb1ef63cf5c9633ed53352c833c802951b0b7",
+          "frame_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            52,
+            56,
+            60
+          ]
+        },
+        {
+          "path": "image-processing/generation/reviews/43-video-f455ebf746d3-contact-2.png",
+          "sha256": "c87734ebf8c21225a33fe936eed89a0de50a4be2ae4e5f5fa87bf3115fc5a81a",
+          "frame_indices": [
+            63,
+            67,
+            71,
+            75,
+            79,
+            83,
+            87,
+            91,
+            95,
+            99,
+            103,
+            107,
+            111,
+            115,
+            119,
+            123
+          ]
+        }
+      ],
+      "reasons": [
+        "Correct tall-chimney-only steam origin, inactive small dome, intact and fully visible locomotive, retained source colors, no object faces.",
+        "The puff rises vertically and a substantial portion exits the frame from around frame 28 onward. With off-screen steam explicitly allowed, that trajectory can read as natural upward travel; it is not itself a broken train or wrong emission origin.",
+        "Less polished than attempt 2: the cloud spends much of the clip visibly truncated near the top, and offset crank-pin circles beside the wheel hubs create busier changing wheel detail. These are comparative drawbacks, not clearly serious defects sufficient to fail the clarified gate."
+      ],
+      "nonblocking_caveats": [
+        "More prominent sustained steam truncation than attempt 2.",
+        "Extra crank-pin shapes are less faithful to the simple source wheel centers.",
+        "No seamless loop or exact prompt adherence claimed."
+      ]
+    }
+  ],
+  "selection_reason": "Recommend attempt 2: it meets the corrected steam-origin requirement, keeps the train intact and face-free, and has the cleaner mechanical detail and more pleasing readable plume. Minor top-outline grazing is acceptable under the actual visual requirement; another generation is not needed to resolve that alone.",
+  "criteria_correction": "Previous FAILs treated all steam-edge clipping and non-dissipation as mandatory gate failures. That was stricter than the clarified user requirement. Those historical records are retained; this separate review supplies the revised, explicitly scoped assessment.",
+  "historical_reviews": [
+    {
+      "path": "image-processing/generation/runs/43/video-attempt-02-steam-edge/video-review.json",
+      "sha256": "64f46a443959ff7704c45172dfad9bf5d4bdb3fec61e756d7ea8e93d398a6bcc",
+      "preserved": true
+    },
+    {
+      "path": "image-processing/generation/reviews/43-video.json",
+      "sha256": "7d3a7292faba792ddbed86a6faa22edcf9b4b25c86ee06be92e1984870cab441",
+      "preserved": true
+    }
+  ],
+  "limitations": [
+    "32 samples per clip, not realtime playback; no frame-perfect smoothness or inter-sample artifact guarantee."
+  ],
+  "actions": "Separate selection review only. Current root video, current 43-video.json, archived attempts, source and historical reviews left unchanged. Parent makes selection."
+}

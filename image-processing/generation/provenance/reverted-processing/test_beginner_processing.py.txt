@@ -1,0 +1,79 @@
+import unittest
+import tempfile
+from pathlib import Path
+import cv2
+import numpy as np
+from process import (simplify_beginner_map, write_rgba_png, group_neighboring_regions,
+                     merge_palette_centers, enclosed_background, BACKGROUND_ID, LINE_ID)
+
+
+class BeginnerProcessingTest(unittest.TestCase):
+    def test_seal_gray_pink_and_white_stay_distinct_but_near_gray_shades_merge(self):
+        colors = [[213, 218, 226], [247, 170, 225], [251, 254, 253], [215, 217, 225]]
+        _, mapping = merge_palette_centers(colors, beginner=True)
+        self.assertNotEqual(mapping[0], mapping[1])
+        self.assertNotEqual(mapping[0], mapping[2])
+        self.assertEqual(mapping[0], mapping[3])
+        # This reproduces the previous failure, rather than just testing a
+        # threshold against itself.
+        _, legacy = merge_palette_centers(colors, beginner=False)
+        self.assertEqual(legacy[0], legacy[1])
+
+    def test_enclosed_background_fill_leaves_outer_canvas_and_paint_targets_alone(self):
+        pixels = np.full((12, 12), BACKGROUND_ID, np.uint8)
+        pixels[3:9, 3:9] = LINE_ID
+        pixels[4:6, 4:6] = BACKGROUND_ID
+        pixels[7, 7] = 0
+        mask = enclosed_background(pixels)
+        self.assertEqual(int(mask.sum()), 4)
+        self.assertTrue(mask[4, 4])
+        self.assertFalse(mask[0, 0])
+        self.assertFalse(mask[7, 7])
+
+    def test_fixed_colored_details_keep_their_color_in_png(self):
+        rgba = np.array([[[0, 200, 255, 255], [255, 30, 0, 255]]], dtype=np.uint8)
+        with tempfile.TemporaryDirectory() as folder:
+            path = str(Path(folder) / 'lines.png')
+            write_rgba_png(path, rgba)
+            decoded = cv2.imread(path, cv2.IMREAD_UNCHANGED)
+        self.assertEqual(decoded[0, 0].tolist(), [255, 200, 0, 255])
+        self.assertEqual(decoded[0, 1].tolist(), [0, 30, 255, 255])
+
+    def test_each_separate_fill_region_gets_a_number_even_when_close(self):
+        pixels = np.full((80, 80), LINE_ID, np.uint8)
+        pixels[5:35, 5:35] = 0
+        pixels[37:67, 5:35] = 0
+        groups = group_neighboring_regions(pixels, 0, 20, neighbor_gap=0)
+        self.assertEqual(len(groups), 2)
+        self.assertTrue(all(pixels[g['best_label_pos'][1], g['best_label_pos'][0]] == 0 for g in groups))
+
+    def test_large_black_and_color_regions_survive_tiny_details_do_not_need_paint(self):
+        pixels = np.full((100, 120), BACKGROUND_ID, np.uint8)
+        pixels[10:50, 10:50] = 0  # A black body is a real painting choice.
+        pixels[10:50, 65:105] = 3
+        pixels[65:68, 10:105] = 1  # Long but too thin for a readable number.
+        pixels[80:85, 80:85] = 2  # Small eye highlight becomes fixed artwork.
+        pixels[5:8, 10:105] = LINE_ID
+        before = pixels.copy()
+        colors = [[0, 0, 0], [30, 30, 30], [255, 255, 255], [255, 20, 50]]
+        cleaned, palette = simplify_beginner_map(pixels, colors)
+        np.testing.assert_array_equal(pixels, before)
+        self.assertEqual(palette, [colors[0], colors[3]])
+        self.assertEqual(cleaned[30, 30], 0)
+        self.assertEqual(cleaned[30, 80], 1)
+        self.assertEqual(cleaned[66, 40], LINE_ID)
+        self.assertEqual(cleaned[82, 82], LINE_ID)
+        self.assertEqual(cleaned[0, 0], BACKGROUND_ID)
+
+    def test_small_disconnected_piece_does_not_remove_large_same_color(self):
+        pixels = np.full((100, 100), BACKGROUND_ID, np.uint8)
+        pixels[5:55, 5:55] = 0
+        pixels[80:85, 80:85] = 0
+        cleaned, palette = simplify_beginner_map(pixels, [[200, 10, 10]])
+        self.assertEqual(cleaned[30, 30], 0)
+        self.assertEqual(cleaned[82, 82], LINE_ID)
+        self.assertEqual(len(palette), 1)
+
+
+if __name__ == '__main__':
+    unittest.main()

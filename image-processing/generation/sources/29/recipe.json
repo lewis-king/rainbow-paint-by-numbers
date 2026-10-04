@@ -1,0 +1,13 @@
+{
+  "id": "29",
+  "slug": "puppy",
+  "title": "Puppy",
+  "category": "animals",
+  "seed": 2026111429,
+  "image_prompt": "(masterpiece), flat vector art, children's coloring book style, cute a happy tan puppy with chocolate-brown floppy ears, a bright red collar and a large golden yellow round tag, holding a deep blue slipper with a turquoise sole in its mouth, sitting beside a round green and orange striped ball. Four clear paws and friendly eyes, simple shapes, thick bold outlines, cel shaded, vibrant solid colors, white background, minimalist, high contrast, 2d game asset, no dithering. Designed as an engaging paint-by-numbers activity for school-age beginners aged 4 and up: use every named contrasting color in substantial clearly enclosed areas. About 18 to 35 medium-to-large paintable regions, repeat some colors in separate regions. Keep all objects fully visible with a generous white margin. No text, no numerals, no gradients, no shadows, no texture, no tiny details. Uniform thick BLACK contours, no colored outline strokes. Every animal has a complete friendly face with clearly visible eyes and pupils.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The seated puppy gently tilts its head left and right and blinks its eyes, keeping the turquoise slipper firmly in its mouth. Its paws and body remain seated. Preserve the exact anatomy, bright solid colors and black outlines of the input illustration. Fixed camera, whole subject visible, plain white background. No new objects, no text, no speech, no cuts. End in the starting pose.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2
+}

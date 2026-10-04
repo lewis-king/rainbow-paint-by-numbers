@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { View, Text, StyleSheet, Pressable, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
 import { Image } from 'expo-image';
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -45,7 +45,7 @@ const EXTENDED_RAINBOW = [
   '#A080FA', '#B080F0', '#C080E8', '#DA77F2', // indigo to violet
   '#E070E0', '#F060D0', '#FF60C0', '#FF60A0', // violet to pink
   '#FF6090', '#FF6080', '#FF6B6B', // pink back to red
-];
+] as const;
 
 // Rainbow gradient title with smooth color cycling
 function RainbowTitle() {
@@ -100,13 +100,18 @@ export default function HomeScreen() {
 
   forceHydratedRef.current = forceHydrated;
 
-  // Check if we should show review prompt when dashboard loads
-  // Only check after BOTH stores are hydrated to avoid race conditions
-  useEffect(() => {
-    if (_hasHydrated && reviewHydrated && shouldShowReview()) {
-      setShowReviewPrompt(true);
+  const closeReviewPrompt = useCallback(() => setShowReviewPrompt(false), []);
+
+  // Returning from the tenth distinct painting is the quiet moment to ask.
+  useFocusEffect(useCallback(() => {
+    if (_hasHydrated && reviewHydrated) {
+      const completed = Object.entries(useLevelProgressStore.getState().levels)
+        .filter(([, level]) => level.isComplete).map(([id]) => id);
+      useReviewStore.getState().reconcileCompletions(completed);
+      setShowReviewPrompt(shouldShowReview());
     }
-  }, [_hasHydrated, reviewHydrated, shouldShowReview]);
+    return () => setShowReviewPrompt(false);
+  }, [_hasHydrated, reviewHydrated, shouldShowReview]));
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -168,7 +173,7 @@ export default function HomeScreen() {
       {/* Review Prompt - shown on dashboard, not during victory */}
       <ReviewPrompt
         visible={showReviewPrompt}
-        onClose={() => setShowReviewPrompt(false)}
+        onClose={closeReviewPrompt}
       />
     </View>
   );

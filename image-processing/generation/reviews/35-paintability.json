@@ -1,0 +1,60 @@
+{
+  "id": "35",
+  "processor_revision": 5,
+  "source_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+  "source_palette_entries": 6,
+  "meaningful_color_groups": 6,
+  "paintable_pixels": 233881,
+  "number_labels": 11,
+  "area_cutoff": 1871,
+  "groups": [
+    [
+      {
+        "index": 0,
+        "hex": "#000000",
+        "area": 129833,
+        "radius": 128.2
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#f95d00",
+        "area": 41534,
+        "radius": 64.0
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#dcdcd9",
+        "area": 34376,
+        "radius": 80.6
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#72a334",
+        "area": 12078,
+        "radius": 29.2
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#83521f",
+        "area": 9627,
+        "radius": 25.6
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#fcd700",
+        "area": 6433,
+        "radius": 24.0
+      }
+    ]
+  ]
+}

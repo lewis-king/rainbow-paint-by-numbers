@@ -1,0 +1,26 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
+  "image": "image-processing/generation/runs/51/image.png",
+  "subject": "Watering can",
+  "observations": [
+    "One large watering can watering one potted flower, with exactly three large blue drops; no duplicate cans or sticker layout.",
+    "Orange can, cyan top handle, purple side handle/pot, red motif, yellow centers, blue drops, green leaves and pink petals provide eight substantial contrasting colors; brown soil is secondary.",
+    "Three separate drops, repeated leaves, purple handle/pot and two yellow flower centers support meaningful repeated number matching. Bold flat fills are cleaner than the archived grid."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Ensure narrow leaf/stem joins and handle openings do not create tiny labels; keep sprinkler holes as fixed detail."
+  ],
+  "scope": "Current single-composition source visually inspected individually with view_image. Supersedes the archived grid candidate only for this exact hash. Source PASS does not approve processed labels, gameplay or video.",
+  "object_realism_revision": 1,
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "source_sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
+    "observation": "Can, flower motif, potted plant and drops have no faces; flower centers are ordinary botanical features.",
+    "criterion": "No anthropomorphic eyes, mouths or character features on non-animal objects, props or motifs.",
+    "method": "Actual full-image visual evidence from this session, verified unchanged by exact source SHA-256."
+  }
+}

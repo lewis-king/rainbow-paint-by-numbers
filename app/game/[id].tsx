@@ -29,8 +29,8 @@ export default function GameScreen() {
   const [initialPaintedPixels, setInitialPaintedPixels] = useState<number[] | undefined>(undefined);
 
   const reset = useGameStore((state) => state.reset);
-  const { getLevelProgress, saveProgress, saveFullState, resetLevel, _hasHydrated, isLevelComplete } = useLevelProgressStore();
-  const { incrementCompletedLevels } = useReviewStore();
+  const { getLevelProgress, saveProgress, saveFullState, resetLevel, _hasHydrated } = useLevelProgressStore();
+  const { recordCompletedLevel } = useReviewStore();
 
   // Refs for debounced saving
   const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -180,17 +180,19 @@ export default function GameScreen() {
 
   // Handle victory - use local progress state to avoid stale global state issues
   useEffect(() => {
-    if (progress >= 99 && !showVictory) {
+    if (!loading && hasPaintedRef.current && progress >= 99 && !showVictory) {
       setShowVictory(true);
       
       // Increment completed levels counter (review prompt will show on dashboard)
-      incrementCompletedLevels();
+      if (id) recordCompletedLevel(id);
     }
-  }, [progress, showVictory, incrementCompletedLevels]);
+  }, [id, loading, progress, showVictory, recordCompletedLevel]);
 
-  const handleProgressChange = useCallback((newProgress: number) => {
-    // Mark that painting happened this session
-    hasPaintedRef.current = true;
+  const handleProgressChange = useCallback((newProgress: number, source: 'paint' | 'restore') => {
+    // Restoring saved pixels is not a new painting action.
+    if (source === 'paint' && newProgress > useGameStore.getState().progress) {
+      hasPaintedRef.current = true;
+    }
     setProgress(newProgress);
     useGameStore.getState().setProgress(newProgress);
   }, []);

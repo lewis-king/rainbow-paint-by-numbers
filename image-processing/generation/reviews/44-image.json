@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "38b02eb9e7809c4b8e16783cf4b3d860ae9396cf684f73a2c9fd24c9614be7e1",
+  "image": "image-processing/generation/runs/44/image.png",
+  "subject": "Aeroplane",
+  "observations": [
+    "Both misplaced eyes are removed; the canopy and fuselage now read as ordinary aircraft structure. No face appears on the aircraft or clouds.",
+    "Yellow fuselage, red nose, orange propeller, purple wing panels, cyan borders/tailplanes, blue canopy and green fin preserve substantial color variety and paired repeated regions."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "No anthropomorphic faces or character features on the object, props or decorative motifs."
+  },
+  "processed_gate_checks": [
+    "Preserve broad paint regions; do not number tiny shading, decorative strokes or background holes."
+  ],
+  "scope": "New current edit inspected individually with view_image. Exact-hash source engagement and no-faces approval only; no processed-output or motion approval is implied."
+}

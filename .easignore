@@ -41,3 +41,10 @@ yarn-debug.*
 yarn-error.*
 .DS_Store
 .vscode/
+
+# Design previews and development tests are not app assets.
+design/
+tests/
+
+# Analytics is deferred to a separate release; configuration stays in the repo.
+analytics/

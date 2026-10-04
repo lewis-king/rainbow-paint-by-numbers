@@ -1,0 +1,14 @@
+{
+  "id": "51",
+  "slug": "watering-can",
+  "title": "Watering Can",
+  "category": "everyday",
+  "seed": 2026110551,
+  "image_prompt": "(masterpiece), flat vector art, children's coloring book style. ONE large  orange watering can with a turquoise top handle, purple side handle and red flower emblem with yellow centre. Its spout pours THREE large blue water drops towards ONE flowering plant in a purple pot. The plant has broad green leaves and ONE large pink flower with a yellow centre. Arrange as ONE compact garden scene. One large central composition filling the canvas, all objects completely visible with white margin. Simple bold shapes, thick uniform black outlines, vibrant SOLID flat colors, white background, minimalist, high contrast, 2d game asset. Large enclosed color areas suitable for age 4 paint by numbers. No collage, no sticker sheet, no grid, no repeated characters, no text, no numbers, no shading, no highlights, no gradients, no texture. Real objects with recognizable physical structure. No anthropomorphic features: no faces, no eyes, no pupils, no mouths, no eyebrows, no smiles, no limbs on any object, food, plant or decoration.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The watering can gently tips and pours a few large blue water drops before returning upright. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1
+}

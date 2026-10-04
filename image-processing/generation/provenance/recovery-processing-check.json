@@ -1,0 +1,14 @@
+{
+  "levels": [
+    41,
+    42,
+    43
+  ],
+  "wall_seconds": 24.9,
+  "max_child_rss_kib": 380496,
+  "user_cpu_seconds": 55.55299,
+  "system_cpu_seconds": 8.604658,
+  "exit_code": 0,
+  "overlapping_gpu_generation": false,
+  "process_threads": 2
+}

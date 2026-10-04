@@ -1,0 +1,44 @@
+[
+  {
+    "frame": 20,
+    "time_s": 0.833333,
+    "top_row_dark_pixel_count": 5,
+    "x_min": 288,
+    "x_max": 292
+  },
+  {
+    "frame": 21,
+    "time_s": 0.875,
+    "top_row_dark_pixel_count": 10,
+    "x_min": 291,
+    "x_max": 300
+  },
+  {
+    "frame": 22,
+    "time_s": 0.916667,
+    "top_row_dark_pixel_count": 14,
+    "x_min": 301,
+    "x_max": 314
+  },
+  {
+    "frame": 23,
+    "time_s": 0.958333,
+    "top_row_dark_pixel_count": 15,
+    "x_min": 305,
+    "x_max": 319
+  },
+  {
+    "frame": 24,
+    "time_s": 1.0,
+    "top_row_dark_pixel_count": 13,
+    "x_min": 319,
+    "x_max": 331
+  },
+  {
+    "frame": 25,
+    "time_s": 1.041667,
+    "top_row_dark_pixel_count": 16,
+    "x_min": 321,
+    "x_max": 336
+  }
+]

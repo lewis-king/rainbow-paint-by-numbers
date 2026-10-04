@@ -1,0 +1,87 @@
+{
+  "source_image": "image-processing/generation/runs/45/image.png",
+  "source_sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
+  "video": "image-processing/generation/runs/45/video.mp4",
+  "sha256": "ae1fa4a68f43ebe1792e72416441794255af33e98a88678d592cb019de28b86c",
+  "video_sha256": "ae1fa4a68f43ebe1792e72416441794255af33e98a88678d592cb019de28b86c",
+  "prompt_id": "3f383ed7-a93d-46b6-8d34-432c1f975821",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "source_visual_verdict": "PASS",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "sample_count": 32,
+    "evidence_sheets": [
+      "image-processing/generation/reviews/45-video-ae1fa4a68f43/contact-1.jpg",
+      "image-processing/generation/reviews/45-video-ae1fa4a68f43/contact-2.jpg",
+      "image-processing/generation/reviews/45-video-ae1fa4a68f43/contact-3.jpg",
+      "image-processing/generation/reviews/45-video-ae1fa4a68f43/contact-4.jpg"
+    ],
+    "description": "Actual source and all chronological contact sheets inspected using view_image. Evenly spaced frames include 0, 4 and last. CPU FFmpeg decoding, filtering and PNG encoding limited to two threads each; no GPU or generation submission."
+  },
+  "observations": [
+    "Source excavator, cone and leaves are recognizable, face-free objects with broad contrasting colours; no source visual failure was found.",
+    "The two-section arm lowers the orange bucket toward the leaves and cone, then raises it again. Joint connections remain coherent across the 32 chronological samples; temporary bucket occlusion behind foreground props reads as overlap rather than disappearance.",
+    "Cab, blue window, red engine block, grey track band and two purple wheels persist without sudden sampled losses or major deformation. Cone and both leaves remain present.",
+    "The entire machine and props remain comfortably within the image throughout sampled views. The background and stationary base do not accumulate drift; no faces appear on the objects."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled still-frame inspection, not real-time playback or inspection of every frame. Motion observations describe progression across samples; frame-perfect smoothness, inter-sample artifacts and seamless looping are not guaranteed.",
+    "Contact sheets use reduced-size frames; full-resolution extracted samples are retained beside them."
+  ],
+  "scope": "Exact-source and exact-video sampled visual reward-video review only. No painting processing, build, emulator, imports or integration performed or approved."
+}

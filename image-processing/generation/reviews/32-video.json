@@ -1,0 +1,100 @@
+{
+  "reviewer": "user",
+  "review_model": null,
+  "verdict": "PASS",
+  "sha256": "83db516421542885ee0fa5a813a8261ed065bc5045e724bd405a4f91b438f3bd",
+  "video": "image-processing/generation/runs/32/video.mp4",
+  "source_sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
+  "source_image": "image-processing/generation/runs/32/image.png",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "overview_frame_indices": [
+      0,
+      11,
+      22,
+      34,
+      45,
+      56,
+      67,
+      78,
+      89,
+      101,
+      112,
+      123
+    ],
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "overview_sample_count": 12,
+    "dense_sample_count": 32,
+    "description": "Individually inspected chronological overview sheet of 12 evenly spaced frames plus denser sheets sampling every fourth frame and final frame. Compared against previously visually inspected exact-hash source. Metadata verified with ffprobe. No realtime playback claimed."
+  },
+  "observations": [
+    "Green snail, yellow/purple spiral shell, red mushroom with turquoise spots and blue ground retain their main colors and recognizable forms.",
+    "Small eye-stalk/head and body changes occur, but most visible displacement is the entire snail, mushroom and blue ground drifting together to the right.",
+    "Right mushroom-cap edge loses its safe margin and is clipped by the frame in late samples, including the final frame."
+  ],
+  "defects": [
+    "Blocking framing defect: composition drifts right and clips the mushroom cap near the end."
+  ],
+  "limitations": [
+    "Sampling cannot guarantee frame-perfect smoothness, absence of every inter-sample artifact or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration.",
+  "suggestions": [
+    "Lock mushroom and ground position, keep camera fixed and preserve clear margins on every side. Animate small snail eye-stalk/head/body movements or a tiny bounded glide without moving the entire scene off-screen."
+  ],
+  "approval_basis": "Explicit user selection of original attempt 1 on 2026-10-04",
+  "user_statement": "btw I don't know what happened to video reward on 32 but the attempt 1 looked fine we can use that",
+  "prior_astra_verdict": "FAIL",
+  "prior_astra_review": "runs/32/video-attempt-01-cropped/video-review.json"
+}

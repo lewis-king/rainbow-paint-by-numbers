@@ -1,0 +1,147 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "rainbow-paint-by-numbers/42.png"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "A gentle flat 2D illustration animation. The complete rainbow hot-air balloon and its basket remain centered and fully visible in EXACTLY the starting position for the entire clip. The envelope rotates only three degrees left and right, and the attached basket sways slightly beneath it. NO rising, NO upward travel, NO translation, NO zoom. Preserve generous empty margin above the balloon and below the basket in every frame. Keep the original shape, colors, ropes and black outlines. Plain white background, fixed camera, no new objects, no faces, no eyes, no mouths. End at the original centered pose.",
+      "width": 640,
+      "height": 640,
+      "length": 124,
+      "first_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026101442
+    }
+  },
+  "7": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "8": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 20,
+      "denoise": 1
+    }
+  },
+  "9": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "6",
+        0
+      ],
+      "guider": [
+        "9",
+        0
+      ],
+      "sampler": [
+        "7",
+        0
+      ],
+      "sigmas": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "5",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24
+    }
+  },
+  "13": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "12",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/video/42-hot-air-balloon",
+      "format": "mp4",
+      "codec": "h264"
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "id": "44",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "38b02eb9e7809c4b8e16783cf4b3d860ae9396cf684f73a2c9fd24c9614be7e1",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "273852336028791f09aa6567f95c061a003ad77d414c04749fb10b90d88737fa",
+    "original.png": "8670ecf6e0e898a4edfd36754aaa59490fabb20befebc397958a40151ad79ac9",
+    "lines.png": "ba8149bfa6f2f9df47afeb2f74a0d7e1856392b2ef93c1985bc4a571b2fa6a25",
+    "map.png": "e63865185d1fa527d69b27c307c25612f89bf8c902e27f3d77c51df28121a1f5",
+    "unpainted.png": "97d626877dcbd569fe81136a93d957d440e0e8cd64965a10b8ff500d97967dc9"
+  },
+  "phone_preview_sha256": "8134562cc9623c5596db0d3116b56d94d98d79f7a692ed8d10c269960e256419",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 8,
+  "palette_entries": 8,
+  "number_labels": 16,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 5,
+        "hex": "#02c1fa",
+        "area": 72431,
+        "radius": 63.3
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#fadb01",
+        "area": 64014,
+        "radius": 83.4
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#873df9",
+        "area": 49354,
+        "radius": 61.1
+      }
+    ],
+    [
+      {
+        "index": 7,
+        "hex": "#f9fafb",
+        "area": 20743,
+        "radius": 42.6
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#f30100",
+        "area": 19379,
+        "radius": 57.7
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#0adf01",
+        "area": 11511,
+        "radius": 45.6
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#d14605",
+        "area": 11365,
+        "radius": 21.4
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#0f86f6",
+        "area": 10364,
+        "radius": 45.3
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 16,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 6.9,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 817,
+        "y": 312,
+        "image_radius_px": 45.59,
+        "screen_radius_px_at_350": 15.58
+      },
+      {
+        "number": 2,
+        "x": 278,
+        "y": 560,
+        "image_radius_px": 57.72,
+        "screen_radius_px_at_350": 19.73
+      },
+      {
+        "number": 3,
+        "x": 125,
+        "y": 517,
+        "image_radius_px": 21.39,
+        "screen_radius_px_at_350": 7.31
+      },
+      {
+        "number": 3,
+        "x": 189,
+        "y": 620,
+        "image_radius_px": 20.18,
+        "screen_radius_px_at_350": 6.9
+      },
+      {
+        "number": 3,
+        "x": 262,
+        "y": 684,
+        "image_radius_px": 21.0,
+        "screen_radius_px_at_350": 7.18
+      },
+      {
+        "number": 4,
+        "x": 550,
+        "y": 420,
+        "image_radius_px": 45.34,
+        "screen_radius_px_at_350": 15.5
+      },
+      {
+        "number": 5,
+        "x": 269,
+        "y": 383,
+        "image_radius_px": 53.73,
+        "screen_radius_px_at_350": 18.36
+      },
+      {
+        "number": 5,
+        "x": 655,
+        "y": 607,
+        "image_radius_px": 61.12,
+        "screen_radius_px_at_350": 20.89
+      },
+      {
+        "number": 6,
+        "x": 158,
+        "y": 336,
+        "image_radius_px": 21.18,
+        "screen_radius_px_at_350": 7.24
+      },
+      {
+        "number": 6,
+        "x": 669,
+        "y": 322,
+        "image_radius_px": 28.0,
+        "screen_radius_px_at_350": 9.57
+      },
+      {
+        "number": 6,
+        "x": 437,
+        "y": 426,
+        "image_radius_px": 63.32,
+        "screen_radius_px_at_350": 21.64
+      },
+      {
+        "number": 6,
+        "x": 857,
+        "y": 408,
+        "image_radius_px": 37.95,
+        "screen_radius_px_at_350": 12.97
+      },
+      {
+        "number": 6,
+        "x": 902,
+        "y": 688,
+        "image_radius_px": 37.95,
+        "screen_radius_px_at_350": 12.97
+      },
+      {
+        "number": 7,
+        "x": 680,
+        "y": 445,
+        "image_radius_px": 83.39,
+        "screen_radius_px_at_350": 28.5
+      },
+      {
+        "number": 8,
+        "x": 117,
+        "y": 449,
+        "image_radius_px": 30.2,
+        "screen_radius_px_at_350": 10.32
+      },
+      {
+        "number": 8,
+        "x": 874,
+        "y": 537,
+        "image_radius_px": 42.56,
+        "screen_radius_px_at_350": 14.55
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Propeller airplane with cockpit, wings, tail, wheels and clouds; no object face.",
+    "Revision5 retains 8 meaningful color groups and 16 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Small far-wheel/underside label 4 at (371,682) is swallowed by the dark curved outline in the phone approximation (3.49px radius); main wheel labels are also tight.",
+        "action": "Make small wheel slivers fixed source-colored detail, preserving the recognizable wheel shape, or enlarge them sufficiently for a 10px screen label."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

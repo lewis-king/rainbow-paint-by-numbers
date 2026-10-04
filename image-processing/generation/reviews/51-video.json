@@ -1,0 +1,135 @@
+{
+  "id": "51",
+  "video": "image-processing/generation/runs/51/video.mp4",
+  "sha256": "180c373b496871a4370ffdca42cd195d4440c735c4b2d5fd522854d1d071a377",
+  "source_image": "image-processing/generation/runs/51/image.png",
+  "source_sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
+  "job_sha256_match": true,
+  "source_approval_sha256_match": true,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "contact_sheets": [
+    {
+      "path": "image-processing/generation/reviews/51-video-contact-1.png",
+      "sha256": "ef2a19dcc3b591c4a318dbc414232cdf863b088a33866ae48796bf62c4117474",
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48,
+        52,
+        56,
+        60
+      ]
+    },
+    {
+      "path": "image-processing/generation/reviews/51-video-contact-2.png",
+      "sha256": "9e2405bb109109ca6a0720160925863c29e2d74ab16e3de335f7f455c2120d62",
+      "frame_indices": [
+        63,
+        67,
+        71,
+        75,
+        79,
+        83,
+        87,
+        91,
+        95,
+        99,
+        103,
+        107,
+        111,
+        115,
+        119,
+        123
+      ]
+    }
+  ],
+  "prompt_id": "c34c12de-89de-4b8f-8fbd-d6ee8c98ec4b",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_model_provenance": "Astra parent dispatch, as confirmed by user; not inferred from assistant persona.",
+  "reviewed_at": "2026-10-04T14:13:55.569491+00:00",
+  "generation_history_status": "success",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "sample_count": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "visual_inspection": "Source and both chronological contact sheets inspected with view_image.",
+    "decode": "CPU only; ffmpeg -hwaccel none; decoder/output threads 2; filter_threads and filter_complex_threads 1; sequential extraction."
+  },
+  "scope": "Exact-hash source/video visual reward gate only; no processing or integration approval.",
+  "limitations": [
+    "32 sampled frames cannot guarantee absence of every inter-sample artifact, frame-perfect smoothness, or seamless looping."
+  ],
+  "verdict": "PASS",
+  "observations": [
+    "Orange can retains its cyan top handle, purple rear handle, red/yellow flower emblem, long spout and perforated sprinkler head. Pink flower, green leaves/stems and purple pot retain source structure and colors.",
+    "Can tips gradually toward the plant across frames 8\u201356, releases blue drops from the sprinkler head onto the plant, then returns upright across frames 63\u2013111. Droplet motion follows the intended watering action; the can and plant remain recognizable and coherent.",
+    "The transient water drops finish falling by the later samples. Their disappearance is the intended end of pouring, not loss of a structural component. The final pose lacks the source still-image droplets, so a seamless loop is not claimed.",
+    "No new faces, eyes, mouths or limbs, frame-edge crops, or disappearing can/plant parts appear in the 32 samples."
+  ],
+  "defects": [],
+  "checks": {
+    "source_structure_and_colors": "PASS",
+    "gentle_coherent_motion": "PASS",
+    "no_object_faces": "PASS",
+    "no_cropping_or_disappearing_parts": "PASS"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "40",
+  "status": "prepared_not_submitted",
+  "reason": "Preserve cactus and flower throughout the reward clip",
+  "failed_video_sha256": "547ce801119f43cfbdb6f86a3ee79ca6447b93ae4bcc126cfc5299a4364e42bc",
+  "source_sha256": "2fd2163d25a74af55e9c87d9b865eebd0a36ef6830cd2c6d052040060530b712",
+  "previous_video_prompt": "A charming flat 2D cartoon animation for young children. The camel sways its long neck gently and flicks its small tail. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "video_seed": 2026111540,
+  "video_prompt": "A gentle flat 2D cartoon animation for young children, preserving the complete input composition. The golden camel remains planted in its exact position with all four feet still. It blinks once and makes a tiny tail flick, ending in its starting pose. The separate green cactus with its pink flower at the lower left remains completely motionless, fully visible and identical in every frame from beginning to end. Preserve both humps, the cream muzzle, orange halter, turquoise blanket, red border and three purple diamonds without changing shapes or colors. Fixed camera, fixed framing, generous white margins, plain white background. No translation, zoom, cuts, disappearing objects, new objects, text or speech. The cactus and flower remain inanimate with no face.",
+  "before_submission": [
+    "Archive failed video, API graph, job receipt and FAIL review together",
+    "Apply this video prompt and seed to manifest",
+    "Confirm ComfyUI history and queue before submitting; do not restart generation while machine stability is unresolved"
+  ],
+  "after_generation": [
+    "Astra review exact source and video hashes, explicitly checking cactus and flower across early frames and entire clip",
+    "Process and approve the final numbered painting before integration"
+  ]
+}

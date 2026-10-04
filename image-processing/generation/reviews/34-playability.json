@@ -1,0 +1,136 @@
+{
+  "id": "34",
+  "reviewer": "gpt6astra",
+  "verdict": "FAIL",
+  "status": "FAIL",
+  "processor_revision": 5,
+  "source_sha256": "63afb532bd58c1835211baa492396b2c157f4db8f52f64ad7ca65d2a630b18e2",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "095152c3b373e1ff20546442fd0a3aa02b919bd5fe30d4eab492608f18a20511",
+    "original.png": "9c3d9e991e31494d6098f4cee63a9919bd1729b18901fae90ea3e3494a7014c8",
+    "lines.png": "8c6dcd925e6c94fbf4e18123b0f900650f18ac02e2ffd1a27d44331f039daaa9",
+    "map.png": "3affe6417f296334ca1c83e2eef4d87d78ab1f10fdd0a77939bb56478ececf49",
+    "unpainted.png": "7c5fb0a739eb9bdc07cff31e33ba69bbe40cc009345aa3b2cac26917ebd90324"
+  },
+  "phone_preview_sha256": "cd2d12fcc5faed6c1169e345659b9ac1d4159239defb677c1bc23c6f204419eb",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 5,
+  "palette_entries": 5,
+  "number_labels": 5,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 3,
+        "hex": "#916ac8",
+        "area": 122948,
+        "radius": 96.1
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#03c8bd",
+        "area": 18820,
+        "radius": 23.4
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#fc7e1e",
+        "area": 16765,
+        "radius": 54.0
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#fbe400",
+        "area": 10615,
+        "radius": 25.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#32aa55",
+        "area": 3353,
+        "radius": 21.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 5,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 7.18,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 913,
+        "y": 523,
+        "image_radius_px": 21.0,
+        "screen_radius_px_at_350": 7.18
+      },
+      {
+        "number": 2,
+        "x": 845,
+        "y": 713,
+        "image_radius_px": 23.37,
+        "screen_radius_px_at_350": 7.99
+      },
+      {
+        "number": 3,
+        "x": 177,
+        "y": 393,
+        "image_radius_px": 53.98,
+        "screen_radius_px_at_350": 18.45
+      },
+      {
+        "number": 4,
+        "x": 514,
+        "y": 312,
+        "image_radius_px": 96.08,
+        "screen_radius_px_at_350": 32.84
+      },
+      {
+        "number": 5,
+        "x": 505,
+        "y": 159,
+        "image_radius_px": 25.0,
+        "screen_radius_px_at_350": 8.54
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Octopus with clear eyes and smile, eight arms, hat, star, seaweed and shell.",
+    "Revision5 retains 5 meaningful color groups and 5 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Small-label clearance is improved; remaining blocking findings are detailed below.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [
+    {
+      "code": "INSUFFICIENT_MEANINGFUL_COLORS",
+      "severity": "blocking",
+      "description": "Only 5 meaningful paintable color groups remain.",
+      "action": "Provide a sixth substantial paintable color with adequate space for a 10px screen label. Enlarge a suitable source-consistent region or add a broad colored panel; do not reinstate tiny mandatory fragments merely to increase the palette count."
+    }
+  ],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "PASS",
+    "defects": []
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

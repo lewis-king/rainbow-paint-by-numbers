@@ -1,0 +1,284 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "scope": "Historical audit of the original candidates in runs 29-58, as accepted by the user. REGENERATE and MISSING decisions do not review replacement images or pending pilots.",
+  "method": "All five reviews/images-*.jpg contact sheets inspected with view_image; originals 35, 37, 42, 54 and 55 additionally inspected at full image resolution. Prior PASS files were not treated as engagement evidence.",
+  "criteria": [
+    "Ages 4+ starting school: engaging recognizable subjects, bold flat colors and reasonably large paintable regions.",
+    "Target roughly six to ten genuinely distinct colors in meaningful areas, with repeated interesting number regions.",
+    "Do not inflate palette with white background, black ink, tiny highlights or similar shades.",
+    "Preserve user-approved toucan 35 as the benchmark; cow 37 also explicitly approved by the user.",
+    "Generated number placement was not inspected."
+  ],
+  "counts": {
+    "KEEP": 6,
+    "REGENERATE": 21,
+    "MISSING": 3
+  },
+  "keep_ids": [
+    35,
+    37,
+    42,
+    43,
+    54,
+    55
+  ],
+  "regenerate_ids": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    40,
+    41,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "missing_ids": [
+    56,
+    57,
+    58
+  ],
+  "decisions": [
+    {
+      "id": 29,
+      "subject": "Puppy",
+      "decision": "REGENERATE",
+      "reason": "Tan dominates; turquoise accessory adds little variety.",
+      "suggestion": "Add a striped bandana, multicolored ball and contrasting patches with large enclosed regions."
+    },
+    {
+      "id": 30,
+      "subject": "Penguin",
+      "decision": "REGENERATE",
+      "reason": "Orange and pale blue provide little color activity.",
+      "suggestion": "Add a broad striped scarf, colorful hat and simple fish."
+    },
+    {
+      "id": 31,
+      "subject": "Kangaroo",
+      "decision": "REGENERATE",
+      "reason": "Almost entirely orange/tan; joey repeats the same palette.",
+      "suggestion": "Add a colorful pouch decoration, scarf and a few large flowers."
+    },
+    {
+      "id": 32,
+      "subject": "Snail",
+      "decision": "REGENERATE",
+      "reason": "Only three meaningful colors; spiral does not create enough enclosed regions.",
+      "suggestion": "Use a segmented rainbow shell and large leaf/flower shapes."
+    },
+    {
+      "id": 33,
+      "subject": "Butterfly",
+      "decision": "REGENERATE",
+      "reason": "Good symmetry and repeated regions, but only four colors.",
+      "suggestion": "Preserve silhouette; add large mirrored wing patches using six to eight colors."
+    },
+    {
+      "id": 34,
+      "subject": "Octopus",
+      "decision": "REGENERATE",
+      "reason": "Essentially one purple region.",
+      "suggestion": "Add broad contrasting arm sections, large spots and simple colorful underwater objects."
+    },
+    {
+      "id": 35,
+      "subject": "Toucan",
+      "decision": "KEEP",
+      "sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+      "observations": [
+        "User-approved engagement benchmark: the oversized two-tone beak and yellow face provide strong focal color, supported by substantial green leaves, blue feet and a brown branch.",
+        "Three separate leaves and two feet repeat color choices across recognizable regions; the broad body and beak remain accessible for ages 4+.",
+        "KEEP is based on composition and meaningful paintable variety, not an inflated count of background white, black ink, highlights or neighboring orange shades."
+      ]
+    },
+    {
+      "id": 36,
+      "subject": "Sheep",
+      "decision": "REGENERATE",
+      "reason": "Cream wool, peach face and brown legs offer very little activity.",
+      "suggestion": "Add a broad patterned blanket, colorful flowers and distinct large wool sections."
+    },
+    {
+      "id": 37,
+      "subject": "Cow",
+      "decision": "KEEP",
+      "sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+      "observations": [
+        "Explicitly user-approved keeper: substantial pink muzzle and inner ears, teal collar and yellow bell add meaningful color to the cream and brown animal.",
+        "Repeated body patches, paired inner ears and four hooves provide separate regions for repeated number/color matching.",
+        "Palette breadth is borderline, but recognizable anatomy, large patches and substantial accessory colors make the activity engaging without relying on bell shading or tiny facial details."
+      ]
+    },
+    {
+      "id": 38,
+      "subject": "Hedgehog",
+      "decision": "REGENERATE",
+      "reason": "Mostly two animal colors plus red apple; green leaf is minor.",
+      "suggestion": "Add large contrasting spine sections and a few colorful garden objects."
+    },
+    {
+      "id": 39,
+      "subject": "Seal",
+      "decision": "REGENERATE",
+      "reason": "Huge gray body; three ball colors carry nearly all the interest.",
+      "suggestion": "Add a broad striped scarf and additional large ball panels or simple beach props."
+    },
+    {
+      "id": 40,
+      "subject": "Camel",
+      "decision": "REGENERATE",
+      "reason": "Yellow body and turquoise blanket dominate.",
+      "suggestion": "Give the blanket large multicolored panels and add a contrasting halter and simple desert plants."
+    },
+    {
+      "id": 41,
+      "subject": "Rocket",
+      "decision": "REGENERATE",
+      "reason": "Repeated fins help, but palette and body subdivision remain limited.",
+      "suggestion": "Add blue body panels, a purple window surround and distinct broad flame sections."
+    },
+    {
+      "id": 42,
+      "subject": "Hot-air balloon",
+      "decision": "KEEP",
+      "sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+      "observations": [
+        "Five broad orange, yellow, green, blue and purple balloon panels plus a substantial brown basket provide six meaningful color families.",
+        "Large enclosed panels are highly accessible for ages 4+; basket and its rims repeat brown across separate regions.",
+        "Accepted as an easier entry with fewer repeated regions than the strongest keepers; background and thin suspension ropes do not inflate the palette."
+      ]
+    },
+    {
+      "id": 43,
+      "subject": "Train",
+      "decision": "KEEP",
+      "sha256": "b13977eeab4944f8765e0ab3bdb2df1a3f9b2dfa003bed07f0733276c6a7157f",
+      "observations": [
+        "Red cab and chassis, blue boiler, yellow chimney and front, contrasting orange and green wheels, gray wheel/rail and a lighter blue window distribute color across recognizable components.",
+        "Repeated red body sections, yellow fittings and distinct wheels support number/color matching in reasonably large regions.",
+        "Engagement comes from substantial machine components rather than black outlines, tiny hubs or white background; the subject remains immediately recognizable."
+      ]
+    },
+    {
+      "id": 44,
+      "subject": "Aeroplane",
+      "decision": "REGENERATE",
+      "reason": "Yellow dominates; neighboring blues do not supply enough variety.",
+      "suggestion": "Add contrasting wing panels, tail stripes and large colored propeller blades."
+    },
+    {
+      "id": 45,
+      "subject": "Excavator",
+      "decision": "REGENERATE",
+      "reason": "Mostly yellow, blue and dark gray; tracks introduce fiddly detail.",
+      "suggestion": "Simplify tracks and add large contrasting machine panels and colorful construction objects."
+    },
+    {
+      "id": 46,
+      "subject": "Camping tent",
+      "decision": "REGENERATE",
+      "reason": "Four main colors, with most area in one coral triangle.",
+      "suggestion": "Add broad tent panels, a contrasting groundsheet and a simple colorful lantern."
+    },
+    {
+      "id": 47,
+      "subject": "Beach bucket",
+      "decision": "REGENERATE",
+      "reason": "Mostly blue, red and yellow; sand contributes little contrast.",
+      "suggestion": "Add large bucket decorations and substantial contrasting shells or beach toys."
+    },
+    {
+      "id": 48,
+      "subject": "Cupcake",
+      "decision": "REGENERATE",
+      "reason": "Pink frosting and turquoise wrapper dominate; cherry stem cannot count as meaningful green.",
+      "suggestion": "Use alternating wrapper panels and several large frosting decorations."
+    },
+    {
+      "id": 49,
+      "subject": "Ice cream",
+      "decision": "REGENERATE",
+      "reason": "Four large regions with almost no repeated matching.",
+      "suggestion": "Add broad sauce sections, chunky enclosed cone panels and a colorful wafer."
+    },
+    {
+      "id": 50,
+      "subject": "Teapot",
+      "decision": "REGENERATE",
+      "reason": "Three meaningful colors despite multiple parts.",
+      "suggestion": "Repeat large contrasting motifs across pot and cup; introduce a distinct saucer and lid sections."
+    },
+    {
+      "id": 51,
+      "subject": "Watering can",
+      "decision": "REGENERATE",
+      "reason": "Three main colors; flower repeats yellow throughout.",
+      "suggestion": "Use contrasting large petals, center and can panels, plus a simple potted plant."
+    },
+    {
+      "id": 52,
+      "subject": "Rain boots",
+      "decision": "REGENERATE",
+      "reason": "Yellow boots and coral umbrella dominate; only four meaningful colors.",
+      "suggestion": "Add repeated broad boot patches and alternating umbrella panels."
+    },
+    {
+      "id": 53,
+      "subject": "Present",
+      "decision": "REGENERATE",
+      "reason": "Plenty of regions but only three colors.",
+      "suggestion": "Add large multicolored wrapping motifs and contrasting broad ribbon sections."
+    },
+    {
+      "id": 54,
+      "subject": "Crayons",
+      "decision": "KEEP",
+      "sha256": "ff9d1ddca5b7be62b09149bf2d7868f658c67c3b6a15e4337d21597e601a69a5",
+      "observations": [
+        "Red, yellow, green, orange, purple and turquoise occupy substantial tip, body or holder areas, providing six clear color families.",
+        "Separate crayon tips and bodies repeat several colors across large accessible shapes; the holder provides additional broad enclosed regions.",
+        "The red tip is substantial enough to paint meaningfully despite its orange wrapper; facial ink and background are excluded from palette assessment."
+      ]
+    },
+    {
+      "id": 55,
+      "subject": "Xylophone",
+      "decision": "KEEP",
+      "sha256": "24e480b44cc7fdc5376281ffa5a1c800e392e3cd9b1bb5ba519db381eb5e53b9",
+      "observations": [
+        "Substantial red, yellow, green, cyan and dark-blue bars, a purple mallet head and broad wooden parts provide varied meaningful paintable areas.",
+        "Yellow repeats on a bar and mallet head; wooden supports and two mallet shafts repeat across distinct components.",
+        "Large bars and round mallet heads preserve recognizable musical-toy appeal; white fasteners and neighboring wood shades are not needed to justify palette variety."
+      ]
+    },
+    {
+      "id": 56,
+      "decision": "MISSING",
+      "reason": "No runs/56/image.png existed at the original audit; not visually reviewed."
+    },
+    {
+      "id": 57,
+      "decision": "MISSING",
+      "reason": "No runs/57/image.png existed at the original audit; not visually reviewed."
+    },
+    {
+      "id": 58,
+      "decision": "MISSING",
+      "reason": "No runs/58/image.png existed at the original audit; not visually reviewed."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "41",
+  "stage": "image",
+  "prompt_id": "e8740540-a438-4fcd-9366-dd9beafe61e7",
+  "status": "completed",
+  "started_at": 1791101234.0648699,
+  "finished_at": 1791101254.073836,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/41/image.png",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/image/41-rocket_00002_.png",
+  "sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "37",
+  "slug": "cow",
+  "title": "Cow",
+  "category": "animals",
+  "seed": 2026100437,
+  "image_prompt": "Flat vector illustration for a young child's paint-by-numbers game. A friendly cream and brown spotted cow with four short legs, a pink muzzle and a large golden bell on a teal collar. One large cute subject, rounded simple shapes, happy gentle expression. Thick smooth uniform black outlines, closed clean shapes, 7 to 9 vibrant solid flat colors, large easy-to-paint color areas, clean pure white background, centered whole subject with generous white margin on all sides. Simple 2D cartoon clipart. No lettering, no patterns of tiny shapes, no gradients, no shading, no textures, no shadows.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The cow gently nods its head and swishes its tail, the bell swinging slightly. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "planned"
+}

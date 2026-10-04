@@ -1,0 +1,97 @@
+{
+  "source_image": "image-processing/generation/runs/56/image.png",
+  "source_sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e",
+  "video": "image-processing/generation/runs/56/video.mp4",
+  "sha256": "6a7647a671f92f13757375320b18c863215984f30705556d0bce5985a579f964",
+  "video_sha256": "6a7647a671f92f13757375320b18c863215984f30705556d0bce5985a579f964",
+  "prompt_id": "bc8783d0-7760-4265-af05-7bfc61faddcf",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "source_visual_verdict": "PASS",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "sample_count": 32,
+    "evidence_sheets": [
+      "image-processing/generation/reviews/56-video-6a7647a671f9/contact-1.jpg",
+      "image-processing/generation/reviews/56-video-6a7647a671f9/contact-2.jpg",
+      "image-processing/generation/reviews/56-video-6a7647a671f9/contact-3.jpg",
+      "image-processing/generation/reviews/56-video-6a7647a671f9/contact-4.jpg"
+    ],
+    "description": "Actual source and all chronological contact sheets inspected using view_image. Evenly spaced frames include 0, 4 and last. CPU FFmpeg decoding, filtering and PNG encoding limited to two threads each; no GPU or generation submission.",
+    "additional_full_resolution_frames_inspected": [
+      12,
+      16,
+      32
+    ]
+  },
+  "observations": [
+    "This review covers only the newly completed root video from prompt bc8783d0-7760-4265-af05-7bfc61faddcf, compared with the actual unchanged approved replacement source. The archived still-tambourine attempt is not being approved for the revised motion request.",
+    "Both instruments visibly move. The guitar rocks between a right-leaning pose and a more upright pose, clearly visible across frames 0, 16, 32 and 48, while preserving the body, neck, headstock, bridge and schematic string alignment.",
+    "The green tambourine visibly rocks/rotates back and forth rather than remaining stationary. Its ribbon attachment moves from the lower-left around to the bottom and back through repeated cycles, while the ring outline changes angle. This is independent object motion, not only camera displacement or ribbon movement.",
+    "Gold jingle discs change orientation/profile with the moving ring and remain attached around its continuous frame. No detached or disappearing jingles are observed in the samples. The visible action reads as shaking; fine-frequency jingle vibration cannot be certified from sampled stills.",
+    "Both purple ribbon tails visibly flutter, alternately trailing left, hanging down and bending right across frames 4, 12, 16, 24, 28 and later samples. Their attachment remains coherent and both tails persist.",
+    "Coral/yellow guitar panels, turquoise accents, green ring, gold jingles and purple ribbons preserve the source colour identity. No faces, sudden structural losses, accumulating drift or clipping are observed; all headstock, body, ring and ribbon extremes remain inside the frame."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled still-frame inspection, not real-time playback or inspection of every frame. Motion observations describe progression across samples; frame-perfect smoothness, inter-sample artifacts and seamless looping are not guaranteed.",
+    "Contact sheets use reduced-size frames; full-resolution extracted samples are retained beside them.",
+    "No audio review is claimed. Fine-frequency independent jingle vibration is not proven by the sampled still frames."
+  ],
+  "scope": "Exact-source and exact-video sampled visual reward-video review only. No painting processing, build, emulator, imports or integration performed or approved.",
+  "motion_requirement": "Both guitar and tambourine visibly move; tambourine ring shakes/tilts, attached jingles move, and both ribbons flutter.",
+  "supersedes_video_sha256": "249a0833e690ff71a9df1c3bdf646ee5784dc33594a3957f59ae34577ced3adc"
+}

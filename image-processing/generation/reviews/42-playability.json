@@ -1,0 +1,166 @@
+{
+  "id": "42",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "1bdfc5647f082612c76cc56eddb6f6524002690164b9bd9620f32b214b67cd9a",
+    "original.png": "b7e2ac229ab7a99d53b7a8daa9b3bd63b156bc2eb3b08092017e4f81de63308a",
+    "lines.png": "b856bb69571d3fc9272fce7823ebf2b7f0b9d3e168631b98550eee7b47df1c55",
+    "map.png": "f394dae372fd965d1beb047f0ca1e3c22ff4bb459728c5fff16620313d929259",
+    "unpainted.png": "d7da637c239c46a56a82fe0dce660418c4333aeb33bf90e33a862e0c47048371"
+  },
+  "phone_preview_sha256": "8a09f748d463c4fb7f1bd4c017f4ae926cf14ac95f4b43fecba2b7c7da404fed",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 7,
+  "palette_entries": 7,
+  "number_labels": 7,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 0,
+        "hex": "#41c325",
+        "area": 122058,
+        "radius": 113.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#0077fe",
+        "area": 73343,
+        "radius": 65.8
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#fcd601",
+        "area": 72850,
+        "radius": 66.0
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#fc4300",
+        "area": 61471,
+        "radius": 55.7
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#7f42ef",
+        "area": 57582,
+        "radius": 54.6
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#bf7a1f",
+        "area": 12125,
+        "radius": 45.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#fcfdfd",
+        "area": 5742,
+        "radius": 38.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 7,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 12.97,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 515,
+        "y": 290,
+        "image_radius_px": 113.0,
+        "screen_radius_px_at_350": 38.62
+      },
+      {
+        "number": 2,
+        "x": 218,
+        "y": 389,
+        "image_radius_px": 55.73,
+        "screen_radius_px_at_350": 19.05
+      },
+      {
+        "number": 3,
+        "x": 488,
+        "y": 940,
+        "image_radius_px": 45.0,
+        "screen_radius_px_at_350": 15.38
+      },
+      {
+        "number": 4,
+        "x": 694,
+        "y": 277,
+        "image_radius_px": 65.79,
+        "screen_radius_px_at_350": 22.49
+      },
+      {
+        "number": 5,
+        "x": 810,
+        "y": 384,
+        "image_radius_px": 54.59,
+        "screen_radius_px_at_350": 18.66
+      },
+      {
+        "number": 6,
+        "x": 335,
+        "y": 276,
+        "image_radius_px": 66.0,
+        "screen_radius_px_at_350": 22.56
+      },
+      {
+        "number": 7,
+        "x": 511,
+        "y": 827,
+        "image_radius_px": 37.95,
+        "screen_radius_px_at_350": 12.97
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Hot-air balloon with five broad vertical panels and suspended basket; no object face.",
+    "Revision5 retains 7 meaningful color groups and 7 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Basket upper-rim label 3 at (444,881) occupies the thin horizontal band and merges with its outline at phone scale (3.76px radius).",
+        "action": "Prefill the thin basket rim or widen it and center the screen-sized glyph within it; apply the same clearance check to the upper connector band."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

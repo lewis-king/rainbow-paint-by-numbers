@@ -1,0 +1,23 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "e0570a0ca3e6356c5619c3abe105b6ec97aaea2189b78223dd7d24abcb2b8295",
+  "image": "image-processing/generation/runs/58/image.png",
+  "subject": "Acorn and autumn leaves",
+  "observations": [
+    "Acorn eyes, eyebrows, cheeks and smile are fully removed. Acorn, two leaves, mushroom and ground patch are ordinary face-free natural forms.",
+    "Green/orange leaves, golden acorn, brown cap, purple mushroom, substantial pink spots, cream stalk and turquoise patch preserve roughly eight meaningful color families.",
+    "Repeated large mushroom spots and broad leaf/acorn regions remain engaging; cap texture and tiny gloss marks are not counted as additional meaningful paint areas."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Full current source individually inspected with view_image: no anthropomorphic eyes, mouths or character features anywhere in the composition."
+  },
+  "processed_gate_checks": [
+    "Suppress cap-texture microregions and tiny highlights; preserve large spots and broad leaf shapes."
+  ],
+  "scope": "Exact-current-hash source engagement and object-realism approval only; separate processor and video reviews are required."
+}

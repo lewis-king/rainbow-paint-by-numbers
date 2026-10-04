@@ -1,0 +1,90 @@
+{
+  "source_image": "image-processing/generation/runs/55/image.png",
+  "source_sha256": "66385f972997b487705a4f5edccc6900f80fc2def7ff99ad13a6288edadee6bc",
+  "video": "image-processing/generation/runs/55/video.mp4",
+  "sha256": "30923a9ea3a5a38cc3b86eefc42471fe769ae6bbcbb616071222c9cb62bbdff3",
+  "video_sha256": "30923a9ea3a5a38cc3b86eefc42471fe769ae6bbcbb616071222c9cb62bbdff3",
+  "prompt_id": "2e18dd85-fb52-442f-a304-795b17582847",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "source_visual_verdict": "PASS",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "sample_count": 32,
+    "evidence_sheets": [
+      "image-processing/generation/reviews/55-video-30923a9ea3a5/contact-1.jpg",
+      "image-processing/generation/reviews/55-video-30923a9ea3a5/contact-2.jpg",
+      "image-processing/generation/reviews/55-video-30923a9ea3a5/contact-3.jpg",
+      "image-processing/generation/reviews/55-video-30923a9ea3a5/contact-4.jpg"
+    ],
+    "description": "Actual source and all chronological contact sheets inspected using view_image. Evenly spaced frames include 0, 4 and last. CPU FFmpeg decoding, filtering and PNG encoding limited to two threads each; no GPU or generation submission. Also inspected extracted frame 56 at full resolution to assess the transient impact distortion.",
+    "additional_full_resolution_frames_inspected": [
+      56
+    ]
+  },
+  "observations": [
+    "Compared against the exact approved replacement source: two distinct purple/yellow round-headed mallets and two short block feet replace the old malformed long support.",
+    "Both mallets remain separate head-and-handle objects throughout all 32 samples, lifting, rotating and striking the coloured bars. Their handles do not become legs, and both squat feet remain attached to the base.",
+    "The five coloured bars persist. Struck bars briefly tilt/depress; at sample 56 the yellow bar and mallet outlines soften and its lower fastener becomes indistinct, then recover in later samples. This is a localized impact-animation artifact, not a persistent missing bar or malformed support.",
+    "The xylophone remains recognizable and face-free, with readable alternating mallet motion. The complete instrument and moving mallets stay inside the frame without accumulating drift or sudden object disappearance."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled still-frame inspection, not real-time playback or inspection of every frame. Motion observations describe progression across samples; frame-perfect smoothness, inter-sample artifacts and seamless looping are not guaranteed.",
+    "Contact sheets use reduced-size frames; full-resolution extracted samples are retained beside them."
+  ],
+  "scope": "Exact-source and exact-video sampled visual reward-video review only. No painting processing, build, emulator, imports or integration performed or approved."
+}

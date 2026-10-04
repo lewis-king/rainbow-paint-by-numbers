@@ -1,0 +1,266 @@
+{
+  "sha256": "b7330f48e45543f7904b791acbc01cd3ef3b21b70d9cd0b4b78afce7be5f5d5f",
+  "artifact_sha256": {
+    "data.json": "d9ae8f5b4c923881f6c5f634b58953ba92553bdfa6f0c3170823e969a5849871",
+    "original.png": "13bd535c4c51aa6dadc4f3697490f50da2eb9918944011a7642376130c49eb97",
+    "lines.png": "db7629f9cc270bbee8d4a013fba4df3d96f92bfb9530014d7cb7fc59c1cefe68",
+    "map.png": "906a1738567d1b8f88630b3fdb2452e82c6a0b50552866a57663bdb73313d35b",
+    "reward.mp4": "d7a5807d4b80379ef28ceeb098254eaf97890b5220631c599ae8c17b5cd0e38a"
+  },
+  "file_sizes": {
+    "data.json": 884,
+    "original.png": 42341,
+    "lines.png": 27818,
+    "map.png": 21923,
+    "reward.mp4": 584546
+  },
+  "source_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "5e7889a9acda6b7438413f4e737ae79ff7c08ac5d4620dfbfdd7531653a7d18f",
+      "artifact_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+      "review_path": "image-processing/generation/reviews/42-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "5d5f6488e6cf8d89244b4e89292c17f61ceb4dbcc2d656e9c5e34c5711b055d9",
+      "artifact_sha256": "d7a5807d4b80379ef28ceeb098254eaf97890b5220631c599ae8c17b5cd0e38a",
+      "review_path": "image-processing/generation/reviews/42-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 7,
+  "number_labels": 7,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": {
+    "area_cutoff": 3151,
+    "entries": [
+      {
+        "index": 0,
+        "hex": "#41c325",
+        "area": 120164,
+        "radius": 112.0,
+        "substantial": true,
+        "lab": [
+          69.580078125,
+          -62.09375,
+          62.59375
+        ]
+      },
+      {
+        "index": 1,
+        "hex": "#fc4300",
+        "area": 59209,
+        "radius": 54.53,
+        "substantial": true,
+        "lab": [
+          56.689453125,
+          67.4375,
+          68.1875
+        ]
+      },
+      {
+        "index": 2,
+        "hex": "#bf7a1f",
+        "area": 11656,
+        "radius": 44.0,
+        "substantial": true,
+        "lab": [
+          57.03125,
+          20.1875,
+          56.234375
+        ]
+      },
+      {
+        "index": 3,
+        "hex": "#0077fe",
+        "area": 71308,
+        "radius": 64.59,
+        "substantial": true,
+        "lab": [
+          52.105712890625,
+          24.34375,
+          -74.59375
+        ]
+      },
+      {
+        "index": 4,
+        "hex": "#7f42ef",
+        "area": 55357,
+        "radius": 53.39,
+        "substantial": true,
+        "lab": [
+          45.074462890625,
+          62.1875,
+          -77.203125
+        ]
+      },
+      {
+        "index": 5,
+        "hex": "#fcd601",
+        "area": 70807,
+        "radius": 65.0,
+        "substantial": true,
+        "lab": [
+          86.273193359375,
+          -2.71875,
+          86.4375
+        ]
+      },
+      {
+        "index": 6,
+        "hex": "#fcfdfd",
+        "area": 5407,
+        "radius": 36.55,
+        "substantial": true,
+        "lab": [
+          99.072265625,
+          -0.3125,
+          -0.109375
+        ]
+      }
+    ],
+    "meaningful_color_groups": 7,
+    "groups": [
+      [
+        0
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        1
+      ],
+      [
+        4
+      ],
+      [
+        2
+      ],
+      [
+        6
+      ]
+    ]
+  },
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 515,
+      "y": 291,
+      "color_index": 0,
+      "screen_radius_px_at_344": 37.62
+    },
+    {
+      "number": 2,
+      "x": 218,
+      "y": 389,
+      "color_index": 1,
+      "screen_radius_px_at_344": 18.32
+    },
+    {
+      "number": 3,
+      "x": 488,
+      "y": 940,
+      "color_index": 2,
+      "screen_radius_px_at_344": 14.78
+    },
+    {
+      "number": 4,
+      "x": 694,
+      "y": 277,
+      "color_index": 3,
+      "screen_radius_px_at_344": 21.7
+    },
+    {
+      "number": 5,
+      "x": 810,
+      "y": 384,
+      "color_index": 4,
+      "screen_radius_px_at_344": 17.94
+    },
+    {
+      "number": 6,
+      "x": 334,
+      "y": 290,
+      "color_index": 5,
+      "screen_radius_px_at_344": 21.84
+    },
+    {
+      "number": 7,
+      "x": 511,
+      "y": 827,
+      "color_index": 6,
+      "screen_radius_px_at_344": 12.28
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 7,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 10762,
+  "fixed_color_mismatch_pixels": 0,
+  "paintable_pixels_obscured_by_overlay": 11088,
+  "enclosed_unpaintable_transparent_regions": [],
+  "phone_preview_sha256": "14fbcc4ff2517c157c1338154d9ca90cb095a755bc05b48e156103f260295dc1",
+  "id": "42",
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "processor_revision": 7,
+  "reviewed_at": "2026-10-04T09:33:28.500195+00:00",
+  "verdict": "PASS",
+  "status": "PASS",
+  "bundle_sha256": "b7330f48e45543f7904b791acbc01cd3ef3b21b70d9cd0b4b78afce7be5f5d5f",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/42",
+  "scope": "Current final processed visual artifact gate only; no native UI play or new video visual review. Existing source/video PASS gates verified against current bytes using promote.approved.",
+  "inspection_method": "Individually viewed current original.png, lines.png and fresh generation/phone_previews.py --final 344px preview. Current single-thread OpenCV/PIL checks measure map components, substantial palette area/radius, label clearance and fixed RGB; no processor or paintability_audit executed.",
+  "phone_preview_provenance": "image-processing/app_assets/42/phone-preview.png regenerated with python generation/phone_previews.py --final 41 42 43",
+  "meaningful_color_groups": 6,
+  "visible_region_coverage": {
+    "verdict": "PASS",
+    "unlabelled_transparent_paintable_components_at_least_20_pixels_after_overlay": 0,
+    "method": "Visual enclosure assessment plus four-connected components of (map < 254) AND (lines alpha == 0); each component >=20 pixels contains a metadata label."
+  },
+  "observations": [
+    "Current original, lines, map and metadata decode successfully; the previous empty bundle has been replaced by complete hot-air-balloon artwork.",
+    "Balloon envelope, suspension and basket remain coherent and face-free. Five broad envelope panels are orange-red, yellow, green, blue and purple; the substantial brown basket supplies a sixth meaningful color. White suspension-gap palette entry is excluded from the six-color count.",
+    "All seven paintable components have one label. The central white gap between suspension ropes has number 7; narrow side gaps are fixed white, and narrow brown rims/ropes are fixed-colored. No visible enclosed white region lacks a number or fixed fill.",
+    "All seven labels are comfortably readable in fresh 344px phone preview, including basket 3 and suspension-gap 7. Minimum map-center clearance is 12.28 screen pixels.",
+    "All 10762 nonblack fixed-color pixels match original.png RGB exactly, including brown rims, suspension details and fixed-white gaps."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "sha256": "1eb4db72c2a1720f9349735afde4a5869b7d1c1928177c210d33dea3c6647bd8",
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "EMPTY_FINAL_BUNDLE_FILES",
+        "severity": "blocking",
+        "description": "data.json, original.png, lines.png and map.png are zero-byte files; the final bundle cannot be decoded, rendered or visually approved. processed-job.json also cannot be parsed.",
+        "action": "Parent must recover or regenerate a complete processed bundle and valid processing receipt, then request a new exact-bundle visual review. No processing attempted in this bounded review."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at 344px canvas width; this approximates actual UI/Skia glyph metrics and layout. No native UI or touch interaction tested.",
+    "Reward animation not visually re-reviewed in this pass; existing source/video PASS records were checked against exact current files."
+  ]
+}

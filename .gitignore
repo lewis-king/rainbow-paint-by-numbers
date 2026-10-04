@@ -45,3 +45,12 @@ image-processing/venv/
 /ios
 /android
 build*
+
+# Local Python caches and generation work products
+__pycache__/
+image-processing/generation/runs/
+image-processing/generation/reviews/*.jpg
+image-processing/generation/reviews/*-paintable.png
+image-processing/generation/paintability-candidates/
+# Decoded per-frame review caches; final media, review JSON and contact sheets remain.
+image-processing/generation/reviews/**/frame-*.png

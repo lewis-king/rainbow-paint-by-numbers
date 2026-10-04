@@ -1,0 +1,16 @@
+{
+  "id": "44",
+  "slug": "aeroplane",
+  "title": "Aeroplane",
+  "category": "vehicles",
+  "seed": 2026111444,
+  "image_prompt": "Edit this existing illustration. Remove both misplaced eyes on the aircraft. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Aeroplane, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The propeller turns slowly and the airplane gently rocks its wings in place. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "image_reference": "sources/44/reference.png",
+  "image_reference_sha256": "5cd70e1d99b24626ded7d1e04d928a98f93c31b0798fdfe69899a1e10b1f05e9"
+}

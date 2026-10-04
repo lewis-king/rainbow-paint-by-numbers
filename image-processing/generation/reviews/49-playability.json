@@ -1,0 +1,188 @@
+{
+  "id": "49",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "2950e069d4c9f49dac6314a509a15b4cb5d100d0984b4147841f60f1d4f7eeff",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "61559e71659ec0866f04f017fb0339d61e767e642cfe70cb4e75b3e012bcff40",
+    "original.png": "47292fc606bc88bd1909164bba271c2e81ce60d817ddc48187f025962339a32d",
+    "lines.png": "7d0415f0fcbdd551cc7522661296bf4846d4fb05ad12ff437ce8a54abc3070f5",
+    "map.png": "d5e271780f685ea76f692ff1f4925e78ed6e81e009cc9a0e17f7612844f9577a",
+    "unpainted.png": "0a6fbe8c55dbc0826a2675cd088d34c3db3d82410f694a91fd4d191962175e5d"
+  },
+  "phone_preview_sha256": "7c65077822ddaa42f9d832c9b91ad50ada7ff6253b90dd0afd21d752ad021744",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 8,
+  "palette_entries": 8,
+  "number_labels": 9,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 4,
+        "hex": "#30d5f5",
+        "area": 105515,
+        "radius": 98.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#90e1a8",
+        "area": 38540,
+        "radius": 89.0
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#f9819d",
+        "area": 35515,
+        "radius": 72.5
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#592511",
+        "area": 33924,
+        "radius": 58.9
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#f8b307",
+        "area": 29423,
+        "radius": 46.1
+      }
+    ],
+    [
+      {
+        "index": 7,
+        "hex": "#f7e36b",
+        "area": 29099,
+        "radius": 74.6
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#7e32d3",
+        "area": 25868,
+        "radius": 44.2
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#e10d16",
+        "area": 6101,
+        "radius": 33.2
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 9,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 11.35,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 542,
+        "y": 472,
+        "image_radius_px": 58.93,
+        "screen_radius_px_at_350": 20.14
+      },
+      {
+        "number": 2,
+        "x": 519,
+        "y": 153,
+        "image_radius_px": 33.2,
+        "screen_radius_px_at_350": 11.35
+      },
+      {
+        "number": 3,
+        "x": 503,
+        "y": 913,
+        "image_radius_px": 44.15,
+        "screen_radius_px_at_350": 15.09
+      },
+      {
+        "number": 4,
+        "x": 738,
+        "y": 161,
+        "image_radius_px": 46.13,
+        "screen_radius_px_at_350": 15.77
+      },
+      {
+        "number": 4,
+        "x": 261,
+        "y": 196,
+        "image_radius_px": 43.74,
+        "screen_radius_px_at_350": 14.95
+      },
+      {
+        "number": 5,
+        "x": 585,
+        "y": 688,
+        "image_radius_px": 98.0,
+        "screen_radius_px_at_350": 33.5
+      },
+      {
+        "number": 6,
+        "x": 553,
+        "y": 259,
+        "image_radius_px": 72.53,
+        "screen_radius_px_at_350": 24.79
+      },
+      {
+        "number": 7,
+        "x": 363,
+        "y": 419,
+        "image_radius_px": 89.0,
+        "screen_radius_px_at_350": 30.42
+      },
+      {
+        "number": 8,
+        "x": 689,
+        "y": 417,
+        "image_radius_px": 74.57,
+        "screen_radius_px_at_350": 25.49
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Sundae with three scoops, topping, wafer, spoon and pedestal bowl; no object face.",
+    "Revision5 retains 8 meaningful color groups and 9 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_TINY_HIGHLIGHT_LABELS",
+        "severity": "blocking",
+        "description": "Highlight-region labels 9 at (425,194) and (677,326) occupy very thin scoop-edge slivers and read against their outline at phone scale.",
+        "action": "Treat these highlight slivers as fixed source-color details rather than mandatory numbered regions, keeping the broad scoop regions paintable."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

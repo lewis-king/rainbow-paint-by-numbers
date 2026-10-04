@@ -1,0 +1,14 @@
+{
+  "job": "34-video",
+  "comfy_launch_args": [
+    "--reserve-vram",
+    "4"
+  ],
+  "samples": 29,
+  "peak_gpu_used_mib": 28754,
+  "minimum_available_ram_kib": 78214360,
+  "peak_gpu_temperature_c": 76,
+  "observed_memory_pressure_avg10_max": 0.0,
+  "outcome": "completed",
+  "limitations": "5-second samples, one run only; does not establish cause of earlier freeze or guarantee stability."
+}

@@ -1,0 +1,89 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+  "image": "image-processing/generation/runs/33/image.png",
+  "subject": "Butterfly",
+  "verdict": "PASS",
+  "observations": [
+    "Coherent symmetrical cartoon butterfly with four wings, two antennae, two visible eyes and a segmented central body.",
+    "Purple wing borders, turquoise upper fields, orange upper spots, yellow lower fields, pink lower spots, green body and coral head provide seven substantial contrasting colors.",
+    "Mirrored wing fields/spots repeat colors in large clearly enclosed regions, and five green body sections add straightforward repeated number matching.",
+    "Clean bold contours, mostly flat fills and excellent region size strongly meet the ages-4+ engagement objective; this directly resolves the original four-color butterfly limitation."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Keep the repeated wing regions and body sections distinct; avoid numbering tiny eye highlights or the minor head shadow."
+  ],
+  "method": "Individual current image visually inspected with view_image; decisions consider substantial contrasting colors, meaningful repeated regions, anatomy and cleanliness against user-approved 35/37 benchmarks.",
+  "scope": "Source-image visual gate for this exact hash only. PASS permits processor evaluation; it does not approve extracted regions, final number placement, gameplay assets or video.",
+  "processed_visual_review": {
+    "reviewer": "gpt-6-astra",
+    "processor_revision": 3,
+    "verdict": "PASS",
+    "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+    "artifact_sha256": {
+      "unpainted.png": "4509de488016e0b874818d0d6304a3b4a5a29bb05ee4d21a17c8d7c8b12d427c",
+      "debug_preview.png": "8f24007135d81c0e0187adf87ec72d863aa0b3ce352c7babdae2a33c8af96177",
+      "data.json": "bf351d2587dd33dbc3adf3cfb785ed29effbe600b18e18248c1ea4eefb5b3ecd"
+    },
+    "number_labels": 18,
+    "palette_entries": 7,
+    "method": "Individually viewed current unpainted.png and colored debug_preview.png at full image resolution; compared with source and previous failed pilot.",
+    "observations": [
+      "Smile and white eye areas are preserved without extra numbered microregions.",
+      "All five body sections and four purple wing-border regions now have visible individual labels; all 18 numbered regions are accessible and readable.",
+      "Seven substantial colors and mirrored repeated regions survive processing; no dense antialias-fragment labels remain.",
+      "Very thin colored edge traces remain in unpainted outlines but do not obscure numbers or create extra tasks."
+    ],
+    "defects": [],
+    "playable_approval": true,
+    "scope": "Exact-artifact visual playability approval for this source; interactive hit testing and video are outside scope."
+  },
+  "processed_visual_review_history": [
+    {
+      "verdict": "FAIL",
+      "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+      "unpainted": "image-processing/generation/paintability-candidates/processed/33/unpainted.png",
+      "unpainted_sha256": "99866280295625cdedbd79f15624bfd1f922ed62816156b72df6110931e67357",
+      "number_labels": 12,
+      "observations": [
+        "83 labels: dense tiny numbers trace the inner and outer wing boundaries and spots. These are not the intended broad mirrored paint regions.",
+        "Retain the strong source design; merge edge artifacts into broad color regions and renumber."
+      ],
+      "playable_approval": false
+    },
+    {
+      "reviewer": "gpt-6-astra",
+      "processor_revision": 2,
+      "verdict": "FAIL",
+      "fragment_label_gate": "PASS",
+      "detail_preservation_gate": "FAIL",
+      "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+      "artifact_sha256": {
+        "unpainted.png": "99866280295625cdedbd79f15624bfd1f922ed62816156b72df6110931e67357",
+        "debug_preview.png": "5858a63cd49ef5e06278556b8aa5121d85c7f65f34bf35dcdba220a0725c15d0",
+        "data.json": "c2ecdb51a067d67d23162519ad46d22b9cfdaf0fa13ea25722ea19c2942029fd"
+      },
+      "number_labels": 12,
+      "palette_entries": 7,
+      "observations": [
+        "Revision 2 has 12 readable labels and seven palette entries; the former dense tiny boundary labels are gone. Large mirrored color regions survive.",
+        "Colored diagnostic loses the source smile and white eye areas, leaving a blank face with solid dark eyes.",
+        "Only one of five visibly enclosed green body sections carries a number; lower purple wing sections likewise have no visible number. The apparent enclosed shapes do not consistently communicate the numbered action.",
+        "Boundaries remain uneven and partly interrupted in the colored preview."
+      ],
+      "defects": [
+        "Source facial expression is lost: smile missing and eye whites filled dark.",
+        "Several visibly enclosed paint regions are unnumbered; verify map connectivity and numbering against the displayed outlines."
+      ],
+      "suggestions": [
+        "Preserve original facial ink and prefill tiny eye whites with their source color instead of converting all small color components to black.",
+        "Ensure each visibly separate paint region has a readable number, or explicitly reconcile the outlines with shared click-region behavior.",
+        "Retain the successful fragment filtering without thickening incidental borders into black blotches."
+      ],
+      "playable_approval": false,
+      "scope": "Unpainted and colored debug_preview each visually inspected. Source PASS remains unchanged; this decision concerns only these exact revised processed artifacts. UI interaction behavior not tested."
+    }
+  ]
+}

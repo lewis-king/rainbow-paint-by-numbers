@@ -1,0 +1,14 @@
+{
+  "id": "40",
+  "slug": "camel",
+  "title": "Camel",
+  "category": "animals",
+  "seed": 2026110540,
+  "image_prompt": "Flat vector art, children's coloring book style. ONE friendly golden yellow camel in side view with two rounded humps, four simple broad legs and a long curved neck. It wears a large turquoise saddle blanket with a broad red border and three large purple diamonds. An orange halter around its cream muzzle. ONE separate green cactus with ONE pink flower grows on the ground to the left of the camel with a clear white gap between cactus and animal. No objects on its back except the blanket. ONE large central composition, generous white margin. Very simple bold shapes, thick uniform BLACK outlines, vibrant SOLID flat colors, white background, high contrast, 2d game asset. Large enclosed color areas for age 4 paint by numbers. No collage, no sticker sheet, no grid, no repeated subjects, no text, no numbers, no shading, no highlights, no gradients, no texture.",
+  "video_prompt": "A gentle flat 2D cartoon animation for young children, preserving the complete input composition. The golden camel remains planted in its exact position with all four feet still. It blinks once and makes a tiny tail flick, ending in its starting pose. The separate green cactus with its pink flower at the lower left remains completely motionless, fully visible and identical in every frame from beginning to end. Preserve both humps, the cream muzzle, orange halter, turquoise blanket, red border and three purple diamonds without changing shapes or colors. Fixed camera, fixed framing, generous white margins, plain white background. No translation, zoom, cuts, disappearing objects, new objects, text or speech. The cactus and flower remain inanimate with no face.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2,
+  "video_seed": 2026111540
+}

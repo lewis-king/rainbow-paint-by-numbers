@@ -1,0 +1,23 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "4869a3d34d7de21c0cb8b65275c1a16328e7595d406a2a755da46361531daac1",
+  "image": "image-processing/generation/runs/50/image.png",
+  "subject": "Teapot and cup",
+  "observations": [
+    "Both teapot and cup are fully face-free: no eyes, eyebrows, mouths or cheek marks remain. Flower motifs are plain botanical decoration.",
+    "Large turquoise/coral/purple pot components, three yellow flowers with orange centers, blue cup and green handle preserve seven substantial color families and repeated accessible regions.",
+    "Prior processed feedback about restoring object facial expressions is superseded; this faceless source is the current approved version."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Current full source inspected individually: no anthropomorphic eyes, mouths or character features on objects, props or motifs."
+  },
+  "processed_gate_checks": [
+    "Separate processor QA must check tiny highlights, narrow trim, background holes and readable numbers while preserving large color regions."
+  ],
+  "scope": "Exact-current-hash source visual engagement and no-faces approval only. Supersedes the archived faced image; no processed-output or motion approval implied."
+}

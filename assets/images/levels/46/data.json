@@ -1,0 +1,290 @@
+{
+  "id": "46",
+  "palette": [
+    "#0b0909",
+    "#081945",
+    "#3c3117",
+    "#931a11",
+    "#0b596f",
+    "#7a610c",
+    "#3b983b",
+    "#f61a13",
+    "#696964",
+    "#652ab4",
+    "#f75f02",
+    "#bf9809",
+    "#0484ea",
+    "#03d5e2",
+    "#fac102",
+    "#999896",
+    "#c8c7c6",
+    "#fafbfb"
+  ],
+  "numbers": [
+    {
+      "number": 2,
+      "x": 525,
+      "y": 324,
+      "color_index": 1
+    },
+    {
+      "number": 2,
+      "x": 524,
+      "y": 627,
+      "color_index": 1
+    },
+    {
+      "number": 2,
+      "x": 434,
+      "y": 512,
+      "color_index": 1
+    },
+    {
+      "number": 2,
+      "x": 443,
+      "y": 732,
+      "color_index": 1
+    },
+    {
+      "number": 2,
+      "x": 804,
+      "y": 739,
+      "color_index": 1
+    },
+    {
+      "number": 2,
+      "x": 919,
+      "y": 742,
+      "color_index": 1
+    },
+    {
+      "number": 3,
+      "x": 669,
+      "y": 252,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 338,
+      "y": 258,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 578,
+      "y": 442,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 646,
+      "y": 564,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 794,
+      "y": 756,
+      "color_index": 2
+    },
+    {
+      "number": 4,
+      "x": 328,
+      "y": 281,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 288,
+      "y": 353,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 263,
+      "y": 392,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 204,
+      "y": 476,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 165,
+      "y": 528,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 392,
+      "y": 591,
+      "color_index": 3
+    },
+    {
+      "number": 5,
+      "x": 860,
+      "y": 555,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 652,
+      "y": 574,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 918,
+      "y": 615,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 892,
+      "y": 644,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 351,
+      "y": 674,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 638,
+      "y": 781,
+      "color_index": 4
+    },
+    {
+      "number": 5,
+      "x": 318,
+      "y": 737,
+      "color_index": 4
+    },
+    {
+      "number": 6,
+      "x": 699,
+      "y": 307,
+      "color_index": 5
+    },
+    {
+      "number": 6,
+      "x": 678,
+      "y": 615,
+      "color_index": 5
+    },
+    {
+      "number": 7,
+      "x": 235,
+      "y": 719,
+      "color_index": 6
+    },
+    {
+      "number": 8,
+      "x": 308,
+      "y": 517,
+      "color_index": 7
+    },
+    {
+      "number": 9,
+      "x": 713,
+      "y": 329,
+      "color_index": 8
+    },
+    {
+      "number": 9,
+      "x": 781,
+      "y": 775,
+      "color_index": 8
+    },
+    {
+      "number": 10,
+      "x": 501,
+      "y": 734,
+      "color_index": 9
+    },
+    {
+      "number": 11,
+      "x": 131,
+      "y": 689,
+      "color_index": 10
+    },
+    {
+      "number": 12,
+      "x": 753,
+      "y": 387,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 781,
+      "y": 424,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 879,
+      "y": 577,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 697,
+      "y": 646,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 899,
+      "y": 732,
+      "color_index": 11
+    },
+    {
+      "number": 13,
+      "x": 862,
+      "y": 771,
+      "color_index": 12
+    },
+    {
+      "number": 14,
+      "x": 666,
+      "y": 699,
+      "color_index": 13
+    },
+    {
+      "number": 15,
+      "x": 744,
+      "y": 533,
+      "color_index": 14
+    },
+    {
+      "number": 16,
+      "x": 931,
+      "y": 631,
+      "color_index": 15
+    },
+    {
+      "number": 16,
+      "x": 980,
+      "y": 703,
+      "color_index": 15
+    },
+    {
+      "number": 18,
+      "x": 909,
+      "y": 741,
+      "color_index": 17
+    }
+  ],
+  "dimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}

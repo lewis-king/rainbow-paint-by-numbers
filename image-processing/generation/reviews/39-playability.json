@@ -1,0 +1,158 @@
+{
+  "id": "39",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "aaa3c5349d1262210a0718fab2abf03b2e4c7ce90160f90ee20ba1a2acfe7230",
+    "original.png": "3b79a035c9516bb93f996b115ecac468758725939585b7297e0d4b8174a7f11b",
+    "lines.png": "8c6d322638ffd659bcfd2c28ab327e5060f6c3ef7613e8a4613f4f79267a1e50",
+    "map.png": "f1882aed2cde17eea130b13331928c16357f14b98a38fd349d0ae5b1e7735a28",
+    "unpainted.png": "441c2398cc273d99d8c6a2cf0f8c3df1a8c9a404a87a83ee0db83129acc6df13"
+  },
+  "phone_preview_sha256": "4c3f01d73de1cf14880629dd51f97e2a6d33b93b00da4fe463192f033b2ffb8d",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 6,
+  "palette_entries": 6,
+  "number_labels": 7,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 5,
+        "hex": "#f7aae1",
+        "area": 108246,
+        "radius": 92.2
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#fdce01",
+        "area": 31115,
+        "radius": 69.8
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#5dc902",
+        "area": 20678,
+        "radius": 48.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#fc1200",
+        "area": 19588,
+        "radius": 36.4
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#00dad6",
+        "area": 17769,
+        "radius": 36.8
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#5036df",
+        "area": 6584,
+        "radius": 24.2
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 7,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 7.92,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 246,
+        "y": 148,
+        "image_radius_px": 36.36,
+        "screen_radius_px_at_350": 12.43
+      },
+      {
+        "number": 2,
+        "x": 429,
+        "y": 247,
+        "image_radius_px": 48.0,
+        "screen_radius_px_at_350": 16.41
+      },
+      {
+        "number": 3,
+        "x": 299,
+        "y": 374,
+        "image_radius_px": 24.17,
+        "screen_radius_px_at_350": 8.26
+      },
+      {
+        "number": 4,
+        "x": 507,
+        "y": 189,
+        "image_radius_px": 36.79,
+        "screen_radius_px_at_350": 12.57
+      },
+      {
+        "number": 5,
+        "x": 308,
+        "y": 277,
+        "image_radius_px": 69.79,
+        "screen_radius_px_at_350": 23.85
+      },
+      {
+        "number": 6,
+        "x": 622,
+        "y": 722,
+        "image_radius_px": 92.2,
+        "screen_radius_px_at_350": 31.51
+      },
+      {
+        "number": 6,
+        "x": 364,
+        "y": 767,
+        "image_radius_px": 23.18,
+        "screen_radius_px_at_350": 7.92
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Seal balancing a beach ball; animal eye retained. Thin double contour/white rim follows the colored original.",
+    "Revision5 retains 6 meaningful color groups and 7 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Beach-ball top wedge label 4 at (405,73) lies at a seam junction and is crossed/crowded by the ball contours at phone size (3.75px radius).",
+        "action": "Prefill the small top wedge or enlarge it and move its label into sufficient phone-scale clearance."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

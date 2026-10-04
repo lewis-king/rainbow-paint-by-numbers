@@ -1,0 +1,133 @@
+{
+  "id": "53",
+  "palette": [
+    "#090e11",
+    "#7c0b0f",
+    "#614b09",
+    "#09576e",
+    "#e00301",
+    "#563c75",
+    "#ae8305",
+    "#0893ad",
+    "#6ed523",
+    "#818189",
+    "#f79e01",
+    "#019afd",
+    "#8842e9",
+    "#eb4e97",
+    "#00f3ea",
+    "#b9b9bd",
+    "#f9fafa"
+  ],
+  "numbers": [
+    {
+      "number": 5,
+      "x": 713,
+      "y": 130,
+      "color_index": 4
+    },
+    {
+      "number": 6,
+      "x": 622,
+      "y": 222,
+      "color_index": 5
+    },
+    {
+      "number": 9,
+      "x": 548,
+      "y": 573,
+      "color_index": 8
+    },
+    {
+      "number": 11,
+      "x": 401,
+      "y": 530,
+      "color_index": 10
+    },
+    {
+      "number": 11,
+      "x": 242,
+      "y": 577,
+      "color_index": 10
+    },
+    {
+      "number": 11,
+      "x": 245,
+      "y": 758,
+      "color_index": 10
+    },
+    {
+      "number": 11,
+      "x": 594,
+      "y": 778,
+      "color_index": 10
+    },
+    {
+      "number": 12,
+      "x": 302,
+      "y": 267,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 809,
+      "y": 287,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 196,
+      "y": 390,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 525,
+      "y": 408,
+      "color_index": 11
+    },
+    {
+      "number": 13,
+      "x": 818,
+      "y": 487,
+      "color_index": 12
+    },
+    {
+      "number": 14,
+      "x": 786,
+      "y": 600,
+      "color_index": 13
+    },
+    {
+      "number": 15,
+      "x": 296,
+      "y": 508,
+      "color_index": 14
+    },
+    {
+      "number": 15,
+      "x": 521,
+      "y": 696,
+      "color_index": 14
+    },
+    {
+      "number": 17,
+      "x": 369,
+      "y": 204,
+      "color_index": 16
+    },
+    {
+      "number": 17,
+      "x": 694,
+      "y": 210,
+      "color_index": 16
+    }
+  ],
+  "dimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}

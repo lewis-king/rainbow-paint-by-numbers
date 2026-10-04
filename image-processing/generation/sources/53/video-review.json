@@ -1,0 +1,134 @@
+{
+  "id": "53",
+  "video": "image-processing/generation/runs/53/video.mp4",
+  "sha256": "090317e42dc7e8dcbfd0f02b6f9432bfbdb77ad2c44c93c55a0ff8d900860c1e",
+  "source_image": "image-processing/generation/runs/53/image.png",
+  "source_sha256": "60d1a7dee351cc4435eab26e542aaba9b4608d5f3611850cbc72100fb6fb951c",
+  "job_sha256_match": true,
+  "source_approval_sha256_match": true,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "contact_sheets": [
+    {
+      "path": "image-processing/generation/reviews/53-video-contact-1.png",
+      "sha256": "8b5c6507e091ee6c60664af506dc4cbd31bfd74949eb3c6aea08206afcbbfe55",
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48,
+        52,
+        56,
+        60
+      ]
+    },
+    {
+      "path": "image-processing/generation/reviews/53-video-contact-2.png",
+      "sha256": "0772f6c42e1cfce84f11ba69ef80323dcae992c8616a05d1011eceb2f84ccca8",
+      "frame_indices": [
+        63,
+        67,
+        71,
+        75,
+        79,
+        83,
+        87,
+        91,
+        95,
+        99,
+        103,
+        107,
+        111,
+        115,
+        119,
+        123
+      ]
+    }
+  ],
+  "prompt_id": "3f4e0e18-a0fd-43e8-973d-9dbf256ea4ae",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_model_provenance": "Astra parent dispatch, as confirmed by user; not inferred from assistant persona.",
+  "reviewed_at": "2026-10-04T14:19:24.725291+00:00",
+  "generation_history_status": "success",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "sample_count": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "visual_inspection": "Source and both chronological contact sheets inspected with view_image.",
+    "decode": "CPU only; ffmpeg -hwaccel none; decoder/output threads 2; filter_threads and filter_complex_threads 1; sequential extraction."
+  },
+  "scope": "Exact-hash source/video visual reward gate only; no processing or integration approval.",
+  "limitations": [
+    "32 sampled frames cannot guarantee absence of every inter-sample artifact, frame-perfect smoothness, or seamless looping."
+  ],
+  "verdict": "PASS",
+  "observations": [
+    "Gift preserves turquoise front, purple side, blue lid, yellow ribbon, tied red two-loop bow, three orange stars, one green balloon and two pink balloon decorations with their strings.",
+    "Box gently rocks side to side while the bow bobs and flexes; lid stays closed and bow stays tied in all 32 samples. Final samples settle close to the starting pose.",
+    "All box edges, ribbon segments, bow loops and printed decorations remain present, with no new faces, limbs, cropping or disappearing components. Source colors and white background are preserved."
+  ],
+  "defects": [],
+  "checks": {
+    "source_structure_and_colors": "PASS",
+    "gentle_coherent_motion": "PASS",
+    "no_object_faces": "PASS",
+    "no_cropping_or_disappearing_parts": "PASS"
+  }
+}

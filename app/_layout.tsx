@@ -8,12 +8,17 @@ import 'react-native-reanimated';
 
 import { fontAssets } from '@/theme/fonts';
 import { backgrounds } from '@/theme/colors';
+import { installReviewPreview } from '@/utils/install-review-preview';
 
 // Keep splash screen visible while we load resources
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts(fontAssets);
+
+  useEffect(() => {
+    if (__DEV__) installReviewPreview();
+  }, []);
 
   useEffect(() => {
     if (fontsLoaded || fontError) {

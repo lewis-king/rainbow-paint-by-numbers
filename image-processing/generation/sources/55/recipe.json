@@ -1,0 +1,15 @@
+{
+  "id": "55",
+  "slug": "xylophone",
+  "title": "Xylophone",
+  "category": "toys",
+  "seed": 2026101455,
+  "image_prompt": "Edit this colorful toy xylophone illustration to correct its construction. Keep the five large red, yellow, green, cyan and blue bars, orange wooden base, bold black outlines, plain white background and large simple flat-color shapes. Replace all visible supports beneath the base with exactly two matching SHORT squat rectangular wooden feet, one near each end. Remove the long paddle-like shape beneath the right side completely. Show exactly TWO separate complete mallets floating ABOVE the instrument with clear white gaps: one purple round head with one straight pale wooden handle, and one golden-yellow round head with one straight pale wooden handle. Both complete handles must be visible against white and must not intersect, hide behind or connect to the xylophone, its legs, or each other. The two mallets are tools clearly separate from the instrument. Preserve recognizable perspective and generous margins. No extra handles, extra legs, faces, eyes, mouths, text, numbers, gradients or shadows.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The two mallets lift and gently tap alternate bars while the xylophone stays in place. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "planned",
+  "object_realism_revision": 1,
+  "image_reference": "sources/55/reference-before-mallet-fix.png",
+  "image_reference_sha256": "24e480b44cc7fdc5376281ffa5a1c800e392e3cd9b1bb5ba519db381eb5e53b9"
+}

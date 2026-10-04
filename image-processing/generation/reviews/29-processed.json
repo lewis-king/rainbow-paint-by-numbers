@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "asset_directory": "image-processing/app_assets/29",
+  "source_sha256": "6c3e431c4f4556b1583f440b4364405b5d900429c47467d84bb59905d4bce4cd",
+  "artifact_sha256": {
+    "data.json": "38d021e1763048b4379eaa237e2c285a072378e45c12842cf8864e420e26285c",
+    "original.png": "bd8641b801e559171a96063b1de809ff4ccbd834edcb231236f1ef2111248dc8",
+    "lines.png": "514b7649b05c8834fe30b330b6120d0ecfc5c1327f9051db05ce8bd687517d7a",
+    "map.png": "1c45d5ad27ba27be8c6f4b16e048bc87b1cec6cc12d965054ba7e59632cc0a91",
+    "reward.mp4": "bb3b916d1a6500f6d09c04c22ed1f263b0d457f595f2938d2250a4e5a416ccdd"
+  },
+  "bundle_sha256": "dac597d26073595dbb58a02a8b86f7a1edeee05f7396a5e2b905269126c3dfd3",
+  "bundle_hash_algorithm": "SHA256; for each filename in bundle_file_order: update(filename.encode(UTF-8)); update(file bytes); no delimiters",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "phone_preview_sha256": "1e4b92be745969102e6a016055666360958f5f06457477d196889d5a0ace815d",
+  "inspected_independent_phone_approximation_sha256": "128fb0045db00ce1e480a1c21426007974038cd665e5c37499799676d779e684",
+  "diagnostic_final_metadata_difference": "has_reward true in final; false in diagnostic. Map, original and corrected lines hashes identical.",
+  "source_video_approval_provenance": "User/main reports source/video PASS and user watched and approved dog video; video not re-reviewed by gpt6astra.",
+  "id": "29",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "sha256": "dac597d26073595dbb58a02a8b86f7a1edeee05f7396a5e2b905269126c3dfd3",
+  "processor_revision": 4,
+  "scope": "final processed visual artifact gate only; not an interactive UI test or independent source/video gate",
+  "observations": [
+    "Recognizable smiling dog, slipper and striped ball; faces confined to the animal. Eyes and smile remain intact.",
+    "Eight meaningful color groups with broad body, ears, slipper and ball regions.",
+    "Sixteen labels remain readable in the 350px approximation. Nose and collar/neck labels are close to boundaries but distinguishable; minimum center clearance is 15.18 image px, approximately 5.19 screen px.",
+    "Revision4 corrected fixed-color overlay: slipper edge is cyan, eyebrows brown and ball edge orange. No blocking visual defect observed."
+  ],
+  "defects": [],
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "min_label_center_radius_image_px": 15.18,
+    "min_label_center_radius_screen_px": 5.19,
+    "labels_below_6_screen_px_radius": [
+      {
+        "number": 1,
+        "x": 369,
+        "y": 286,
+        "image_radius_px": 16.0,
+        "screen_radius_px_at_350": 5.47
+      },
+      {
+        "number": 3,
+        "x": 485,
+        "y": 450,
+        "image_radius_px": 15.18,
+        "screen_radius_px_at_350": 5.19
+      }
+    ]
+  },
+  "inspection_method": "Viewed actual original/unpainted artifacts and 350px PIL phone approximation using 10px bold font and GameCanvas x-4/y+3 offsets; inspected refreshed final original and phone approximation. No UI played.",
+  "limitations": [
+    "Phone preview is a font/rendering approximation, not a native screenshot or interactive play test.",
+    "Source and reward video approval are outside this reviewer scope."
+  ]
+}

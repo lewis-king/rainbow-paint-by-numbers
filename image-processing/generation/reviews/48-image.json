@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "d0a0a17ce72707007e02a1d4e3f154f742dfac45a5549e0e61b70d750887eead",
+  "image": "image-processing/generation/runs/48/image.png",
+  "subject": "Cupcake",
+  "observations": [
+    "Cherry eyes, eyebrows and smile are fully removed; topping, frosting, wrapper and candy decorations are face-free.",
+    "Pink frosting, red cherry, green leaf, cyan/purple/yellow wrapper and blue/orange toppings preserve roughly eight meaningful color families. Repeated wrapper sections and substantial toppings remain paintable."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Current full source inspected individually: no anthropomorphic eyes, mouths or character features on objects, props or motifs."
+  },
+  "processed_gate_checks": [
+    "Separate processor QA must check tiny highlights, narrow trim, background holes and readable numbers while preserving large color regions."
+  ],
+  "scope": "Exact-current-hash source visual engagement and no-faces approval only. Supersedes the archived faced image; no processed-output or motion approval implied."
+}

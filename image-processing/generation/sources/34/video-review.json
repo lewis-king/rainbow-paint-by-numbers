@@ -1,0 +1,83 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "f009f95ee2ac18603185fe0a66e131f6910d2f939932bd5c9d4e9e02b40b6ed9",
+  "video": "image-processing/generation/runs/34/video.mp4",
+  "source_sha256": "63afb532bd58c1835211baa492396b2c157f4db8f52f64ad7ca65d2a630b18e2",
+  "source_image": "image-processing/generation/runs/34/image.png",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "dense_sample_count": 32,
+    "description": "Actually visually inspected four chronological contact sheets with view_image, sampling every fourth frame plus final frame, and the exact approved source image individually. FFmpeg CPU decoding limited to two threads; no GPU or processor used.",
+    "evidence_sheets": [
+      "/tmp/astra-qa34/dense-1.jpg",
+      "/tmp/astra-qa34/dense-2.jpg",
+      "/tmp/astra-qa34/dense-3.jpg",
+      "/tmp/astra-qa34/dense-4.jpg"
+    ]
+  },
+  "observations": [
+    "Eight separately traceable arms (four per side) and their coral inner panels persist across all 32 sampled frames, including downward-curled and outward-spread poses; no arm loss, duplication or fusion observed.",
+    "Meaningful gentle repeated arm waving accompanies restrained body movement, a brief closed-eye blink around frames 64-68 and a smiling mouth opening. The character remains coherent; no unintended anatomical morphing observed.",
+    "Yellow sailor hat with blue band stays attached. Orange starfish, green seaweed and turquoise shell remain present, recognizable and without added faces.",
+    "All artwork remains inside the frame with white margins; no cropping or disappearing decorations observed. Colors and overall composition remain faithful to the approved source."
+  ],
+  "defects": [],
+  "limitations": [
+    "This is sampled visual inspection, not realtime playback or inspection of every frame. Sampling cannot guarantee frame-perfect smoothness, absence of every inter-sample artifact or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

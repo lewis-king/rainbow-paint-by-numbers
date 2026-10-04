@@ -20,6 +20,12 @@ This app is tailored specifically to her taste, featuring cute designs that come
 
 All artwork and animations in this app are AI-generated and post-processed into paintable segments. The entire pipeline runs locally on an **NVIDIA RTX 5090** using [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
 
+The current batch uses **Qwen Image 2.1 → MiniMax H3**. Editable ComfyUI workflows,
+exact prompts and seeds, approved source images, and visual quality reviews live
+in [`image-processing/generation/`](image-processing/generation/README.md).
+That directory also retains the Flux2/Wan2.2 fallback workflows. The descriptions
+below document the original pipeline used for the existing levels.
+
 ### Text-to-Image: Flux2 Dev
 
 We use [Flux2 Dev](https://github.com/black-forest-labs/flux2) to generate the base artwork.

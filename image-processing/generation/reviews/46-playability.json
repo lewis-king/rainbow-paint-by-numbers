@@ -1,0 +1,180 @@
+{
+  "id": "46",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "00b8584bae3ffd81eab52d036e86cc398ce2089d1f1b42cbaa52c53728d5bcb7",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "770d273d67357cdd2017cf86ddbfa0adb325f3e66bcdf4d84097bc76fcc271cc",
+    "original.png": "edb3393801ea1a25e5eef6a3a5cdb8f65db031f6ccb2121276f7ccea7b2cb2d1",
+    "lines.png": "96ecfa5b539fd36fc87340fb284341162c50fa713885076d93a4bc6d283c522c",
+    "map.png": "c04fcd4ecdcc533018928b295756e708c214eb520e3f2f196c754d17acf44925",
+    "unpainted.png": "038a85f9392c40d2bbd69af71407925315097fcf9c73d0bebcd60b6f1e2dda5b"
+  },
+  "phone_preview_sha256": "1bf0eadbfb60e2621518a659fa243112f6b69bda9da97cde273bf56cd077cdd8",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 7,
+  "palette_entries": 7,
+  "number_labels": 9,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 6,
+        "hex": "#fac102",
+        "area": 95693,
+        "radius": 95.9
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#f61a13",
+        "area": 93137,
+        "radius": 108.3
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#03d5e2",
+        "area": 62366,
+        "radius": 51.5
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#3b983b",
+        "area": 32505,
+        "radius": 59.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#652ab4",
+        "area": 18631,
+        "radius": 55.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#081945",
+        "area": 16419,
+        "radius": 48.9
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#0484ea",
+        "area": 4149,
+        "radius": 22.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 9,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 7.52,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 526,
+        "y": 627,
+        "image_radius_px": 48.93,
+        "screen_radius_px_at_350": 16.73
+      },
+      {
+        "number": 2,
+        "x": 82,
+        "y": 691,
+        "image_radius_px": 29.96,
+        "screen_radius_px_at_350": 10.24
+      },
+      {
+        "number": 2,
+        "x": 200,
+        "y": 717,
+        "image_radius_px": 58.98,
+        "screen_radius_px_at_350": 20.16
+      },
+      {
+        "number": 3,
+        "x": 290,
+        "y": 545,
+        "image_radius_px": 108.25,
+        "screen_radius_px_at_350": 37.0
+      },
+      {
+        "number": 4,
+        "x": 502,
+        "y": 732,
+        "image_radius_px": 55.0,
+        "screen_radius_px_at_350": 18.8
+      },
+      {
+        "number": 5,
+        "x": 858,
+        "y": 776,
+        "image_radius_px": 22.0,
+        "screen_radius_px_at_350": 7.52
+      },
+      {
+        "number": 6,
+        "x": 665,
+        "y": 700,
+        "image_radius_px": 51.53,
+        "screen_radius_px_at_350": 17.61
+      },
+      {
+        "number": 7,
+        "x": 747,
+        "y": 540,
+        "image_radius_px": 95.87,
+        "screen_radius_px_at_350": 32.77
+      },
+      {
+        "number": 7,
+        "x": 859,
+        "y": 699,
+        "image_radius_px": 39.0,
+        "screen_radius_px_at_350": 13.33
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Tent with open entrance, rolled mat and lantern; no object face.",
+    "Revision5 retains 7 meaningful color groups and 9 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Lantern neck label 6 at (862,649) sits in a tiny strip between contours (3.42px screen radius); adjacent label 8 at (817,736) is also cramped.",
+        "action": "Prefill the narrow lantern collar and frame gaps as fixed source colors or simplify them into larger paint regions; preserve the large lamp chamber."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

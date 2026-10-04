@@ -1,0 +1,777 @@
+{
+  "completed_at": "2026-10-04T15:02:41.179Z",
+  "scope": "30 source images and 30 reward videos only; excludes processing, game integration, review-dialog device validation and analytics",
+  "image_model": "Qwen Image 2.1",
+  "video_model": "MiniMax H3",
+  "accepted_images": 30,
+  "accepted_videos": 30,
+  "visual_review_limitations": "Video reviews use chronological sampled frames; no claim of every-frame inspection or seamless loops. Snail32 selected by explicit user approval. Train43 accepted with minor late steam-edge contact.",
+  "original_processor_restored": true,
+  "entries": [
+    {
+      "id": "29",
+      "title": "Puppy",
+      "image_sha256": "6c3e431c4f4556b1583f440b4364405b5d900429c47467d84bb59905d4bce4cd",
+      "video_sha256": "bb3b916d1a6500f6d09c04c22ed1f263b0d457f595f2938d2250a4e5a416ccdd",
+      "source_directory": "image-processing/generation/sources/29",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "30",
+      "title": "Penguin",
+      "image_sha256": "61483c92ad243f2a2a482569e5cafc9cfe35c857c0c864c5dc6d6ad611dc7657",
+      "video_sha256": "baa83e4636c8b9a6666ed2e7c81c9810495ea5300e3e55e552f6dbb753ef0660",
+      "source_directory": "image-processing/generation/sources/30",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "31",
+      "title": "Kangaroo",
+      "image_sha256": "bb620ce157ce0432d07d8380c6622bf3a24c34458077b599cc0bbef98d8bde5a",
+      "video_sha256": "850da577b0111483e36f9d759fe8aa4603298884bcd863d7bdf078d452ee2362",
+      "source_directory": "image-processing/generation/sources/31",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "32",
+      "title": "Snail",
+      "image_sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
+      "video_sha256": "83db516421542885ee0fa5a813a8261ed065bc5045e724bd405a4f91b438f3bd",
+      "source_directory": "image-processing/generation/sources/32",
+      "video_approval": "Explicit user selection of original attempt",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "33",
+      "title": "Butterfly",
+      "image_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+      "video_sha256": "66e7d3eed5fce0e5d0467a5c08515e671c53b82368758fda84ab1e2ea6806063",
+      "source_directory": "image-processing/generation/sources/33",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "34",
+      "title": "Octopus",
+      "image_sha256": "63afb532bd58c1835211baa492396b2c157f4db8f52f64ad7ca65d2a630b18e2",
+      "video_sha256": "f009f95ee2ac18603185fe0a66e131f6910d2f939932bd5c9d4e9e02b40b6ed9",
+      "source_directory": "image-processing/generation/sources/34",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "35",
+      "title": "Toucan",
+      "image_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+      "video_sha256": "3e1ba167a3f2cfe76474c5ee33c35e92fa45620d3ffd2e022588353437070d29",
+      "source_directory": "image-processing/generation/sources/35",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "36",
+      "title": "Sheep",
+      "image_sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
+      "video_sha256": "838701cb3762885746e24474fedf661a9a1f05a38b3145800fe6184ec0d9b9d6",
+      "source_directory": "image-processing/generation/sources/36",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "37",
+      "title": "Cow",
+      "image_sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+      "video_sha256": "a9f29a56aa7200f4633e51d9952bba2f85467c7d1ba9f9a86676e8e6e68e96f0",
+      "source_directory": "image-processing/generation/sources/37",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "38",
+      "title": "Hedgehog",
+      "image_sha256": "9cf1d40bf412cd278785362cba7d41c07242e4f29e11e32cdfd6374c69d9f650",
+      "video_sha256": "47a5b148e647fe6402a64cd800417743a6e958243b92266272779e3c884d0bf5",
+      "source_directory": "image-processing/generation/sources/38",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "39",
+      "title": "Seal",
+      "image_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
+      "video_sha256": "1760d2ed8aeb01fedbec2ec328b05c2293352e752445466e955106e2bccdda02",
+      "source_directory": "image-processing/generation/sources/39",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "40",
+      "title": "Camel",
+      "image_sha256": "2fd2163d25a74af55e9c87d9b865eebd0a36ef6830cd2c6d052040060530b712",
+      "video_sha256": "162b932f28a19940599de940310a11180fae115905030fa59e1863ebbcaed7cd",
+      "source_directory": "image-processing/generation/sources/40",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "41",
+      "title": "Rocket",
+      "image_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+      "video_sha256": "ace604389e0bbed8f9b971456880eb6208be001d111a3e7867591eaf4a06d35e",
+      "source_directory": "image-processing/generation/sources/41",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "42",
+      "title": "Hot Air Balloon",
+      "image_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+      "video_sha256": "d7a5807d4b80379ef28ceeb098254eaf97890b5220631c599ae8c17b5cd0e38a",
+      "source_directory": "image-processing/generation/sources/42",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "43",
+      "title": "Train",
+      "image_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+      "video_sha256": "70cd1876bdcf9948567092e97408731c16838aca01bac513abd5d18c47405d21",
+      "source_directory": "image-processing/generation/sources/43",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": [
+        "Cloud outline touches/slightly clips the upper edge in later frames.",
+        "Cloud persists at the end; seamless looping is neither established nor required."
+      ]
+    },
+    {
+      "id": "44",
+      "title": "Aeroplane",
+      "image_sha256": "38b02eb9e7809c4b8e16783cf4b3d860ae9396cf684f73a2c9fd24c9614be7e1",
+      "video_sha256": "e142e4fc1d8fb7098bb5ac21dd92f6212be30c024f1fc499545594269e3036c8",
+      "source_directory": "image-processing/generation/sources/44",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "45",
+      "title": "Excavator",
+      "image_sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
+      "video_sha256": "ae1fa4a68f43ebe1792e72416441794255af33e98a88678d592cb019de28b86c",
+      "source_directory": "image-processing/generation/sources/45",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "46",
+      "title": "Camping Tent",
+      "image_sha256": "00b8584bae3ffd81eab52d036e86cc398ce2089d1f1b42cbaa52c53728d5bcb7",
+      "video_sha256": "4c01d2393303b821aaf8fb0ccb5b1dd4133e5698bb0f2c2d02b1fbd7091baf20",
+      "source_directory": "image-processing/generation/sources/46",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "47",
+      "title": "Beach Bucket",
+      "image_sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07",
+      "video_sha256": "e9dd2fd854ce27278b54f23f0d5403c058be090685f27378af972235160f2ff5",
+      "source_directory": "image-processing/generation/sources/47",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "48",
+      "title": "Cupcake",
+      "image_sha256": "d0a0a17ce72707007e02a1d4e3f154f742dfac45a5549e0e61b70d750887eead",
+      "video_sha256": "d238062541ba50fe0dbfafc343b51223e0294d87156c97d3b91526560a1ad0d3",
+      "source_directory": "image-processing/generation/sources/48",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "49",
+      "title": "Ice Cream Sundae",
+      "image_sha256": "2950e069d4c9f49dac6314a509a15b4cb5d100d0984b4147841f60f1d4f7eeff",
+      "video_sha256": "66a80412a6e3fd0bc3fbf41ff8ad2007f5328ce4ceedf71e022ad1f86b680c9d",
+      "source_directory": "image-processing/generation/sources/49",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "50",
+      "title": "Teapot",
+      "image_sha256": "4869a3d34d7de21c0cb8b65275c1a16328e7595d406a2a755da46361531daac1",
+      "video_sha256": "7292a41017546b0adf7f71a4a8890620ea6b003d044ce89a0394844dbfbd9685",
+      "source_directory": "image-processing/generation/sources/50",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "51",
+      "title": "Watering Can",
+      "image_sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
+      "video_sha256": "180c373b496871a4370ffdca42cd195d4440c735c4b2d5fd522854d1d071a377",
+      "source_directory": "image-processing/generation/sources/51",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "52",
+      "title": "Rain Boots",
+      "image_sha256": "259b49bd6135b796663898034d80024b088ae8d52c400e388244684b7e2dd8bf",
+      "video_sha256": "9c39dec7bc6f4d1c4a02317804d7c2646fb6fb6aad12dd3da25caa818addf06c",
+      "source_directory": "image-processing/generation/sources/52",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "53",
+      "title": "Present",
+      "image_sha256": "60d1a7dee351cc4435eab26e542aaba9b4608d5f3611850cbc72100fb6fb951c",
+      "video_sha256": "090317e42dc7e8dcbfd0f02b6f9432bfbdb77ad2c44c93c55a0ff8d900860c1e",
+      "source_directory": "image-processing/generation/sources/53",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "54",
+      "title": "Crayons",
+      "image_sha256": "4e996467f19b05fc523779b60acd47f78791562b8c81e377150eac95e5efb967",
+      "video_sha256": "87dffab92882cf9f12f521cc2c74eb4397b96c39de40924eaa0e7c2343156f7b",
+      "source_directory": "image-processing/generation/sources/54",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "55",
+      "title": "Xylophone",
+      "image_sha256": "66385f972997b487705a4f5edccc6900f80fc2def7ff99ad13a6288edadee6bc",
+      "video_sha256": "30923a9ea3a5a38cc3b86eefc42471fe769ae6bbcbb616071222c9cb62bbdff3",
+      "source_directory": "image-processing/generation/sources/55",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "56",
+      "title": "Guitar",
+      "image_sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e",
+      "video_sha256": "6a7647a671f92f13757375320b18c863215984f30705556d0bce5985a579f964",
+      "source_directory": "image-processing/generation/sources/56",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    },
+    {
+      "id": "57",
+      "title": "Windmill",
+      "image_sha256": "70f081afac007c432125595fea10ad7abba85ff77f0ccb5095dd87599b384455",
+      "video_sha256": "5730ad7f073ae79d877dabdb46ec8af4548e1602b6131488cff71228400a4bbc",
+      "source_directory": "image-processing/generation/sources/57",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": [
+        "Visual inspection samples every three frames plus additional top-edge closeups; all frames are measured for angular progression, but not every full frame was individually viewed.",
+        "Color centroid angles are approximate and affected by small redraw/shape changes. The first tiny positive movements are near measurement precision; robust later progression has no sign reversal.",
+        "Initial acceleration is supported, sustained acceleration is not; end slows slightly.",
+        "No seamless-loop criterion was applied.",
+        "Source and video files were not modified. This is an exact-hash visual review only, not processing or integration approval.",
+        "Overall PASS does not change the strict framing observation: outline contact/clipping at frames 20–25 remains. User clarified that this prompt-derived condition is not an automatic acceptance gate."
+      ]
+    },
+    {
+      "id": "58",
+      "title": "Acorn",
+      "image_sha256": "e0570a0ca3e6356c5619c3abe105b6ec97aaea2189b78223dd7d24abcb2b8295",
+      "video_sha256": "60a18b248ebb185db062438ac08b8401bd4447cdc31384fb4ce41238de1253d4",
+      "source_directory": "image-processing/generation/sources/58",
+      "video_approval": "Astra sampled visual review",
+      "video_format": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 640,
+            "height": 640,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          }
+        ],
+        "format": {
+          "duration": "5.166667"
+        }
+      },
+      "nonblocking_caveats": []
+    }
+  ],
+  "status": "complete",
+  "latest_amendments": {
+    "56": "Both guitar and tambourine move, including attached jingles and ribbons.",
+    "57": "Consistent one-direction rotation with initial acceleration; brief outline-only top-edge contact accepted as minor."
+  }
+}

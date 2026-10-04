@@ -1,0 +1,35 @@
+{
+  "prepared_at": "2026-10-04T15:14:26.402Z",
+  "version": "1.4",
+  "branch": "main",
+  "validation": {
+    "new_assets": "30/30 pass",
+    "review_tests": "6/6 pass",
+    "typescript": "Passed during integration",
+    "android_ios_bundle_exports": "Passed during integration",
+    "resolved_app_identifiers": "Verified unchanged",
+    "analytics": "No Firebase analytics SDK or collection enabled"
+  },
+  "eas": {
+    "project_id": "07ea8a44-227f-4b82-83cf-e6e75790723b",
+    "production_auto_increment": true,
+    "asc_app_id": "6760931321"
+  },
+  "publication_status": "Proceeding under user release instruction after licensing terms were surfaced and user stated their review finds this use acceptable; no separate license clearance verified.",
+  "licensing_sources": [
+    "https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/main/LICENSE",
+    "https://huggingface.co/Qwen/Qwen-Image-2.1/raw/main/LICENSE"
+  ],
+  "license_findings": {
+    "minimax": "Section V.4 expressly covers outputs and excluded territories include UK/EU/US/South Korea.",
+    "qwen": "Non-Commercial is defined as research or evaluation purposes only; free-app publication permission not established."
+  },
+  "planned_remaining_steps": [
+    "Push release commit after licensing decision",
+    "EAS Android and iOS production builds",
+    "Download AAB and IPA to ~/Downloads",
+    "Verify both artifacts exclude raw assets",
+    "EAS submit verified IPA; Android manual upload by user"
+  ],
+  "user_license_assessment": "I'm reading the Minimax h3 and qwen 2.1 license it looks fine for what we are doing they are open source models"
+}

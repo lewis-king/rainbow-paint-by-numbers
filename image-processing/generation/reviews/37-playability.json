@@ -1,0 +1,184 @@
+{
+  "id": "37",
+  "reviewer": "gpt6astra",
+  "verdict": "FAIL",
+  "status": "FAIL",
+  "processor_revision": 5,
+  "source_sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "4406fc8fd8a508391ba1af04f56cf4b1953938bba18610530be57de5456bb4ea",
+    "original.png": "f85208e7f9d59dfd8f122710b298218a12da91025ed1b4b20c0904ed169eca20",
+    "lines.png": "2170dc0270116414663e185701cb676aaf4d4906c347b6ebd61991e84ac2f784",
+    "map.png": "84c52184042b43743b63184303d3fc1c8c0ce3cb11ea1bd66814dcbf24232cc9",
+    "unpainted.png": "36025e0aa240c8b07c6ad7929492daea2557ce683a32d1e8261cecdd9723834d"
+  },
+  "phone_preview_sha256": "42797140901254cb5910b60dc58555cd1f2a247223d8e84a65af70ce383338d7",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 5,
+  "palette_entries": 6,
+  "number_labels": 11,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 5,
+        "hex": "#fcf0d9",
+        "area": 117464,
+        "radius": 91.8
+      },
+      {
+        "index": 4,
+        "hex": "#d4ccbd",
+        "area": 2928,
+        "radius": 26.0
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#9d4c36",
+        "area": 53071,
+        "radius": 72.8
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#fba289",
+        "area": 26795,
+        "radius": 43.2
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#f3b529",
+        "area": 8197,
+        "radius": 44.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#34291e",
+        "area": 2101,
+        "radius": 20.4
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 11,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 6.96,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 867,
+        "y": 568,
+        "image_radius_px": 20.38,
+        "screen_radius_px_at_350": 6.96
+      },
+      {
+        "number": 2,
+        "x": 413,
+        "y": 274,
+        "image_radius_px": 44.76,
+        "screen_radius_px_at_350": 15.3
+      },
+      {
+        "number": 2,
+        "x": 671,
+        "y": 465,
+        "image_radius_px": 72.78,
+        "screen_radius_px_at_350": 24.88
+      },
+      {
+        "number": 2,
+        "x": 793,
+        "y": 613,
+        "image_radius_px": 29.0,
+        "screen_radius_px_at_350": 9.91
+      },
+      {
+        "number": 3,
+        "x": 328,
+        "y": 592,
+        "image_radius_px": 43.98,
+        "screen_radius_px_at_350": 15.03
+      },
+      {
+        "number": 4,
+        "x": 199,
+        "y": 271,
+        "image_radius_px": 21.0,
+        "screen_radius_px_at_350": 7.18
+      },
+      {
+        "number": 4,
+        "x": 509,
+        "y": 293,
+        "image_radius_px": 22.0,
+        "screen_radius_px_at_350": 7.52
+      },
+      {
+        "number": 4,
+        "x": 294,
+        "y": 414,
+        "image_radius_px": 43.15,
+        "screen_radius_px_at_350": 14.75
+      },
+      {
+        "number": 5,
+        "x": 683,
+        "y": 721,
+        "image_radius_px": 26.0,
+        "screen_radius_px_at_350": 8.89
+      },
+      {
+        "number": 6,
+        "x": 308,
+        "y": 266,
+        "image_radius_px": 45.94,
+        "screen_radius_px_at_350": 15.7
+      },
+      {
+        "number": 6,
+        "x": 516,
+        "y": 574,
+        "image_radius_px": 91.78,
+        "screen_radius_px_at_350": 31.37
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Benchmark cow retains eyes, nostrils, smile, horns, hooves and bell; clear large body patches.",
+    "Revision5 retains 5 meaningful color groups and 11 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Small-label clearance is improved; remaining blocking findings are detailed below.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [
+    {
+      "code": "INSUFFICIENT_MEANINGFUL_COLORS",
+      "severity": "blocking",
+      "description": "Only 5 meaningful paintable color groups remain.",
+      "action": "Provide a sixth substantial paintable color with adequate space for a 10px screen label. Enlarge a suitable source-consistent region or add a broad colored panel; do not reinstate tiny mandatory fragments merely to increase the palette count."
+    }
+  ],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "PASS",
+    "defects": []
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

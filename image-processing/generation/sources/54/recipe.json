@@ -1,0 +1,15 @@
+{
+  "id": "54",
+  "slug": "crayons",
+  "title": "Crayons",
+  "category": "toys",
+  "seed": 2026101454,
+  "image_prompt": "Edit this existing illustration. Remove the face on the purple crayon. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Crayons, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The five crayons gently bob up and down one after another inside the box. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "object_realism_revision": 1,
+  "image_reference": "sources/54/reference.png",
+  "image_reference_sha256": "ff9d1ddca5b7be62b09149bf2d7868f658c67c3b6a15e4337d21597e601a69a5"
+}

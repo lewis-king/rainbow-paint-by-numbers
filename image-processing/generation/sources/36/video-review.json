@@ -1,0 +1,84 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "838701cb3762885746e24474fedf661a9a1f05a38b3145800fe6184ec0d9b9d6",
+  "video": "image-processing/generation/runs/36/video.mp4",
+  "source_sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
+  "source_image": "image-processing/generation/runs/36/image.png",
+  "prompt_id": "ec83f6f1-c4d0-4cf7-ab4a-c03f4867cd87",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "dense_sample_count": 32,
+    "description": "Actually visually inspected four chronological sheets using view_image, every fourth frame plus last, against individually viewed exact-hash approved source. FFmpeg decoding limited to two CPU threads; no GPU submission or painting processor. Live Comfy history verified successful generation.",
+    "evidence_sheets": [
+      "/tmp/astra-qa36/dense-1.jpg",
+      "/tmp/astra-qa36/dense-2.jpg",
+      "/tmp/astra-qa36/dense-3.jpg",
+      "/tmp/astra-qa36/dense-4.jpg"
+    ]
+  },
+  "observations": [
+    "Sheep makes repeated small upward bounces and settles, with gentle ear/head movement; the sampled pose changes provide meaningful reward motion.",
+    "Four distinct legs and dark hooves remain coherent through raised and grounded poses. Two ears, face, wool silhouette and small tail retain source anatomy with no observed duplicated or disappearing limbs.",
+    "Cream wool, tan face/legs, pink inner ears and red scarf with yellow inset preserve approved appearance; the scarf remains attached and its panel stays visible.",
+    "Both flowers, their leaves and the green ground oval persist without new faces. Entire sheep, ears, hooves and decorations remain inside the frame in all samples; no cropping or unintended morphing observed."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled visual inspection is not realtime playback or inspection of every frame. Sampling cannot guarantee frame-perfect smoothness, absence of inter-sample artifacts or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

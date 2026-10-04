@@ -1,0 +1,11 @@
+{
+  "id": "48",
+  "stage": "video",
+  "prompt_id": "cd39db25-f9e2-4220-b0b5-d1318ee26b56",
+  "status": "completed",
+  "started_at": 1791122584.9549923,
+  "finished_at": 1791122740.013271,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/48/video.mp4",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/video/48-cupcake_00001_.mp4",
+  "sha256": "d238062541ba50fe0dbfafc343b51223e0294d87156c97d3b91526560a1ad0d3"
+}

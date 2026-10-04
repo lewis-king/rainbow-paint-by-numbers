@@ -1,0 +1,220 @@
+{
+  "id": "43",
+  "reviewer": "gpt6astra",
+  "verdict": "FAIL",
+  "status": "FAIL",
+  "processor_revision": 6,
+  "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "aeef634f6308e61cd20697c571adbcdc455a9ed1b9641092d2dc65b8655a4b9a",
+    "original.png": "94e3ad6710448d52b5c88dc122dbbd0fabeafab679d8da3eb5b2b5fef7b12d92",
+    "lines.png": "c12dc0504cc31c11c031f66b53c96d3fe99e1191c034c5308c331af9c0e72aed",
+    "map.png": "e4b71be9c822fbe1797e63d071918634679ca9fb46909a270a6aa6550e3ef232",
+    "unpainted.png": "147aef246bd2062aa1fd6a770d96d6a8cc4b59c674495c9957c941b63d61ec71"
+  },
+  "phone_preview_sha256": "0349dd0efc829004b317d214361d7acecc82a14448a0e6b61ac904afac21ef5f",
+  "phone_preview_provenance": "Viewed fresh shared diagnostic phone preview plus independently rendered temporary snapshot at 350px using 10px bold font and GameCanvas x-4/y+3 offsets; not native UI screenshots.",
+  "inspection_method": "Viewed current individual unpainted.png, original.png and phone previews; checked map connectivity and label clearance. No UI played.",
+  "meaningful_color_groups": 7,
+  "palette_entries": 7,
+  "number_labels": 10,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 2,
+        "hex": "#db2f27",
+        "area": 90536,
+        "radius": 57.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#0179f0",
+        "area": 89078,
+        "radius": 122.9
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#fbca03",
+        "area": 25403,
+        "radius": 44.2
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#30a549",
+        "area": 14479,
+        "radius": 26.8
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#656363",
+        "area": 14375,
+        "radius": 26.0
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#f57a12",
+        "area": 13810,
+        "radius": 25.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#2db1fa",
+        "area": 12723,
+        "radius": 57.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 10,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 8.54,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 740,
+        "y": 701,
+        "image_radius_px": 26.79,
+        "screen_radius_px_at_350": 9.16
+      },
+      {
+        "number": 2,
+        "x": 514,
+        "y": 742,
+        "image_radius_px": 26.0,
+        "screen_radius_px_at_350": 8.89
+      },
+      {
+        "number": 3,
+        "x": 578,
+        "y": 331,
+        "image_radius_px": 26.0,
+        "screen_radius_px_at_350": 8.89
+      },
+      {
+        "number": 3,
+        "x": 768,
+        "y": 592,
+        "image_radius_px": 56.97,
+        "screen_radius_px_at_350": 19.47
+      },
+      {
+        "number": 3,
+        "x": 458,
+        "y": 691,
+        "image_radius_px": 35.15,
+        "screen_radius_px_at_350": 12.01
+      },
+      {
+        "number": 4,
+        "x": 384,
+        "y": 525,
+        "image_radius_px": 122.89,
+        "screen_radius_px_at_350": 42.0
+      },
+      {
+        "number": 5,
+        "x": 358,
+        "y": 702,
+        "image_radius_px": 25.0,
+        "screen_radius_px_at_350": 8.54
+      },
+      {
+        "number": 6,
+        "x": 310,
+        "y": 259,
+        "image_radius_px": 44.2,
+        "screen_radius_px_at_350": 15.11
+      },
+      {
+        "number": 6,
+        "x": 451,
+        "y": 368,
+        "image_radius_px": 34.0,
+        "screen_radius_px_at_350": 11.62
+      },
+      {
+        "number": 7,
+        "x": 708,
+        "y": 472,
+        "image_radius_px": 57.0,
+        "screen_radius_px_at_350": 19.48
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Locomotive remains recognizable without an object face; seven meaningful paintable color groups remain.",
+    "Ten four-connected regions each have one label and minimum label-center radius is 8.54px at 350px; numerical coverage still misses the visual chimney-cap enclosure problem.",
+    "Chimney cap is yellow in colored original but blank and unnumbered in both fresh phone and full diagnostic unpainted views."
+  ],
+  "defects": [
+    {
+      "code": "UNLABELLED_VISIBLE_ENCLOSURE",
+      "severity": "blocking",
+      "description": "Revision6 chimney cap near (310,185) still appears enclosed and blank in full unpainted and 344/350px phone views. Map index 5 connects it by four-connectivity to chimney label 6 at (310,259); there is no label inside the cap.",
+      "action": "Prefill the cap in source yellow, fully separate the cap hit region along the rendered dividing boundary and give it a readable label, or visibly open the dividing contour. Recheck both cap edges for surviving hidden connections."
+    }
+  ],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "UNLABELLED_VISIBLE_ENCLOSURE",
+        "severity": "blocking",
+        "description": "The rounded chimney cap near (310,185) is visibly enclosed by black outline but has no number in either full-size or phone unpainted view; colored original shows it yellow.",
+        "action": "Make the cap fixed yellow or give the visibly enclosed cap its own paintable component and centered label. An 8-connected map pass alone does not establish visual label coverage."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ],
+  "revision_history": [
+    {
+      "processor_revision": 5,
+      "verdict": "FAIL",
+      "artifact_sha256": {
+        "data.json": "056ca7113ec41c39b1abb98b89b5f783395426271fe7c8481bbcf23dad885ff9",
+        "original.png": "89abe389a0e55c775045ca769a287e385dce4d77f65edbb3d0dea1615a2be50f",
+        "lines.png": "40dcdf0c5bd23e22ce7c058ce859d8497502162a183b7a4e5857ffdeda11360a",
+        "map.png": "aed3a314e99606f287d928747808246f884fee5f3b804b6ff2cb88fc521782a4",
+        "unpainted.png": "b4006749353fea01c85997da43664fd17bcbd92b7cf655412c040335531b686a"
+      },
+      "observations": [
+        "Steam locomotive with cab, chimney, wheels, coupling rod and track; no object face.",
+        "Revision5 retains 7 meaningful color groups and 11 numbered regions; small pieces retain source color as fixed artwork.",
+        "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+        "Small-label clearance is improved, but the visible enclosure coverage defect detailed below remains.",
+        "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+      ],
+      "defects": [
+        {
+          "code": "UNLABELLED_VISIBLE_ENCLOSURE",
+          "severity": "blocking",
+          "description": "Rounded yellow chimney cap near (310,185) still appears enclosed and has no number in revision5 unpainted/phone previews, while remaining unfilled. Four-connected map labeling does not solve the visible cap boundary.",
+          "action": "Prefill the cap in source yellow, split it into an independently numbered region with adequate clearance, or open the rendered dividing contour so its connection to the numbered chimney is visible."
+        }
+      ]
+    }
+  ]
+}

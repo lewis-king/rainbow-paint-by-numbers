@@ -1,0 +1,87 @@
+{
+  "source_image": "image-processing/generation/runs/46/image.png",
+  "source_sha256": "00b8584bae3ffd81eab52d036e86cc398ce2089d1f1b42cbaa52c53728d5bcb7",
+  "video": "image-processing/generation/runs/46/video.mp4",
+  "sha256": "4c01d2393303b821aaf8fb0ccb5b1dd4133e5698bb0f2c2d02b1fbd7091baf20",
+  "video_sha256": "4c01d2393303b821aaf8fb0ccb5b1dd4133e5698bb0f2c2d02b1fbd7091baf20",
+  "prompt_id": "b60f24ee-e9d7-4955-9589-4d79072b5469",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "source_visual_verdict": "PASS",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "sample_count": 32,
+    "evidence_sheets": [
+      "image-processing/generation/reviews/46-video-4c01d2393303/contact-1.jpg",
+      "image-processing/generation/reviews/46-video-4c01d2393303/contact-2.jpg",
+      "image-processing/generation/reviews/46-video-4c01d2393303/contact-3.jpg",
+      "image-processing/generation/reviews/46-video-4c01d2393303/contact-4.jpg"
+    ],
+    "description": "Actual source and all chronological contact sheets inspected using view_image. Evenly spaced frames include 0, 4 and last. CPU FFmpeg decoding, filtering and PNG encoding limited to two threads each; no GPU or generation submission."
+  },
+  "observations": [
+    "The actual source shows a recognizable face-free tent, rolled mat and lantern with broad red, yellow, turquoise, blue, purple, green and orange components.",
+    "Across 32 chronological samples, the turquoise entrance flaps gently change curvature and opening width while the tent ridge and outer panels stay coherent. Motion is restrained but visible; no sudden collapse or panel loss is observed.",
+    "The green rolled mat, orange strap and blue/yellow lantern persist from frame 0 through frame 123. Lantern shape shifts slightly without developing eyes or a mouth; all props remain recognizable.",
+    "The full composition stays within the frame without accumulating drift or sampled clipping. Source colours and the dark-blue/purple interior remain consistent."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled still-frame inspection, not real-time playback or inspection of every frame. Motion observations describe progression across samples; frame-perfect smoothness, inter-sample artifacts and seamless looping are not guaranteed.",
+    "Contact sheets use reduced-size frames; full-resolution extracted samples are retained beside them."
+  ],
+  "scope": "Exact-source and exact-video sampled visual reward-video review only. No painting processing, build, emulator, imports or integration performed or approved."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "41",
+  "slug": "rocket",
+  "title": "Rocket",
+  "category": "adventures",
+  "seed": 2026110441,
+  "image_prompt": "(masterpiece), flat vector art, children's coloring book style,  a chunky  toy rocket with a red nose cone, cream upper body and purple lower body, one large blue round window in a thick golden yellow rim, two broad green side fins and an orange center fin. Broad yellow and orange exhaust flame below, two large turquoise and pink stars beside it, white empty background, simple shapes, thick bold outlines, cel shaded, vibrant solid colors, white background, minimalist, high contrast, 2d game asset, no dithering. Designed as an engaging paint-by-numbers activity for school-age beginners aged 4 and up: use every named contrasting color in substantial clearly enclosed areas. About 18 to 35 medium-to-large paintable regions, repeat some colors in separate regions. Keep all objects fully visible with a generous white margin. No text, no numerals, no gradients, no shadows, no texture, no tiny details. Uniform thick BLACK contours, no colored outline strokes.  Real objects with recognizable physical structure. No anthropomorphic features: no faces, no eyes, no pupils, no mouths, no eyebrows, no smiles, no limbs on any object, food, plant or decoration.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The rocket gently lifts a little and settles while its broad flame flickers softly. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1
+}

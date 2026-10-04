@@ -1,0 +1,152 @@
+{
+  "id": "43",
+  "reviewer": "Codex",
+  "requested_review_model": "gpt-6-astra",
+  "review_model": null,
+  "model_note": "Requested model recorded; exact runtime model identity is not verifiable from this session. No separate model invocation claimed.",
+  "verdict": "CORRECTION_RECOMMENDED",
+  "scope": "Source and current reward-video visual review of steam origin only; existing PASS preserved, not overwritten.",
+  "source_image": "image-processing/generation/runs/43/image.png",
+  "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+  "video": "image-processing/generation/runs/43/video.mp4",
+  "sha256": "b08767ecb3c47720b1bab227d6fe82cc7dcfad14318d815a4213635da0a37a21",
+  "existing_pass_reviews": [
+    {
+      "path": "image-processing/generation/reviews/43-video.json",
+      "sha256": "58925f8cc62127431f125562d7c3d6776d73ca2d75028786ce8d6cbb61058dc2",
+      "verdict": "PASS",
+      "preserved": true
+    },
+    {
+      "path": "image-processing/generation/sources/43/video-review.json",
+      "sha256": "58925f8cc62127431f125562d7c3d6776d73ca2d75028786ce8d6cbb61058dc2",
+      "verdict": "PASS",
+      "preserved": true
+    }
+  ],
+  "method": {
+    "type": "view_image_source_and_sampled_video_frames_not_realtime_playback",
+    "decode": "ffmpeg CPU software decode, -hwaccel none -threads 2; output threads 2; filter_threads 1; filter_complex_threads 1; no GPU",
+    "source_dimensions": [
+      1024,
+      1024
+    ],
+    "video_dimensions": [
+      640,
+      640
+    ],
+    "fps": 24,
+    "frame_count": 124,
+    "duration_seconds": 5.166667,
+    "sampled_frame_indices": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      123
+    ],
+    "full_resolution_frame_indices": [
+      8,
+      24,
+      64,
+      120,
+      123
+    ],
+    "overview": "Frames 0 through 120 every eight frames, row-major 4x4 contact sheet; frame 123 inspected separately.",
+    "temporary_evidence_directory": "/tmp/train43-steam-review"
+  },
+  "geometry": {
+    "coordinate_system": "Approximate pixels, origin top-left, x rightward, y downward; source coordinates refer to 1024x1024 image.",
+    "large_chimney": {
+      "description": "Tall yellow tapered stack with broad flared yellow lip on the left/front of the blue boiler, above the orange front wheel.",
+      "source_bbox_xyxy": [
+        239,
+        154,
+        379,
+        409
+      ],
+      "source_top_outlet_center_xy": [
+        309,
+        156
+      ],
+      "video_top_outlet_center_xy": [
+        193,
+        98
+      ]
+    },
+    "small_fitting": {
+      "description": "Short rounded yellow dome on top of the blue boiler, between the tall chimney and the red cab.",
+      "source_bbox_xyxy": [
+        411,
+        327,
+        492,
+        409
+      ],
+      "source_top_center_xy": [
+        451,
+        329
+      ],
+      "video_top_center_xy": [
+        282,
+        206
+      ]
+    },
+    "relation": "The large chimney is screen-left of the small fitting, toward the locomotive front; their bases are nearly level. The chimney top is about 173 source pixels higher, and its center about 142 source pixels left of the small fitting. The small fitting is nearer the red cab on the right."
+  },
+  "finding": {
+    "user_concern_confirmed": true,
+    "confidence": "high",
+    "motion_origin": "Steam visually originates immediately above the small yellow dome (approximately x=286, y=183 in the 640x640 video), not above the large chimney (outlet approximately x=193, y=98). The first sampled puff is detached by a short gap above the dome; origin is inferred from alignment and successive puff growth, not a continuously connected jet.",
+    "motion_direction": "Puffs enlarge and rise diagonally up and right toward/over the red cab. New small puffs recur above the dome while the cloud extends rightward. No chimney emission is visible in inspected samples.",
+    "evidence": [
+      {
+        "frame": 8,
+        "seconds": 0.333333,
+        "observation": "No visible steam."
+      },
+      {
+        "frame": 24,
+        "seconds": 1.0,
+        "observation": "Small outlined puff centered approximately (286,183), directly above small dome, well right and below tall chimney outlet."
+      },
+      {
+        "frame": 64,
+        "seconds": 2.666667,
+        "observation": "Small new puff above dome near (287,186); larger cloud extends up and right."
+      },
+      {
+        "frame": 120,
+        "seconds": 5.0,
+        "observation": "Large cloud over cab; smaller trailing puff remains above dome."
+      },
+      {
+        "frame": 123,
+        "seconds": 5.125,
+        "observation": "Tiny new puff near (288,189) above dome; tall chimney remains inactive."
+      }
+    ],
+    "assessment": "This is a clear emission-location mismatch for the intended chimney steam. The previous PASS explicitly noticed dome-origin steam but accepted it as stylization. On reconsideration, recommend correcting the motion prompt; source artwork does not need modification."
+  },
+  "corrective_motion_prompt": "A charming flat 2D cartoon animation for young children. Preserve the exact input train and all its parts. The locomotive faces left. Its steam chimney is the TALL YELLOW STACK with the broad flared top on the LEFT/front of the blue boiler, above the orange front wheel (top center approximately 30% image width, 15% image height). Emit one small soft white, black-outlined steam cloud ONLY from the TOP CENTER of this tall chimney. Show the cloud first touching the chimney top, then rising vertically clear of the rim before drifting gently right and fading. The SHORT ROUNDED YELLOW DOME to its RIGHT, between chimney and red cab (approximately 44% width, 32% height), stays solid, unchanged and completely inactive: no steam, smoke, bubbles or puffs above that dome. Do not relocate, shorten, reshape or add outlets. The toy train rolls slowly a short distance and its wheels turn gently. Preserve exact proportions, bright solid colors and thick black outlines. Keep the entire train and steam visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no zoom, no text, no new objects except the specified steam. Let steam dissipate and end near the starting pose. No speech, eyes, mouths, faces, limbs or character features.",
+  "limitations": [
+    "Sampled review does not establish the exact first emission frame or inspect every inter-sample frame.",
+    "No realtime playback or frame-perfect motion/loop approval claimed."
+  ],
+  "actions_taken": [
+    "Read source, video metadata and existing review records.",
+    "Decoded temporary review-only frames on CPU and inspected them with view_image.",
+    "Wrote this separate review; no source edit, generation, asset processing pipeline or build."
+  ]
+}

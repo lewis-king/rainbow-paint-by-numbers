@@ -1,0 +1,16 @@
+{
+  "id": "53",
+  "slug": "present",
+  "title": "Present",
+  "category": "toys",
+  "seed": 2026111453,
+  "image_prompt": "Edit this existing illustration. Remove all faces on the balloon decorations. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Present, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The closed gift box wiggles playfully and its big bow bobs, remaining tied. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "image_reference": "sources/53/reference.png",
+  "image_reference_sha256": "af6aefaf23f1b4dba43f0dde5cc52cc3e778e4980d20449bd64bb915d61406bd"
+}

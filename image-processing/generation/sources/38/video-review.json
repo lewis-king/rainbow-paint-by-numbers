@@ -1,0 +1,84 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "47a5b148e647fe6402a64cd800417743a6e958243b92266272779e3c884d0bf5",
+  "video": "image-processing/generation/runs/38/video.mp4",
+  "source_sha256": "9cf1d40bf412cd278785362cba7d41c07242e4f29e11e32cdfd6374c69d9f650",
+  "source_image": "image-processing/generation/runs/38/image.png",
+  "prompt_id": "4b09e026-10b2-4f3e-a822-55810d7d4b4f",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "dense_sample_count": 32,
+    "description": "Actually visually inspected four chronological sheets using view_image, every fourth frame plus last, against individually viewed exact-hash approved source. FFmpeg decoding limited to two CPU threads; no GPU submission or painting processor. Live Comfy history verified successful generation.",
+    "evidence_sheets": [
+      "/tmp/astra-qa38/dense-1.jpg",
+      "/tmp/astra-qa38/dense-2.jpg",
+      "/tmp/astra-qa38/dense-3.jpg",
+      "/tmp/astra-qa38/dense-4.jpg"
+    ]
+  },
+  "observations": [
+    "Hedgehog gently turns and leans down toward the apple during roughly frames 12-32 while lowering its held yellow leaf. This is a meaningful small action; later samples largely hold the sniffing pose rather than repeating the movement.",
+    "Head, snout, ears, visible arm and spiny back remain coherent through the turn. Leaf naturally occludes parts of the lower body/feet in the bent pose; no detached, duplicated or malformed limbs observed.",
+    "Brown spines, tan face/body, orange cheeks, turquoise scarf and yellow leaf preserve the source identity. Scarf remains attached and the leaf remains visibly held.",
+    "Red apple with stem/leaf, purple-capped orange-stemmed mushroom and green grass persist, without added faces. Entire composition remains uncropped with generous margins; no disappearing decorations or unintended object morphing observed."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled visual inspection is not realtime playback or inspection of every frame. Sampling cannot guarantee frame-perfect smoothness, absence of inter-sample artifacts or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

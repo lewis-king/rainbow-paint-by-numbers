@@ -1,0 +1,13 @@
+{
+  "id": "30",
+  "slug": "penguin",
+  "title": "Penguin",
+  "category": "animals",
+  "seed": 2026110530,
+  "image_prompt": "(masterpiece), flat vector art, children's coloring book style. ONE single cheerful penguin with a black body, large white belly, orange beak and feet. It wears a golden yellow bobble hat with a broad purple band and bright red scarf. It stands on ONE pale blue ice floe beside ONE turquoise fish with orange fins. One large central composition filling the canvas, all objects completely visible with white margin. Simple bold shapes, thick uniform black outlines, vibrant SOLID flat colors, white background, minimalist, high contrast, 2d game asset. Large enclosed color areas suitable for age 4 paint by numbers. No collage, no sticker sheet, no grid, no repeated characters, no text, no numbers, no shading, no highlights, no gradients, no texture.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The penguin wiggles its flippers and sways happily from side to side. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2
+}

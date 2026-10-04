@@ -1,0 +1,88 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "1760d2ed8aeb01fedbec2ec328b05c2293352e752445466e955106e2bccdda02",
+  "video": "image-processing/generation/runs/39/video.mp4",
+  "source_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
+  "source_image": "image-processing/generation/runs/39/image.png",
+  "prompt_id": "b8f08fe1-5ad6-4f1d-a6ea-98e95f1f5d77",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "dense_sample_count": 32,
+    "description": "Actually visually inspected four chronological sheets using view_image, every fourth frame plus last, against individually viewed exact-hash approved source. FFmpeg decoding limited to two CPU threads; no GPU submission or painting processor. Live Comfy history verified successful generation.",
+    "evidence_sheets": [
+      "/tmp/astra-qa39/dense-1.jpg",
+      "/tmp/astra-qa39/dense-2.jpg",
+      "/tmp/astra-qa39/dense-3.jpg",
+      "/tmp/astra-qa39/dense-4.jpg"
+    ],
+    "additional_native_resolution_frame_indices": [
+      104
+    ]
+  },
+  "observations": [
+    "Seal makes repeated front-flipper clapping/paddling motions while gently balancing the colored ball on its nose; meaningful movement is visible without large travel.",
+    "Two front flippers and the source rear-flipper arrangement remain attached and coherent. Head, muzzle, eye and gray torso retain source appearance; no solid extra limbs or anatomical loss observed.",
+    "Some late clapping samples around frames 100-112 show faint motion trails/soft doubled edges on the moving flippers. Frame 104 was additionally inspected individually at native resolution: this reads as motion smear, not a separate limb or structural mutation.",
+    "Ball retains its red/yellow/green/cyan/blue/purple panels and round silhouette, stays at the nose, and remains fully below the upper image boundary. No added face appears on the ball.",
+    "Pink flipper coloring, rear flippers and blue oval below the seal persist. Full seal and ball remain uncropped in all sampled frames; no disappearing decorations observed."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled visual inspection is not realtime playback or inspection of every frame. Sampling cannot guarantee frame-perfect smoothness, absence of inter-sample artifacts or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

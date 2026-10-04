@@ -1,0 +1,84 @@
+{
+  "id": "32",
+  "processor_revision": 5,
+  "source_sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
+  "source_palette_entries": 9,
+  "meaningful_color_groups": 9,
+  "paintable_pixels": 298763,
+  "number_labels": 16,
+  "area_cutoff": 2390,
+  "groups": [
+    [
+      {
+        "index": 0,
+        "hex": "#d90c0e",
+        "area": 67532,
+        "radius": 73.3
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#a3d93b",
+        "area": 48259,
+        "radius": 51.1
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#8a4db1",
+        "area": 45858,
+        "radius": 28.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#4bbbfc",
+        "area": 32412,
+        "radius": 31.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#fbb900",
+        "area": 31964,
+        "radius": 30.4
+      }
+    ],
+    [
+      {
+        "index": 8,
+        "hex": "#fbefc9",
+        "area": 24230,
+        "radius": 50.3
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#03f8cd",
+        "area": 19792,
+        "radius": 41.4
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#d66d00",
+        "area": 18177,
+        "radius": 26.0
+      }
+    ],
+    [
+      {
+        "index": 7,
+        "hex": "#eccd80",
+        "area": 10539,
+        "radius": 23.0
+      }
+    ]
+  ]
+}

@@ -2,123 +2,99 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as StoreReview from 'expo-store-review';
+import { isReviewDue, nextReviewMilestone, REVIEW_MILESTONE, type ReviewHistory } from '@/utils/review-policy';
 
-// Wrap AsyncStorage to handle errors gracefully
-const safeAsyncStorage = {
-  getItem: async (key: string) => {
-    try {
-      return await AsyncStorage.getItem(key);
-    } catch (error) {
-      console.error('AsyncStorage.getItem error:', key, error);
-      return null;
-    }
-  },
-  setItem: async (_key: string, value: string) => {
-    try {
-      await AsyncStorage.setItem(_key, value);
-    } catch (error) {
-      console.error('AsyncStorage.setItem error:', error);
-    }
-  },
-  removeItem: async (key: string) => {
-    try {
-      await AsyncStorage.removeItem(key);
-    } catch (error) {
-      console.error('AsyncStorage.removeItem error:', error);
-    }
-  },
-};
-
-interface ReviewState {
-  // Count of total completed levels
-  totalLevelsCompleted: number;
-  // Whether user has already clicked to review
-  hasClickedReview: boolean;
-  // Last review request timestamp
+interface ReviewState extends ReviewHistory {
   lastReviewRequest: number | null;
   _hasHydrated: boolean;
-
-  // Check if we should show review prompt
+  requestInFlight: boolean;
+  recordCompletedLevel: (id: string) => void;
+  reconcileCompletions: (ids: string[]) => void;
   shouldShowReview: () => boolean;
-
-  // Mark that a level was completed
-  incrementCompletedLevels: () => void;
-
-  // Mark that user clicked review button
-  markClickedReview: () => void;
-
-  // Request the actual review
-  requestReview: () => Promise<void>;
-
-  // Hydration status
-  setHasHydrated: (state: boolean) => void;
+  requestReview: (canPresent: () => boolean) => Promise<void>;
+  setHasHydrated: () => void;
 }
+
+// Do not write defaults over saved cadence/opt-out while storage is loading.
+const pendingCompletions = new Set<string>();
 
 export const useReviewStore = create<ReviewState>()(
   persist(
     (set, get) => ({
-      totalLevelsCompleted: 0,
-      hasClickedReview: false,
+      completedLevelIds: [],
       lastReviewRequest: null,
+      nextReviewAt: REVIEW_MILESTONE,
+      requestCount: 0,
+      optedOut: false,
       _hasHydrated: false,
-
-      setHasHydrated: (state: boolean) => {
-        set({ _hasHydrated: state });
+      requestInFlight: false,
+      setHasHydrated: () => {
+        set({
+          _hasHydrated: true,
+          completedLevelIds: [...new Set([...get().completedLevelIds, ...pendingCompletions])],
+        });
+        pendingCompletions.clear();
       },
-
-      shouldShowReview: () => {
-        const state = get();
-        
-        // Don't show if already clicked review button
-        if (state.hasClickedReview) return false;
-        
-        // Only show after completing 10+ levels
-        if (state.totalLevelsCompleted < 10) return false;
-        
-        // Cooldown: wait at least 7 days between review requests
-        if (state.lastReviewRequest) {
-          const daysSinceLastRequest = (Date.now() - state.lastReviewRequest) / (1000 * 60 * 60 * 24);
-          if (daysSinceLastRequest < 7) return false;
+      recordCompletedLevel: (id) => {
+        if (!get()._hasHydrated) {
+          pendingCompletions.add(id);
+          return;
         }
-        
-        return true;
+        if (!get().completedLevelIds.includes(id)) {
+          set({ completedLevelIds: [...get().completedLevelIds, id] });
+        }
       },
-
-      incrementCompletedLevels: () => {
-        set((state) => ({
-          totalLevelsCompleted: state.totalLevelsCompleted + 1,
-        }));
+      reconcileCompletions: (ids) => {
+        if (!get()._hasHydrated) {
+          ids.forEach((id) => pendingCompletions.add(id));
+          return;
+        }
+        const merged = [...new Set([...get().completedLevelIds, ...ids])];
+        if (merged.length !== get().completedLevelIds.length) set({ completedLevelIds: merged });
       },
-
-      markClickedReview: () => {
-        set({ hasClickedReview: true });
-      },
-
-      requestReview: async () => {
+      shouldShowReview: () => get()._hasHydrated && !get().requestInFlight && isReviewDue(get()),
+      requestReview: async (canPresent) => {
+        if (!canPresent() || !get().shouldShowReview()) return;
+        set({ requestInFlight: true });
         try {
-          const isAvailable = await StoreReview.isAvailableAsync();
-          
-          if (isAvailable) {
-            await StoreReview.requestReview();
-            // Mark that they clicked review (we can't know if they actually submitted)
-            get().markClickedReview();
-            set({ lastReviewRequest: Date.now() });
-          }
+          if (!await StoreReview.isAvailableAsync()) return;
+          if (!canPresent() || !isReviewDue(get())) return;
+          // An attempt is not proof the OS displayed a dialog or a review was submitted.
+          // Persist first so rerenders/relaunches cannot spam requests.
+          set({
+            lastReviewRequest: Date.now(),
+            nextReviewAt: nextReviewMilestone(get().completedLevelIds.length),
+            requestCount: get().requestCount + 1,
+          });
+          await StoreReview.requestReview();
         } catch (error) {
-          console.error('Error requesting review:', error);
+          console.warn('Native review request unavailable:', error);
+        } finally {
+          set({ requestInFlight: false });
         }
       },
     }),
     {
       name: 'review-storage',
-      storage: createJSONStorage(() => safeAsyncStorage),
-      onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated(true);
+      version: 1,
+      storage: createJSONStorage(() => AsyncStorage),
+      migrate: (stored) => {
+        const previous = stored as { hasClickedReview?: boolean; lastReviewRequest?: number | null } | null;
+        return {
+          completedLevelIds: [], // Recover distinct completions from level-progress-storage.
+          // The old flag also meant “don't ask again”; preserve that choice.
+          optedOut: previous?.hasClickedReview ?? false,
+          lastReviewRequest: previous?.lastReviewRequest ?? null,
+          nextReviewAt: REVIEW_MILESTONE,
+          requestCount: 0,
+        };
       },
-      partialize: (state) => ({
-        totalLevelsCompleted: state.totalLevelsCompleted,
-        hasClickedReview: state.hasClickedReview,
-        lastReviewRequest: state.lastReviewRequest,
+      onRehydrateStorage: () => (state) => {
+        // Fail closed on storage errors: do not prompt with unknown history.
+        state?.setHasHydrated();
+      },
+      partialize: ({ completedLevelIds, lastReviewRequest, nextReviewAt, requestCount, optedOut }) => ({
+        completedLevelIds, lastReviewRequest, nextReviewAt, requestCount, optedOut,
       }),
     }
   )

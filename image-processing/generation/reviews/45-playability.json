@@ -1,0 +1,208 @@
+{
+  "id": "45",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "b1bcb75b28a7334c184493d3c0977fccac634715f28f18207b533d2b4c4669c9",
+    "original.png": "977f965a86f108bdfb8383e2acd461931e3d8134cedec599edfa013e482c6c16",
+    "lines.png": "c7c1f3dd4e69b893832e6e826f0c298515c7e9607814744aed642b2ee1bd20b2",
+    "map.png": "6732067a90a2f7226f28fe2f8310b3125ed64a2ff0aff4fc022dd5a1b9765e3b",
+    "unpainted.png": "f907b378f4f2db9b3af352eb44a29bf9322f51e485fd212e716dc65ba29bbe2c"
+  },
+  "phone_preview_sha256": "fbd0242e2fb8905e8a229a2b7a013fa5c5b72991a8b11b0e74ee58651b2833f1",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 7,
+  "palette_entries": 7,
+  "number_labels": 14,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 5,
+        "hex": "#d8b402",
+        "area": 50361,
+        "radius": 47.0
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#f22119",
+        "area": 25579,
+        "radius": 43.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#3a3a3b",
+        "area": 21802,
+        "radius": 52.0
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#53ac28",
+        "area": 20130,
+        "radius": 25.8
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#833ac1",
+        "area": 14760,
+        "radius": 47.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#00a1fe",
+        "area": 14334,
+        "radius": 57.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#fb8000",
+        "area": 11178,
+        "radius": 47.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 14,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 6.84,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 639,
+        "y": 700,
+        "image_radius_px": 52.0,
+        "screen_radius_px_at_350": 17.77
+      },
+      {
+        "number": 1,
+        "x": 869,
+        "y": 696,
+        "image_radius_px": 20.0,
+        "screen_radius_px_at_350": 6.84
+      },
+      {
+        "number": 2,
+        "x": 236,
+        "y": 691,
+        "image_radius_px": 25.77,
+        "screen_radius_px_at_350": 8.81
+      },
+      {
+        "number": 2,
+        "x": 136,
+        "y": 679,
+        "image_radius_px": 23.18,
+        "screen_radius_px_at_350": 7.92
+      },
+      {
+        "number": 3,
+        "x": 735,
+        "y": 539,
+        "image_radius_px": 43.0,
+        "screen_radius_px_at_350": 14.7
+      },
+      {
+        "number": 3,
+        "x": 327,
+        "y": 611,
+        "image_radius_px": 31.36,
+        "screen_radius_px_at_350": 10.72
+      },
+      {
+        "number": 3,
+        "x": 364,
+        "y": 713,
+        "image_radius_px": 23.0,
+        "screen_radius_px_at_350": 7.86
+      },
+      {
+        "number": 4,
+        "x": 216,
+        "y": 476,
+        "image_radius_px": 47.0,
+        "screen_radius_px_at_350": 16.06
+      },
+      {
+        "number": 5,
+        "x": 529,
+        "y": 701,
+        "image_radius_px": 47.0,
+        "screen_radius_px_at_350": 16.06
+      },
+      {
+        "number": 5,
+        "x": 794,
+        "y": 701,
+        "image_radius_px": 47.0,
+        "screen_radius_px_at_350": 16.06
+      },
+      {
+        "number": 6,
+        "x": 310,
+        "y": 329,
+        "image_radius_px": 39.16,
+        "screen_radius_px_at_350": 13.38
+      },
+      {
+        "number": 6,
+        "x": 527,
+        "y": 344,
+        "image_radius_px": 47.0,
+        "screen_radius_px_at_350": 16.06
+      },
+      {
+        "number": 6,
+        "x": 657,
+        "y": 552,
+        "image_radius_px": 29.59,
+        "screen_radius_px_at_350": 10.12
+      },
+      {
+        "number": 7,
+        "x": 568,
+        "y": 476,
+        "image_radius_px": 57.0,
+        "screen_radius_px_at_350": 19.48
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Excavator with articulated arm, bucket, cab and continuous track; cone and leaves are recognizable, no object face.",
+    "Revision5 retains 7 meaningful color groups and 14 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "PASS",
+    "defects": []
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

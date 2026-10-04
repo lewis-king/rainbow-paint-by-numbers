@@ -1,0 +1,87 @@
+{
+  "source_image": "image-processing/generation/runs/40/image.png",
+  "source_sha256": "2fd2163d25a74af55e9c87d9b865eebd0a36ef6830cd2c6d052040060530b712",
+  "video": "image-processing/generation/runs/40/video.mp4",
+  "sha256": "162b932f28a19940599de940310a11180fae115905030fa59e1863ebbcaed7cd",
+  "video_sha256": "162b932f28a19940599de940310a11180fae115905030fa59e1863ebbcaed7cd",
+  "prompt_id": "2af78240-6587-4725-840f-6a3e241a586e",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "requested_review_model": "gpt-6-astra",
+  "reviewer": "Codex visual reviewer",
+  "verdict": "PASS",
+  "source_visual_verdict": "PASS",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "sample_count": 32,
+    "evidence_sheets": [
+      "image-processing/generation/reviews/40-video-162b932f28a1/contact-1.jpg",
+      "image-processing/generation/reviews/40-video-162b932f28a1/contact-2.jpg",
+      "image-processing/generation/reviews/40-video-162b932f28a1/contact-3.jpg",
+      "image-processing/generation/reviews/40-video-162b932f28a1/contact-4.jpg"
+    ],
+    "description": "Actual source and all chronological contact sheets inspected using view_image. Evenly spaced frames include 0, 4 and last. CPU FFmpeg decoding, filtering and PNG encoding limited to two threads each; no GPU or generation submission."
+  },
+  "observations": [
+    "The green cactus with pink flower persists in every inspected sample, including frames 0, 4 and 123. It remains at the lower left without the previous disappearance.",
+    "Camel blinking, slight head/body bobbing and tail swaying are readable across chronological samples. Two humps, long neck, muzzle and four source legs remain coherent without abrupt sampled structural changes.",
+    "The cyan blanket, red border and three purple diamonds retain their structure and colours. No faces appear on the blanket, cactus or other non-animal elements.",
+    "The complete camel and cactus stay within the frame in the inspected samples, including the moving tail. Minor whole-composition bobbing is visible but no accumulating drift, clipping or sudden loss is observed."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampled still-frame inspection, not real-time playback or inspection of every frame. Motion observations describe progression across samples; frame-perfect smoothness, inter-sample artifacts and seamless looping are not guaranteed.",
+    "Contact sheets use reduced-size frames; full-resolution extracted samples are retained beside them."
+  ],
+  "scope": "Exact-source and exact-video sampled visual reward-video review only. No painting processing, build, emulator, imports or integration performed or approved."
+}

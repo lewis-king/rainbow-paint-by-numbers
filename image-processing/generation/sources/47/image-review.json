@@ -1,0 +1,26 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07",
+  "image": "image-processing/generation/runs/47/image.png",
+  "subject": "Beach bucket",
+  "observations": [
+    "One coherent beach composition: one large bucket, one spade, one sandcastle and one shell, with no sticker-sheet duplication.",
+    "Blue bucket, red handle, purple spade shaft, turquoise blade, yellow star/castle, orange door/flag and pink shell provide seven substantial colors.",
+    "Bucket rim/body, red handle sections, castle sections/star and orange door/flag repeat colors with large accessible main regions."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Avoid narrow rim, flagpole and shell-rib microregions; open decorative strokes are not separate paint regions."
+  ],
+  "scope": "Current single-composition source visually inspected individually with view_image. Supersedes the archived grid candidate only for this exact hash. Source PASS does not approve processed labels, gameplay or video.",
+  "object_realism_revision": 1,
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "source_sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07",
+    "observation": "Bucket, spade, castle, shell and decorative star are all face-free.",
+    "criterion": "No anthropomorphic eyes, mouths or character features on non-animal objects, props or motifs.",
+    "method": "Actual full-image visual evidence from this session, verified unchanged by exact source SHA-256."
+  }
+}

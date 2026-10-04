@@ -1,0 +1,136 @@
+{
+  "id": "58",
+  "video": "image-processing/generation/runs/58/video.mp4",
+  "sha256": "60a18b248ebb185db062438ac08b8401bd4447cdc31384fb4ce41238de1253d4",
+  "source_image": "image-processing/generation/runs/58/image.png",
+  "source_sha256": "e0570a0ca3e6356c5619c3abe105b6ec97aaea2189b78223dd7d24abcb2b8295",
+  "job_sha256_match": true,
+  "source_approval_sha256_match": true,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "contact_sheets": [
+    {
+      "path": "image-processing/generation/reviews/58-video-contact-1.png",
+      "sha256": "ab706fd89bdfdeb3607d8fc56ab5222212691709894c2a4233e0c45ff340dcdc",
+      "frame_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48,
+        52,
+        56,
+        60
+      ]
+    },
+    {
+      "path": "image-processing/generation/reviews/58-video-contact-2.png",
+      "sha256": "98163805d367e9d10d661ee529a4a417ca627323a9e4284d6e5b5be5df8b3894",
+      "frame_indices": [
+        63,
+        67,
+        71,
+        75,
+        79,
+        83,
+        87,
+        91,
+        95,
+        99,
+        103,
+        107,
+        111,
+        115,
+        119,
+        123
+      ]
+    }
+  ],
+  "prompt_id": "4ec6d27b-ea79-42a7-9f8f-ca7fa62fd06e",
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "review_model_provenance": "Astra parent dispatch, as confirmed by user; not inferred from assistant persona.",
+  "reviewed_at": "2026-10-04T14:30:38.813503+00:00",
+  "generation_history_status": "success",
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "sample_count": 32,
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99,
+      103,
+      107,
+      111,
+      115,
+      119,
+      123
+    ],
+    "visual_inspection": "Source and both chronological contact sheets inspected with view_image.",
+    "decode": "CPU only; ffmpeg -hwaccel none; decoder/output threads 2; filter_threads and filter_complex_threads 1; sequential extraction."
+  },
+  "scope": "Exact-hash source/video visual reward gate only; no processing or integration approval.",
+  "limitations": [
+    "32 sampled frames cannot guarantee absence of every inter-sample artifact, frame-perfect smoothness, or seamless looping."
+  ],
+  "verdict": "PASS",
+  "observations": [
+    "Golden acorn retains its brown textured cap and short brown stem as it gently rocks. Cap stays attached throughout all 32 samples, with no splitting, vanishing or replacement.",
+    "Both the green rear oak leaf and large orange oak leaf remain present with recognizable lobes and veins while fluttering softly. Purple mushroom retains pink spots and cream stalk; turquoise ground patch stays present.",
+    "Motion is gentle and coherent, source colors/layout are retained, and all acorn/leaf/mushroom components remain within the frame. No faces, eyes, mouths, limbs or disappearing parts appear."
+  ],
+  "defects": [],
+  "checks": {
+    "source_structure_and_colors": "PASS",
+    "acorn_cap_and_stem_retention": "PASS",
+    "both_oak_leaves_retained": "PASS",
+    "gentle_coherent_motion": "PASS",
+    "no_object_faces": "PASS",
+    "no_cropping_or_disappearing_parts": "PASS"
+  }
+}

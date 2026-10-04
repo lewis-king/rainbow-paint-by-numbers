@@ -1,0 +1,11 @@
+{
+  "id": "39",
+  "stage": "image",
+  "prompt_id": "e7b6c4a6-7e0a-45f1-9da4-8f2a6ba5cfdc",
+  "status": "completed",
+  "started_at": 1791101194.044177,
+  "finished_at": 1791101214.0523827,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/39/image.png",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/image/39-seal_00003_.png",
+  "sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d"
+}

@@ -34,7 +34,7 @@ interface GameCanvasProps {
   levelData: LevelData;
   linesUri: string;
   mapUri: string;
-  onProgressChange: (progress: number) => void;
+  onProgressChange: (progress: number, source: 'paint' | 'restore') => void;
   initialPaintedPixels?: number[];
 }
 
@@ -286,7 +286,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
 
     if (totalPaintablePixelsRef.current > 0) {
       const progress = (paintedPixelsRef.current.size / totalPaintablePixelsRef.current) * 100;
-      onProgressChange(progress);
+      onProgressChange(progress, 'restore');
     }
   }, [mapReady, initialPaintedPixels, levelData.palette, createCanvasImage, onProgressChange]);
 
@@ -311,7 +311,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
   const updateProgress = useCallback(() => {
     if (totalPaintablePixelsRef.current === 0) return;
     const progress = (paintedPixelsRef.current.size / totalPaintablePixelsRef.current) * 100;
-    onProgressChange(progress);
+    onProgressChange(progress, 'paint');
   }, [onProgressChange]);
 
   const paintBrush = useCallback((

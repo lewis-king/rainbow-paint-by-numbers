@@ -1,0 +1,75 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "bb3b916d1a6500f6d09c04c22ed1f263b0d457f595f2938d2250a4e5a416ccdd",
+  "video": "image-processing/generation/runs/29/video.mp4",
+  "source_sha256": "6c3e431c4f4556b1583f440b4364405b5d900429c47467d84bb59905d4bce4cd",
+  "source_image": "image-processing/generation/runs/29/image.png",
+  "metadata": {
+    "codec": "h264",
+    "width": 640,
+    "height": 640,
+    "fps": 24,
+    "frames": 124,
+    "duration_seconds": 5.166667,
+    "verification": "ffprobe"
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "source_inspected": true,
+    "provided_contact_sheet": "image-processing/generation/reviews/29-video-frames.jpg",
+    "additional_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "additional_sample_count": 32,
+    "sampling_interval_seconds": 0.16666666666666666,
+    "description": "Viewed the supplied 12-frame contact sheet and three denser sheets extracted using OpenCV, covering every fourth frame plus final frame, in chronological order. Compared with full source image. No realtime playback claimed."
+  },
+  "observations": [
+    "Puppy identity, two ears, seated legs/paws, red collar/yellow tag, blue slipper with cyan sole and orange/green ball remain recognizable in the sampled sequence.",
+    "Visible head/ear sway, repeated natural-looking blink phases and small tail-tip movement provide a gentle idle animation; slipper follows the head while paws and ball remain stable.",
+    "Main colors and bold flat illustration style remain consistent; no extra limbs, prop disappearance, camera cut or obvious subject morphing appears in inspected frames.",
+    "Small tail tips alternately peek from behind the seated body; these read as occluded wagging, not extra legs. Motion is restrained rather than a large action sequence."
+  ],
+  "defects": [],
+  "limitations": [
+    "Frame sampling supports a visual motion gate but does not establish frame-perfect temporal smoothness, absence of all inter-sample artifacts or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate. Does not approve processed painting assets or claim realtime playback.",
+  "user_review": {
+    "verdict": "PASS",
+    "feedback": "User watched the dog reward video and confirmed they like it."
+  }
+}

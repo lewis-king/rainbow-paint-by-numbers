@@ -1,0 +1,27 @@
+{
+  "reviewer": "gpt-6-astra",
+  "engagement_revision": 2,
+  "verdict": "PASS",
+  "sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
+  "image": "image-processing/generation/runs/45/image.png",
+  "subject": "Excavator",
+  "observations": [
+    "One immediately recognizable excavator with coherent two-section arm, orange bucket, cab, engine body and broad track band. Dense hydraulic hardware and tiny treads have been removed.",
+    "Yellow body/arm, orange bucket, blue window, red engine/cone, purple wheels, green leaves and gray tracks provide seven meaningful substantial color families. Cone white is not needed to justify variety.",
+    "Two large purple wheels, repeated yellow machine sections, red cone/body regions and paired leaves offer meaningful matching. Broad flat shapes directly resolve the prior complexity failure."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Retain the large track band and both purple wheel regions; avoid treating small track seam strokes as paint cells."
+  ],
+  "method": "Latest full image visually inspected individually with view_image against ages-4+ region-size, engagement, anatomy and cleanliness criteria and user-approved 35/37 benchmarks.",
+  "scope": "Source-image approval for this exact replacement hash only; earlier source defects are resolved. Processed number placement and detail preservation need separate approval.",
+  "object_realism_revision": 1,
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "source_sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
+    "observation": "Simplified excavator, cone and leaves have no faces; window and wheels are ordinary mechanical features.",
+    "criterion": "No anthropomorphic eyes, mouths or character features on non-animal objects, props or motifs.",
+    "method": "Actual full-image visual evidence from this session, verified unchanged by exact source SHA-256."
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "id": "39",
+  "sha256": "b22aaf0c8ded933ed86b1f15a93d4a339623382c218b27ccf992f0b832a18f5a",
+  "artifact_sha256": {
+    "data.json": "c449128ebf3db554daf08c915cfec9b13fb3bac6d05808dd916176b09f57c1f7",
+    "original.png": "e59151a0f207053f0813f5ae8460d2eadfb1fbe005c2f6a583b8e34fbe3aaedb",
+    "lines.png": "05254cfe5ccabbf4198d6179cf58964d01cfb88ceeb5e7e5fa4edac1d11d7857",
+    "map.png": "2f568841a9ed2c6b85b7918180d55677118d69fbc530207accad96597cf4c966",
+    "reward.mp4": "1760d2ed8aeb01fedbec2ec328b05c2293352e752445466e955106e2bccdda02"
+  },
+  "file_sizes": {
+    "data.json": 869,
+    "original.png": 35347,
+    "lines.png": 24769,
+    "map.png": 18100,
+    "reward.mp4": 519080
+  },
+  "source_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "f0b4cd133d775c447459425d1f45e9301373878901b78f395ffff5b1fc16400e",
+      "artifact_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
+      "review_path": "image-processing/generation/reviews/39-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "6c97d899fc36fe9f54bfb57562130c8a2cd37fe5c58b379430d77aec47a190b0",
+      "artifact_sha256": "1760d2ed8aeb01fedbec2ec328b05c2293352e752445466e955106e2bccdda02",
+      "review_path": "image-processing/generation/reviews/39-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 6,
+  "number_labels": 7,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": [
+    {
+      "index": 0,
+      "hex": "#fc1200",
+      "area": 18598,
+      "max_screen_radius_px": 11.74
+    },
+    {
+      "index": 1,
+      "hex": "#5dc902",
+      "area": 19864,
+      "max_screen_radius_px": 15.79
+    },
+    {
+      "index": 2,
+      "hex": "#5036df",
+      "area": 6055,
+      "max_screen_radius_px": 7.72
+    },
+    {
+      "index": 3,
+      "hex": "#00dad6",
+      "area": 16645,
+      "max_screen_radius_px": 11.96
+    },
+    {
+      "index": 4,
+      "hex": "#fdce01",
+      "area": 30141,
+      "max_screen_radius_px": 23.04
+    },
+    {
+      "index": 5,
+      "hex": "#f7aae1",
+      "area": 102019,
+      "max_screen_radius_px": 30.57
+    }
+  ],
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 246,
+      "y": 148,
+      "color_index": 0,
+      "screen_radius_px_at_344": 11.74
+    },
+    {
+      "number": 2,
+      "x": 429,
+      "y": 248,
+      "color_index": 1,
+      "screen_radius_px_at_344": 15.79
+    },
+    {
+      "number": 3,
+      "x": 299,
+      "y": 374,
+      "color_index": 2,
+      "screen_radius_px_at_344": 7.72
+    },
+    {
+      "number": 4,
+      "x": 507,
+      "y": 189,
+      "color_index": 3,
+      "screen_radius_px_at_344": 11.96
+    },
+    {
+      "number": 5,
+      "x": 308,
+      "y": 277,
+      "color_index": 4,
+      "screen_radius_px_at_344": 23.04
+    },
+    {
+      "number": 6,
+      "x": 622,
+      "y": 722,
+      "color_index": 5,
+      "screen_radius_px_at_344": 30.57
+    },
+    {
+      "number": 6,
+      "x": 365,
+      "y": 767,
+      "color_index": 5,
+      "screen_radius_px_at_344": 7.39
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 7,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 13672,
+  "fixed_color_mismatch_pixels": 0,
+  "enclosed_unpaintable_transparent_regions": [
+    {
+      "area": 53,
+      "bbox": [
+        357,
+        447,
+        8,
+        14
+      ]
+    },
+    {
+      "area": 6,
+      "bbox": [
+        446,
+        450,
+        6,
+        1
+      ]
+    },
+    {
+      "area": 2688,
+      "bbox": [
+        463,
+        451,
+        341,
+        283
+      ]
+    },
+    {
+      "area": 3,
+      "bbox": [
+        460,
+        454,
+        3,
+        1
+      ]
+    },
+    {
+      "area": 3,
+      "bbox": [
+        357,
+        563,
+        1,
+        3
+      ]
+    },
+    {
+      "area": 258,
+      "bbox": [
+        362,
+        625,
+        13,
+        57
+      ]
+    },
+    {
+      "area": 171,
+      "bbox": [
+        419,
+        766,
+        24,
+        18
+      ]
+    },
+    {
+      "area": 235,
+      "bbox": [
+        888,
+        772,
+        31,
+        22
+      ]
+    },
+    {
+      "area": 1487,
+      "bbox": [
+        781,
+        784,
+        147,
+        42
+      ]
+    },
+    {
+      "area": 1249,
+      "bbox": [
+        562,
+        794,
+        209,
+        28
+      ]
+    },
+    {
+      "area": 3,
+      "bbox": [
+        778,
+        795,
+        3,
+        1
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        777,
+        796,
+        1,
+        1
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        774,
+        797,
+        1,
+        1
+      ]
+    }
+  ],
+  "phone_preview_current": true,
+  "phone_preview_sha256": "9fb3f60a09363b02aeead3af61d6ac311f03a805cc88508f38fccc80ae0a7cf1",
+  "verdict": "FAIL",
+  "meaningful_color_groups": 6,
+  "observations": [
+    "Full 1024px final original, full approved source, native 344px phone preview and full lines overlay inspected individually. Round ball and overall seal/flipper silhouette remain identifiable, but final rendering materially changes source color and eye detail.",
+    "Six substantial numbered colors remain: red, green, violet, cyan, yellow and pink. Blue ball rim/top violet panel/blue shadow are fixed, not extra paintable choices. Palette count alone cannot pass the damaged subject rendering.",
+    "All seven four-connected paintable components have one matching number, and the native 10px digits are readable (minimum map-center clearance 7.39 screen pixels). This check misses blank regions encoded as background.",
+    "Fixed RGB matches the already processed original exactly (zero mismatch pixels), which does not establish fidelity to the approved source. Current source/video hashes and receipt are valid despite the visual processing defects."
+  ],
+  "defects": [
+    "Gray source torso/head/rear flipper has been merged into pink palette index 5 (#f7aae1), number 6. Final original shows an almost entirely pink seal instead of the approved gray body with pink flippers. The large body label and separate front flipper label both assign pink; gray is absent from the palette.",
+    "Unnumbered transparent strips remain inside the seal outline. Major map-255/alpha-zero pockets: upper head/back bbox [463,451,341,283], area 2688; rear flipper [781,784,147,42], area 1487; belly [562,794,209,28], area 1249. Additional visible small pockets occur at chest [362,625,13,57], foreflipper junction [419,766,24,18] and tail [888,772,31,22]. These appear as white seams in the colored original and unfilled contour strips in the phone preview, violating the visible-enclosure rule.",
+    "Approved source eye has a white upper glint and white lower rim around a black pupil. The final eye loses its upper glint and substitutes pink in the lower highlight/rim, leaving a mostly solid black eye with a pink notch. Facial detail/color fidelity is not preserved."
+  ],
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "reviewed_at": "2026-10-04T13:12:54.537996+00:00",
+  "status": "FAIL",
+  "bundle_sha256": "b22aaf0c8ded933ed86b1f15a93d4a339623382c218b27ccf992f0b832a18f5a",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/39",
+  "scope": "Current final processed visual artifact gate only. Existing exact-hash source/video PASS records checked via promote.approved. No integration or new video visual approval.",
+  "inspection_method": "Individually viewed full-size original.png, native-size unpainted phone-preview.png and full-size lines.png. Also viewed approved source for 39. Existing phone previews verified pixel-for-pixel against current data/lines; missing 39 preview generated with phone_previews.py --final. Sequential lightweight NumPy/PIL/OpenCV checks, cv2 threads capped at 2.",
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at a 344px canvas width; native UI/Skia and touch interaction not tested.",
+    "Reward videos not visually re-reviewed; relied on current exact-hash source/video PASS records."
+  ],
+  "heavywork": false,
+  "review_dispatch": {
+    "tool": "multi_agent_v1.spawn_agent",
+    "requested_model": "gpt-6-astra",
+    "agent_id": "01a10708-bd1d-7152-aadb-45a313fdb14f",
+    "nickname": "Fermat",
+    "nested_reviewer_used": false
+  }
+}

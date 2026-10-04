@@ -1,0 +1,92 @@
+{
+  "reviewer": "gpt-6-astra",
+  "review_model": "gpt-6-astra",
+  "verdict": "PASS",
+  "sha256": "66e7d3eed5fce0e5d0467a5c08515e671c53b82368758fda84ab1e2ea6806063",
+  "video": "image-processing/generation/runs/33/video.mp4",
+  "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+  "source_image": "image-processing/generation/runs/33/image.png",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "duration": "5.166667",
+        "nb_frames": "124"
+      }
+    ],
+    "format": {
+      "duration": "5.166667"
+    }
+  },
+  "method": {
+    "type": "sampled_frames_not_realtime_playback",
+    "overview_frame_indices": [
+      0,
+      11,
+      22,
+      34,
+      45,
+      56,
+      67,
+      78,
+      89,
+      101,
+      112,
+      123
+    ],
+    "dense_frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      123
+    ],
+    "overview_sample_count": 12,
+    "dense_sample_count": 32,
+    "description": "Individually inspected chronological overview sheet of 12 evenly spaced frames plus denser sheets sampling every fourth frame and final frame. Compared against previously visually inspected exact-hash source. Metadata verified with ffprobe. No realtime playback claimed."
+  },
+  "observations": [
+    "Butterfly repeatedly opens and narrows its four wings in a readable flutter cycle, with slight body/antenna movement and stable centered framing.",
+    "Purple borders, turquoise/orange upper patches, yellow/pink lower patches, green body sections and coral smiling head retain their identities and colors through the changing wing pose.",
+    "Wing shapes compress consistently with flapping rather than melting or exchanging regions; no extra wings or antennae appear in sampled frames.",
+    "Motion is clearly visible, pleasant and bounded, and the full butterfly remains inside the image."
+  ],
+  "defects": [],
+  "limitations": [
+    "Sampling cannot guarantee frame-perfect smoothness, absence of every inter-sample artifact or seamless looping."
+  ],
+  "scope": "Exact-MP4 sampled visual reward-video gate only. Does not approve processed painting assets or integration."
+}

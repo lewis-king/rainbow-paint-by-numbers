@@ -1,0 +1,12 @@
+{
+  "id": "35",
+  "slug": "toucan",
+  "title": "Toucan",
+  "category": "animals",
+  "seed": 2026100435,
+  "image_prompt": "Flat vector illustration for a young child's paint-by-numbers game. A friendly toucan with a large orange and yellow beak, black body and white chest, perched on one short brown branch with two green leaves. One large cute subject, rounded simple shapes, happy gentle expression. Thick smooth uniform black outlines, closed clean shapes, 7 to 9 vibrant solid flat colors, large easy-to-paint color areas, clean pure white background, centered whole subject with generous white margin on all sides. Simple 2D cartoon clipart. No lettering, no patterns of tiny shapes, no gradients, no shading, no textures, no shadows.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The toucan bobs its head and opens one wing, holding onto the branch. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "planned"
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "sha256": "61483c92ad243f2a2a482569e5cafc9cfe35c857c0c864c5dc6d6ad611dc7657",
+  "image": "image-processing/generation/runs/30/image.png",
+  "subject": "Penguin",
+  "observations": [
+    "One large coherent penguin with two eyes, two flippers and two feet on one ice floe beside one substantial fish; no duplicate subjects or grid.",
+    "Yellow hat, purple band, red scarf, orange beak/feet/fish fins, turquoise fish and pale-blue floe provide six meaningful color families without counting black animal areas, white belly/background or neighboring blue shades.",
+    "Separate hat/pompom, scarf ends, feet and fish fins repeat colors across substantial regions. Broad silhouette and accessories are appropriate for ages 4+."
+  ],
+  "defects": [],
+  "processed_gate_checks": [
+    "Keep scarf fringe and small fish-fin detail as decoration rather than tiny required numbered regions."
+  ],
+  "scope": "Current single-composition source visually inspected individually with view_image. Supersedes the archived grid candidate only for this exact hash. Source PASS does not approve processed labels, gameplay or video."
+}

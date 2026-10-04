@@ -1,0 +1,8 @@
+{
+  "reviewer": "gpt-6-astra",
+  "agent_id": "01a105c7-56d4-7861-9d4b-2e31b86cf834",
+  "reference": "/tmp/rainbow-existing.jpg",
+  "verdict": "PASS",
+  "scope": "Inventory of existing 28 pictures and approval of proposed distinct subjects for slots 29–58; not approval of generated outputs.",
+  "standards": ["Rounded cartoon shapes and bold black contours", "Bright flat fills, no gradients or texture", "One clear subject and at most two supporting props", "Full silhouette visible, generous margins", "Large closed paintable areas and legible numbers", "Gentle expressions and readable anatomy", "No text, watermarks, unwanted objects, or cropped limbs"]
+}

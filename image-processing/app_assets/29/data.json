@@ -1,0 +1,156 @@
+{
+  "id": "29",
+  "palette": [
+    "#070503",
+    "#0f2547",
+    "#482f12",
+    "#814106",
+    "#d60000",
+    "#1f51a9",
+    "#51b121",
+    "#6d6862",
+    "#a77d44",
+    "#f88700",
+    "#09badf",
+    "#dfa153",
+    "#fcdc00",
+    "#acaaab",
+    "#d4d4d2",
+    "#fcfdfd"
+  ],
+  "numbers": [
+    {
+      "number": 1,
+      "x": 369,
+      "y": 286,
+      "color_index": 0
+    },
+    {
+      "number": 3,
+      "x": 498,
+      "y": 161,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 366,
+      "y": 264,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 358,
+      "y": 608,
+      "color_index": 2
+    },
+    {
+      "number": 4,
+      "x": 289,
+      "y": 190,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 643,
+      "y": 237,
+      "color_index": 3
+    },
+    {
+      "number": 5,
+      "x": 485,
+      "y": 450,
+      "color_index": 4
+    },
+    {
+      "number": 6,
+      "x": 309,
+      "y": 380,
+      "color_index": 5
+    },
+    {
+      "number": 7,
+      "x": 828,
+      "y": 687,
+      "color_index": 6
+    },
+    {
+      "number": 7,
+      "x": 789,
+      "y": 842,
+      "color_index": 6
+    },
+    {
+      "number": 9,
+      "x": 499,
+      "y": 404,
+      "color_index": 8
+    },
+    {
+      "number": 9,
+      "x": 437,
+      "y": 744,
+      "color_index": 8
+    },
+    {
+      "number": 10,
+      "x": 816,
+      "y": 771,
+      "color_index": 9
+    },
+    {
+      "number": 10,
+      "x": 780,
+      "y": 874,
+      "color_index": 9
+    },
+    {
+      "number": 11,
+      "x": 390,
+      "y": 455,
+      "color_index": 10
+    },
+    {
+      "number": 12,
+      "x": 429,
+      "y": 174,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 524,
+      "y": 584,
+      "color_index": 11
+    },
+    {
+      "number": 13,
+      "x": 431,
+      "y": 517,
+      "color_index": 12
+    },
+    {
+      "number": 14,
+      "x": 429,
+      "y": 467,
+      "color_index": 13
+    },
+    {
+      "number": 16,
+      "x": 350,
+      "y": 203,
+      "color_index": 15
+    },
+    {
+      "number": 16,
+      "x": 508,
+      "y": 225,
+      "color_index": 15
+    }
+  ],
+  "dimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}

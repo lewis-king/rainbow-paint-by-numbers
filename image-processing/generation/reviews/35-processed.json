@@ -1,0 +1,237 @@
+{
+  "id": "35",
+  "sha256": "79043a2556280c6f2f80656abd550cfec6d619ab916898d59566f95619f0775e",
+  "artifact_sha256": {
+    "data.json": "f41f94f433b715907d7244be2e97344f78f19f0d49f8c947e35ef8d329162d03",
+    "original.png": "73cff4c58fa7353d3914cc4f22e382e189581b66b20d8956087d0b396224e80a",
+    "lines.png": "0fbb62ff99f3985739607e55fb3956b7c0e45adf524210179ad17cb0ebc380d6",
+    "map.png": "b70c42c147765ec4412a8e5d8df391dda1a87f2f603ce39b0653814930b9161a",
+    "reward.mp4": "3e1ba167a3f2cfe76474c5ee33c35e92fa45620d3ffd2e022588353437070d29"
+  },
+  "file_sizes": {
+    "data.json": 1217,
+    "original.png": 22548,
+    "lines.png": 20870,
+    "map.png": 14511,
+    "reward.mp4": 434553
+  },
+  "source_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "505434704fb473d78d0e854ddbaa82971eb5429a0ee0d01e5cfe0a1c7baaf88c",
+      "artifact_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+      "review_path": "image-processing/generation/reviews/35-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "fd45837c979135ff71fa4392260531a12e2754e0239577043707f091c8ea38a0",
+      "artifact_sha256": "3e1ba167a3f2cfe76474c5ee33c35e92fa45620d3ffd2e022588353437070d29",
+      "review_path": "image-processing/generation/reviews/35-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 6,
+  "number_labels": 11,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": [
+    {
+      "index": 0,
+      "hex": "#000000",
+      "area": 126632,
+      "max_screen_radius_px": 42.67
+    },
+    {
+      "index": 1,
+      "hex": "#83521f",
+      "area": 9050,
+      "max_screen_radius_px": 8.19
+    },
+    {
+      "index": 2,
+      "hex": "#72a334",
+      "area": 11148,
+      "max_screen_radius_px": 9.33
+    },
+    {
+      "index": 3,
+      "hex": "#f95d00",
+      "area": 39820,
+      "max_screen_radius_px": 21.16
+    },
+    {
+      "index": 4,
+      "hex": "#fcd700",
+      "area": 5821,
+      "max_screen_radius_px": 7.58
+    },
+    {
+      "index": 5,
+      "hex": "#dcdcd9",
+      "area": 33480,
+      "max_screen_radius_px": 26.61
+    }
+  ],
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 361,
+      "y": 565,
+      "color_index": 0,
+      "screen_radius_px_at_344": 42.67
+    },
+    {
+      "number": 1,
+      "x": 776,
+      "y": 238,
+      "color_index": 0,
+      "screen_radius_px_at_344": 15.12
+    },
+    {
+      "number": 1,
+      "x": 305,
+      "y": 821,
+      "color_index": 0,
+      "screen_radius_px_at_344": 18.48
+    },
+    {
+      "number": 2,
+      "x": 202,
+      "y": 755,
+      "color_index": 1,
+      "screen_radius_px_at_344": 8.19
+    },
+    {
+      "number": 3,
+      "x": 714,
+      "y": 607,
+      "color_index": 2,
+      "screen_radius_px_at_344": 7.99
+    },
+    {
+      "number": 3,
+      "x": 787,
+      "y": 637,
+      "color_index": 2,
+      "screen_radius_px_at_344": 9.33
+    },
+    {
+      "number": 3,
+      "x": 730,
+      "y": 725,
+      "color_index": 2,
+      "screen_radius_px_at_344": 8.12
+    },
+    {
+      "number": 4,
+      "x": 626,
+      "y": 202,
+      "color_index": 3,
+      "screen_radius_px_at_344": 21.16
+    },
+    {
+      "number": 4,
+      "x": 591,
+      "y": 301,
+      "color_index": 3,
+      "screen_radius_px_at_344": 10.08
+    },
+    {
+      "number": 5,
+      "x": 420,
+      "y": 261,
+      "color_index": 4,
+      "screen_radius_px_at_344": 7.58
+    },
+    {
+      "number": 6,
+      "x": 506,
+      "y": 412,
+      "color_index": 5,
+      "screen_radius_px_at_344": 26.61
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 11,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 10154,
+  "fixed_color_mismatch_pixels": 0,
+  "enclosed_unpaintable_transparent_regions": [
+    {
+      "area": 1,
+      "bbox": [
+        744,
+        622,
+        1,
+        1
+      ]
+    },
+    {
+      "area": 1,
+      "bbox": [
+        732,
+        641,
+        1,
+        1
+      ]
+    },
+    {
+      "area": 188,
+      "bbox": [
+        703,
+        643,
+        29,
+        17
+      ]
+    }
+  ],
+  "phone_preview_current": true,
+  "phone_preview_sha256": "9585e293c9a47a3ee6b47d418e83ff26635ab41268463f64a6245a2675dffdbc",
+  "verdict": "FAIL",
+  "meaningful_color_groups": 6,
+  "observations": [
+    "Full 1024px colored original and native 344px unpainted phone preview inspected individually. Toucan silhouette, eye, beak, chest, tail and two feet remain recognizable; three leaves and repeated black/beak regions support matching.",
+    "Six substantial paintable groups: black plumage/beak tip/tail, brown branch, green leaves, orange beak, yellow face and pale gray chest. Black is a large subject fill here, not a count of outline ink; chest is a substantial subject region, not background. Fixed blue feet do not count as paintable variety. This is a borderline chromatic spread relative to the approved toucan source, but not a two/three-color asset.",
+    "All 11 four-connected paintable components have exactly one matching number. All 10px digits are readable at native phone size; minimum map-center clearance 7.58 screen pixels. Yellow eye-patch label is snug but separate from eye/outline.",
+    "Fixed blue feet, brown branch sections and eye highlight agree exactly with the current original RGB. Zero fixed-color mismatches; this does not excuse the unfilled background pocket."
+  ],
+  "defects": [
+    "Visible enclosed unfilled background pocket between the upper/right leaves and branch has no number and no fixed fill. map.png is 255 and lines.png alpha is zero for 188 pixels, bbox [703,643,29,17] in the 1024px asset (approximately [236.2,216.0,9.7,5.7] at 344px). It is visible as a small gray triangular gap in the phone preview. This violates the requested every-visible-enclosure rule despite all paintable map components being labeled. Fix as appropriate fixed background or an accessible numbered region; do not squeeze a 10px label into this pocket."
+  ],
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "reviewed_at": "2026-10-04T13:12:54.517430+00:00",
+  "status": "FAIL",
+  "bundle_sha256": "79043a2556280c6f2f80656abd550cfec6d619ab916898d59566f95619f0775e",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/35",
+  "scope": "Current final processed visual artifact gate only. Existing exact-hash source/video PASS records checked via promote.approved. No integration or new video visual approval.",
+  "inspection_method": "Individually viewed full-size original.png, native-size unpainted phone-preview.png and full-size lines.png. Also viewed approved source for 39. Existing phone previews verified pixel-for-pixel against current data/lines; missing 39 preview generated with phone_previews.py --final. Sequential lightweight NumPy/PIL/OpenCV checks, cv2 threads capped at 2.",
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at a 344px canvas width; native UI/Skia and touch interaction not tested.",
+    "Reward videos not visually re-reviewed; relied on current exact-hash source/video PASS records."
+  ],
+  "heavywork": false,
+  "review_dispatch": {
+    "tool": "multi_agent_v1.spawn_agent",
+    "requested_model": "gpt-6-astra",
+    "agent_id": "01a10708-bd1d-7152-aadb-45a313fdb14f",
+    "nickname": "Fermat",
+    "nested_reviewer_used": false
+  }
+}

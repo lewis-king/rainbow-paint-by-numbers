@@ -1,0 +1,11 @@
+{
+  "id": "43",
+  "stage": "video",
+  "prompt_id": "244f699e-5d18-4320-a04a-b2880187d102",
+  "status": "completed",
+  "started_at": 1791123670.470302,
+  "finished_at": 1791123825.5250397,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/43/video.mp4",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/video/43-train_00002_.mp4",
+  "sha256": "70cd1876bdcf9948567092e97408731c16838aca01bac513abd5d18c47405d21"
+}

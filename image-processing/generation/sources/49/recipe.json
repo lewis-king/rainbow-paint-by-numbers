@@ -1,0 +1,16 @@
+{
+  "id": "49",
+  "slug": "ice-cream",
+  "title": "Ice Cream Sundae",
+  "category": "treats",
+  "seed": 2026111449,
+  "image_prompt": "Edit this existing illustration. Remove all faces on the ice-cream scoops. Replace every removed facial mark with the surrounding original solid material color. Keep the same recognizable real object, layout, shapes, decorative patterns, large enclosed color areas and bright color palette. Do not add any other eyes, pupils, mouths, smiles, eyebrows, faces, limbs or living character features anywhere, including accessories or decorations. The subject is a real Ice Cream Sundae, not a living character. Preserve the clean white background, thick black contours and simple flat vector coloring-book style. No new objects. No shading or texture.",
+  "video_prompt": "A cheerful cartoon ice cream sundae gently bounces in its turquoise cup. Three colorful scoops and a cherry wobble softly, keeping their shape. Fixed camera, white background, flat colors, no new objects or text. End near the starting pose. Objects must remain inanimate recognizable objects; never add eyes, mouths, faces, limbs or character features.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "object_realism_revision",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "image_reference": "sources/49/reference.png",
+  "image_reference_sha256": "87d2ec835dc0f12e129feb82e1cba1894dd6ef4244dcca7f0e11346f111c4bab"
+}

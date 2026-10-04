@@ -1,0 +1,303 @@
+{
+  "sha256": "456b59bc9c6c5a39a1800976903bd9ea44d2531bd4ce4540ea7ec5e58d6643da",
+  "artifact_sha256": {
+    "data.json": "6ee20780bb390274b08c13691b3173e03106434336581d8d627b638893cb7277",
+    "original.png": "0af55f7abe1e01102e670ef9e9134854e25f1edc7f30f8d0eccbcde9994845f3",
+    "lines.png": "276aa6658e971b78b3e3cd05f25f546fa6d0caae8543154dc8836cfcdc4e338d",
+    "map.png": "edb075ee76e481fd11728f975ed9f10f0c2b0f444e589da897197a0c279ffb11",
+    "reward.mp4": "66e7d3eed5fce0e5d0467a5c08515e671c53b82368758fda84ab1e2ea6806063"
+  },
+  "file_sizes": {
+    "data.json": 1580,
+    "original.png": 59878,
+    "lines.png": 39269,
+    "map.png": 29842,
+    "reward.mp4": 1505211
+  },
+  "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "3d5d7f26e09e39053f5bd1554a5802c384f7e554f6c63fa69cea8ba0d84384ce",
+      "artifact_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+      "review_path": "image-processing/generation/reviews/33-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "2c71a75fe982447027ebae9e4a6be9ffae17b7d2f6be44ecf33ef495556bf70e",
+      "artifact_sha256": "66e7d3eed5fce0e5d0467a5c08515e671c53b82368758fda84ab1e2ea6806063",
+      "review_path": "image-processing/generation/reviews/33-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 7,
+  "number_labels": 15,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": {
+    "area_cutoff": 3288,
+    "entries": [
+      {
+        "index": 0,
+        "hex": "#6cd400",
+        "area": 18143,
+        "radius": 32.0,
+        "substantial": true,
+        "lab": [
+          76.123046875,
+          -58.15625,
+          74.6875
+        ]
+      },
+      {
+        "index": 1,
+        "hex": "#fd6c00",
+        "area": 50627,
+        "radius": 74.2,
+        "substantial": true,
+        "lab": [
+          62.884521484375,
+          51.578125,
+          71.421875
+        ]
+      },
+      {
+        "index": 2,
+        "hex": "#7450cc",
+        "area": 118356,
+        "radius": 52.53,
+        "substantial": true,
+        "lab": [
+          43.83544921875,
+          43.6875,
+          -59.40625
+        ]
+      },
+      {
+        "index": 3,
+        "hex": "#fa5e47",
+        "area": 9142,
+        "radius": 20.0,
+        "substantial": true,
+        "lab": [
+          60.467529296875,
+          58.265625,
+          44.375
+        ]
+      },
+      {
+        "index": 4,
+        "hex": "#fcd601",
+        "area": 94823,
+        "radius": 43.18,
+        "substantial": true,
+        "lab": [
+          86.273193359375,
+          -2.71875,
+          86.4375
+        ]
+      },
+      {
+        "index": 5,
+        "hex": "#1ee8db",
+        "area": 69636,
+        "radius": 51.33,
+        "substantial": true,
+        "lab": [
+          83.36181640625,
+          -47.40625,
+          -6.625
+        ]
+      },
+      {
+        "index": 6,
+        "hex": "#fd82bb",
+        "area": 50372,
+        "radius": 69.5,
+        "substantial": true,
+        "lab": [
+          69.71435546875,
+          52.84375,
+          -8.1875
+        ]
+      }
+    ],
+    "meaningful_color_groups": 7,
+    "groups": [
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        1
+      ],
+      [
+        6
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 508,
+      "y": 471,
+      "color_index": 0,
+      "screen_radius_px_at_344": 9.07
+    },
+    {
+      "number": 1,
+      "x": 506,
+      "y": 534,
+      "color_index": 0,
+      "screen_radius_px_at_344": 10.75
+    },
+    {
+      "number": 1,
+      "x": 509,
+      "y": 601,
+      "color_index": 0,
+      "screen_radius_px_at_344": 10.08
+    },
+    {
+      "number": 1,
+      "x": 510,
+      "y": 664,
+      "color_index": 0,
+      "screen_radius_px_at_344": 9.67
+    },
+    {
+      "number": 2,
+      "x": 259,
+      "y": 315,
+      "color_index": 1,
+      "screen_radius_px_at_344": 24.93
+    },
+    {
+      "number": 2,
+      "x": 775,
+      "y": 314,
+      "color_index": 1,
+      "screen_radius_px_at_344": 24.93
+    },
+    {
+      "number": 3,
+      "x": 203,
+      "y": 482,
+      "color_index": 2,
+      "screen_radius_px_at_344": 17.65
+    },
+    {
+      "number": 3,
+      "x": 831,
+      "y": 482,
+      "color_index": 2,
+      "screen_radius_px_at_344": 17.31
+    },
+    {
+      "number": 4,
+      "x": 516,
+      "y": 333,
+      "color_index": 3,
+      "screen_radius_px_at_344": 6.72
+    },
+    {
+      "number": 5,
+      "x": 424,
+      "y": 582,
+      "color_index": 4,
+      "screen_radius_px_at_344": 14.51
+    },
+    {
+      "number": 5,
+      "x": 606,
+      "y": 583,
+      "color_index": 4,
+      "screen_radius_px_at_344": 14.45
+    },
+    {
+      "number": 6,
+      "x": 389,
+      "y": 428,
+      "color_index": 5,
+      "screen_radius_px_at_344": 17.18
+    },
+    {
+      "number": 6,
+      "x": 644,
+      "y": 428,
+      "color_index": 5,
+      "screen_radius_px_at_344": 17.24
+    },
+    {
+      "number": 7,
+      "x": 314,
+      "y": 708,
+      "color_index": 6,
+      "screen_radius_px_at_344": 23.21
+    },
+    {
+      "number": 7,
+      "x": 713,
+      "y": 704,
+      "color_index": 6,
+      "screen_radius_px_at_344": 23.35
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 15,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 26020,
+  "fixed_color_mismatch_pixels": 0,
+  "paintable_pixels_obscured_by_overlay": 19303,
+  "enclosed_unpaintable_transparent_regions": [],
+  "phone_preview_sha256": "d3e6603a8baf7cdb4ef403bf3ad4c1860af9cb2593cc3e32d3b9aed77660c47f",
+  "id": "33",
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "reviewed_at": "2026-10-04T09:30:03.521048+00:00",
+  "verdict": "PASS",
+  "status": "PASS",
+  "bundle_sha256": "456b59bc9c6c5a39a1800976903bd9ea44d2531bd4ce4540ea7ec5e58d6643da",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/33",
+  "scope": "Current final processed visual artifact gate only; no native UI play or new video visual review. Existing source/video PASS gates verified against current bytes via promote.approved.",
+  "inspection_method": "Individually viewed current original.png, lines.png and freshly rendered generation/phone_previews.py --final preview; lightweight single-thread OpenCV/PIL checks on current map and fixed RGB.",
+  "meaningful_color_groups": 7,
+  "observations": [
+    "Butterfly retains both eyes, smile and antennae in original and unpainted phone view. No missing animal face.",
+    "Seven substantial distinct paintable colors: green segmented body, orange inner upper wings, purple outer upper wings, coral face, yellow lower wings, turquoise middle upper wings and pink lower wing interiors. Current map area and radius statistics support all seven.",
+    "All 15 four-connected paintable regions have one matching number; no enclosed transparent unpaintable background pockets. Narrow lower purple borders, terminal green tail, eye whites and small gaps beside the neck remain fixed artwork.",
+    "At 344px all labels are readable. Forehead 4 is the tightest at 6.72px map-center clearance but remains above the eyes without visibly crossing ink; segmented-body 1 labels are separated.",
+    "All 26020 nonblack fixed-color pixels exactly match original.png RGB; purple lower-wing rims and green tail retain correct hues."
+  ],
+  "defects": [],
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at 344px canvas width, an approximation of native UI/Skia font metrics and layout; no actual UI or touch interaction tested.",
+    "Reward animation not re-reviewed visually; relied on existing exact-file source/video PASS records."
+  ]
+}

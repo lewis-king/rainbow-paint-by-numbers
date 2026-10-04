@@ -1,0 +1,9 @@
+{
+  "id": "33",
+  "palette_size": 7,
+  "labels": 15,
+  "paintable_pixels": 411099,
+  "label_clearance_min_px": 20.0,
+  "labels_under_8px_clearance": 0,
+  "has_reward": true
+}

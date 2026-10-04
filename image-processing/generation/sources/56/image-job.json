@@ -1,0 +1,11 @@
+{
+  "id": "56",
+  "stage": "image",
+  "prompt_id": "3a673edc-326d-4410-9a67-d5dcd3c2c36c",
+  "status": "completed",
+  "started_at": 1791123850.5895588,
+  "finished_at": 1791123870.6171727,
+  "output": "/home/lewis/Workspace/rainbow-paint-by-numbers/image-processing/generation/runs/56/image.png",
+  "source": "/home/lewis/comfy/ComfyUI/output/rainbow-paint-by-numbers/image/56-guitar_00004_.png",
+  "sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e"
+}

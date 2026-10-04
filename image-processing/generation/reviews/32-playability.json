@@ -1,0 +1,245 @@
+{
+  "id": "32",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "ef98068e864c2e1a58ece15490d4323d12914b21c3b35b2c42f1ce03662c090e",
+    "original.png": "0b6ddb8a49b0458c2863a407c1ac11aa4129d4b31998cb11a745a5f43c2d274b",
+    "lines.png": "5feb292de7820ca220306e94ad2e9ea4c31ff31dfabd488e51a462303cfd293d",
+    "map.png": "9a6d4bb96cd57d38d6c1ec8f7dc40f22e970cbf9625e3248d57e32afea092e0c",
+    "unpainted.png": "39197ee4d73f535bafb6cc5db2c03e49b13b23c5da15f534da6d0c2fcbb61e5f"
+  },
+  "phone_preview_sha256": "da4ac367dfbd97e65ee2290146170a54a446b2e4c6d6e24b381421e6a2634a07",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 9,
+  "palette_entries": 9,
+  "number_labels": 16,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 0,
+        "hex": "#d90c0e",
+        "area": 67532,
+        "radius": 73.3
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#a3d93b",
+        "area": 48259,
+        "radius": 51.1
+      }
+    ],
+    [
+      {
+        "index": 2,
+        "hex": "#8a4db1",
+        "area": 45858,
+        "radius": 28.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#4bbbfc",
+        "area": 32412,
+        "radius": 31.0
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#fbb900",
+        "area": 31964,
+        "radius": 30.4
+      }
+    ],
+    [
+      {
+        "index": 8,
+        "hex": "#fbefc9",
+        "area": 24230,
+        "radius": 50.3
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#03f8cd",
+        "area": 19792,
+        "radius": 41.4
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#d66d00",
+        "area": 18177,
+        "radius": 26.0
+      }
+    ],
+    [
+      {
+        "index": 7,
+        "hex": "#eccd80",
+        "area": 10539,
+        "radius": 23.0
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 16,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 7.1,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 689,
+        "y": 371,
+        "image_radius_px": 73.32,
+        "screen_radius_px_at_350": 25.06
+      },
+      {
+        "number": 2,
+        "x": 477,
+        "y": 509,
+        "image_radius_px": 20.77,
+        "screen_radius_px_at_350": 7.1
+      },
+      {
+        "number": 2,
+        "x": 309,
+        "y": 530,
+        "image_radius_px": 25.97,
+        "screen_radius_px_at_350": 8.88
+      },
+      {
+        "number": 2,
+        "x": 460,
+        "y": 668,
+        "image_radius_px": 26.0,
+        "screen_radius_px_at_350": 8.89
+      },
+      {
+        "number": 3,
+        "x": 598,
+        "y": 659,
+        "image_radius_px": 27.98,
+        "screen_radius_px_at_350": 9.56
+      },
+      {
+        "number": 4,
+        "x": 493,
+        "y": 408,
+        "image_radius_px": 30.36,
+        "screen_radius_px_at_350": 10.38
+      },
+      {
+        "number": 4,
+        "x": 395,
+        "y": 607,
+        "image_radius_px": 21.17,
+        "screen_radius_px_at_350": 7.24
+      },
+      {
+        "number": 5,
+        "x": 218,
+        "y": 639,
+        "image_radius_px": 51.13,
+        "screen_radius_px_at_350": 17.48
+      },
+      {
+        "number": 6,
+        "x": 720,
+        "y": 255,
+        "image_radius_px": 41.4,
+        "screen_radius_px_at_350": 14.15
+      },
+      {
+        "number": 6,
+        "x": 836,
+        "y": 343,
+        "image_radius_px": 31.76,
+        "screen_radius_px_at_350": 10.85
+      },
+      {
+        "number": 6,
+        "x": 584,
+        "y": 350,
+        "image_radius_px": 31.76,
+        "screen_radius_px_at_350": 10.85
+      },
+      {
+        "number": 6,
+        "x": 704,
+        "y": 557,
+        "image_radius_px": 23.37,
+        "screen_radius_px_at_350": 7.99
+      },
+      {
+        "number": 6,
+        "x": 758,
+        "y": 635,
+        "image_radius_px": 26.59,
+        "screen_radius_px_at_350": 9.09
+      },
+      {
+        "number": 7,
+        "x": 767,
+        "y": 791,
+        "image_radius_px": 31.0,
+        "screen_radius_px_at_350": 10.6
+      },
+      {
+        "number": 8,
+        "x": 763,
+        "y": 488,
+        "image_radius_px": 22.97,
+        "screen_radius_px_at_350": 7.85
+      },
+      {
+        "number": 9,
+        "x": 688,
+        "y": 679,
+        "image_radius_px": 50.33,
+        "screen_radius_px_at_350": 17.2
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Smiling snail with spiral shell and spotted mushroom; face ink retained.",
+    "Revision5 retains 9 meaningful color groups and 16 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_EYE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Two-digit label 10 at (174,260) overlaps the snail eye/pupil boundary at phone size; minimum center radius is 3.62 screen px.",
+        "action": "Keep the entire small eye white/highlight as fixed artwork, preserving pupil and smile; remove its mandatory label, or enlarge the eye and number clearance."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

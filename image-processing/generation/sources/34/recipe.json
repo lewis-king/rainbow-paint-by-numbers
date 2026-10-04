@@ -1,0 +1,15 @@
+{
+  "id": "34",
+  "slug": "octopus",
+  "title": "Octopus",
+  "category": "animals",
+  "seed": 2026110633,
+  "image_prompt": "Edit this exact cartoon octopus to make a colorful paint-by-numbers picture. Preserve its round head, two eyes and ALL EIGHT arms in their exact original positions and silhouettes; do not remove, merge, shorten or overlap any of the eight arms. Keep the whole body purple. Add one broad coral pink enclosed inner panel on each of its eight arms. Add a small yellow sailor hat with a wide blue band on its head, and a little black smiling mouth below its eyes. In the empty white space to its left add one large orange starfish, and in the empty white space to its right add two broad green seaweed leaves and one large turquoise seashell. Keep all eight arm tips clear of the props. Every shape has a thick uniform black outline and a single perfectly flat color. Large areas of purple, coral pink, yellow, blue, orange, green and turquoise. Clean white background, no gradients, no highlights, no shadows, no texture, no text or numbers. A cheerful 2D coloring-book picture for ages4plus.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The octopus gently waves its eight short arms in a friendly underwater dance. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "image_model": "Qwen-Image-2.1",
+  "video_model": "MiniMax-H3",
+  "status": "engagement_revision",
+  "engagement_revision": 2,
+  "image_reference": "sources/34/reference.png",
+  "image_reference_sha256": "2153be359d8f55829d7165191afa8eead76e18324998e9c0ef481f8e0b061995"
+}

@@ -1,0 +1,132 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux2_dev_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "mistral_3_small_flux2_bf16.safetensors",
+      "type": "flux2",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "(masterpiece), flat vector art, children's coloring book style, cute a happy tan puppy with chocolate-brown floppy ears, a bright red collar and a large golden yellow round tag, holding a deep blue slipper with a turquoise sole in its mouth, sitting beside a round green and orange striped ball. Four clear paws and friendly eyes, simple shapes, thick bold outlines, cel shaded, vibrant solid colors, white background, minimalist, high contrast, 2d game asset, no dithering. Designed as an engaging paint-by-numbers activity for school-age beginners aged 4 and up: use every named contrasting color in substantial clearly enclosed areas. About 18 to 35 medium-to-large paintable regions, repeat some colors in separate regions. Keep all objects fully visible with a generous white margin. No text, no numerals, no gradients, no shadows, no texture, no tiny details. Uniform thick BLACK contours, no colored outline strokes. Every animal has a complete friendly face with clearly visible eyes and pupils."
+    }
+  },
+  "5": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "guidance": 3.5
+    }
+  },
+  "6": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "8": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026111429
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "steps": 20,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "8",
+        0
+      ],
+      "guider": [
+        "6",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/fallback/29-puppy"
+    }
+  }
+}

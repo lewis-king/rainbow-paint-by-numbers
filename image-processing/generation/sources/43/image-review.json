@@ -1,0 +1,22 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+  "image": "image-processing/generation/runs/43/image.png",
+  "subject": "Train",
+  "observations": [
+    "Locomotive front is now an ordinary blue boiler with no eye or smile; wheels, chimney and cab remain recognizable mechanical parts.",
+    "Large red, blue, yellow, orange, green and gray components retain engaging variety and repeated body/wheel regions; the former yellow facial panel is removed without undermining the palette."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "No anthropomorphic faces or character features on the object, props or decorative motifs."
+  },
+  "processed_gate_checks": [
+    "Preserve broad paint regions; do not number tiny shading, decorative strokes or background holes."
+  ],
+  "scope": "New current edit inspected individually with view_image. Exact-hash source engagement and no-faces approval only; no processed-output or motion approval is implied."
+}

@@ -1,0 +1,294 @@
+{
+  "sha256": "93369a47cf31477e735259f4f481628b8fd2a1511aaf6e79276213572e5927ca",
+  "artifact_sha256": {
+    "data.json": "9707060dcd68b98d4b4b29284043d414040a5194b38989346103ac858ccb4c7f",
+    "original.png": "bd10d6cc6037689f8ba117efbe89b0fd630ab4dc1feef78fcea5bb6ce91b7188",
+    "lines.png": "59c64c660eebda394b854601cdb4fbafe80a48dd68feff4d03355d51e2b9dfab",
+    "map.png": "5e2d665db4a084046bb33463625da828b4ef99802c2977c640670f77ae523745",
+    "reward.mp4": "b08767ecb3c47720b1bab227d6fe82cc7dcfad14318d815a4213635da0a37a21"
+  },
+  "file_sizes": {
+    "data.json": 1232,
+    "original.png": 33739,
+    "lines.png": 23609,
+    "map.png": 16235,
+    "reward.mp4": 523564
+  },
+  "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+  "source_video_gate_provenance": {
+    "image": {
+      "validation": "PASS",
+      "review_sha256": "ca4f931d39dee33a583d0e2c6da576cb95135bd0c461552af84c3ecaca4ce198",
+      "artifact_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+      "review_path": "image-processing/generation/reviews/43-image.json"
+    },
+    "video": {
+      "validation": "PASS",
+      "review_sha256": "58925f8cc62127431f125562d7c3d6776d73ca2d75028786ce8d6cbb61058dc2",
+      "artifact_sha256": "b08767ecb3c47720b1bab227d6fe82cc7dcfad14318d815a4213635da0a37a21",
+      "review_path": "image-processing/generation/reviews/43-video.json"
+    },
+    "both_current_exact_hash_verdicts": "PASS"
+  },
+  "reward_matches_reviewed_video": true,
+  "processing_receipt_current": true,
+  "palette_entries": 7,
+  "number_labels": 11,
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "current_palette_stats": {
+    "area_cutoff": 2083,
+    "entries": [
+      {
+        "index": 0,
+        "hex": "#30a549",
+        "area": 14478,
+        "radius": 26.79,
+        "substantial": true,
+        "lab": [
+          59.85107421875,
+          -51.828125,
+          38.140625
+        ]
+      },
+      {
+        "index": 1,
+        "hex": "#656363",
+        "area": 14374,
+        "radius": 26.0,
+        "substantial": true,
+        "lab": [
+          41.998291015625,
+          0.8125,
+          0.296875
+        ]
+      },
+      {
+        "index": 2,
+        "hex": "#db2f27",
+        "area": 90536,
+        "radius": 56.97,
+        "substantial": true,
+        "lab": [
+          48.486328125,
+          64.3125,
+          46.859375
+        ]
+      },
+      {
+        "index": 3,
+        "hex": "#0179f0",
+        "area": 89078,
+        "radius": 122.89,
+        "substantial": true,
+        "lab": [
+          51.64794921875,
+          17.515625,
+          -67.328125
+        ]
+      },
+      {
+        "index": 4,
+        "hex": "#f57a12",
+        "area": 13810,
+        "radius": 25.0,
+        "substantial": true,
+        "lab": [
+          64.31884765625,
+          42.109375,
+          68.609375
+        ]
+      },
+      {
+        "index": 5,
+        "hex": "#fbca03",
+        "area": 25381,
+        "radius": 44.2,
+        "substantial": true,
+        "lab": [
+          83.203125,
+          2.96875,
+          84.046875
+        ]
+      },
+      {
+        "index": 6,
+        "hex": "#2db1fa",
+        "area": 12723,
+        "radius": 57.0,
+        "substantial": true,
+        "lab": [
+          68.603515625,
+          -9.921875,
+          -45.734375
+        ]
+      }
+    ],
+    "meaningful_color_groups": 7,
+    "groups": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        4
+      ],
+      [
+        6
+      ]
+    ]
+  },
+  "phone_clearance": [
+    {
+      "number": 1,
+      "x": 740,
+      "y": 701,
+      "color_index": 0,
+      "screen_radius_px_at_344": 9.0
+    },
+    {
+      "number": 2,
+      "x": 514,
+      "y": 742,
+      "color_index": 1,
+      "screen_radius_px_at_344": 8.73
+    },
+    {
+      "number": 3,
+      "x": 578,
+      "y": 331,
+      "color_index": 2,
+      "screen_radius_px_at_344": 8.73
+    },
+    {
+      "number": 3,
+      "x": 768,
+      "y": 592,
+      "color_index": 2,
+      "screen_radius_px_at_344": 19.14
+    },
+    {
+      "number": 3,
+      "x": 458,
+      "y": 691,
+      "color_index": 2,
+      "screen_radius_px_at_344": 11.81
+    },
+    {
+      "number": 4,
+      "x": 384,
+      "y": 525,
+      "color_index": 3,
+      "screen_radius_px_at_344": 41.28
+    },
+    {
+      "number": 5,
+      "x": 358,
+      "y": 702,
+      "color_index": 4,
+      "screen_radius_px_at_344": 8.4
+    },
+    {
+      "number": 6,
+      "x": 273,
+      "y": 184,
+      "color_index": 5,
+      "screen_radius_px_at_344": 8.4
+    },
+    {
+      "number": 6,
+      "x": 310,
+      "y": 259,
+      "color_index": 5,
+      "screen_radius_px_at_344": 14.85
+    },
+    {
+      "number": 6,
+      "x": 451,
+      "y": 368,
+      "color_index": 5,
+      "screen_radius_px_at_344": 11.42
+    },
+    {
+      "number": 7,
+      "x": 708,
+      "y": 472,
+      "color_index": 6,
+      "screen_radius_px_at_344": 19.15
+    }
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 11,
+    "each_region_exactly_one_label": true,
+    "exceptions": []
+  },
+  "fixed_color_pixels": 26875,
+  "fixed_color_mismatch_pixels": 0,
+  "paintable_pixels_obscured_by_overlay": 9888,
+  "enclosed_unpaintable_transparent_regions": [],
+  "phone_preview_sha256": "2ed05df68233976dd59212a090700f3508a40f27b6e55d9fc6b9aa95dc8a4b06",
+  "id": "43",
+  "reviewer": "Codex",
+  "review_protocol": "Astra processed visual gate",
+  "processor_revision": 7,
+  "reviewed_at": "2026-10-04T09:33:28.501961+00:00",
+  "verdict": "PASS",
+  "status": "PASS",
+  "bundle_sha256": "93369a47cf31477e735259f4f481628b8fd2a1511aaf6e79276213572e5927ca",
+  "bundle_file_order": [
+    "data.json",
+    "original.png",
+    "lines.png",
+    "map.png",
+    "reward.mp4"
+  ],
+  "bundle_hash_algorithm": "SHA256 filename UTF-8 bytes followed by file bytes in listed order, without delimiters",
+  "asset_directory": "image-processing/app_assets/43",
+  "scope": "Current final processed visual artifact gate only; no native UI play or new video visual review. Existing source/video PASS gates verified against current bytes using promote.approved.",
+  "inspection_method": "Individually viewed current original.png, lines.png and fresh generation/phone_previews.py --final 344px preview. Current single-thread OpenCV/PIL checks measure map components, substantial palette area/radius, label clearance and fixed RGB; no processor or paintability_audit executed.",
+  "phone_preview_provenance": "image-processing/app_assets/43/phone-preview.png regenerated with python generation/phone_previews.py --final 41 42 43",
+  "meaningful_color_groups": 7,
+  "visible_region_coverage": {
+    "verdict": "PASS",
+    "unlabelled_transparent_paintable_components_at_least_20_pixels_after_overlay": 0,
+    "method": "Visual enclosure assessment plus four-connected components of (map < 254) AND (lines alpha == 0); each component >=20 pixels contains a metadata label."
+  },
+  "observations": [
+    "Face-free locomotive retains yellow chimney/dome, blue boiler, red cab/chassis, light-blue window, orange/gray/green wheels, coupling rod and track. No object eyes or smile introduced.",
+    "Seven substantial visually distinguishable palette colors are supported by current map area/radius checks: green, gray, red, blue, orange, yellow and light blue. Even grouping both blues conservatively leaves six; gray is a broad numbered wheel fill, not outline ink.",
+    "Prior chimney-cap defect is resolved: rounded cap now carries its own readable 6 at (273,184), above the separately numbered chimney stem 6 at (310,259). Cap divider is visible and neither enclosed yellow section is unlabelled.",
+    "All 11 paintable components have one matching label. At 344px, cap, roof and wheel labels are readable; smallest map-center clearance is 8.40 screen pixels. Hubs, cowcatcher, small roof support, track and enclosed gaps beneath the chassis retain fixed colors. Right bumper remains connected to the numbered red chassis.",
+    "All 26875 nonblack fixed-color pixels match original.png RGB exactly. No visible unlabelled enclosure remains; checking transparent paintable areas after overlay ink also finds no unlabelled connected area of 20 pixels or larger."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "sha256": "99c7a3d33c61a8d3d3eb793c280dd177e9e9cbdff68d5cb39cb66d9668c82e7d",
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "UNLABELLED_VISIBLE_ENCLOSURE",
+        "severity": "blocking",
+        "description": "Rounded yellow chimney cap near (310,185) still appears enclosed and has no number in revision5 unpainted/phone previews, while remaining unfilled. Four-connected map labeling does not solve the visible cap boundary.",
+        "action": "Prefill the cap in source yellow, split it into an independently numbered region with adequate clearance, or open the rendered dividing contour so its connection to the numbered chimney is visible."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone preview uses PIL Noto Sans Bold 10px at 344px canvas width; this approximates actual UI/Skia glyph metrics and layout. No native UI or touch interaction tested.",
+    "Reward animation not visually re-reviewed in this pass; existing source/video PASS records were checked against exact current files."
+  ]
+}

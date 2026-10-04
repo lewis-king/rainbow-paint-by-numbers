@@ -1,0 +1,230 @@
+{
+  "id": "51",
+  "reviewer": "gpt6astra",
+  "verdict": "PASS",
+  "status": "PASS",
+  "processor_revision": 5,
+  "source_sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
+  "scope": "diagnostic pre-video only; not shipping final gate",
+  "artifact_sha256": {
+    "data.json": "9e8e97b4fcd3e977e43dc454bcfc17297399cdbd2070b624689a8d3dd07a21ea",
+    "original.png": "95be07584c04db139b5756b86370d1b63b421723ad7126a5d025ad5f758e0c17",
+    "lines.png": "7302827d56fb88ca644ca7600501541d7581e325addf7310c2a14830e832ad3e",
+    "map.png": "4fb3b276254c1fe105859d3ab68b62dee19c47e7489eef025c55117eff14f0cf",
+    "unpainted.png": "425ce12680b7e0842a75f07109b5035b11ef049fdfa1c33dbc558ef73ac1e6cc"
+  },
+  "phone_preview_sha256": "d7a4c6563cecf3912f4d0ee3c90eb0e3ed4510c938248bf27843dad06243ddcc",
+  "phone_preview_provenance": "Temporary snapshot rendered with generation/phone_previews.py render(folder,350), 10px bold screen font, GameCanvas x-4/y+3 offsets; not native UI screenshot.",
+  "inspection_method": "Viewed updated unpainted and colored original artifacts and fresh 350px phone approximation; focused on prior defects and any new visual regressions. No UI played.",
+  "meaningful_color_groups": 8,
+  "palette_entries": 8,
+  "number_labels": 15,
+  "meaningful_color_groups_details": [
+    [
+      {
+        "index": 2,
+        "hex": "#f37200",
+        "area": 89597,
+        "radius": 62.9
+      }
+    ],
+    [
+      {
+        "index": 4,
+        "hex": "#8832f9",
+        "area": 43850,
+        "radius": 72.0
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "hex": "#0dc400",
+        "area": 35353,
+        "radius": 30.0
+      }
+    ],
+    [
+      {
+        "index": 6,
+        "hex": "#fd60d6",
+        "area": 20906,
+        "radius": 35.0
+      }
+    ],
+    [
+      {
+        "index": 7,
+        "hex": "#fbfdfd",
+        "area": 20013,
+        "radius": 51.9
+      }
+    ],
+    [
+      {
+        "index": 1,
+        "hex": "#f80600",
+        "area": 15944,
+        "radius": 30.4
+      }
+    ],
+    [
+      {
+        "index": 3,
+        "hex": "#0189fc",
+        "area": 4050,
+        "radius": 23.0
+      }
+    ],
+    [
+      {
+        "index": 5,
+        "hex": "#fcf800",
+        "area": 3805,
+        "radius": 25.2
+      }
+    ]
+  ],
+  "connected_region_label_check": {
+    "connectivity": 4,
+    "regions": 15,
+    "each_region_exactly_one_label": true
+  },
+  "phone_clearance": {
+    "preview_width_px": 350,
+    "font_screen_px": 10,
+    "minimum_center_radius_screen_px": 6.84,
+    "label_clearance": [
+      {
+        "number": 1,
+        "x": 669,
+        "y": 581,
+        "image_radius_px": 29.96,
+        "screen_radius_px_at_350": 10.24
+      },
+      {
+        "number": 1,
+        "x": 902,
+        "y": 655,
+        "image_radius_px": 23.97,
+        "screen_radius_px_at_350": 8.19
+      },
+      {
+        "number": 1,
+        "x": 657,
+        "y": 682,
+        "image_radius_px": 27.76,
+        "screen_radius_px_at_350": 9.49
+      },
+      {
+        "number": 2,
+        "x": 270,
+        "y": 340,
+        "image_radius_px": 30.36,
+        "screen_radius_px_at_350": 10.38
+      },
+      {
+        "number": 3,
+        "x": 136,
+        "y": 495,
+        "image_radius_px": 62.91,
+        "screen_radius_px_at_350": 21.5
+      },
+      {
+        "number": 3,
+        "x": 438,
+        "y": 381,
+        "image_radius_px": 37.15,
+        "screen_radius_px_at_350": 12.7
+      },
+      {
+        "number": 4,
+        "x": 584,
+        "y": 381,
+        "image_radius_px": 20.0,
+        "screen_radius_px_at_350": 6.84
+      },
+      {
+        "number": 4,
+        "x": 650,
+        "y": 438,
+        "image_radius_px": 23.0,
+        "screen_radius_px_at_350": 7.86
+      },
+      {
+        "number": 5,
+        "x": 763,
+        "y": 796,
+        "image_radius_px": 24.0,
+        "screen_radius_px_at_350": 8.2
+      },
+      {
+        "number": 5,
+        "x": 775,
+        "y": 896,
+        "image_radius_px": 72.0,
+        "screen_radius_px_at_350": 24.61
+      },
+      {
+        "number": 6,
+        "x": 260,
+        "y": 399,
+        "image_radius_px": 25.2,
+        "screen_radius_px_at_350": 8.61
+      },
+      {
+        "number": 6,
+        "x": 809,
+        "y": 507,
+        "image_radius_px": 22.4,
+        "screen_radius_px_at_350": 7.66
+      },
+      {
+        "number": 7,
+        "x": 804,
+        "y": 442,
+        "image_radius_px": 34.95,
+        "screen_radius_px_at_350": 11.95
+      },
+      {
+        "number": 8,
+        "x": 274,
+        "y": 133,
+        "image_radius_px": 51.93,
+        "screen_radius_px_at_350": 17.75
+      },
+      {
+        "number": 8,
+        "x": 94,
+        "y": 271,
+        "image_radius_px": 25.58,
+        "screen_radius_px_at_350": 8.74
+      }
+    ]
+  },
+  "fixed_color_mismatch_pixels": 0,
+  "observations": [
+    "Watering can, droplets and flowerpot; no object face.",
+    "Revision5 retains 8 meaningful color groups and 15 numbered regions; small pieces retain source color as fixed artwork.",
+    "Fixed-color overlay matches colored original at inspected fixed pixels; original animal eyes/smile or object structure remain recognizable, with no added object face.",
+    "Prior small mandatory-label collisions are removed or given larger space; retained phone-scale numbers are distinguishable.",
+    "Four-connected map components each have one label; visual enclosure coverage assessed separately."
+  ],
+  "defects": [],
+  "prior_revision_findings": {
+    "processor_revision": 4,
+    "verdict": "FAIL",
+    "defects": [
+      {
+        "code": "PHONE_LABEL_COLLISION",
+        "severity": "blocking",
+        "description": "Nozzle labels 4 at (596,241) and (556,256) compete with the sprinkler holes and outlines; the tiny pot/leaf stem labels near (758,757), (816,756) are crowded. Minimum radius is 3.42 screen px.",
+        "action": "Prefill the nozzle face/holes and tiny stem fragments in source colors or simplify/enlarge those regions before labelling. Retain large can, leaves, pot and petals."
+      }
+    ]
+  },
+  "limitations": [
+    "Phone approximation uses PIL/Noto Sans rather than native Skia glyph metrics. No touch interaction tested.",
+    "Source/video gates are outside this diagnostic review."
+  ]
+}

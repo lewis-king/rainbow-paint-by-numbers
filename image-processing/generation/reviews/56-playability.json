@@ -1,0 +1,67 @@
+{
+  "reviewer": "gpt6astra",
+  "verdict": "FAIL",
+  "status": "FAIL",
+  "review_date": "2026-10-04",
+  "acceptance_basis": "Preserve substantial painting engagement and readable phone labels; no mandatory six-color rule. Small fixed details are acceptable; prominent colored features must not be removed from play merely to meet clearance.",
+  "limitations": [
+    "Static visual review only; no native UI or touch test. Reward video not independently reviewed.",
+    "No generation, processor, audit, build or emulator run. Only requested review JSON files written."
+  ],
+  "id": "56",
+  "processor_revision": 7,
+  "scope": "Diagnostic pre-video playability gate only; not a final processed gate or shipping approval.",
+  "asset_directory": "image-processing/generation/paintability-candidates/processed/56",
+  "source_sha256": "401228627bf9b9228a60ed7c6398abbc4149ebed16bf2a20ed3e0d840171af1a",
+  "artifact_sha256": {
+    "data.json": "45c22d69ec04b8dcfb52316257750013d156b538dc03f2c0dd487c0fab8fb16e",
+    "original.png": "66a9c140e6af86b90e6c29d57e86a6af6b45347a809c13c80fe2993277504a4c",
+    "lines.png": "a06f59a1cf6bced584404b1e25cd75eb14a01dd41959e047f3c7fcccc5759acc",
+    "map.png": "6ba997040d60a6605049cd559f776eb34f0477835c9456bd68df36df8c9cbac5",
+    "unpainted.png": "e09aa808209045512e069acf178588d17ce0e15e0853e2ee20ad8a2d06ae8f10"
+  },
+  "phone_preview_sha256": "66f48cae60f5de84d05875aebdb13b43930822d76cd6965b5eee8a582f6a9929",
+  "phone_preview_current": false,
+  "palette_entries": 6,
+  "number_labels": 13,
+  "reported_meaningful_color_groups": 6,
+  "meaningful_color_groups": 5,
+  "meaningful_color_groups_details": [
+    "black soundhole",
+    "red body panels",
+    "blue headstock",
+    "purple neck panels",
+    "yellow body and jingles"
+  ],
+  "inspection_method": "Viewed current source, processed original, unpainted.png, lines.png and saved phone-preview.png; compared labels to current data.json. Current full-size unpainted labels agree with metadata. Saved phone preview is stale and cannot establish current phone clearance. An attempted in-memory phone rendering was not successfully displayed and is not treated as inspected evidence.",
+  "observations": [
+    "The source-image PASS remains outside this diagnostic verdict; source hash matches the approved enlarged image. No faces appear on either instrument.",
+    "Two broad purple neck panels survive as paint targets, improving the previous revision. Thirteen labels and six palette entries are present.",
+    "The entire green tambourine frame and turquoise soundhole ring remain prefilled; orange tuning pegs and two small partially occluded yellow jingles are also fixed. Small fixed hardware is acceptable, but the prominent green frame is a substantial loss of engagement.",
+    "Palette entry six is the white tambourine opening, labeled 6 at (281,745). It is background space, not a meaningful colored instrument part. Therefore six entries do not establish six meaningful colors.",
+    "Saved phone preview shows obsolete numbering including 7 and 8, plus numbered tuners and frame fragments absent from current metadata."
+  ],
+  "defects": [
+    {
+      "code": "SUBSTANTIAL_FRAME_PREFILLED",
+      "severity": "blocking",
+      "description": "Enlargement did not restore the prominent green tambourine frame to painting; the turquoise ring is also fixed.",
+      "action": "Provide broader uninterrupted green frame regions and a thicker turquoise annulus while preserving instrument design; reassess extraction later."
+    },
+    {
+      "code": "BACKGROUND_OPENING_IS_PAINT_TARGET",
+      "severity": "blocking",
+      "description": "White tambourine opening is numbered as palette entry 6 despite the source gate requiring it to remain background.",
+      "action": "Exclude the tambourine opening from painting in a later authorized processing fix."
+    },
+    {
+      "code": "STALE_PHONE_PREVIEW",
+      "severity": "blocking_for_phone_gate",
+      "description": "Saved preview does not represent current six-entry, 13-label artifacts.",
+      "action": "Refresh the phone approximation in a later authorized task and visually review current label placement before a PASS."
+    }
+  ],
+  "minimal_qwen_image_edit": "Preserve the current guitar and tambourine composition, broad purple neck panels, red/yellow body, blue headstock, black soundhole, tuning pegs and yellow jingles. Locally broaden the green tambourine frame to leave useful uninterrupted interiors roughly 50-60 image pixels across at label sites; remove redundant thin internal green divisions if necessary, keeping the open white center and recognizable ring. Thicken the turquoise soundhole annulus locally to comparable usable width while keeping the black central hole. Add no faces, text, numbers or extra objects. Small tuning hardware can remain fixed. This is a recommendation only; no edit executed.",
+  "video_status": "Outstanding; diagnostic contains has_reward=false and no final bundle is approved.",
+  "source_widening_necessary": true
+}

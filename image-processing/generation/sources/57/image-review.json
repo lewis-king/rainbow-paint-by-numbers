@@ -1,0 +1,23 @@
+{
+  "reviewer": "gpt-6-astra",
+  "verdict": "PASS",
+  "engagement_revision": 2,
+  "object_realism_revision": 1,
+  "sha256": "70f081afac007c432125595fea10ad7abba85ff77f0ccb5095dd87599b384455",
+  "image": "image-processing/generation/runs/57/image.png",
+  "subject": "Windmill",
+  "observations": [
+    "Tower eyes and smile are fully removed. Door/window, shutters, blades, fence and flowers retain ordinary object/botanical shapes without faces.",
+    "Opposite cyan/yellow blade pairs, red roof, orange hub, cream tower, blue door, purple shutters, green hill, pink flowers and brown fence retain substantial varied regions and repeated shapes.",
+    "Thin trim, shutter slats and garden marks still need processed-region QA; no approval of processed output is implied."
+  ],
+  "defects": [],
+  "anthropomorphism_review": {
+    "verdict": "PASS",
+    "observation": "Current full source inspected individually: no anthropomorphic eyes, mouths or character features on objects, props or motifs."
+  },
+  "processed_gate_checks": [
+    "Separate processor QA must check tiny highlights, narrow trim, background holes and readable numbers while preserving large color regions."
+  ],
+  "scope": "Exact-current-hash source visual engagement and no-faces approval only. Supersedes the archived faced image; no processed-output or motion approval implied."
+}
