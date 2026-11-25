@@ -1,0 +1,36 @@
+{
+  "id": "64",
+  "slug": "fire-engine",
+  "title": "Fire Engine",
+  "category": "vehicles",
+  "kind": "object",
+  "factory": 1,
+  "added": "2026-11-23",
+  "seed": 2026115364,
+  "subject": "a bright red fire engine in side view with a long plain yellow ladder lying flat along the roof, a large light blue cabin window, a broad white stripe along the side, a blue light on the cabin roof, a silver bumper, and two large dark grey wheels with yellow hubs, beside one big orange fire bucket",
+  "motion": "The fire engine rolls gently forward a little and back again, its wheels turning and its roof light flashing softly",
+  "image_prompt": "Flat vector art, children's coloring book style, a bright red fire engine in side view with a long plain yellow ladder lying flat along the roof, a large light blue cabin window, a broad white stripe along the side, a blue light on the cabin roof, a silver bumper, and two large dark grey wheels with yellow hubs, beside one big orange fire bucket. A real object drawn as the thing itself. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The fire engine rolls gently forward a little and back again, its wheels turning and its roof light flashing softly. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "image_negative": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, face on an object, eyes, mouth, arms, legs",
+  "image_model": "qwen-image-2.1",
+  "history": [
+    {
+      "at": "2026-11-25T11:47:22Z",
+      "stage": "image",
+      "seed_was": 2026112364,
+      "reason": "Restyle to the earlier look: Qwen-Image 2.1 and the older style wording"
+    },
+    {
+      "at": "2026-11-25T11:50:53Z",
+      "stage": "image",
+      "seed_was": 2026113364,
+      "reason": "The cone's white band joined the white page and split the cone in two; no white parts at the edge of the subject"
+    },
+    {
+      "at": "2026-11-25T11:53:13Z",
+      "stage": "image",
+      "seed_was": 2026114364,
+      "reason": "Cone bands too narrow to number; ladder mount fiddly. Simpler subject."
+    }
+  ]
+}

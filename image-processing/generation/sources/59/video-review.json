@@ -1,0 +1,20 @@
+{
+  "id": "59",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Kitten pats the wool and swishes its tail; same kitten throughout, no extra limbs, white background"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "2c7708eea988d708d117f96024847188518a8abf30d09d83b2b79097dee4f35b",
+  "sheet_sha256": "9849211cb202f54d531cd3a48db1ecdd0d5211e72b48cb48c4dfbef29dbe89d2",
+  "reviewed_at": "2026-11-25T17:28:17Z",
+  "video_sha256": "2293792ec2913626d11040bcfb90980136bbf4a7a03c2e71c48e2419cb4e1f29"
+}

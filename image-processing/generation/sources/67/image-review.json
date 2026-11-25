@@ -1,0 +1,21 @@
+{
+  "id": "67",
+  "stage": "image",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-image.jpg",
+  "notes": [
+    "Two-tier cake with three candles on a stand; white icing paintable, no face, painted matches source"
+  ],
+  "checklist": [
+    "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
+    "Anatomy or structure is correct: right number of limbs, wheels, eyes; nothing malformed or fused",
+    "Objects, vehicles, food and plants have no faces or limbs; animal faces look right",
+    "No text, numerals, watermark or stray marks",
+    "Numbered picture: every region is a sensible shape with a readable number, no clutter",
+    "Painted picture matches the source: no lost features, ragged edges or wrong colours"
+  ],
+  "image_sha256": "fb9ac92c29d4ec122ad8243180cd8a236052fe7a561f30e2538ae0fd18435942",
+  "sheet_sha256": "8aa1cbb6baf8baeac1072c95fe1e748b27d33df57ed04c30df00cbe5535f3f4c",
+  "reviewed_at": "2026-11-25T16:33:35Z",
+  "playable_sha256": "3312e58d2b48ffcd5b57b25fc41ca2853e78e5257d4d31697fdf53621c2d6e77"
+}

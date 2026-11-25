@@ -20,9 +20,9 @@ This app is tailored specifically to her taste, featuring cute designs that come
 
 All artwork and animations in this app are AI-generated and post-processed into paintable segments. The entire pipeline runs locally on an **NVIDIA RTX 5090** using [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
 
-Editable ComfyUI workflows, prompts, seeds, source artwork and visual quality
-reviews live in [`image-processing/generation/`](image-processing/generation/README.md).
-The generation tools support switching models independently of the game.
+The level factory in [`image-processing/generation/`](image-processing/generation/README.md)
+runs the whole line: recipe, picture, numbered level, reward video, quality
+checks, review and integration into the app.
 
 ### Text-to-Image
 
@@ -57,30 +57,36 @@ The generated images go through a post-processing pipeline to become usable game
 
 The result is a set of clearly defined regions that players can tap to fill, with the app tracking progress toward the original colored design.
 
-### Running the Post-Processing Script
+### Adding levels
 
-Raw source files live in `image-processing/raw_assets/` and are named by level, for example `22.png` and optional `22.mp4`.
-
-On a fresh clone, create the Python virtual environment and install the processing dependencies first:
+On a fresh clone, create the Python environment first:
 ```bash
 cd image-processing
 python3 -m venv venv
-source venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+venv/bin/python -m pip install -r requirements.txt
 ```
 
-To process from a level number inclusive, run:
+Then, with ComfyUI running:
 ```bash
-python process.py --from 22
+venv/bin/python generation/factory.py add --title "Kitten" --category animals --kind animal \
+  --subject "A cute ginger kitten ..." --motion "The kitten bats the ball of wool"
+venv/bin/python generation/factory.py run 59 --wait-gpu 30
 ```
 
-That processes every numbered image from `22` upward. To process a bounded inclusive range:
+`run` generates, checks and stops at each visual review. After the reviews it
+copies the level into `assets/images/levels/` and registers it in
+`utils/level-loader.ts` and `utils/picture-catalog.json`. Before a release:
 ```bash
-python process.py --from 22 --to 28
+npm run verify:levels       # level files are the approved ones
+npm run verify:new-assets   # every level folder is wired into the app
 ```
 
-Generated files are written to `image-processing/app_assets/{level}/`. Copy the finished level folders into `assets/images/levels/`, then add the static `require(...)` entries in `utils/level-loader.ts`.
+When `finish.py` changes, `factory.py refinish 1-58` rebuilds the older
+pictures with the new rules.
+
+`process.py` can still be run by hand (`python process.py --from 22 --to 28`,
+reading `raw_assets/` and writing `app_assets/`), but its raw output does not
+pass the factory's playability checks. See the factory README for why.
 
 ## Tech Stack
 

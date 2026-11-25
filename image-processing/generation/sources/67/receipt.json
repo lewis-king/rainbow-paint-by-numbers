@@ -1,0 +1,63 @@
+{
+  "id": "67",
+  "title": "Birthday Cake",
+  "factory_revision": 1,
+  "integrated_at": "2026-11-25T17:30:02Z",
+  "models": {
+    "image": "qwen-image-2.1",
+    "video": "wan2.2-i2v"
+  },
+  "code": {
+    "process.py": "3aea2e76f4e65f0531aba61faa0f7e1d4f0d08d6707f679da33db1ea2822a1a6",
+    "finish.py": "50ecb34cfd4176056daac9194676d64e6d21b3c87688a606a3ddf91cab35fc80",
+    "checks.py": "b1b6e78e0e821ec02ff5a480824f6845091b18cfb6ca99f4298e5a2dc0b032c6"
+  },
+  "finish": {
+    "finish_revision": 11,
+    "palette_before": 20,
+    "palette_after": 11,
+    "lookalike_colors_merged": 0,
+    "shade_regions_merged": 0,
+    "areas_returned_to_art_colour": 0,
+    "slivers_absorbed": 73,
+    "ink_pixels_restored": 2761,
+    "black_fill_pixels": 0,
+    "dash_pixels_dropped": 2339,
+    "lost_part_pixels_reclaimed": 26469,
+    "overmerged_colors_split": 0,
+    "mixed_regions_divided": 0,
+    "fixed_detail_pixels": 0,
+    "small_numbers": 3,
+    "fixed_detail_fraction_of_subject": 0.0,
+    "pixels_changed_fraction": 0.0321,
+    "numbers": 15
+  },
+  "image_sha256": "fb9ac92c29d4ec122ad8243180cd8a236052fe7a561f30e2538ae0fd18435942",
+  "video_sha256": "d745273c2b74786521691818dede70665328b6580733bed6af8076d1d627f6ee",
+  "playable_sha256": "3312e58d2b48ffcd5b57b25fc41ca2853e78e5257d4d31697fdf53621c2d6e77",
+  "bundle_sha256": "557a326d3a3011dce2cdd56cdd96296c5de37b2a71f2cf3f50269caee838b1c8",
+  "files": {
+    "data.json": "7822f39fd93fcf50b76d0fa77b3def8d50bdc959eec8b9e4e934f8d1c862c096",
+    "original.png": "8c565b39c24f277b1309d707c7640394a10d0811436a20f8482e9b65b3d7c6bb",
+    "lines.png": "f1b09083d9746f55d4671b3897e355329db5bc724924c44ca7a34d8165d84bf1",
+    "map.png": "e52b10d107b392fc40ba5dcbf2f753808d374d6188cc53c2719ec4d78e5cd872",
+    "reward.mp4": "d745273c2b74786521691818dede70665328b6580733bed6af8076d1d627f6ee"
+  },
+  "bytes": {
+    "data.json": 1695,
+    "original.png": 28970,
+    "lines.png": 18961,
+    "map.png": 13626,
+    "reward.mp4": 417056
+  },
+  "reviews": {
+    "image": {
+      "reviewer": "Claude vision review of review-image.jpg",
+      "sha256": "a7552d1d3b3d4fafc57000b543993168410d9f941f9e71b810c9680345ccbb66"
+    },
+    "video": {
+      "reviewer": "Claude vision review of review-video.jpg",
+      "sha256": "55d28ce4f00970093f44f0fa659978dfc653d9a3a1d615cc7151e2765d36fdda"
+    }
+  }
+}

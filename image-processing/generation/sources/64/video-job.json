@@ -1,0 +1,26 @@
+{
+  "id": "64",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "e71564ec-7de0-4f78-9860-db3bc4ad4ac6",
+  "status": "completed",
+  "graph_sha256": "887270f702c063763a1e106e0938f93abbf6b19d53a75c378a41feb28c0351f4",
+  "seed": 2026115364,
+  "submitted_at": "2026-11-25T16:33:49Z",
+  "comfy_output": {
+    "filename": "64-fire-engine_00002_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.06201171875,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "332f801e767e795a7be8a330efe030a2de8e9f9bcf98e47740804be5b1523475",
+  "finished_at": "2026-11-25T17:06:10Z",
+  "sha256": "332f801e767e795a7be8a330efe030a2de8e9f9bcf98e47740804be5b1523475"
+}

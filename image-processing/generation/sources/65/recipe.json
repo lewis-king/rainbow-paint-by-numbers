@@ -1,0 +1,60 @@
+{
+  "id": "65",
+  "slug": "sailing-boat",
+  "title": "Sailing Boat",
+  "category": "vehicles",
+  "kind": "object",
+  "factory": 1,
+  "added": "2026-11-23",
+  "seed": 2026117365,
+  "subject": "A toy sailing boat with a red hull that has a broad yellow stripe and two round light blue portholes, a brown mast, one large turquoise main sail, one smaller orange front sail and a purple flag on top, floating on one small blue oval puddle of water only a little wider than the boat",
+  "motion": "The boat rocks gently from side to side and its purple flag flutters. The flat blue puddle keeps its exact shape, flat colour and black outline",
+  "image_prompt": "Flat vector art, children's coloring book style, A toy sailing boat with a red hull that has a broad yellow stripe and two round light blue portholes, a brown mast, one large turquoise main sail, one smaller orange front sail and a purple flag on top, floating on one small blue oval puddle of water only a little wider than the boat. A real object drawn as the thing itself. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The boat rocks gently from side to side and its purple flag flutters. The flat blue puddle keeps its exact shape, flat colour and black outline. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "history": [
+    {
+      "at": "2026-11-23T17:51:50Z",
+      "stage": "image",
+      "seed_was": 2026112365,
+      "reason": "Check: sea and sun fill the frame to the edges"
+    },
+    {
+      "at": "2026-11-23T17:59:56Z",
+      "stage": "image",
+      "seed_was": 2026112365,
+      "reason": "Check: water runs edge to edge"
+    },
+    {
+      "at": "2026-11-23T18:21:17Z",
+      "stage": "image",
+      "seed_was": 2026113365,
+      "reason": "Review: drawn inside a frame with paint-swatch blobs around it"
+    },
+    {
+      "at": "2026-11-23T21:32:17Z",
+      "stage": "image",
+      "seed_was": 2026114365,
+      "reason": "Check: paint blobs drawn around the boat to the edges; unwanted things moved to the negative prompt"
+    },
+    {
+      "at": "2026-11-23T21:42:34Z",
+      "stage": "image",
+      "seed_was": 2026115365,
+      "reason": "Review: loose paint swatches around the boat; template no longer asks for a number of shapes"
+    },
+    {
+      "at": "2026-11-23T22:07:08Z",
+      "stage": "video",
+      "seed_was": 2026116365,
+      "reason": "Review: puddle turns into shaded translucent water in several frames"
+    },
+    {
+      "at": "2026-11-25T15:49:43Z",
+      "stage": "image",
+      "seed_was": 2026116365,
+      "reason": "Restyle on Qwen-Image 2.1 to match the earlier levels, approved by Lewis"
+    }
+  ],
+  "image_negative": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, face on an object, eyes, mouth, arms, legs",
+  "image_model": "qwen-image-2.1"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "66",
+  "stage": "image",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-image.jpg",
+  "notes": [
+    "Castle with three towers on a green mound; sand walls and battlements clean, no face, painted matches source"
+  ],
+  "checklist": [
+    "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
+    "Anatomy or structure is correct: right number of limbs, wheels, eyes; nothing malformed or fused",
+    "Objects, vehicles, food and plants have no faces or limbs; animal faces look right",
+    "No text, numerals, watermark or stray marks",
+    "Numbered picture: every region is a sensible shape with a readable number, no clutter",
+    "Painted picture matches the source: no lost features, ragged edges or wrong colours"
+  ],
+  "image_sha256": "32f946aa3af36c0b8f264c230519ae3cc1f8bb5d5534bed43ff6a14f6bc24f8e",
+  "sheet_sha256": "2469c9e4e1de14f6d2c3ed3db5b6a5fea912a83a4dbd0faa39cb87d4639eda0e",
+  "reviewed_at": "2026-11-25T16:33:35Z",
+  "playable_sha256": "369022020ae1922efa62d2319cec9970e1f07c97c9bbb1b677c442c4212eb290"
+}

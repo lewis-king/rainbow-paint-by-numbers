@@ -1,0 +1,20 @@
+{
+  "id": "63",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Parrot bobs its head and sways its tail on the branch; wings folded, colours hold, stays in frame"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "8bbfd646934b095d758cc420cc1c705347de9dc059d7aa839c206dc6a3c15fe2",
+  "sheet_sha256": "10202d8c2fe1d21576275b9f3943a5b7a66fa7f4b434975fbd8cfe17dea87f09",
+  "reviewed_at": "2026-11-25T17:45:10Z",
+  "video_sha256": "cefb90a8d846745ff6c4b92fa57a3c934927a5a8872245afc248eccbad0fa293"
+}

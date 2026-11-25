@@ -1,0 +1,23 @@
+{
+  "id": "62",
+  "stage": "image",
+  "model": "qwen-image",
+  "prompt_id": "4b657ad0-9793-49a4-946c-eaad88a07f19",
+  "status": "completed",
+  "graph_sha256": "82993e5aa62e4291c03f03cbf70712806358ccdaf931d61614ca0bde916dfb55",
+  "seed": 2026114362,
+  "submitted_at": "2026-11-25T15:49:48Z",
+  "comfy_output": {
+    "filename": "62-whale_00005_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "74712f93b95c0d71fc9a5b5fe96af2103d098fd0cf803e81b6f712fe55c04958",
+  "finished_at": "2026-11-25T15:51:29Z",
+  "sha256": "74712f93b95c0d71fc9a5b5fe96af2103d098fd0cf803e81b6f712fe55c04958"
+}

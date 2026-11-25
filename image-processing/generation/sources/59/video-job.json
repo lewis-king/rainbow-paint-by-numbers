@@ -1,0 +1,26 @@
+{
+  "id": "59",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "391732c0-a48a-4638-b9e6-ebeeb978a886",
+  "status": "completed",
+  "graph_sha256": "0c054f03001c1c04f4dbe7079353112ebac45c32e9ac867d0a2ed03f30b39a96",
+  "seed": 2026113359,
+  "submitted_at": "2026-11-25T16:33:48Z",
+  "comfy_output": {
+    "filename": "59-kitten_00002_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "2293792ec2913626d11040bcfb90980136bbf4a7a03c2e71c48e2419cb4e1f29",
+  "finished_at": "2026-11-25T16:39:09Z",
+  "sha256": "2293792ec2913626d11040bcfb90980136bbf4a7a03c2e71c48e2419cb4e1f29"
+}

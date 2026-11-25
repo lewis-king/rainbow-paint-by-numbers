@@ -1,0 +1,2514 @@
+{
+  "1": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:28:59Z",
+    "source_sha256": "38380d234643d89da2da7ee626b0a147f2a9349a2c7ecfd55b93b6a3a6d7e66e",
+    "files": {
+      "data.json": "0d760c0c228eeee1fe676f1d17e32d3f6e9d29904841b589ae42826a245581a3",
+      "original.png": "1c66bbe78fa7eb901d1d26978da74910c6ba3629906d8840e0ba3108aaf318d6",
+      "lines.png": "e5218a3980547b76184f0fba573d1cc92865d42cff7502064ca02b84cc805b1c",
+      "map.png": "f3c00a4b7c8997adbcb0ad5e6db0543b00221697afc407d72490ac305e002639"
+    },
+    "playable_sha256": "51ecc838816bbe5a6f889ebb6045db6be225e604f2df24aee41bb49f70c0e281",
+    "numbers": [
+      30,
+      32
+    ],
+    "colours": [
+      17,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 11,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 9,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 352,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 286,
+      "small_numbers": 11,
+      "fixed_detail_fraction_of_subject": 0.0009,
+      "pixels_changed_fraction": 0.0091,
+      "numbers": 32
+    }
+  },
+  "2": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:02Z",
+    "source_sha256": "be765f4847670f2ed4325b3f402c12301a41dbce1039436b798069563f299df2",
+    "files": {
+      "data.json": "d1c4654173ab2fe6bd5f122e517b62f920e7ba719ae5c6adf8e7b05510882767",
+      "original.png": "12e01df6ba6cc647e0e1c865916fd78ae0013f3cc4307ef34c0f8f1b8f0cf473",
+      "lines.png": "0bd318f2edac4cd7c0c6167192602916f9be05718b47be0e76ac0bfb74a5daa0",
+      "map.png": "0dda01dfb41cc62f522fce511fb59466ef614f093393062e359f3f507094efe1"
+    },
+    "playable_sha256": "7de38c08cad11e7b2ec3573a3d4298f38ebdd3cff83f611150344543e1f3bfc1",
+    "numbers": [
+      28,
+      18
+    ],
+    "colours": [
+      15,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 8,
+      "lookalike_colors_merged": 2,
+      "shade_regions_merged": 7,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 1749,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0037,
+      "pixels_changed_fraction": 0.0512,
+      "numbers": 18
+    }
+  },
+  "3": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:06Z",
+    "source_sha256": "15f59277926e94ef31dd52dab955e8d4037a8d9666ee62e459d8bdc1ea0fb63c",
+    "files": {
+      "data.json": "c6dfc4cf77bc9db0fa91f8bb5043678735a39b89aa52f5d5b9ed2e6cc47e940d",
+      "original.png": "13d7191a53a7f6045a9d5f194855e35882f2b7d582841fb941c2c1b684c9ce59",
+      "lines.png": "d02ee0eab939455885c8d9c0b87d446f7175d7862a0b74bbea0e268ffdc44962",
+      "map.png": "5062619b84005c134e62286d9859a8f0a45c98029ff3a60a7bc36f8720c8202e"
+    },
+    "playable_sha256": "97a8094d203ded734d04a26d1b6460c93697d54b98523bae59e193dc03f23c05",
+    "numbers": [
+      16,
+      17
+    ],
+    "colours": [
+      9,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 12,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 1,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 213,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 313,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 396,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0013,
+      "pixels_changed_fraction": 0.103,
+      "numbers": 17
+    }
+  },
+  "4": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:08Z",
+    "source_sha256": "ec9dcc77d7f2a18b864c3eb3fc9f206993e45c247f94d77e1512aeed868d1b84",
+    "files": {
+      "data.json": "3a33d49e497b39104880b07d37bc7fbe689ab3f3cc759201f43f9926846ae0d5",
+      "original.png": "f69d1013afb74a6043a42b1e16f2b0433f688f8597cdbe6651e95bc7c36edfa8",
+      "lines.png": "226102b2347fce54c034afccd498d1c3273190667d0cd1b2ed4e6bbe0effe293",
+      "map.png": "50ae6ac474c475a746a9196ff23067eaeea16fc9e27338d28d139d11990db473"
+    },
+    "playable_sha256": "1aa2ae263898c63c40d2ada637d699f424f320222d9c33c068b5a33e1d0ca2b1",
+    "numbers": [
+      24,
+      18
+    ],
+    "colours": [
+      12,
+      5
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 4 colours with a real area to paint; need 5+"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 13,
+      "palette_after": 5,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 2,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 7,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 186,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 5,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0058,
+      "numbers": 18
+    }
+  },
+  "5": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:12Z",
+    "source_sha256": "e729ff6e5e260c85c6f33df665e5e670d1cf3d3695994712f1a4bc9da84b6bf2",
+    "files": {
+      "data.json": "c5b25b92f3aa6e6a68b9badbfa8cd41026628aee368cfb9240fc51a311b2e013",
+      "original.png": "873f05ae968ff20e1056ca1981e91d320160a5556de39493b0b895cfe037b13c",
+      "lines.png": "38182d6cf301d76602ecd0bf0144b438a20fae09f38d7cac803c2fdb68f3a37a",
+      "map.png": "6f5add770df193165bb805461c4c9d7a09e97737e9e14389e7ac238b5903bd6d"
+    },
+    "playable_sha256": "772294d4ba3294f360aa0c0fe847c7304f6d875f9377533db7e9cf770a407b3f",
+    "numbers": [
+      25,
+      23
+    ],
+    "colours": [
+      11,
+      9
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 13,
+      "palette_after": 9,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 2,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 3967,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 109,
+      "small_numbers": 7,
+      "fixed_detail_fraction_of_subject": 0.0003,
+      "pixels_changed_fraction": 0.0068,
+      "numbers": 23
+    }
+  },
+  "6": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:17Z",
+    "source_sha256": "c6f72d461cec75b5de7e3510a16729b35476d72a33a61ff8dc7e4a64839755de",
+    "files": {
+      "data.json": "7e294538c164c8132eb0903019470bb933e0ecaf99fcc06baae177d9f4203219",
+      "original.png": "b0dd1de5240b0133c476f9c8dbf9f7d506e84dc8795b9ea75e8e261699b1cfc4",
+      "lines.png": "64a72bcf1308bbd6828c6f7cc7ab6d65f5ae703d04214b0141b3778aec6c114b",
+      "map.png": "fd30d0bf1db069e0bb3380e91d42bd1d4bd3681c3b8a92c2e2a573e5b91eb9ea"
+    },
+    "playable_sha256": "1a32438237a60b54bb788bb0cb3eda9d38e554da09ca7747cae8d71ff79640d3",
+    "numbers": [
+      64,
+      32
+    ],
+    "colours": [
+      18,
+      12
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "A number spills out of its region (51% inside): [{'number': 10, 'x': 1018, 'y': 754, 'inside': 0.51, 'clearance_screen_px': 18.32}, {'number': 10, 'x': 0, 'y': 361, 'inside': 0.66, 'clearance_screen_px': 23.08}, {'number': 10, 'x': 922, 'y': 705, 'inside': 0.71, 'clearance_screen_px': 4.28}]",
+      "1 pairs of numbers are drawn on top of each other",
+      "Subject is cropped or touches the edge (0px margin)"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 12,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 45,
+      "ink_pixels_restored": 58,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 370,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 672,
+      "small_numbers": 12,
+      "fixed_detail_fraction_of_subject": 0.0021,
+      "pixels_changed_fraction": 0.0299,
+      "numbers": 32
+    }
+  },
+  "7": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:22Z",
+    "source_sha256": "e34800950ba7eea59f3351d3ccde8071046068a4c31bd2ff31d1034746eab03c",
+    "files": {
+      "data.json": "4cadddab7f73cfff94d6a49b4630549b393183fcfb659d0bfacf81feefea3577",
+      "original.png": "6b5e00b34482ba13c63a89b252a4ad157036c56eb560c62b8b7694667d3e2155",
+      "lines.png": "c5f38957b8db430dd02dffd7a722629145ce5fce8cb1844e3ce8c07cbe377e85",
+      "map.png": "49b4f8e916236b9140265bc87208bdffb87400ffa7770077c65c1e799d3c8344"
+    },
+    "playable_sha256": "5d2c791883309ef5b2d93c4d39880a90c66343e9a0e8c3846c68b6b05b84bdba",
+    "numbers": [
+      38,
+      25
+    ],
+    "colours": [
+      16,
+      14
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "14 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 14,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 11,
+      "ink_pixels_restored": 814,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 3555,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 4,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 13,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0442,
+      "numbers": 25
+    }
+  },
+  "8": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:26Z",
+    "source_sha256": "435e88ed49b105e569f0bb0fe2f14ad5b3f43896960a732bf232cfa4f676b3b2",
+    "files": {
+      "data.json": "05e229e872c59e126faffc3b4f91e3a15563f7311108311ef4dbd9a3ecad1e1c",
+      "original.png": "0c265d7d428182a2d91e871f822ff1e4633b53bf56eae7c6732dffe5ca3dd457",
+      "lines.png": "1c32afa4811d44b760185bfda6d16dba1b871896f2b096f6068f5bdb78a533ca",
+      "map.png": "4a35551b49d91877b96eda072a84cfcf241e61081715b45397451727379831fe"
+    },
+    "playable_sha256": "dba7c4410b728f83c9fa604e371f840aa2b07daee6f1411be9680720717a9bfe",
+    "numbers": [
+      23,
+      21
+    ],
+    "colours": [
+      12,
+      7
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "A number spills out of its region (50% inside): [{'number': 2, 'x': 2, 'y': 122, 'inside': 0.5, 'clearance_screen_px': 3.93}, {'number': 3, 'x': 1023, 'y': 111, 'inside': 0.76, 'clearance_screen_px': 6.91}, {'number': 6, 'x': 501, 'y': 214, 'inside': 0.98, 'clearance_screen_px': 3.83}]",
+      "Subject is cropped or touches the edge (0px margin)"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 14,
+      "palette_after": 7,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 4,
+      "ink_pixels_restored": 242,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 549,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 8,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0054,
+      "numbers": 21
+    }
+  },
+  "9": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:30Z",
+    "source_sha256": "e3ba273d6e1e7903ef5b3aff0be373addc833252ee1a226dc85b986e7064ae2e",
+    "files": {
+      "data.json": "3487aac837728c38e1db541d3d2b8e406d70b924aa82a631c541f4f98fe4c47e",
+      "original.png": "9dcd4da91804dd03eaefbcb5bff0a76f2d2c8c9e933a1c2ca0afc02a09383fcc",
+      "lines.png": "51bccebc85212b3c2081193f9cf207baef601dc4f7ef2b6637ffb42fba114f09",
+      "map.png": "ba6b041032144032c87df03dcbda98af46890d1d98de24d59e46fcc02a6dab04"
+    },
+    "playable_sha256": "4d0f372d00409483b3dd1a762daff1a9a9fa31a5012469b082c468ae3be1e1d6",
+    "numbers": [
+      31,
+      25
+    ],
+    "colours": [
+      13,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 15,
+      "palette_after": 11,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 4,
+      "ink_pixels_restored": 15,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 5,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0165,
+      "numbers": 25
+    }
+  },
+  "10": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:37Z",
+    "source_sha256": "1ca777813f640f1fce01e222f9ed4736688e2ff4f5828d357cd2e6736f83beda",
+    "files": {
+      "data.json": "0ab7e8c76b1d80532756daecc3df25cba3ab55f305d4ca2860e545e5e0ba9f81",
+      "original.png": "373f10419732a6aa8db7afdef94ad50cf2c43e2bff110f7eb927fd46c9395658",
+      "lines.png": "98cd2a7e11c16c0436f1148b4970a7273c0e710c9706b1c9f07561e1f74fcc18",
+      "map.png": "ceb62affa69cd432325dffdd857a7143b340529ecb00393b21a1a41561d77efe"
+    },
+    "playable_sha256": "30daeb0cc5cda8d512e72d26f83cfa295654c3eb861e854949a766c5d95e8c84",
+    "numbers": [
+      32,
+      23
+    ],
+    "colours": [
+      20,
+      16
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "16 colours in the palette; ages 4+ need 5-12",
+      "Flattened colours drift from the source art (mean delta E 9.91); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 22,
+      "palette_after": 16,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 8,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0167,
+      "numbers": 23
+    }
+  },
+  "11": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:40Z",
+    "source_sha256": "93d362aff16e30e9985813ff1f614de07d686322e68d7956a06d20e68c7b251e",
+    "files": {
+      "data.json": "ade98157ee3731fc412be265eec19c62dc93b270b3c122b48278e2e795b4c1c9",
+      "original.png": "f1f592e938f068a9f81bbed54ac292af242884472bcf7216d49ad3b9d221a722",
+      "lines.png": "a3fe52775b6da7fbc4291af881aec81bf7fa7813e64954f51811647138cea5c5",
+      "map.png": "a50c3b8a7fccdb38ac19cf1dff1cffcdd22e1567bfe3269d9b4c5d62de07ce86"
+    },
+    "playable_sha256": "e29b9a3de2ae19d50c44a9057d1c8016ab427c219f203df5099e62c2ed4913ad",
+    "numbers": [
+      56,
+      23
+    ],
+    "colours": [
+      12,
+      6
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 3 colours with a real area to paint; need 5+"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 12,
+      "palette_after": 6,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 40,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 9,
+      "ink_pixels_restored": 777,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 1195,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 1,
+      "fixed_detail_pixels": 857,
+      "small_numbers": 11,
+      "fixed_detail_fraction_of_subject": 0.0025,
+      "pixels_changed_fraction": 0.0235,
+      "numbers": 23
+    }
+  },
+  "12": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:43Z",
+    "source_sha256": "27884343083a407674c1b074429556d1efd79517c9d80e00787575615d01dd9c",
+    "files": {
+      "data.json": "d20f45bdf521262d1245a589c1138d48385520e26fd6eb0325a8df0a68da5db5",
+      "original.png": "56d5d7bd8308d957dabd8313aa0d24b1b9aa0b3a09e445f4a155dc598b61ad80",
+      "lines.png": "b4d8953b97bbfec9abe513b6d9d59c08ef725e0f87092ee10df504de5e9af8cd",
+      "map.png": "5a85fd71560c0b0e362852973bdaf0ad7f0b8d14861c79edaf6ccfd9a0eb4311"
+    },
+    "playable_sha256": "aa566d0c4dcfa7c10306db1acbd7b569b1fa00aa2dd0affa76e4a3a69a7e82ae",
+    "numbers": [
+      40,
+      38
+    ],
+    "colours": [
+      9,
+      6
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 4 colours with a real area to paint; need 5+",
+      "Flattened colours drift from the source art (mean delta E 9.34); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 9,
+      "palette_after": 6,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 4,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 759,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 979,
+      "small_numbers": 20,
+      "fixed_detail_fraction_of_subject": 0.0036,
+      "pixels_changed_fraction": 0.0019,
+      "numbers": 38
+    }
+  },
+  "13": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:46Z",
+    "source_sha256": "7286633e407f26ba4e76c56c0f76791da95a8720e6331ff418ffbad09b32b539",
+    "files": {
+      "data.json": "fbd867d3dee8971cd73eef273c6b630503f7b01861a00f3cd82f5d1a868f0293",
+      "original.png": "5a942252f501e185267a8fda6577a52cd09516981444c305d78f1da680821c30",
+      "lines.png": "86d692f5e79b11d869053a27cab0ddde797b0b36289a0c02c09f8cb048d7c588",
+      "map.png": "110a3408c8f8bca95fac11d362020b84e025505b3464c194215a1bb8776ed32b"
+    },
+    "playable_sha256": "34fba8ccedd1ad805c077f14a6b515941a4a9158861a52cc30abd570e89b0c40",
+    "numbers": [
+      14,
+      10
+    ],
+    "colours": [
+      13,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 15,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 7,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 9835,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0143,
+      "numbers": 10
+    }
+  },
+  "14": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:49Z",
+    "source_sha256": "5d833cfcb2ef3789f72c7637b75b23cec22caccd3dcfffded400d0201ee11152",
+    "files": {
+      "data.json": "f21228d8285aff3dec9476343e3f1cc45c7548b675d61c88dff45fc0094b18d1",
+      "original.png": "d51b4ba18f5dba5363a03100972567f646d8dad0be94b29fdf5d9d9e6bd98cb6",
+      "lines.png": "7cf4fba36b4cfdc5d52a05be63c90f4cf4bd784d68b469e7faddab359d175572",
+      "map.png": "c853a67eb43bb1ee90624252ecaf0abb4b5db41cf8ac961ee354c36dcf1f1ca9"
+    },
+    "playable_sha256": "e8a944867274a90b97ce7156d992696f1d46f7e31b77c1bebe24b05b4edda826",
+    "numbers": [
+      15,
+      15
+    ],
+    "colours": [
+      14,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 15,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 354,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0075,
+      "numbers": 15
+    }
+  },
+  "15": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:52Z",
+    "source_sha256": "f4e9bc5066170eb99c9286953e027ed5fcb9a43c284f5995eb5750a13a1f796f",
+    "files": {
+      "data.json": "33147fc0294aa4c6d08dc96b78f0b5b1b9bcb82c5ec68dcd7c59ee69a07d5d79",
+      "original.png": "986d1f99aa763ca335129ec15866210000319d996499a35201cfb75c77e8389c",
+      "lines.png": "af59b1ab7c3ee12155dc65d318280d153297214983e5046a0d7f61bfe4e2e8f9",
+      "map.png": "90e843d6cb7c7a649c923111c3cb1744dce97f6b4c87726f275424fb7c9c14b4"
+    },
+    "playable_sha256": "15be67667a4144d81882e8afd816986f2631ce3d3dae31504bcb8fe2123a1f97",
+    "numbers": [
+      24,
+      17
+    ],
+    "colours": [
+      9,
+      6
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 4 colours with a real area to paint; need 5+"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 10,
+      "palette_after": 6,
+      "lookalike_colors_merged": 2,
+      "shade_regions_merged": 3,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 108,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 101,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 305,
+      "small_numbers": 6,
+      "fixed_detail_fraction_of_subject": 0.0009,
+      "pixels_changed_fraction": 0.0231,
+      "numbers": 17
+    }
+  },
+  "16": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:29:58Z",
+    "source_sha256": "fb7ddaeec15c9b9df6700dce6771dd2d87398c397492ddc93049a76ab4b7a64b",
+    "files": {
+      "data.json": "a4c7507286185bcac91fe37586e30d7ce43c5ef442438e4b0e17d62336907140",
+      "original.png": "a20c248da294b85e150b7c1b4f22529f3dce8b2d50b67e678f35a3102e1028d9",
+      "lines.png": "2c9349e5f88bbca027e2f6648300d518f2d6636f67e02257a3441cef84d6000b",
+      "map.png": "d91954640f8779a796c13844622d7e9526b4202dff5e0c6bb6dfc0d9750daeae"
+    },
+    "playable_sha256": "a22cd756185109843a05ce02bc7d28bb904d782a85f5a688d94a64a62bd140f0",
+    "numbers": [
+      45,
+      33
+    ],
+    "colours": [
+      15,
+      14
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "14 colours in the palette; ages 4+ need 5-12",
+      "9 of 33 numbers are in cramped regions; too fiddly for small fingers",
+      "Flattened colours drift from the source art (mean delta E 15.93); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 25,
+      "palette_after": 14,
+      "lookalike_colors_merged": 4,
+      "shade_regions_merged": 6,
+      "areas_returned_to_art_colour": 4,
+      "slivers_absorbed": 3,
+      "ink_pixels_restored": 18,
+      "black_fill_pixels": 4748,
+      "dash_pixels_dropped": 71,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 7,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 732,
+      "small_numbers": 15,
+      "fixed_detail_fraction_of_subject": 0.0023,
+      "pixels_changed_fraction": 0.0381,
+      "numbers": 33
+    }
+  },
+  "17": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:04Z",
+    "source_sha256": "7c3ac0a154abc341ca82cfb3c6a77c33c60d85cc8004559db120bee74d3a1ed9",
+    "files": {
+      "data.json": "a4de82a2db88184138f2cf6185bfeb423177870d30796e3cce2defe4c6d64637",
+      "original.png": "26c5b8db92639e0a57572ef4379552c2c35812dbf162086419a99c0d61814e32",
+      "lines.png": "8807398f002819ec124b842225f291ab7dddbb821384ed4fb9daafe71aa16733",
+      "map.png": "b643b38c63de4e602e86cdaba5f2922d1262ed85d20f1a1a89df3322f3cfe17d"
+    },
+    "playable_sha256": "dd96276142d6cc1967fd19d04cd4b1cb4bf6e8ed7082dd941b60bd7fe050464f",
+    "numbers": [
+      32,
+      24
+    ],
+    "colours": [
+      19,
+      13
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "13 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 22,
+      "palette_after": 13,
+      "lookalike_colors_merged": 3,
+      "shade_regions_merged": 7,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 2530,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 2530,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 137,
+      "small_numbers": 10,
+      "fixed_detail_fraction_of_subject": 0.0005,
+      "pixels_changed_fraction": 0.0635,
+      "numbers": 24
+    }
+  },
+  "18": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:07Z",
+    "source_sha256": "c0529f2107cdfc4a8dfbccc1dbce05da3ae8b953af92bc32baeb3a65007eff59",
+    "files": {
+      "data.json": "5f2ff116ed3312e4b0ec64d0ed0109ad26339e3244d10a9a388c9f0cc595b4d3",
+      "original.png": "8c2cdce33a21d720ad4fc6817f4abe0e82a2db0bcec52c87923dc87fcca5d71e",
+      "lines.png": "fb0133b9232b0089206c8de3ba8b83a9b7058021409dd1153da4cdbb0cfbdd2a",
+      "map.png": "0d87ed1f512fced5abd59073f5007bd30d28794d6fdc936a7b7625d9be48c800"
+    },
+    "playable_sha256": "c96f9edb5b72dfda842c59be3cfed0a8fdfb73d792860cca504045c61cd13fd5",
+    "numbers": [
+      17,
+      8
+    ],
+    "colours": [
+      15,
+      4
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "4 colours in the palette; ages 4+ need 5-12",
+      "Only 3 colours with a real area to paint; need 5+"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 17,
+      "palette_after": 4,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 358,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 512,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0016,
+      "pixels_changed_fraction": 0.0148,
+      "numbers": 8
+    }
+  },
+  "19": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:10Z",
+    "source_sha256": "dff4c6e9f9be7128a7f81f632f68310d31d98982a8cd80807ae70ad639c0407c",
+    "files": {
+      "data.json": "7d417900b714a5aeeeac0fce8d4740c0a9295617f3f795c648e5a17b4b4c091d",
+      "original.png": "dcf805360021f8f91ab5f2cdaed3c9c6a428f6dcbf15782c1fcf832260bd11da",
+      "lines.png": "b1a00f7e5e2cf05bdc07d13d29bc89bbec87e90269ec5da4e4f2a96d10c33b28",
+      "map.png": "c03f40135d3f4e65b0a6bebf4959ef7b0a41d3450b471d688d7b044d07aa11ea"
+    },
+    "playable_sha256": "75ebd3257baa28bacb5fa090f17ed7d597fa20999cebfc89921212e32313d934",
+    "numbers": [
+      28,
+      18
+    ],
+    "colours": [
+      15,
+      7
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 16,
+      "palette_after": 7,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 66,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 212,
+      "small_numbers": 3,
+      "fixed_detail_fraction_of_subject": 0.0005,
+      "pixels_changed_fraction": 0.0897,
+      "numbers": 18
+    }
+  },
+  "20": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:15Z",
+    "source_sha256": "d13654d48ed68d377dee4f0091dfa7b938ee06a519a7ef315727c4739d152525",
+    "files": {
+      "data.json": "88b5c09b40461ef6a855166082323b15f151c567d031e55d463a384fb3e084b5",
+      "original.png": "13fd4c41088976734f3ec4bfbe09af91dc7dc9c664a0f56117cd84b6c97cd17a",
+      "lines.png": "ac32c373fcfbc7a3cdf7e5d18ca875e11ea11774d3e8e73ac8b451998358f1b5",
+      "map.png": "f28bc8b6e8b1041fc61ffed0f3f55c97f5a02caf70a69021b5fda55433e81c83"
+    },
+    "playable_sha256": "e2861dbd8a2cd147ada25ab81365ae5e6f807f1ba0506b96a9f01e61ae7fd523",
+    "numbers": [
+      28,
+      20
+    ],
+    "colours": [
+      16,
+      10
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Flattened colours drift from the source art (mean delta E 13.21); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 10,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 75,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 1361,
+      "small_numbers": 7,
+      "fixed_detail_fraction_of_subject": 0.0046,
+      "pixels_changed_fraction": 0.0098,
+      "numbers": 20
+    }
+  },
+  "21": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:17Z",
+    "source_sha256": "e225af02418e732feb1bc7473dd20c936e6c6e807092f7a974d7723ae45ed505",
+    "files": {
+      "data.json": "b26bbd980df5db0ec9977d1bec4482601a1377a1519091c7cf00b9f1ff05c744",
+      "original.png": "a0ff3ff7f41c4e59167d9d2d4ba78330302d58805a563621aff09315904f94fc",
+      "lines.png": "ab72845c9f03ce54b081a645a12c04460874f4e65f4fff662933fcaece1d02b9",
+      "map.png": "e74cc65d9f0afa09b03153fbde552f94675283b1746794454debfd2faace0801"
+    },
+    "playable_sha256": "6ee547af62daa7705e8064b9f223304a157a02260621bbdc9124a3e45e66d435",
+    "numbers": [
+      19,
+      5
+    ],
+    "colours": [
+      13,
+      4
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "4 colours in the palette; ages 4+ need 5-12",
+      "Only 3 colours with a real area to paint; need 5+",
+      "5 numbered areas; need 8-50"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 13,
+      "palette_after": 4,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 13,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 3411,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 397,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0013,
+      "pixels_changed_fraction": 0.0589,
+      "numbers": 5
+    }
+  },
+  "22": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:21Z",
+    "source_sha256": "cf041c658cfb86a7773b37b0f5f3f2de0a6926707972894b18433926cb383ac5",
+    "files": {
+      "data.json": "00e37c01d4d4724383215ad9f7a7514b509bc91591142d59cc5eae6f73ccff2d",
+      "original.png": "3746e6d31d006e1ea328c13d5276688fda1f036d7193e356bbaa4b9466fef1a2",
+      "lines.png": "4b9a4b55b1cdc01d3731074d0ce0fdcf407f62af437ee6ec94a48bdee40bb915",
+      "map.png": "070d5f3cb5a9dbfda75e7c7732a440cbab4c41369ab0ec4dd46ed3ce9ad1e3f8"
+    },
+    "playable_sha256": "e03bc591c827e2e134c681a4de619fb78e5e2c85ece13050ab2d642a1fcf202c",
+    "numbers": [
+      28,
+      16
+    ],
+    "colours": [
+      13,
+      10
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "A number spills out of its region (59% inside): [{'number': 10, 'x': 563, 'y': 719, 'inside': 0.59, 'clearance_screen_px': 3.66}, {'number': 9, 'x': 513, 'y': 553, 'inside': 0.91, 'clearance_screen_px': 3.36}, {'number': 8, 'x': 693, 'y': 736, 'inside': 0.99, 'clearance_screen_px': 4.03}]"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 17,
+      "palette_after": 10,
+      "lookalike_colors_merged": 3,
+      "shade_regions_merged": 6,
+      "areas_returned_to_art_colour": 1,
+      "slivers_absorbed": 3,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.1013,
+      "numbers": 16
+    }
+  },
+  "23": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:24Z",
+    "source_sha256": "fec0b821b17ead6c219fa62044ef229a5585fed58414e0d2efce3591a6eae9c0",
+    "files": {
+      "data.json": "c58338faa9bc42f5e05fab5cdb287c6e50ef24e5cb6b24abffde5a7a7d5384b7",
+      "original.png": "a6f73623e0f2b24004b45f7e5481e20a9798fc5eddeba3e1c1a156092ca682a0",
+      "lines.png": "61d1f952474700dc4abb9f4c1a315b25f0fe02967562ab3abce6605fbad917ee",
+      "map.png": "a4c5b0f8d10caf35e0f3f5f38dd6566a4726989ceda14fce6d61656b87e551ac"
+    },
+    "playable_sha256": "24e1b1d6801373c51a55e7cb98f1a54ee9a138c6e0022c28277637d201ebe40f",
+    "numbers": [
+      9,
+      8
+    ],
+    "colours": [
+      19,
+      7
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 19,
+      "palette_after": 7,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0,
+      "numbers": 8
+    }
+  },
+  "24": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:28Z",
+    "source_sha256": "b6801f0d6713def09e7f77aba64a275fbf179f1f0bd420264f888941cf8bdab7",
+    "files": {
+      "data.json": "b40e0e9b54ec57da45436e2a4125df24d878c4e838621bb278820040258ef3a2",
+      "original.png": "b366f9d7ea7d712fbe16c9be8e120393c8f8b79ac5d10190f9a925e07b2f6444",
+      "lines.png": "74742f350e8fe53fd5d1fd4ab1dcbb358bb77066dc5c8ced085e6a49263e0bf4",
+      "map.png": "97ab1d7f4843d672b99372c73fffb793d46e537ff01d49dc619acbd8d66eab5e"
+    },
+    "playable_sha256": "b5cf75af36aba8d29b80b80d886ca1e7b32ee2ab2ba618b35f6a83cd5ab5e3e0",
+    "numbers": [
+      25,
+      13
+    ],
+    "colours": [
+      10,
+      7
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 3 colours with a real area to paint; need 5+"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 12,
+      "palette_after": 7,
+      "lookalike_colors_merged": 2,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 1,
+      "slivers_absorbed": 7,
+      "ink_pixels_restored": 644,
+      "black_fill_pixels": 3568,
+      "dash_pixels_dropped": 748,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0197,
+      "numbers": 13
+    }
+  },
+  "25": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:34Z",
+    "source_sha256": "49c8717cf9d1c79a7ae95c8f4ef4662962b3960a3ab667b71fb6caede1200a3d",
+    "files": {
+      "data.json": "734ce1927d5e16382a23130783e1212ac84e368642f7d4314ef940d286fa7600",
+      "original.png": "216b0a24bd780daa8bdf078c49060a7d642043e67f88a46994c16cd6edfea359",
+      "lines.png": "29e5e1a34261431aae2566ca215c83dbd8b478eef90e32844390709ca06d7e8b",
+      "map.png": "ec28b7f50bb3b2f9a2d5b8710e725341cf32a8ddcbfecf8e2844b460f9b58478"
+    },
+    "playable_sha256": "e139dcc8ca0efd6498da641d229deeaed8ab67f8a8edbf5a440c843603d9820b",
+    "numbers": [
+      67,
+      55
+    ],
+    "colours": [
+      19,
+      10
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "55 numbered areas; need 8-50"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 21,
+      "palette_after": 10,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 2,
+      "areas_returned_to_art_colour": 2,
+      "slivers_absorbed": 37,
+      "ink_pixels_restored": 951,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 1031,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 1923,
+      "small_numbers": 21,
+      "fixed_detail_fraction_of_subject": 0.0049,
+      "pixels_changed_fraction": 0.0175,
+      "numbers": 55
+    }
+  },
+  "26": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:40Z",
+    "source_sha256": "819c419c023b364579a8c2ad45abe30db6ec2a1fbe9898351faddff5ee530857",
+    "files": {
+      "data.json": "5f405f46e363756f1c0584047a45a83f842d626b9f9204078d991a12a49ec1d2",
+      "original.png": "04601e29e834138e262472d08c20f21232ee1dc1f72170584d4815feae65cb07",
+      "lines.png": "08a517ac01fe458bac4d40b2a21bf3ef95c1472cc17a3ad6bbb5dce13c8340db",
+      "map.png": "6631c67caa0397d2f60e96c474f2535df9f79c495ea56b49f99980a42aa0bfea"
+    },
+    "playable_sha256": "cfb4141ab28c8cbb3ee770682c01503686e5f5efb06cf282e1a29917bc0cfd1b",
+    "numbers": [
+      53,
+      33
+    ],
+    "colours": [
+      12,
+      17
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "17 colours in the palette; ages 4+ need 5-12",
+      "Flattened colours drift from the source art (mean delta E 10.45); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 23,
+      "palette_after": 17,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 11,
+      "areas_returned_to_art_colour": 7,
+      "slivers_absorbed": 27,
+      "ink_pixels_restored": 3257,
+      "black_fill_pixels": 25461,
+      "dash_pixels_dropped": 2881,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 7,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 25,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0597,
+      "numbers": 33
+    }
+  },
+  "27": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:43Z",
+    "source_sha256": "547845cfa1df7b859d91a390a4c43e1db0593c60676b6fceb47871e6e117f03d",
+    "files": {
+      "data.json": "2fed1ab98ecc57a7231bd7fb631bf3ef1f56296b7677a6eea93bf7b613cd631a",
+      "original.png": "6303d6ec7dcfccb4db8e9b7f2f63f377b2e738f943364062d4893e99e2285f58",
+      "lines.png": "2a25922db1fefdfc584c870421d91ed9d82113796ef823daf5db69cec55f1412",
+      "map.png": "9e2812a65b6ae0d7f5677e697a802b0cde2a70749ccb735e267b40ef2ed0506d"
+    },
+    "playable_sha256": "2cd36b86a94c217a22d4ce9765673d70cd9f622c27c4a15ab3b76df42369ac23",
+    "numbers": [
+      51,
+      27
+    ],
+    "colours": [
+      11,
+      7
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 4 colours with a real area to paint; need 5+",
+      "A number spills out of its region (47% inside): [{'number': 7, 'x': 3, 'y': 849, 'inside': 0.47, 'clearance_screen_px': 4.7}, {'number': 7, 'x': 1023, 'y': 856, 'inside': 0.76, 'clearance_screen_px': 4.97}, {'number': 3, 'x': 1022, 'y': 758, 'inside': 0.82, 'clearance_screen_px': 28.22}]",
+      "Subject is cropped or touches the edge (0px margin)",
+      "Flattened colours drift from the source art (mean delta E 13.02); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 11,
+      "palette_after": 7,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 20,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 12,
+      "ink_pixels_restored": 177,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 1541,
+      "lost_part_pixels_reclaimed": 1166,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 217,
+      "small_numbers": 10,
+      "fixed_detail_fraction_of_subject": 0.0006,
+      "pixels_changed_fraction": 0.0667,
+      "numbers": 27
+    }
+  },
+  "28": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:46Z",
+    "source_sha256": "808c8c76e9a13ae4a2988656a9f0259cb25cee7e91c3e234042712dc4d24b8fd",
+    "files": {
+      "data.json": "c3738f1c41da2fd247e8ecdbb706806f19284458d66e141032e1d2e6042945e9",
+      "original.png": "365b68e1cb748f1b5d9b712ca1cd5eb36180d8ef42f79b1a5ae1e851b48c8618",
+      "lines.png": "5311ed274e5a011c565734b72b700e364c90be2fd7cea6f8085bc66062448dc0",
+      "map.png": "dac40cef0f1b7c124b9685984bd79e96db4081bf65a3f2221427d522ef6d8337"
+    },
+    "playable_sha256": "5a622f8705e75a4cf35455a114493c415ea75c835a334f0a74bd2e5ce83cc42a",
+    "numbers": [
+      29,
+      25
+    ],
+    "colours": [
+      12,
+      5
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "Only 3 colours with a real area to paint; need 5+",
+      "7 of 25 numbers are in cramped regions; too fiddly for small fingers",
+      "Only 13% of the canvas is paintable"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 13,
+      "palette_after": 5,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 10,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 338,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 201,
+      "small_numbers": 23,
+      "fixed_detail_fraction_of_subject": 0.0009,
+      "pixels_changed_fraction": 0.0037,
+      "numbers": 25
+    }
+  },
+  "29": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:51Z",
+    "source_sha256": "6c3e431c4f4556b1583f440b4364405b5d900429c47467d84bb59905d4bce4cd",
+    "files": {
+      "data.json": "8bea69d08c02384dfc86ab6019d9e816cb5de7116c89a827554e2e5008ab01e7",
+      "original.png": "0292e99e7d0d1aa2cb111f42f520e65c2c59fbbd8b7db11aa1862fae40f14728",
+      "lines.png": "8209be79c4d8e04ba9395b6db4409e7586da8c5aa8f869a67709328a67ed922f",
+      "map.png": "d4b83f4db8dfc2de7adc4b1025e6a8d69b550aa223803964822971323edc22e7"
+    },
+    "playable_sha256": "dc23261b49340ea06a1feee00d63bc9a5ecbf9e481fe85e1953283a46a6d8e2d",
+    "numbers": [
+      21,
+      17
+    ],
+    "colours": [
+      16,
+      12
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 16,
+      "palette_after": 12,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 3,
+      "ink_pixels_restored": 93,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 63,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 213,
+      "small_numbers": 6,
+      "fixed_detail_fraction_of_subject": 0.0006,
+      "pixels_changed_fraction": 0.0058,
+      "numbers": 17
+    }
+  },
+  "30": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:30:56Z",
+    "source_sha256": "61483c92ad243f2a2a482569e5cafc9cfe35c857c0c864c5dc6d6ad611dc7657",
+    "files": {
+      "data.json": "7b743339be822d3a3d633cf0b52d36df045c5fab18b4b2b0f4a674b7f8678f0b",
+      "original.png": "ab7608ac0709ce824dda66a917027f67c2e709eeb98eac8f6ade21929c543306",
+      "lines.png": "90ad4daacd415cf80623d5832de3f10bea697b7c96e8fed682958b6428dc7695",
+      "map.png": "02cc42cd0be3b8eb49559ac352d6a009c396510c999620fe6653a781a1a1d38c"
+    },
+    "playable_sha256": "77a5ffe1b39a07bf55ccd3459476ee5e58e708e15482c6fec1492454806303d1",
+    "numbers": [
+      28,
+      22
+    ],
+    "colours": [
+      17,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 11,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 23,
+      "ink_pixels_restored": 95,
+      "black_fill_pixels": 48966,
+      "dash_pixels_dropped": 281,
+      "lost_part_pixels_reclaimed": 2514,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0613,
+      "numbers": 22
+    }
+  },
+  "31": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:02Z",
+    "source_sha256": "bb620ce157ce0432d07d8380c6622bf3a24c34458077b599cc0bbef98d8bde5a",
+    "files": {
+      "data.json": "2a4393fb4edecaf7fce4b7b3da0870b7d44e3baf3e356482183c04a04e354315",
+      "original.png": "f14391833c167b242956647a217e898c6c24a57ad04595b9f2dfc7f1cc202c88",
+      "lines.png": "d037b14f78078971d9c59c6a9b34fbe2d4f38e87f6bb1b2db90be4293ac48843",
+      "map.png": "2c83d08030db10c563f743ef02368973940fd3867d14d718d7f916e5256d01e4"
+    },
+    "playable_sha256": "7ff8fc91ec99073aeb50f01f5d3f92866d2b89836a0eca041060434f4454e302",
+    "numbers": [
+      80,
+      50
+    ],
+    "colours": [
+      15,
+      16
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "16 colours in the palette; ages 4+ need 5-12",
+      "Flattened colours drift from the source art (mean delta E 15.13); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 16,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 50,
+      "ink_pixels_restored": 2784,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 4920,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 5,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 25,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0336,
+      "numbers": 50
+    }
+  },
+  "32": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:08Z",
+    "source_sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
+    "files": {
+      "data.json": "9dbfe5627238c0749a053d1339479d53d997905239cd309986852bea559e7349",
+      "original.png": "86af2f4d0c76cb50b3a62d22137417f3facd12a20d3041a39bc73756be3fc696",
+      "lines.png": "bf1570c523c3701a3177bda762ef1d854792e3d3be0295a2d5600813f74edc88",
+      "map.png": "48957f739c91ac26494fff4cbdbabdb1ba137f148af7970faca20e868d2656ff"
+    },
+    "playable_sha256": "3cea40176f72203763be10b866a5d482ed827d4cb5d3a61e70e7658547e7fdc3",
+    "numbers": [
+      32,
+      23
+    ],
+    "colours": [
+      16,
+      14
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "14 colours in the palette; ages 4+ need 5-12",
+      "1 pairs of numbers are drawn on top of each other"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 19,
+      "palette_after": 14,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 5,
+      "ink_pixels_restored": 494,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 525,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 9,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0311,
+      "numbers": 23
+    }
+  },
+  "33": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:12Z",
+    "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
+    "files": {
+      "data.json": "1f93344d546b8d8db6b961b7e0f5a98e24d7f65438c2ebe4a0e8060cdf9cebdc",
+      "original.png": "a693d2f4b731de6904d7a64dc5f2f4e336af40a1a22eb658549c95701f638811",
+      "lines.png": "39cddc0db58b2b5ade1f8bbf346c7c7158f5ddabfded0f2890e7dc898dc51ca4",
+      "map.png": "0d7b69cca436924c0c0030fc3dec42e90c589ccd5fc8dac1f4b5e8d4e37c91c0"
+    },
+    "playable_sha256": "1b69d64a466e520cda7d813c08c3b754c70f2fc6619d7ef0384f7a5a4d9ac51c",
+    "numbers": [
+      83,
+      14
+    ],
+    "colours": [
+      19,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 19,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 95,
+      "ink_pixels_restored": 4494,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 6426,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 545,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0011,
+      "pixels_changed_fraction": 0.0101,
+      "numbers": 14
+    }
+  },
+  "34": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:16Z",
+    "source_sha256": "63afb532bd58c1835211baa492396b2c157f4db8f52f64ad7ca65d2a630b18e2",
+    "files": {
+      "data.json": "df3005daf6ffbbe064c5646809071ce40127a22387b6ed0c2f2eb49d9ddd3e9d",
+      "original.png": "19dc14f0d83972fb4ae95119f0a8033cfae15d3293a32ffb9293988186e37b84",
+      "lines.png": "e4c4e8edece6a93c4345f10c0c6ad2b20728c91c4fc4d031e98f5cf0ab448839",
+      "map.png": "9337ffd4e9ae2bef6e9f4cc3b75bbc55fee1b0450f50e3fd9d1c47ed5b98e876"
+    },
+    "playable_sha256": "e8547e325ea78881d140fbcb0e457ae912d68b456485436c776036a45f7258d7",
+    "numbers": [
+      14,
+      15
+    ],
+    "colours": [
+      18,
+      9
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 19,
+      "palette_after": 9,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 156,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 211,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0121,
+      "numbers": 15
+    }
+  },
+  "35": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:19Z",
+    "source_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
+    "files": {
+      "data.json": "8777204891c6db386578a13be76f78ab542fcca967ef3f1f9d841841c7d569dc",
+      "original.png": "253b5b4c7004f022c8ade80ffaa761f0897c9a0e91d70360240b71f19cae97eb",
+      "lines.png": "eac38630d3c6d4ef2af93f5f00190262e5dd92d30d2d40d887679032f2f623e8",
+      "map.png": "df2d009fe0a14029de619868bfcafeda64ea685d8be95e3ece2984eafcf4202c"
+    },
+    "playable_sha256": "c32c12961c41ab42f275e90fc3a8fed5becf8435f39220b5d51f4c9a5fab3c6b",
+    "numbers": [
+      14,
+      14
+    ],
+    "colours": [
+      12,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 13,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 14,
+      "black_fill_pixels": 133459,
+      "dash_pixels_dropped": 514,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 165,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0006,
+      "pixels_changed_fraction": 0.0165,
+      "numbers": 14
+    }
+  },
+  "36": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:24Z",
+    "source_sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
+    "files": {
+      "data.json": "6465407d4f7e634bfd1634d126dfa365e049bc09bcce7452fc97d9e6bd5d7c9d",
+      "original.png": "04cebe86d563e02d577878bb0c089cce80566e183b1fdea099948f1c4c888e38",
+      "lines.png": "c645ab757076683e7c1033240d852226dd49a607f1168f24613901c6daab1690",
+      "map.png": "5a9d115be69f143cf06e016009cfe85ea6d70f15471089f7911482bbca25c3cf"
+    },
+    "playable_sha256": "0074498a84b3c6fbe5ac6506b94770bc0363cdfadaef52c82677ed15b7d30a83",
+    "numbers": [
+      29,
+      25
+    ],
+    "colours": [
+      15,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 17,
+      "palette_after": 11,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 11,
+      "ink_pixels_restored": 285,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 757,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 318,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0007,
+      "pixels_changed_fraction": 0.0049,
+      "numbers": 25
+    }
+  },
+  "37": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:27Z",
+    "source_sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
+    "files": {
+      "data.json": "5f952d2c016e6d12dc8b21b00897de15fe534f0a2eb9441e5027d805fc23f087",
+      "original.png": "bb8121caba7bd54736d331436e42c01ba69cc9ffa94b6bd95e3e50f76de14d5e",
+      "lines.png": "153e31498642b917310c0e5f946760667f8b102973233587a0a92bb97e35ce15",
+      "map.png": "60434701016eaa061a43ed33fe1d9231b48b1d143ff65ae3b43cf12c495f2808"
+    },
+    "playable_sha256": "a9b23e578c467d43cc1d83376223271334f9f1f80dbd52ab33492aef55e04182",
+    "numbers": [
+      23,
+      21
+    ],
+    "colours": [
+      10,
+      7
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 11,
+      "palette_after": 7,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 2,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 9,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 862,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.006,
+      "numbers": 21
+    }
+  },
+  "38": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:32Z",
+    "source_sha256": "9cf1d40bf412cd278785362cba7d41c07242e4f29e11e32cdfd6374c69d9f650",
+    "files": {
+      "data.json": "42c55080535dddfa9c68122d8288804bd5cc4de463b020ed653b52f7b9fdad35",
+      "original.png": "77a8ee18a8e77126551484cc93bd600066c2f3379310c53e1f8c8054bc8bb75c",
+      "lines.png": "580e5368bd639adf1b5cd0c52a3c10a725a1c92faaa52e2bb28c5d83df247c06",
+      "map.png": "01454f9e24ceb3592514c07c3d6a8a921301c9e4d3f8ff69959faa1f532b32ca"
+    },
+    "playable_sha256": "f1e2175610c4ed21fea6fa731229caba852b8719c639591bcb04a94df2189da8",
+    "numbers": [
+      22,
+      21
+    ],
+    "colours": [
+      15,
+      12
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 17,
+      "palette_after": 12,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 2,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 42,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 1031,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 1,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 7,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0028,
+      "numbers": 21
+    }
+  },
+  "39": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:38Z",
+    "source_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
+    "files": {
+      "data.json": "96dd2d412268ff61805d0013497dc2e890bd302097048caae72c8b8bdd6ed186",
+      "original.png": "e2e68dfe05cc9cfb0abd0fe27a9fd56e46037a2d0c3dfd22600739c108972ac9",
+      "lines.png": "b80951530bba03ed5cf6996c96e174b4201ec823592e88c0c7ceb2c53466733f",
+      "map.png": "38295197b45b3cf58be7917aaf97727f229c2d58eae7546d6f8eed6a5f1c0274"
+    },
+    "playable_sha256": "5125d076d71f1f24fded5cb1facec1abcafd269bdbea16315368939d5c668731",
+    "numbers": [
+      22,
+      12
+    ],
+    "colours": [
+      16,
+      10
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 10,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 54,
+      "ink_pixels_restored": 519,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 657,
+      "lost_part_pixels_reclaimed": 1486,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 3,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0203,
+      "numbers": 12
+    }
+  },
+  "40": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:42Z",
+    "source_sha256": "2fd2163d25a74af55e9c87d9b865eebd0a36ef6830cd2c6d052040060530b712",
+    "files": {
+      "data.json": "9a637c219d75dcca0beb3a1a79d2e39417a67d46aac344339c1443e19b949f4f",
+      "original.png": "d1c1a0958ddf319ec04396a96e12a435153881517d005fb404994008cb859f3d",
+      "lines.png": "39850b8e56ca8a5d1f6809ed454650fd0018b6500dc9160a3896e372994003e8",
+      "map.png": "3e5cb082aa76d7fb5e78836babe086ac90fea0e34bda0f414cada4ae250a49f5"
+    },
+    "playable_sha256": "a067972725a3b411a411ba1b0dfa9abc27468d64ab5dd1a81b8fa7717f49902b",
+    "numbers": [
+      34,
+      12
+    ],
+    "colours": [
+      20,
+      9
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 21,
+      "palette_after": 9,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 25,
+      "ink_pixels_restored": 846,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 1140,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0116,
+      "numbers": 12
+    }
+  },
+  "41": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:48Z",
+    "source_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
+    "files": {
+      "data.json": "1999370f157435584900946ecabc549357103021206b1aacc05076c779c1e7fc",
+      "original.png": "2e84c9ec4dd309cc744babe564cb53e5d7ac2dc01de0d26253666166f8dfb6cf",
+      "lines.png": "7df633b97c5fceec8c92f8cdc4ad23ca158b60a9643783395e70f28b8fbdf3ea",
+      "map.png": "009e32d59e99b02c4190d2dfb903ca31ac5fa45829914149637e3f09e1ec4255"
+    },
+    "playable_sha256": "854b77e931e3e446c209ed949a96948d0b9675fbc36948d762490305487c6a00",
+    "numbers": [
+      24,
+      15
+    ],
+    "colours": [
+      16,
+      14
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "14 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 14,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 5,
+      "ink_pixels_restored": 1046,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 2224,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 4,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0223,
+      "numbers": 15
+    }
+  },
+  "42": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:52Z",
+    "source_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
+    "files": {
+      "data.json": "7ef50a55be2f6f1e2a697796af7d5d81906439f923561344f64306c4de3160ca",
+      "original.png": "0c3a34ddf1abe967011de5697554cbde1fab3553b56c2c085a7573ed9fc5d0e8",
+      "lines.png": "54be8e1ef07b0437b99a2c4059f07506b30bedeab62f819ca0cdc89286c1516a",
+      "map.png": "02e7ab2155f1f6a654ce377a03b376c7287ac0fce60cf608a5ae71c75467cf03"
+    },
+    "playable_sha256": "7fd4a068c6ce865a09db708d2eef2d5abaa0be20fc4345309e894b4c5997dbef",
+    "numbers": [
+      25,
+      10
+    ],
+    "colours": [
+      18,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 18,
+      "ink_pixels_restored": 1221,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 2040,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0029,
+      "numbers": 10
+    }
+  },
+  "43": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:31:56Z",
+    "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
+    "files": {
+      "data.json": "23bce054cdd3505343438466e53e0fe66b110af6aac128bea34c677225c822b4",
+      "original.png": "726624a58c774ce4c05f3dc35cdc099ee382a20e2c394397f2349268da60d337",
+      "lines.png": "29c4e5c6cf90bb68fb6d616d9dfeea5b74954edebb2667510f20eaa32d6792a8",
+      "map.png": "eef8ee8d1f227078fc117fcfd8df77ed10e8137c90ddcee4506e9f39023582e8"
+    },
+    "playable_sha256": "6c653e618646d995e53f46199fd937abcefdf3035e2ec0ba4ee102e48186ebb0",
+    "numbers": [
+      19,
+      13
+    ],
+    "colours": [
+      15,
+      9
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 16,
+      "palette_after": 9,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 2,
+      "ink_pixels_restored": 1750,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 191,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0139,
+      "numbers": 13
+    }
+  },
+  "44": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:01Z",
+    "source_sha256": "38b02eb9e7809c4b8e16783cf4b3d860ae9396cf684f73a2c9fd24c9614be7e1",
+    "files": {
+      "data.json": "e58692b1c7dd9f218c2a520b9e0512745b7bf02e4734032e4419d2c2ae492c00",
+      "original.png": "3bbca14a1fd644779295145ab06a1791b3a8e2b6d320e2593a37dfe700f26578",
+      "lines.png": "1031957f14987822c88ea44ffb5e00865bcd56c97ac23a5c256c7aaf7810c0a7",
+      "map.png": "d4e00dd5e05bde3c5d9386df6c6a7e78bf2bb950ae9c622141eb5ecd930183c2"
+    },
+    "playable_sha256": "190ee484fe622a41ad0357d1b8a225a2524e78fd32f8b7d5518ae451c77a909f",
+    "numbers": [
+      34,
+      24
+    ],
+    "colours": [
+      18,
+      13
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "13 colours in the palette; ages 4+ need 5-12",
+      "1 pairs of numbers are drawn on top of each other"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 13,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 8,
+      "ink_pixels_restored": 283,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 217,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 9,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0089,
+      "numbers": 24
+    }
+  },
+  "45": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:05Z",
+    "source_sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
+    "files": {
+      "data.json": "4c9cf7ce5d9cded15e41c01296907be9d36084f1d4bcdc8c781c7def32d3b648",
+      "original.png": "fc9bdef2801af7340657bb94a460e175edd98965b9bdd0cb006bbdc0db95494e",
+      "lines.png": "e9e56dadf72f496758b8709fe47dc22c1ddf647460787e70999f5558100304bd",
+      "map.png": "e32e53d9b028ebee1bbc0b0dbd04a73eeb3ebfeb0082381219189a3d33218d00"
+    },
+    "playable_sha256": "131b0037cf301f9daed93fdfe238b5c47a0ca1d9971502051da5cb85323abba8",
+    "numbers": [
+      12,
+      11
+    ],
+    "colours": [
+      17,
+      8
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 17,
+      "palette_after": 8,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 135,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 135,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0001,
+      "numbers": 11
+    }
+  },
+  "46": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:10Z",
+    "source_sha256": "00b8584bae3ffd81eab52d036e86cc398ce2089d1f1b42cbaa52c53728d5bcb7",
+    "files": {
+      "data.json": "ce3f95262faea5b93da0e6b7a24000d565a6972243e1f9ca49ad7cf5ea281694",
+      "original.png": "2db093cb9adf5e83d2c2a2316dfd009cfb00d2ab43a60b1e7142dfc32c9d2ef0",
+      "lines.png": "2ce9c92ae7c7ff903352fe200b6844bdeae7ebe148d44e5abd812b0b065035bb",
+      "map.png": "59e91223dabcae496c8e90e61de2619d02f01d34b8d4e1a51c99b2262b9e34e6"
+    },
+    "playable_sha256": "614005fc636020514c9c735d45f35e02e28f58a11c72f99f620e412a6c4341a5",
+    "numbers": [
+      43,
+      12
+    ],
+    "colours": [
+      18,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 19,
+      "palette_after": 11,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 41,
+      "ink_pixels_restored": 3073,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 6427,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0146,
+      "numbers": 12
+    }
+  },
+  "47": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:15Z",
+    "source_sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07",
+    "files": {
+      "data.json": "1f6b9a2abfb7de9d5cedac5f08303df709bcf78e768c27fc540cdaab01a9caf5",
+      "original.png": "e506d918eebf50f0335961399a5bc53e2d3d429936765a22dbe43defecb62ae0",
+      "lines.png": "243a3231db2fa7789740e073d1bec1c7fa9d86d3ce5d6b7c111d0fc12d38c77e",
+      "map.png": "8ca50b3ce62c3494426a0f020cba05610dbd5eaac91fcc6088b4aa0f9fc6ea43"
+    },
+    "playable_sha256": "74b6eda7e7c6a889595c9848c3cecc0f5a13d4daab1b73d5e076ce1c0f6ede48",
+    "numbers": [
+      16,
+      14
+    ],
+    "colours": [
+      20,
+      13
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "13 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 21,
+      "palette_after": 13,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 124,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 9,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0138,
+      "numbers": 14
+    }
+  },
+  "48": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:20Z",
+    "source_sha256": "d0a0a17ce72707007e02a1d4e3f154f742dfac45a5549e0e61b70d750887eead",
+    "files": {
+      "data.json": "5380b9d1f8cd9febe964a051b94972db4f789502ce5631138901b168aafa4145",
+      "original.png": "7fc5944f5795bf2f3ee51db8f8157b469117cedc7b2999b60196b1542306eab5",
+      "lines.png": "820b56ae01d781cbf6b1fd548cc268834a2ecb9e4cac33b5573fe7dfa6f3ec95",
+      "map.png": "6bb2eeda114e6df57d82408f7a40cc2284a8b599dd44cb6a6ce31f478e39505c"
+    },
+    "playable_sha256": "15e209b3b30815ea5fae78a6554e6c2343a2a309ccffdaaed64a314094f89c49",
+    "numbers": [
+      32,
+      17
+    ],
+    "colours": [
+      16,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 11,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 19,
+      "ink_pixels_restored": 1309,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 651,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0074,
+      "numbers": 17
+    }
+  },
+  "49": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:26Z",
+    "source_sha256": "2950e069d4c9f49dac6314a509a15b4cb5d100d0984b4147841f60f1d4f7eeff",
+    "files": {
+      "data.json": "be7ac42645772707314b026502f8c6aca9bf41900f34719df32107d2c18bdf78",
+      "original.png": "a51a3db9f9a6d3808f714e704996d6fa41ea60d71c7a7725db1fae0a6f988d49",
+      "lines.png": "84396af2775aa9f047b888d90a7ca01d56e59cd19f2bf981398e36a48b3cf398",
+      "map.png": "7d2326eef5925f6d4844b82356dcfef7727788462503d388e2e9325f524b1540"
+    },
+    "playable_sha256": "4b5327d27962c2f03b197e4e6de2b1b98429c265f339635c84587e181a3056ae",
+    "numbers": [
+      22,
+      21
+    ],
+    "colours": [
+      13,
+      14
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "14 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 14,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 499,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 5,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 10,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0223,
+      "numbers": 21
+    }
+  },
+  "50": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:31Z",
+    "source_sha256": "4869a3d34d7de21c0cb8b65275c1a16328e7595d406a2a755da46361531daac1",
+    "files": {
+      "data.json": "b0c55b84875e32eff7f22aed4b90a25a3e67c54634fecbfe54853e1788769b0f",
+      "original.png": "6371736f9cfb6992173790578337eb52702818085aabb1094a3ea2791186a71a",
+      "lines.png": "e2a0c72740766e77975e0ee89d508a8cda780fe733320a10827427f85e64eac1",
+      "map.png": "51a9cd0e2169d523f5a7c1e9bd0ea7eaea85f32970f6c33e1795f3018017c395"
+    },
+    "playable_sha256": "c377e1bde915d8a0e44ca70bddb713915cd3acd7ff0a049d321e1a925ab46b24",
+    "numbers": [
+      63,
+      19
+    ],
+    "colours": [
+      19,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 20,
+      "palette_after": 11,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 52,
+      "ink_pixels_restored": 7778,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 9488,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 3,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0082,
+      "numbers": 19
+    }
+  },
+  "51": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:35Z",
+    "source_sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
+    "files": {
+      "data.json": "f77fad0973bb43f6b71a3e40b9e1819babdfca15a25a772a386ff9c3dcfa7f3c",
+      "original.png": "aa63b6a766fae498a2bb103593ca39824f792825990c5c25c4bc7aa961719b56",
+      "lines.png": "a7384b71774a5471bfee3cafe666fca0817186d5ad573220b689d30294886761",
+      "map.png": "085b37e54da084c7a83d96b820500b8fd93d6c662ffcac0ae8f2c6e7200deaf4"
+    },
+    "playable_sha256": "0fd1b4c0a4e17ff0be4bb7cd0e5de16d0642082905db63e70c2b8695d85e5f04",
+    "numbers": [
+      17,
+      16
+    ],
+    "colours": [
+      21,
+      10
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 21,
+      "palette_after": 10,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 411,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 311,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0001,
+      "numbers": 16
+    }
+  },
+  "52": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:40Z",
+    "source_sha256": "259b49bd6135b796663898034d80024b088ae8d52c400e388244684b7e2dd8bf",
+    "files": {
+      "data.json": "9396f2334104149003bd5004b4f92a03f72e5bbc5c41a4458c5d2fc808367ad6",
+      "original.png": "b83f18751312cdbdf514558128bce75b157849919a05ac1cc56835716599f2cd",
+      "lines.png": "aa2e15a31c9f3a854ecb57919f9bb743c2e70c141c71c05d4b09a3408247a019",
+      "map.png": "0b873fc3feb897ca3938df266c346c137adca2b9f62f53088a5b74e0a9281aab"
+    },
+    "playable_sha256": "56d221e1eca0072f8133ea4c08f13a14cf048375d06385d7f6b119a338a7faac",
+    "numbers": [
+      32,
+      22
+    ],
+    "colours": [
+      19,
+      14
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "14 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 23,
+      "palette_after": 14,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 27,
+      "ink_pixels_restored": 2418,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 2342,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 4,
+      "mixed_regions_divided": 1,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 4,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0585,
+      "numbers": 22
+    }
+  },
+  "53": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:44Z",
+    "source_sha256": "60d1a7dee351cc4435eab26e542aaba9b4608d5f3611850cbc72100fb6fb951c",
+    "files": {
+      "data.json": "ec8b03ad79c478d949f6328901f2c4dd4e5e09a8eeab67df92bdd33afb675eab",
+      "original.png": "4e9ea97ebb83ddc9adeb318fb41945fae42ee327bfe4c8a7213c7036a1300f27",
+      "lines.png": "d4db6fc3a6943c9936e7d9e7c8b695098965c7b358b70d65ccf77f6c67b59ea1",
+      "map.png": "94114a96442578bd4771276e07fce3d98f27ee60b673c5b90f0a50f3f238525b"
+    },
+    "playable_sha256": "3652f316858a4e1cd2b834b8c33990bb693dbbca6dfaac087766524be0364fdb",
+    "numbers": [
+      17,
+      17
+    ],
+    "colours": [
+      17,
+      9
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 9,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 0,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 1,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 0,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 2,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0252,
+      "numbers": 17
+    }
+  },
+  "54": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:48Z",
+    "source_sha256": "4e996467f19b05fc523779b60acd47f78791562b8c81e377150eac95e5efb967",
+    "files": {
+      "data.json": "912559d9cbde9767f40b689363846bda13f7072b33660b23a145cb7f8ae740c8",
+      "original.png": "8901c89b890ef0b8a0305dc4b3f6b4fc21e6a153def4d593e719113d2390b3df",
+      "lines.png": "650ab2a323d107bd8a0768d4da9a89687bb747bca93c133304b0e2e305c39da5",
+      "map.png": "0e4e3efa9bd5b131f93ddfdd46ccc3256e6c07ad9dec0ca110788e424a214da8"
+    },
+    "playable_sha256": "86a90cd12b1bcb673cd5db66217dde421a2ba1bbb34795a37942ded980a9ad8b",
+    "numbers": [
+      12,
+      8
+    ],
+    "colours": [
+      16,
+      7
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 16,
+      "palette_after": 7,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 4,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 3,
+      "ink_pixels_restored": 3173,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 3173,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 0,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 0,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0048,
+      "numbers": 8
+    }
+  },
+  "55": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:53Z",
+    "source_sha256": "66385f972997b487705a4f5edccc6900f80fc2def7ff99ad13a6288edadee6bc",
+    "files": {
+      "data.json": "5c80b437677e9fb444462617d62175ce1edc0f35a00875dd2e81537c612c7e89",
+      "original.png": "fd817f43a57d2ae7dc45485e2f093bb3fedddd066070fa8e7ff21b795ae2dda5",
+      "lines.png": "0e857b1376d008dae01299ac6c3a8b9837a1e2dc90fb98fcad749c95b2433395",
+      "map.png": "38d30fb3dc60bf5898e5bf9fab742e21b2ada5f578dc1879f2ad719946ea0204"
+    },
+    "playable_sha256": "ac1d359aa3ede7513f78221a93cf80cf03b37c704f020f43371170cf678d9e89",
+    "numbers": [
+      26,
+      27
+    ],
+    "colours": [
+      15,
+      11
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 18,
+      "palette_after": 11,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 1,
+      "areas_returned_to_art_colour": 1,
+      "slivers_absorbed": 0,
+      "ink_pixels_restored": 0,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 3112,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 16,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0083,
+      "numbers": 27
+    }
+  },
+  "56": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:32:59Z",
+    "source_sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e",
+    "files": {
+      "data.json": "58b5ded631e388cd9f71c1e3dc5536a51f40159dc1374038ecae6d39b82f3510",
+      "original.png": "25cc02336dd457c88773a1fb3316aeb7230d3d94e68a0d7b9ecf3fa24ba44868",
+      "lines.png": "887faf17b3b53aa2c7f567c1b404f99d892994a134eb21b75fac46f818faace4",
+      "map.png": "2da8cab5b69aee4b75de2a636773f21c3df2d21a235e5b3283139963381c63ef"
+    },
+    "playable_sha256": "b0e6b8e10c62692b88911673de11b3d3eaf0de6543eceef36126ef803ca46a5d",
+    "numbers": [
+      37,
+      21
+    ],
+    "colours": [
+      15,
+      10
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "6 of 21 numbers are in cramped regions; too fiddly for small fingers",
+      "Flattened colours drift from the source art (mean delta E 11.0); the source has gradients or shading"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 16,
+      "palette_after": 10,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 2,
+      "areas_returned_to_art_colour": 0,
+      "slivers_absorbed": 43,
+      "ink_pixels_restored": 2834,
+      "black_fill_pixels": 6857,
+      "dash_pixels_dropped": 4625,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 1,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 9,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0088,
+      "numbers": 21
+    }
+  },
+  "57": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:33:06Z",
+    "source_sha256": "70f081afac007c432125595fea10ad7abba85ff77f0ccb5095dd87599b384455",
+    "files": {
+      "data.json": "ceb536e4c9ba9068b8890629dd8f46a9964c8c6ca8198b38268e3db6f0d34369",
+      "original.png": "0f31cc78ae3d1ff1a3ea79f3108b9f431f4ca077a9f884e8bf48496a290e3a85",
+      "lines.png": "79f05921ded8199b37563c4a6b9cc07fecf6abb4117eb76c5802371e0404d862",
+      "map.png": "08331203b4137582a0f4a93dcd7f74eb31385feb3469812d71d338387acad290"
+    },
+    "playable_sha256": "25729dc9b737e11a833a4ecef3afd3e0ac964c065c890c68c9057c3153624fc7",
+    "numbers": [
+      114,
+      42
+    ],
+    "colours": [
+      19,
+      18
+    ],
+    "verdict": "FAIL",
+    "failures": [
+      "18 colours in the palette; ages 4+ need 5-12"
+    ],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 22,
+      "palette_after": 18,
+      "lookalike_colors_merged": 0,
+      "shade_regions_merged": 7,
+      "areas_returned_to_art_colour": 1,
+      "slivers_absorbed": 89,
+      "ink_pixels_restored": 4077,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 8815,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 3,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 20,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0368,
+      "numbers": 42
+    }
+  },
+  "58": {
+    "finish_revision": 11,
+    "refinished_at": "2026-11-25T16:33:12Z",
+    "source_sha256": "e0570a0ca3e6356c5619c3abe105b6ec97aaea2189b78223dd7d24abcb2b8295",
+    "files": {
+      "data.json": "aae925e0ca0c95851d551e52cb54b6f09d17cb90d05a1a0e8e11829e6a9ca659",
+      "original.png": "d75093def07340aa297e2e536894e4e1c1cc76588a6afbfa8f5efad3327fbdb7",
+      "lines.png": "1ff35f90b1ef450609f59d836849f03c4cf82d1a4a2c4314a374c9ca11d1b39f",
+      "map.png": "34b781d8124e4a9cd18649c19910cc1b2d93b72726b2c9112420e95094b3d966"
+    },
+    "playable_sha256": "0b0437c3cda5f4abeb61f8652bd5d553bcb4b8e0e441b33a50eb5bc331c55ed3",
+    "numbers": [
+      23,
+      20
+    ],
+    "colours": [
+      16,
+      12
+    ],
+    "verdict": "PASS",
+    "failures": [],
+    "finish": {
+      "finish_revision": 11,
+      "palette_before": 19,
+      "palette_after": 12,
+      "lookalike_colors_merged": 1,
+      "shade_regions_merged": 3,
+      "areas_returned_to_art_colour": 1,
+      "slivers_absorbed": 3,
+      "ink_pixels_restored": 19,
+      "black_fill_pixels": 0,
+      "dash_pixels_dropped": 738,
+      "lost_part_pixels_reclaimed": 0,
+      "overmerged_colors_split": 2,
+      "mixed_regions_divided": 0,
+      "fixed_detail_pixels": 0,
+      "small_numbers": 7,
+      "fixed_detail_fraction_of_subject": 0.0,
+      "pixels_changed_fraction": 0.0521,
+      "numbers": 20
+    }
+  }
+}

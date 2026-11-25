@@ -1,0 +1,48 @@
+{
+  "id": "62",
+  "slug": "whale",
+  "title": "Whale",
+  "category": "animals",
+  "kind": "animal",
+  "factory": 1,
+  "added": "2026-11-23",
+  "seed": 2026114362,
+  "subject": "A smiling blue whale in side view with a pale cream tummy and a large tail, spouting one broad turquoise fountain of water from the top of its head, with one large orange starfish and one big yellow fish with a green tail beside it",
+  "motion": "The whale flicks its tail and blinks, the fish wiggles its tail and the starfish sways. The whale stays at the same height and the water spout keeps its size and only sways slightly",
+  "image_prompt": "Flat vector art, children's coloring book style, A smiling blue whale in side view with a pale cream tummy and a large tail, spouting one broad turquoise fountain of water from the top of its head, with one large orange starfish and one big yellow fish with a green tail beside it. A complete friendly face with clearly visible eyes and pupils, correct anatomy. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The whale flicks its tail and blinks, the fish wiggles its tail and the starfish sways. The whale stays at the same height and the water spout keeps its size and only sways slightly. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "history": [
+    {
+      "at": "2026-11-23T17:51:50Z",
+      "stage": "image",
+      "seed_was": 2026112362,
+      "reason": "Review: two meaningless blobs beside the fish; spout colour merged with the body"
+    },
+    {
+      "at": "2026-11-23T17:59:55Z",
+      "stage": "image",
+      "seed_was": 2026112362,
+      "reason": "Check: only 4 colours and 6 areas; too little to paint"
+    },
+    {
+      "at": "2026-11-23T21:32:17Z",
+      "stage": "video",
+      "seed_was": 2026113362,
+      "reason": "Check: spout shrinks to a thin spike and regrows, hue drift 0.31"
+    },
+    {
+      "at": "2026-11-23T21:42:35Z",
+      "stage": "video",
+      "seed_was": 2026114362,
+      "reason": "Check: spout rises out of the top of the frame in 17% of frames"
+    },
+    {
+      "at": "2026-11-25T15:49:43Z",
+      "stage": "image",
+      "seed_was": 2026113362,
+      "reason": "Restyle on Qwen-Image 2.1 to match the earlier levels, approved by Lewis"
+    }
+  ],
+  "image_negative": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, missing eyes",
+  "image_model": "qwen-image-2.1"
+}

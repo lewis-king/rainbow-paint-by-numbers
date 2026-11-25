@@ -1,0 +1,21 @@
+{
+  "id": "65",
+  "stage": "image",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-image.jpg",
+  "notes": [
+    "Sailing boat on a puddle of water; sails, hull stripes and portholes numbered, no face, painted matches source"
+  ],
+  "checklist": [
+    "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
+    "Anatomy or structure is correct: right number of limbs, wheels, eyes; nothing malformed or fused",
+    "Objects, vehicles, food and plants have no faces or limbs; animal faces look right",
+    "No text, numerals, watermark or stray marks",
+    "Numbered picture: every region is a sensible shape with a readable number, no clutter",
+    "Painted picture matches the source: no lost features, ragged edges or wrong colours"
+  ],
+  "image_sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f",
+  "sheet_sha256": "d70a973ee94da1e628c6a99700cb76f1670df7fd2e3b34a71495cb3c51a0041c",
+  "reviewed_at": "2026-11-25T16:33:34Z",
+  "playable_sha256": "6aed999a72cf3e01eb3768c8e0a6752919fb716061814d67dbe84a160b9f3563"
+}

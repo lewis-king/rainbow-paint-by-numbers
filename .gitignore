@@ -55,3 +55,9 @@ image-processing/generation/reviews/*-paintable.png
 image-processing/generation/paintability-candidates/
 # Decoded per-frame review caches; final media, review JSON and contact sheets remain.
 image-processing/generation/reviews/**/frame-*.png
+
+# fastlane working files
+fastlane/metadata/
+fastlane/report.xml
+fastlane/README.md
+.bundle/

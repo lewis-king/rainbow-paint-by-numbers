@@ -1,0 +1,108 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "Flat vector art, children's coloring book style, A fairy-tale toy castle with sandy yellow stone walls, three round towers with purple cone roofs and a red flag on each, a large brown arched door and two blue arched windows, standing on one small rounded green mound only a little wider than the castle. Every wall, tower, roof, flag, door and window is drawn with a bold black outline. A real object drawn as the thing itself. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+      "negative_prompt": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, face on an object, eyes, mouth, arms, legs",
+      "resolution": 1024,
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 2026115366,
+      "steps": 25,
+      "cfg": 3,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/image/66-castle"
+    }
+  }
+}

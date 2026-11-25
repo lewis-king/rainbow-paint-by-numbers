@@ -1,0 +1,63 @@
+{
+  "id": "65",
+  "title": "Sailing Boat",
+  "factory_revision": 1,
+  "integrated_at": "2026-11-25T17:29:47Z",
+  "models": {
+    "image": "qwen-image-2.1",
+    "video": "wan2.2-i2v"
+  },
+  "code": {
+    "process.py": "3aea2e76f4e65f0531aba61faa0f7e1d4f0d08d6707f679da33db1ea2822a1a6",
+    "finish.py": "50ecb34cfd4176056daac9194676d64e6d21b3c87688a606a3ddf91cab35fc80",
+    "checks.py": "b1b6e78e0e821ec02ff5a480824f6845091b18cfb6ca99f4298e5a2dc0b032c6"
+  },
+  "finish": {
+    "finish_revision": 11,
+    "palette_before": 20,
+    "palette_after": 8,
+    "lookalike_colors_merged": 0,
+    "shade_regions_merged": 2,
+    "areas_returned_to_art_colour": 0,
+    "slivers_absorbed": 13,
+    "ink_pixels_restored": 261,
+    "black_fill_pixels": 0,
+    "dash_pixels_dropped": 357,
+    "lost_part_pixels_reclaimed": 0,
+    "overmerged_colors_split": 0,
+    "mixed_regions_divided": 0,
+    "fixed_detail_pixels": 0,
+    "small_numbers": 0,
+    "fixed_detail_fraction_of_subject": 0.0,
+    "pixels_changed_fraction": 0.0018,
+    "numbers": 10
+  },
+  "image_sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f",
+  "video_sha256": "6b0c249cd5d6e2aefdf42f29917df44f09b845315c68d4a7deb5a1dad616d43f",
+  "playable_sha256": "6aed999a72cf3e01eb3768c8e0a6752919fb716061814d67dbe84a160b9f3563",
+  "bundle_sha256": "92358b2db643b06b227aac39686ebbc6afaae1830202c224c464810a5d1cd3ca",
+  "files": {
+    "data.json": "ad35241a0ae6f9971d5135f65ee40ce1d038bcb0a4352dff50cdf67fc58c8b14",
+    "original.png": "7ab7c542e9b023b691c7100e34cd7e8e95ce58f13555f8d729fd75effc105b99",
+    "lines.png": "1097abf270c1d129320b64f9fb84864f526d74eae154112b5311a758295e2137",
+    "map.png": "8c69d025598232697bb0ae89cdb556c697d43ad8bf0c959e7987ce71f5a97a71",
+    "reward.mp4": "6b0c249cd5d6e2aefdf42f29917df44f09b845315c68d4a7deb5a1dad616d43f"
+  },
+  "bytes": {
+    "data.json": 1159,
+    "original.png": 30035,
+    "lines.png": 18958,
+    "map.png": 11832,
+    "reward.mp4": 436495
+  },
+  "reviews": {
+    "image": {
+      "reviewer": "Claude vision review of review-image.jpg",
+      "sha256": "27bf556d423ced97e621955a74631ff385a7a78259702f4688e5aa3e097bb6ba"
+    },
+    "video": {
+      "reviewer": "Claude vision review of review-video.jpg",
+      "sha256": "3823e07cf5600ed8a296527f0893aa4d0abebb30d334e6e321bc8b460fb8c0a6"
+    }
+  }
+}

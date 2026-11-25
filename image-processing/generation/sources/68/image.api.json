@@ -1,0 +1,108 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "prompt": "Flat vector art, children's coloring book style, A big cute round bumblebee with a bright yellow body with two broad brown stripes, a yellow head with a smiling face, two wings that are both the same sky blue and two short antennae, flying just above one big pink flower with five round petals, an orange centre, a thick green stem and two large green leaves. The bee and the flower are large and fill the picture, both drawn with bold black outlines. Only the bee has a face. A complete friendly face with clearly visible eyes and pupils, correct anatomy. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+      "negative_prompt": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, missing eyes",
+      "resolution": 1024,
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "seed": 2026121368,
+      "steps": 25,
+      "cfg": 3,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "rainbow-paint-by-numbers/image/68-bee"
+    }
+  }
+}

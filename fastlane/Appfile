@@ -1,0 +1,3 @@
+app_identifier("king.meezy.rainbowpaintbynumbers")
+package_name("king.meezy.rainbowpaintbynumbers")
+json_key_file(File.expand_path("~/Workspace/.config/store-keys/play-service-account.json"))

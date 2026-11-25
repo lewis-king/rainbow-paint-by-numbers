@@ -1,0 +1,84 @@
+{
+  "id": "68",
+  "slug": "bee",
+  "title": "Bee",
+  "category": "animals",
+  "kind": "animal",
+  "factory": 1,
+  "added": "2026-11-23",
+  "seed": 2026121368,
+  "subject": "A big cute round bumblebee with a bright yellow body with two broad brown stripes, a yellow head with a smiling face, two wings that are both the same sky blue and two short antennae, flying just above one big pink flower with five round petals, an orange centre, a thick green stem and two large green leaves. The bee and the flower are large and fill the picture, both drawn with bold black outlines. Only the bee has a face",
+  "motion": "The bee's wings flutter quickly while it bobs gently up and down beside the flower",
+  "image_prompt": "Flat vector art, children's coloring book style, A big cute round bumblebee with a bright yellow body with two broad brown stripes, a yellow head with a smiling face, two wings that are both the same sky blue and two short antennae, flying just above one big pink flower with five round petals, an orange centre, a thick green stem and two large green leaves. The bee and the flower are large and fill the picture, both drawn with bold black outlines. Only the bee has a face. A complete friendly face with clearly visible eyes and pupils, correct anatomy. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The bee's wings flutter quickly while it bobs gently up and down beside the flower. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "history": [
+    {
+      "at": "2026-11-23T17:54:14Z",
+      "stage": "image",
+      "seed_was": 2026112368,
+      "reason": "Review: face drawn on the wing cases and on the flower; no black outlines"
+    },
+    {
+      "at": "2026-11-23T18:00:08Z",
+      "stage": "image",
+      "seed_was": 2026112368,
+      "reason": "Review: face on a black head is lost when numbered; changed the picture to a bee"
+    },
+    {
+      "at": "2026-11-23T18:21:18Z",
+      "stage": "image",
+      "seed_was": 2026113368,
+      "reason": "Review: a box frame is drawn around the picture"
+    },
+    {
+      "at": "2026-11-23T21:32:17Z",
+      "stage": "image",
+      "seed_was": 2026114368,
+      "reason": "Check: drawn inside a rounded box on a blob background; unwanted things moved to the negative prompt"
+    },
+    {
+      "at": "2026-11-23T21:42:35Z",
+      "stage": "image",
+      "seed_was": 2026115368,
+      "reason": "Check: bee and flower cropped at the edges, flower has no outline"
+    },
+    {
+      "at": "2026-11-23T21:54:11Z",
+      "stage": "image",
+      "seed_was": 2026116368,
+      "reason": "Check: drawn with no black outlines, stripes lost when numbered; outline check added"
+    },
+    {
+      "at": "2026-11-23T22:07:08Z",
+      "stage": "image",
+      "seed_was": 2026117368,
+      "reason": "Check: still drawn without outlines; outlines named in the subject and lineless art added to the negative prompt"
+    },
+    {
+      "at": "2026-11-23T22:14:51Z",
+      "stage": "image",
+      "seed_was": 2026118368,
+      "reason": "Check: the two wings came out as two near-identical blues; black stripes merge with the outline. Wings one blue, stripes brown"
+    },
+    {
+      "at": "2026-11-25T15:49:44Z",
+      "stage": "image",
+      "seed_was": 2026118368,
+      "reason": "Restyle on Qwen-Image 2.1 to match the earlier levels, approved by Lewis"
+    },
+    {
+      "at": "2026-11-25T15:58:46Z",
+      "stage": "image",
+      "seed_was": 2026119368,
+      "reason": "Failed picture checks after restyle (weak outlines or small subject)"
+    },
+    {
+      "at": "2026-11-25T16:02:31Z",
+      "stage": "image",
+      "seed_was": 2026120368,
+      "reason": "Subject small and pale"
+    }
+  ],
+  "image_negative": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, missing eyes",
+  "image_model": "qwen-image-2.1"
+}

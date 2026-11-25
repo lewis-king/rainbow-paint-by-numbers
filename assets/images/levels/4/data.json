@@ -1,163 +1,125 @@
 {
   "id": "4",
   "palette": [
-    "#040301",
-    "#3b342a",
-    "#559c06",
-    "#8e5c0f",
-    "#756661",
-    "#df8206",
-    "#7aea04",
-    "#ab9e98",
-    "#faca2e",
-    "#fdc6ae",
-    "#aff5fa",
-    "#f7fbfb"
+    "#fbb300",
+    "#7ced04",
+    "#ffd2b8",
+    "#cefafc",
+    "#f5fefd"
   ],
   "numbers": [
     {
-      "number": 2,
-      "x": 431,
-      "y": 349,
-      "color_index": 1
+      "number": 1,
+      "x": 455,
+      "y": 216,
+      "color_index": 0
     },
     {
       "number": 2,
-      "x": 429,
-      "y": 422,
+      "x": 522,
+      "y": 604,
       "color_index": 1
+    },
+    {
+      "number": 3,
+      "x": 520,
+      "y": 304,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 442,
+      "y": 440,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 605,
+      "y": 440,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 497,
+      "y": 753,
+      "color_index": 2
+    },
+    {
+      "number": 3,
+      "x": 609,
+      "y": 761,
+      "color_index": 2
+    },
+    {
+      "number": 4,
+      "x": 346,
+      "y": 365,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 686,
+      "y": 366,
+      "color_index": 3
+    },
+    {
+      "number": 4,
+      "x": 421,
+      "y": 501,
+      "color_index": 3,
+      "size": 7
+    },
+    {
+      "number": 4,
+      "x": 658,
+      "y": 524,
+      "color_index": 3
     },
     {
       "number": 5,
-      "x": 619,
-      "y": 339,
+      "x": 566,
+      "y": 373,
+      "color_index": 4,
+      "size": 9
+    },
+    {
+      "number": 5,
+      "x": 474,
+      "y": 375,
       "color_index": 4
     },
     {
-      "number": 6,
-      "x": 456,
-      "y": 212,
-      "color_index": 5
+      "number": 5,
+      "x": 734,
+      "y": 494,
+      "color_index": 4,
+      "size": 8
     },
     {
-      "number": 7,
-      "x": 519,
-      "y": 602,
-      "color_index": 6
+      "number": 5,
+      "x": 704,
+      "y": 542,
+      "color_index": 4,
+      "size": 6
     },
     {
-      "number": 9,
-      "x": 446,
-      "y": 121,
-      "color_index": 8
+      "number": 5,
+      "x": 640,
+      "y": 545,
+      "color_index": 4,
+      "size": 7
     },
     {
-      "number": 9,
-      "x": 429,
-      "y": 193,
-      "color_index": 8
+      "number": 5,
+      "x": 703,
+      "y": 895,
+      "color_index": 4
     },
     {
-      "number": 10,
-      "x": 517,
-      "y": 305,
-      "color_index": 9
-    },
-    {
-      "number": 10,
-      "x": 602,
-      "y": 438,
-      "color_index": 9
-    },
-    {
-      "number": 10,
-      "x": 439,
-      "y": 438,
-      "color_index": 9
-    },
-    {
-      "number": 10,
-      "x": 606,
-      "y": 759,
-      "color_index": 9
-    },
-    {
-      "number": 10,
-      "x": 494,
-      "y": 751,
-      "color_index": 9
-    },
-    {
-      "number": 11,
-      "x": 683,
-      "y": 364,
-      "color_index": 10
-    },
-    {
-      "number": 11,
-      "x": 343,
-      "y": 363,
-      "color_index": 10
-    },
-    {
-      "number": 11,
-      "x": 655,
-      "y": 522,
-      "color_index": 10
-    },
-    {
-      "number": 11,
-      "x": 419,
-      "y": 500,
-      "color_index": 10
-    },
-    {
-      "number": 12,
-      "x": 820,
-      "y": 249,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 214,
-      "y": 252,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 489,
-      "y": 368,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 731,
-      "y": 492,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 367,
-      "y": 534,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 702,
-      "y": 541,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 700,
-      "y": 893,
-      "color_index": 11
-    },
-    {
-      "number": 12,
-      "x": 513,
-      "y": 912,
-      "color_index": 11
+      "number": 5,
+      "x": 516,
+      "y": 914,
+      "color_index": 4
     }
   ],
   "dimensions": {

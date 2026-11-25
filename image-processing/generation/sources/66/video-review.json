@@ -1,0 +1,20 @@
+{
+  "id": "66",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Small clouds drift behind the towers and the flags wave; castle, door and windows unchanged, no face"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "32f946aa3af36c0b8f264c230519ae3cc1f8bb5d5534bed43ff6a14f6bc24f8e",
+  "sheet_sha256": "17ac8e8f99388e06e3f5de1fd998b36d34aca4d3244188cd24c1c945c8fa039f",
+  "reviewed_at": "2026-11-25T17:39:27Z",
+  "video_sha256": "31155a09c3e25f32282d7d63925e2179191a1558557b3cb0008fa48dd7fcdfcd"
+}

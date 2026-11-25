@@ -1,0 +1,23 @@
+{
+  "id": "66",
+  "stage": "image",
+  "model": "qwen-image-2.1",
+  "prompt_id": "8705807c-e00b-4293-bbe0-1e80724c9aa6",
+  "status": "completed",
+  "graph_sha256": "4725c4835350b5f22b4e1c99cee1c96aa93c36fbb7a3649c019dde9f610d7b4c",
+  "seed": 2026115366,
+  "submitted_at": "2026-11-25T16:07:43Z",
+  "comfy_output": {
+    "filename": "66-castle_00005_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "32f946aa3af36c0b8f264c230519ae3cc1f8bb5d5534bed43ff6a14f6bc24f8e",
+  "finished_at": "2026-11-25T16:08:23Z",
+  "sha256": "32f946aa3af36c0b8f264c230519ae3cc1f8bb5d5534bed43ff6a14f6bc24f8e"
+}

@@ -3,6 +3,7 @@ export interface NumberLabel {
   x: number;
   y: number;
   color_index: number;
+  size?: number; // font px for a number in a narrow region; 10 when absent
 }
 
 export interface LevelDimensions {

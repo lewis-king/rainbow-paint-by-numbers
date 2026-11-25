@@ -1,0 +1,20 @@
+{
+  "id": "62",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Whale spout rises and falls, tail and fish sway; shapes and colours hold"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "74712f93b95c0d71fc9a5b5fe96af2103d098fd0cf803e81b6f712fe55c04958",
+  "sheet_sha256": "f06c189de658c881c7bc8149c116d3c2471e33b839aafc939f66912e126e3e5a",
+  "reviewed_at": "2026-11-25T17:28:18Z",
+  "video_sha256": "e427575ed76bfdbffe01de6a19a13ebdc8f9c3f0c47da37352ac76a83ad74709"
+}

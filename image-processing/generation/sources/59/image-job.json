@@ -1,0 +1,23 @@
+{
+  "id": "59",
+  "stage": "image",
+  "model": "qwen-image",
+  "prompt_id": "ac3f3108-1968-4a21-a199-5da2ed38a42f",
+  "status": "completed",
+  "graph_sha256": "583fa318e1b01b08f4ebe13995ed3f8fb50b0b9deee8c60ed7da6c76734010af",
+  "seed": 2026113359,
+  "submitted_at": "2026-11-25T11:47:55Z",
+  "comfy_output": {
+    "filename": "59-kitten_00002_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "2c7708eea988d708d117f96024847188518a8abf30d09d83b2b79097dee4f35b",
+  "finished_at": "2026-11-25T11:48:35Z",
+  "sha256": "2c7708eea988d708d117f96024847188518a8abf30d09d83b2b79097dee4f35b"
+}

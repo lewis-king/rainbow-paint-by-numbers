@@ -43,6 +43,7 @@ export interface GameCanvasHandle {
   getCanvasSnapshot: () => string | null;
 }
 
+const SMALL_NUMBER_SIZES = [4, 5, 6, 7, 8, 9];
 const fontFamily = Platform.select({ ios: 'Helvetica', default: 'sans-serif' });
 const fontStyle = {
   fontFamily,
@@ -57,6 +58,11 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
   const linesImage = useImage(linesUri);
   const mapImage = useImage(mapUri);
   const font = matchFont(fontStyle);
+  // Narrow regions carry a smaller number (size in data.json); it reads clearly once zoomed in.
+  const smallFonts = useMemo(
+    () => new Map(SMALL_NUMBER_SIZES.map((size) => [size, matchFont({ ...fontStyle, fontSize: size })])),
+    []
+  );
 
   const { brushSize } = useGameStore();
 
@@ -615,10 +621,10 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
               {scaledNumbers.map((n, i) => (
                 <Text
                   key={`${n.x}-${n.y}-${i}`}
-                  x={n.displayX - 4}
-                  y={n.displayY + 3}
+                  x={n.displayX - 4 * (n.size ? n.size / 10 : 1)}
+                  y={n.displayY + 3 * (n.size ? n.size / 10 : 1)}
                   text={String(n.number)}
-                  font={font}
+                  font={(n.size && smallFonts.get(n.size)) || font}
                   color="#666666" 
                 />
               ))}

@@ -1,0 +1,26 @@
+{
+  "verdict": "PASS",
+  "failures": [],
+  "warnings": [],
+  "metrics": {
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "width": 640,
+    "height": 640,
+    "fps": 16.0,
+    "duration_s": 5.06,
+    "bytes": 463970,
+    "audio_streams": 0,
+    "frames": 81,
+    "first_frame_diff": 2.69,
+    "motion_mean": 1.29,
+    "motion_peak": 2.85,
+    "displacement_peak": 8.11,
+    "loop_gap": 7.72,
+    "border_white_min": 249.6,
+    "frames_touching_edge_fraction": 0.0,
+    "color_drift": 0.06,
+    "ink_ratio_min": 0.88,
+    "ink_ratio_max": 1.0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "67",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Candle flames flicker; cake and stand unchanged, no face"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "fb9ac92c29d4ec122ad8243180cd8a236052fe7a561f30e2538ae0fd18435942",
+  "sheet_sha256": "0db421bb9ca4bc472bad0024ca50fe79a267fe558aa79a3c1bc75dc2193fbad9",
+  "reviewed_at": "2026-11-25T17:28:18Z",
+  "video_sha256": "d745273c2b74786521691818dede70665328b6580733bed6af8076d1d627f6ee"
+}

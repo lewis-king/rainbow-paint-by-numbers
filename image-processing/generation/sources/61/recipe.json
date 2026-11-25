@@ -1,0 +1,36 @@
+{
+  "id": "61",
+  "slug": "frog",
+  "title": "Frog",
+  "category": "animals",
+  "kind": "animal",
+  "factory": 1,
+  "added": "2026-11-23",
+  "seed": 2026114361,
+  "subject": "A happy bright green frog with a yellow tummy and orange feet sitting on a large dark green lily pad that floats on one round blue pond, with one large closed pink water lily bud made of plain petals beside it. Only the frog has a face",
+  "motion": "The frog puffs out its throat, blinks and makes one small hop in place on the lily pad",
+  "image_prompt": "Flat vector art, children's coloring book style, A happy bright green frog with a yellow tummy and orange feet sitting on a large dark green lily pad that floats on one round blue pond, with one large closed pink water lily bud made of plain petals beside it. Only the frog has a face. A complete friendly face with clearly visible eyes and pupils, correct anatomy. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The frog puffs out its throat, blinks and makes one small hop in place on the lily pad. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "history": [
+    {
+      "at": "2026-11-23T17:54:13Z",
+      "stage": "image",
+      "seed_was": 2026112361,
+      "reason": "Review: the water lily has a sad face; plants must not have faces"
+    },
+    {
+      "at": "2026-11-23T17:59:55Z",
+      "stage": "image",
+      "seed_was": 2026112361,
+      "reason": "Review: water lily still has a face on the same seed"
+    },
+    {
+      "at": "2026-11-25T15:49:42Z",
+      "stage": "image",
+      "seed_was": 2026113361,
+      "reason": "Restyle on Qwen-Image 2.1 to match the earlier levels, approved by Lewis"
+    }
+  ],
+  "image_negative": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, missing eyes",
+  "image_model": "qwen-image-2.1"
+}

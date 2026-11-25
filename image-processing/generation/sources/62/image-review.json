@@ -1,0 +1,21 @@
+{
+  "id": "62",
+  "stage": "image",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-image.jpg",
+  "notes": [
+    "Whale with spout, fish and starfish; cream tummy is paintable, no faces on the starfish, painted matches source"
+  ],
+  "checklist": [
+    "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
+    "Anatomy or structure is correct: right number of limbs, wheels, eyes; nothing malformed or fused",
+    "Objects, vehicles, food and plants have no faces or limbs; animal faces look right",
+    "No text, numerals, watermark or stray marks",
+    "Numbered picture: every region is a sensible shape with a readable number, no clutter",
+    "Painted picture matches the source: no lost features, ragged edges or wrong colours"
+  ],
+  "image_sha256": "74712f93b95c0d71fc9a5b5fe96af2103d098fd0cf803e81b6f712fe55c04958",
+  "sheet_sha256": "b36b2a62ec21150192f011489a84f4384fbf8e7b4b3838e87d852aa6f7774c2d",
+  "reviewed_at": "2026-11-25T16:33:34Z",
+  "playable_sha256": "393f4893bec3945e9cfcf8d22cafef1076b0043f06ea22912f41d7ca70b6d332"
+}

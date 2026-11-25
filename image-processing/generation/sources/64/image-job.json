@@ -1,0 +1,24 @@
+{
+  "id": "64",
+  "stage": "image",
+  "model": "qwen-image",
+  "prompt_id": "f5495e4d-b00f-403c-84e2-ee632ba6d429",
+  "status": "completed",
+  "graph_sha256": "28c84c0bcd8180004bbe355f9c02a9e46fa56ec96cbad975f03ec2a2ecffb384",
+  "seed": 2026115364,
+  "submitted_at": "2026-11-25T11:53:17Z",
+  "comfy_output": {
+    "filename": "64-fire-engine_00004_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "293efc6bce649bfcf3c47c62f51202c061d75498b3bd8ff417978d19191f9599",
+  "reframed": true,
+  "finished_at": "2026-11-25T11:53:57Z",
+  "sha256": "9f0e50d00f73ec56742988ba062870fab381641a5251db45db64179d6fbc4400"
+}

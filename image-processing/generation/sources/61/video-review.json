@@ -1,0 +1,20 @@
+{
+  "id": "61",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Frog shifts and turns on the lily pad; four legs throughout, pad and water hold their colour"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "bb7d4cbfd905d0dfa9c356e7a218f960980e927bfd6135d15f032a255aa0a2bd",
+  "sheet_sha256": "91fa4d0fa7d3bca1be5c47dadbc988cd58a3f7a966a56cbcc696c82e80ecec52",
+  "reviewed_at": "2026-11-25T17:28:17Z",
+  "video_sha256": "44eaf3d851c8448788efbd848aa087a10c8e7b78891c696b095e3da193e7aa04"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "62",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "db851312-f19f-4f99-b2fa-42b971c71c34",
+  "status": "completed",
+  "graph_sha256": "f539bb96b8b92e5fe79701af74a36ae1318427c7418f5dbdeb5c9f9e0e811360",
+  "seed": 2026114362,
+  "submitted_at": "2026-11-25T16:33:48Z",
+  "comfy_output": {
+    "filename": "62-whale_00004_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "e427575ed76bfdbffe01de6a19a13ebdc8f9c3f0c47da37352ac76a83ad74709",
+  "finished_at": "2026-11-25T16:55:29Z",
+  "sha256": "e427575ed76bfdbffe01de6a19a13ebdc8f9c3f0c47da37352ac76a83ad74709"
+}

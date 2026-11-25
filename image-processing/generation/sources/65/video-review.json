@@ -1,0 +1,20 @@
+{
+  "id": "65",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Boat rocks and the flag flutters; sails and hull keep their colours, no face"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f",
+  "sheet_sha256": "83ae5af805f15e0c1438f06f8b75ddbe0980028e3ecf43f4a35770703d41d2ba",
+  "reviewed_at": "2026-11-25T17:28:18Z",
+  "video_sha256": "6b0c249cd5d6e2aefdf42f29917df44f09b845315c68d4a7deb5a1dad616d43f"
+}

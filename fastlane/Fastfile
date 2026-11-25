@@ -1,0 +1,43 @@
+# Listing text and images only. Uploading the app is `eas submit`, and sending for review stays a person's decision.
+require "dotenv"
+
+# One set of keys for every app, outside any repo.
+KEYS = File.expand_path("~/Workspace/.config/store-keys")
+Dotenv.load(File.join(KEYS, "apple.env"))
+
+def asc_key
+  app_store_connect_api_key(
+    key_id: ENV.fetch("ASC_KEY_ID"),
+    issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+    key_filepath: File.join(KEYS, "asc-key.p8"),
+  )
+end
+
+platform :ios do
+  lane :listing do
+    deliver(
+      api_key: asc_key,
+      metadata_path: "fastlane/metadata/ios",
+      screenshots_path: "fastlane/metadata/ios-screenshots",
+      overwrite_screenshots: true,
+      skip_binary_upload: true,
+      submit_for_review: false,
+      force: true,
+      precheck_include_in_app_purchases: false,
+    )
+  end
+end
+
+platform :android do
+  lane :listing do
+    supply(
+      metadata_path: "fastlane/metadata/android",
+      # supply needs a release to attach to, even when only uploading the listing.
+      track: "internal",
+      version_code: google_play_track_version_codes(track: "internal").max,
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_changelogs: true,
+    )
+  end
+end

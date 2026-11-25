@@ -1,0 +1,26 @@
+{
+  "id": "66",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "6b846889-c33b-477a-b941-993d0704b05a",
+  "status": "completed",
+  "graph_sha256": "bf00f23546d9e8c584881ec78e903ffa4874dfc6bcf185cea007d1a86bcbf48f",
+  "seed": 2026116366,
+  "submitted_at": "2026-11-25T17:28:08Z",
+  "comfy_output": {
+    "filename": "66-castle_00003_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "31155a09c3e25f32282d7d63925e2179191a1558557b3cb0008fa48dd7fcdfcd",
+  "finished_at": "2026-11-25T17:38:59Z",
+  "sha256": "31155a09c3e25f32282d7d63925e2179191a1558557b3cb0008fa48dd7fcdfcd"
+}

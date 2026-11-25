@@ -41,14 +41,17 @@ def qwen_graph(prompt, seed, prefix, reference=None):
         graph['7']['inputs']['latent_image']=['4',2]
     return graph
 
-def qwen_original_graph(prompt, seed, prefix):
+LEGACY_IMAGE_NEGATIVE = 'shading, gradients, texture, photography, 3d, tiny details, watermark, text, greyscale, extra limbs, cropped subject'
+
+
+def qwen_original_graph(prompt, seed, prefix, negative=LEGACY_IMAGE_NEGATIVE):
     """Original installed Qwen-Image base checkpoint (Apache 2.0), text-to-image."""
     return {
         '1': node('UNETLoader', unet_name='qwen_image_fp8_e4m3fn.safetensors', weight_dtype='default'),
         '2': node('CLIPLoader', clip_name='qwen_2.5_vl_7b_fp8_scaled.safetensors', type='qwen_image', device='default'),
         '3': node('VAELoader', vae_name='qwen_image_vae.safetensors'),
         '4': node('CLIPTextEncode', clip=['2',0], text=prompt),
-        '5': node('CLIPTextEncode', clip=['2',0], text='shading, gradients, texture, photography, 3d, tiny details, watermark, text, greyscale, extra limbs, cropped subject'),
+        '5': node('CLIPTextEncode', clip=['2',0], text=negative),
         '6': node('ModelSamplingAuraFlow', model=['1',0], shift=3.1),
         '7': node('EmptySD3LatentImage', width=1024, height=1024, batch_size=1),
         '8': node('KSampler', model=['6',0], positive=['4',0], negative=['5',0], latent_image=['7',0], seed=seed, steps=50, cfg=4, sampler_name='euler', scheduler='simple', denoise=1),
@@ -123,6 +126,60 @@ def ui_graph(graph, catalog):
     return {'last_node_id':max(map(int,graph)),'last_link_id':len(links),'nodes':nodes,'links':links,'groups':[],'config':{},'extra':{'ds':{'scale':0.7,'offset':[30,30]}},'version':0.4}
 
 STYLE="Flat vector illustration for a young child's paint-by-numbers game. {subject}. One large cute subject, rounded simple shapes and recognizable anatomy or physical structure. Friendly faces belong only on animals; no faces, eyes, mouths or limbs on objects, plants, food or decorations. Thick smooth uniform black outlines, closed clean shapes, 7 to 9 vibrant solid flat colors, large easy-to-paint color areas, clean pure white background, centered whole subject with generous white margin on all sides. Simple 2D cartoon clipart. No lettering, no patterns of tiny shapes, no gradients, no shading, no textures, no shadows."
+
+# Recipe templates for new levels (factory.py add). The finished prompt is stored
+# in manifest.json, so editing a template never changes an existing level.
+# Say only what should be in the picture. Naming an unwanted thing in the prompt
+# ("no frame, no blobs, no face") makes Qwen-Image draw it; unwanted things go in
+# the negative prompt instead. Asking for a number of shapes makes it pad a
+# simple subject with loose colour blobs, so the subject must name its own parts.
+IMAGE_TEMPLATE = ("Flat vector art, children's coloring book style, {subject}. {rule} "
+    "Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, "
+    "vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. "
+    "Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. "
+    "Everything fully visible with a generous white margin.")
+KIND_RULES = {
+    'animal': 'A complete friendly face with clearly visible eyes and pupils, correct anatomy.',
+    'object': 'A real object drawn as the thing itself.',
+}
+IMAGE_NEGATIVE = ('frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, '
+    'coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, '
+    'rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject')
+KIND_NEGATIVES = {
+    'animal': ', missing eyes',
+    'object': ', face on an object, eyes, mouth, arms, legs',
+}
+# Levels 29-58 were drawn by Qwen-Image 2.1 and the game's look comes from it: finer lines and
+# fuller drawings than the base Qwen-Image model, which draws chunky toddler clip art.
+# cfg 3 matters: at cfg 1 the negative prompt is ignored and the lines come out as hairlines.
+IMAGE_MODEL = 'qwen-image-2.1'
+
+
+def qwen21_graph(prompt, seed, prefix, negative, cfg=3, steps=25):
+    """Qwen-Image 2.1 text-to-image, the model behind the game's picture style."""
+    return {
+        '1': node('UNETLoader', unet_name='qwen_image_2.1_int8_convrot.safetensors', weight_dtype='default'),
+        '2': node('CLIPLoader', clip_name='qwen3vl_8b_int8_convrot.safetensors', type='qwen_image', device='default'),
+        '3': node('VAELoader', vae_name='qwen_image_2.1_vae_bf16.safetensors'),
+        '4': node('TextEncodeQwenImage21', clip=['2',0], prompt=prompt, negative_prompt=negative, resolution=1024, vae=['3',0]),
+        '5': node('QwenImage21Cache', model=['1',0], device='auto', dtype='default'),
+        '6': node('EmptyLatentImage', width=1024, height=1024, batch_size=1),
+        '7': node('KSampler', model=['5',0], positive=['4',0], negative=['4',1], latent_image=['6',0], seed=seed, steps=steps, cfg=cfg, sampler_name='euler', scheduler='simple', denoise=1),
+        '8': node('VAEDecode', samples=['7',0], vae=['3',0]),
+        '9': node('SaveImage', images=['8',0], filename_prefix=prefix),
+    }
+
+
+def image_prompts(subject, kind):
+    """The (prompt, negative prompt) pair for a recipe."""
+    return (IMAGE_TEMPLATE.format(subject=subject.rstrip('. '), rule=KIND_RULES[kind]),
+            IMAGE_NEGATIVE + KIND_NEGATIVES[kind])
+
+
+VIDEO_TEMPLATE = ("A charming flat 2D cartoon animation for young children. {motion}. Preserve the exact subject, proportions, "
+    "bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, "
+    "plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. "
+    "End near the starting pose. No speech.")
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description='Save repo workflows and optionally install them in ComfyUI')

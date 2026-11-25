@@ -1,0 +1,26 @@
+{
+  "id": "61",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "645c2365-cb3b-4e52-aaaf-799fe0f6c566",
+  "status": "completed",
+  "graph_sha256": "3c0bd7826df486fb8c754d9cde28b4914dc25221f65170355fce7e9b5b273526",
+  "seed": 2026114361,
+  "submitted_at": "2026-11-25T16:33:48Z",
+  "comfy_output": {
+    "filename": "61-frog_00002_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "44eaf3d851c8448788efbd848aa087a10c8e7b78891c696b095e3da193e7aa04",
+  "finished_at": "2026-11-25T16:49:59Z",
+  "sha256": "44eaf3d851c8448788efbd848aa087a10c8e7b78891c696b095e3da193e7aa04"
+}

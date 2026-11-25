@@ -10,7 +10,9 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "verify:dist": "node ./scripts/assert-no-raw-assets-in-build.js",
-    "verify:new-assets": "node ./scripts/verify-new-levels.mjs"
+    "verify:new-assets": "node ./scripts/verify-new-levels.mjs",
+    "verify:levels": "image-processing/venv/bin/python image-processing/generation/factory.py verify",
+    "test:factory": "image-processing/venv/bin/python -m unittest discover -s image-processing/generation/tests"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",

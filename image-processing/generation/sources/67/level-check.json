@@ -1,0 +1,191 @@
+{
+  "verdict": "PASS",
+  "failures": [],
+  "warnings": [],
+  "metrics": {
+    "palette_size": 11,
+    "labels": 15,
+    "meaningful_colors": 9,
+    "paintable_fraction": 0.29,
+    "background_fraction": 0.695,
+    "line_fraction": 0.015,
+    "corners_are_background": true,
+    "subject_margin_px": 60,
+    "dead_colors": [],
+    "smallest_color_share": 0.0013,
+    "closest_colors": {
+      "delta_e": 26.8,
+      "numbers": [
+        3,
+        6
+      ]
+    },
+    "lightest_vs_unpainted_delta_e": 9.2,
+    "label_clearance_min_screen_px": 8.73,
+    "label_inside_min_fraction": 1.0,
+    "tight_labels": 0,
+    "overflow_labels": 3,
+    "label_overlaps": 0,
+    "worst_labels": [
+      {
+        "number": 1,
+        "x": 522,
+        "y": 268,
+        "inside": 1.0,
+        "clearance_screen_px": 13.44
+      },
+      {
+        "number": 3,
+        "x": 373,
+        "y": 278,
+        "inside": 1.0,
+        "clearance_screen_px": 11.76
+      },
+      {
+        "number": 5,
+        "x": 257,
+        "y": 606,
+        "inside": 1.0,
+        "clearance_screen_px": 8.73
+      },
+      {
+        "number": 6,
+        "x": 521,
+        "y": 163,
+        "inside": 1.0,
+        "clearance_screen_px": 12.14
+      },
+      {
+        "number": 6,
+        "x": 370,
+        "y": 186,
+        "inside": 1.0,
+        "clearance_screen_px": 10.33
+      }
+    ],
+    "unnumbered_fraction": 0.0,
+    "unnumbered_largest_px": 0,
+    "regions": 16,
+    "regions_without_own_number": 1,
+    "enclosed_background_px": 0,
+    "line_halfwidth_max_px": 6.4,
+    "precolored_fraction_of_subject": 0.0,
+    "colors": [
+      {
+        "number": 1,
+        "hex": "#0ebd00",
+        "pixels": 10281,
+        "share": 0.0338,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 13.8,
+        "art_delta_e": 0.1
+      },
+      {
+        "number": 2,
+        "hex": "#076878",
+        "pixels": 392,
+        "share": 0.0013,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 1.0
+      },
+      {
+        "number": 3,
+        "hex": "#fb0000",
+        "pixels": 7945,
+        "share": 0.0261,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 12.1,
+        "art_delta_e": 0.0
+      },
+      {
+        "number": 4,
+        "hex": "#614f55",
+        "pixels": 2814,
+        "share": 0.0092,
+        "labels": 2,
+        "regions": 2,
+        "max_radius_screen_px": 1.0
+      },
+      {
+        "number": 5,
+        "hex": "#7900d0",
+        "pixels": 28930,
+        "share": 0.095,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 8.7,
+        "art_delta_e": 0.2
+      },
+      {
+        "number": 6,
+        "hex": "#ff6700",
+        "pixels": 16597,
+        "share": 0.0545,
+        "labels": 3,
+        "regions": 3,
+        "max_radius_screen_px": 12.4,
+        "art_delta_e": 0.8
+      },
+      {
+        "number": 7,
+        "hex": "#007aff",
+        "pixels": 7591,
+        "share": 0.0249,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 11.4,
+        "art_delta_e": 0.0
+      },
+      {
+        "number": 8,
+        "hex": "#ffe601",
+        "pixels": 48286,
+        "share": 0.1586,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 16.8,
+        "art_delta_e": 0.2
+      },
+      {
+        "number": 9,
+        "hex": "#00ffff",
+        "pixels": 80288,
+        "share": 0.2638,
+        "labels": 1,
+        "regions": 2,
+        "max_radius_screen_px": 25.0,
+        "art_delta_e": 0.3
+      },
+      {
+        "number": 10,
+        "hex": "#ff82c7",
+        "pixels": 74379,
+        "share": 0.2444,
+        "labels": 2,
+        "regions": 2,
+        "max_radius_screen_px": 11.8,
+        "art_delta_e": 0.8
+      },
+      {
+        "number": 11,
+        "hex": "#fbfdfd",
+        "pixels": 26892,
+        "share": 0.0883,
+        "labels": 1,
+        "regions": 1,
+        "max_radius_screen_px": 10.1,
+        "art_delta_e": 1.7
+      }
+    ],
+    "fidelity_mean_delta_e": 5.02,
+    "fidelity_p95_delta_e": 29.92,
+    "parts_lost_px": 0,
+    "worst_color_fidelity": {
+      "delta_e": 1.7,
+      "number": 11
+    }
+  }
+}

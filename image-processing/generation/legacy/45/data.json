@@ -1,0 +1,103 @@
+{
+  "id": "45",
+  "palette": [
+    "#050403",
+    "#421807",
+    "#3a3a3b",
+    "#981612",
+    "#705804",
+    "#015b92",
+    "#53ac28",
+    "#a67f04",
+    "#f22119",
+    "#686766",
+    "#fb8000",
+    "#833ac1",
+    "#d8b402",
+    "#00a1fe",
+    "#a3a2a1",
+    "#c6c6c5",
+    "#fcfdfd"
+  ],
+  "numbers": [
+    {
+      "number": 3,
+      "x": 687,
+      "y": 701,
+      "color_index": 2
+    },
+    {
+      "number": 7,
+      "x": 211,
+      "y": 680,
+      "color_index": 6
+    },
+    {
+      "number": 9,
+      "x": 735,
+      "y": 539,
+      "color_index": 8
+    },
+    {
+      "number": 9,
+      "x": 327,
+      "y": 611,
+      "color_index": 8
+    },
+    {
+      "number": 9,
+      "x": 250,
+      "y": 754,
+      "color_index": 8
+    },
+    {
+      "number": 10,
+      "x": 119,
+      "y": 772,
+      "color_index": 9
+    },
+    {
+      "number": 11,
+      "x": 216,
+      "y": 476,
+      "color_index": 10
+    },
+    {
+      "number": 12,
+      "x": 529,
+      "y": 701,
+      "color_index": 11
+    },
+    {
+      "number": 12,
+      "x": 794,
+      "y": 701,
+      "color_index": 11
+    },
+    {
+      "number": 13,
+      "x": 527,
+      "y": 344,
+      "color_index": 12
+    },
+    {
+      "number": 14,
+      "x": 568,
+      "y": 476,
+      "color_index": 13
+    },
+    {
+      "number": 17,
+      "x": 306,
+      "y": 667,
+      "color_index": 16
+    }
+  ],
+  "dimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}

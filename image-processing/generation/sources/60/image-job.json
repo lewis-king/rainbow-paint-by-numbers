@@ -1,0 +1,23 @@
+{
+  "id": "60",
+  "stage": "image",
+  "model": "qwen-image-2.1",
+  "prompt_id": "28ba6898-290a-4063-b455-4369e05e7370",
+  "status": "completed",
+  "graph_sha256": "71930ecc31bec49514b77e18a45f689e02076de316bd36cf33fc670130d88438",
+  "seed": 2026114360,
+  "submitted_at": "2026-11-25T15:58:51Z",
+  "comfy_output": {
+    "filename": "60-fox_00003_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "80c371d9adc74fa4c4a2f88508fe14f641918221b923a69690f6f6ac83fbbded",
+  "finished_at": "2026-11-25T15:59:31Z",
+  "sha256": "80c371d9adc74fa4c4a2f88508fe14f641918221b923a69690f6f6ac83fbbded"
+}

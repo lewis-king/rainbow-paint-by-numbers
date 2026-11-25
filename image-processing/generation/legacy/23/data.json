@@ -1,0 +1,87 @@
+{
+  "id": "23",
+  "palette": [
+    "#040302",
+    "#231f30",
+    "#077406",
+    "#691800",
+    "#a80700",
+    "#07d209",
+    "#ec0000",
+    "#574a4d",
+    "#5d088a",
+    "#0949a5",
+    "#a16300",
+    "#796d71",
+    "#fc6b00",
+    "#067efd",
+    "#9711e6",
+    "#e9bc00",
+    "#9c9396",
+    "#c4bec1",
+    "#e9f4fa"
+  ],
+  "numbers": [
+    {
+      "number": 6,
+      "x": 733,
+      "y": 535,
+      "color_index": 5
+    },
+    {
+      "number": 7,
+      "x": 571,
+      "y": 254,
+      "color_index": 6
+    },
+    {
+      "number": 12,
+      "x": 760,
+      "y": 321,
+      "color_index": 11
+    },
+    {
+      "number": 13,
+      "x": 489,
+      "y": 291,
+      "color_index": 12
+    },
+    {
+      "number": 14,
+      "x": 472,
+      "y": 431,
+      "color_index": 13
+    },
+    {
+      "number": 15,
+      "x": 402,
+      "y": 514,
+      "color_index": 14
+    },
+    {
+      "number": 16,
+      "x": 536,
+      "y": 336,
+      "color_index": 15
+    },
+    {
+      "number": 19,
+      "x": 246,
+      "y": 694,
+      "color_index": 18
+    },
+    {
+      "number": 19,
+      "x": 778,
+      "y": 690,
+      "color_index": 18
+    }
+  ],
+  "dimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}

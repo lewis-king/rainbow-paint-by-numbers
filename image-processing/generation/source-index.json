@@ -178,5 +178,65 @@
     "title": "Acorn",
     "sha256": "e0570a0ca3e6356c5619c3abe105b6ec97aaea2189b78223dd7d24abcb2b8295",
     "video_sha256": "60a18b248ebb185db062438ac08b8401bd4447cdc31384fb4ce41238de1253d4"
+  },
+  {
+    "id": "59",
+    "title": "Kitten",
+    "sha256": "2c7708eea988d708d117f96024847188518a8abf30d09d83b2b79097dee4f35b",
+    "video_sha256": "2293792ec2913626d11040bcfb90980136bbf4a7a03c2e71c48e2419cb4e1f29"
+  },
+  {
+    "id": "60",
+    "title": "Fox",
+    "sha256": "80c371d9adc74fa4c4a2f88508fe14f641918221b923a69690f6f6ac83fbbded",
+    "video_sha256": "ae2f8333f879669c1795f8fd81ccde8eecb985e9a35772e8ab1462dcfa71d72b"
+  },
+  {
+    "id": "61",
+    "title": "Frog",
+    "sha256": "bb7d4cbfd905d0dfa9c356e7a218f960980e927bfd6135d15f032a255aa0a2bd",
+    "video_sha256": "44eaf3d851c8448788efbd848aa087a10c8e7b78891c696b095e3da193e7aa04"
+  },
+  {
+    "id": "62",
+    "title": "Whale",
+    "sha256": "74712f93b95c0d71fc9a5b5fe96af2103d098fd0cf803e81b6f712fe55c04958",
+    "video_sha256": "e427575ed76bfdbffe01de6a19a13ebdc8f9c3f0c47da37352ac76a83ad74709"
+  },
+  {
+    "id": "63",
+    "title": "Parrot",
+    "sha256": "8bbfd646934b095d758cc420cc1c705347de9dc059d7aa839c206dc6a3c15fe2",
+    "video_sha256": "cefb90a8d846745ff6c4b92fa57a3c934927a5a8872245afc248eccbad0fa293"
+  },
+  {
+    "id": "64",
+    "title": "Fire Engine",
+    "sha256": "9f0e50d00f73ec56742988ba062870fab381641a5251db45db64179d6fbc4400",
+    "video_sha256": "332f801e767e795a7be8a330efe030a2de8e9f9bcf98e47740804be5b1523475"
+  },
+  {
+    "id": "65",
+    "title": "Sailing Boat",
+    "sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f",
+    "video_sha256": "6b0c249cd5d6e2aefdf42f29917df44f09b845315c68d4a7deb5a1dad616d43f"
+  },
+  {
+    "id": "66",
+    "title": "Castle",
+    "sha256": "32f946aa3af36c0b8f264c230519ae3cc1f8bb5d5534bed43ff6a14f6bc24f8e",
+    "video_sha256": "31155a09c3e25f32282d7d63925e2179191a1558557b3cb0008fa48dd7fcdfcd"
+  },
+  {
+    "id": "67",
+    "title": "Birthday Cake",
+    "sha256": "fb9ac92c29d4ec122ad8243180cd8a236052fe7a561f30e2538ae0fd18435942",
+    "video_sha256": "d745273c2b74786521691818dede70665328b6580733bed6af8076d1d627f6ee"
+  },
+  {
+    "id": "68",
+    "title": "Bee",
+    "sha256": "74be244be18e385fe0926c850048e716c7f72c61f6ad6f38fce67787d8874ef9",
+    "video_sha256": "c0ee8d50cf08b9b0e77c5ffb5626289b7f90f9fb9d427255d51023735f32a31b"
   }
 ]

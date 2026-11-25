@@ -1,0 +1,26 @@
+{
+  "id": "68",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "64928cc4-5022-49e7-abff-75ff35befeda",
+  "status": "completed",
+  "graph_sha256": "eb5170e9b4e5f20309794ccf371e75e73d004289fe2a1f8c9e4fce1a8235ceb7",
+  "seed": 2026121368,
+  "submitted_at": "2026-11-25T16:33:49Z",
+  "comfy_output": {
+    "filename": "68-bee_00002_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "c0ee8d50cf08b9b0e77c5ffb5626289b7f90f9fb9d427255d51023735f32a31b",
+  "finished_at": "2026-11-25T17:27:40Z",
+  "sha256": "c0ee8d50cf08b9b0e77c5ffb5626289b7f90f9fb9d427255d51023735f32a31b"
+}

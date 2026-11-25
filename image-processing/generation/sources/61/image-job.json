@@ -1,0 +1,24 @@
+{
+  "id": "61",
+  "stage": "image",
+  "model": "qwen-image",
+  "prompt_id": "e8c84c48-5368-4243-8451-d2af2657c071",
+  "status": "completed",
+  "graph_sha256": "0554db7e5da837bbbd20eb2fd335d998eea9d1a5a51094e7cf7318c4bb2da7f3",
+  "seed": 2026114361,
+  "submitted_at": "2026-11-25T15:49:48Z",
+  "comfy_output": {
+    "filename": "61-frog_00004_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "93a2b644ce2d865923b75a1f151f4e060a2b2e184803fc547ae67f90ac805761",
+  "reframed": true,
+  "finished_at": "2026-11-25T15:50:59Z",
+  "sha256": "bb7d4cbfd905d0dfa9c356e7a218f960980e927bfd6135d15f032a255aa0a2bd"
+}

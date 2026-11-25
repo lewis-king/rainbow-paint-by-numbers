@@ -1,0 +1,26 @@
+{
+  "id": "60",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "c89b0316-b036-43a0-92b1-130da354da10",
+  "status": "completed",
+  "graph_sha256": "841e1a470bd5b795a054e6d05ab13bb058ab821d927594f69f9670a9b8e30ab8",
+  "seed": 2026114360,
+  "submitted_at": "2026-11-25T16:33:48Z",
+  "comfy_output": {
+    "filename": "60-fox_00002_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.06201171875,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "ae2f8333f879669c1795f8fd81ccde8eecb985e9a35772e8ab1462dcfa71d72b",
+  "finished_at": "2026-11-25T16:44:39Z",
+  "sha256": "ae2f8333f879669c1795f8fd81ccde8eecb985e9a35772e8ab1462dcfa71d72b"
+}

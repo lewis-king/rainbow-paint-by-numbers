@@ -1,0 +1,20 @@
+{
+  "id": "64",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Fire engine bounces on its wheels; ladder, stripe and bucket unchanged, no face"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "9f0e50d00f73ec56742988ba062870fab381641a5251db45db64179d6fbc4400",
+  "sheet_sha256": "3e7ef55ef37755c101d9cfa00bdcdae4a093090ff0c6e8b7a2ab1417c8c1169a",
+  "reviewed_at": "2026-11-25T17:28:18Z",
+  "video_sha256": "332f801e767e795a7be8a330efe030a2de8e9f9bcf98e47740804be5b1523475"
+}

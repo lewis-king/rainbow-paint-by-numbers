@@ -1,0 +1,26 @@
+{
+  "id": "65",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "c5097752-8bec-48a7-9906-7b94b68101dc",
+  "status": "completed",
+  "graph_sha256": "0795ac86121af09132e4b75be36f849736f8a8b958bcd5dcc12db6f60ddcbf53",
+  "seed": 2026117365,
+  "submitted_at": "2026-11-25T16:33:49Z",
+  "comfy_output": {
+    "filename": "65-sailing-boat_00003_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "6b0c249cd5d6e2aefdf42f29917df44f09b845315c68d4a7deb5a1dad616d43f",
+  "finished_at": "2026-11-25T17:11:40Z",
+  "sha256": "6b0c249cd5d6e2aefdf42f29917df44f09b845315c68d4a7deb5a1dad616d43f"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "67",
+  "stage": "image",
+  "model": "qwen-image-2.1",
+  "prompt_id": "b3c4986d-38c5-4d73-bf56-e91c11a89370",
+  "status": "completed",
+  "graph_sha256": "2dc26f787123d734dd5373ad0af5f76329e0e5f21523da188d697f519d4c048f",
+  "seed": 2026119367,
+  "submitted_at": "2026-11-25T16:02:35Z",
+  "comfy_output": {
+    "filename": "67-birthday-cake_00009_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "7a22cb608670f5971cbd23be9b5296017293bf0619e48593e7ec5a93e2bbe2f1",
+  "reframed": true,
+  "finished_at": "2026-11-25T16:03:15Z",
+  "sha256": "fb9ac92c29d4ec122ad8243180cd8a236052fe7a561f30e2538ae0fd18435942"
+}

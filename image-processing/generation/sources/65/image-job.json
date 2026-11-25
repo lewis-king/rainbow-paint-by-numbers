@@ -1,0 +1,23 @@
+{
+  "id": "65",
+  "stage": "image",
+  "model": "qwen-image",
+  "prompt_id": "cf63cc9f-5b56-4b34-9fb7-9772ea2f4ce6",
+  "status": "completed",
+  "graph_sha256": "70c365c7c873f69c80a83fc51aa9156c9800a8837c0427c78d9fa2a3f39236b5",
+  "seed": 2026117365,
+  "submitted_at": "2026-11-25T15:49:48Z",
+  "comfy_output": {
+    "filename": "65-sailing-boat_00007_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f",
+  "finished_at": "2026-11-25T15:52:39Z",
+  "sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "63",
+  "stage": "image",
+  "model": "qwen-image",
+  "prompt_id": "9e020b4c-236e-497b-8239-416de18860bc",
+  "status": "completed",
+  "graph_sha256": "8b1ff7a1b0c7675e73c7f126aa2b2111acb4a40eb02dadc4dbc5795da9339c48",
+  "seed": 2026113363,
+  "submitted_at": "2026-11-25T15:49:48Z",
+  "comfy_output": {
+    "filename": "63-parrot_00002_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "8bbfd646934b095d758cc420cc1c705347de9dc059d7aa839c206dc6a3c15fe2",
+  "finished_at": "2026-11-25T15:51:59Z",
+  "sha256": "8bbfd646934b095d758cc420cc1c705347de9dc059d7aa839c206dc6a3c15fe2"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "59",
+  "title": "Kitten",
+  "factory_revision": 1,
+  "integrated_at": "2026-11-25T17:28:40Z",
+  "models": {
+    "image": "qwen-image-2.1",
+    "video": "wan2.2-i2v"
+  },
+  "code": {
+    "process.py": "3aea2e76f4e65f0531aba61faa0f7e1d4f0d08d6707f679da33db1ea2822a1a6",
+    "finish.py": "50ecb34cfd4176056daac9194676d64e6d21b3c87688a606a3ddf91cab35fc80",
+    "checks.py": "b1b6e78e0e821ec02ff5a480824f6845091b18cfb6ca99f4298e5a2dc0b032c6"
+  },
+  "finish": {
+    "finish_revision": 11,
+    "palette_before": 20,
+    "palette_after": 11,
+    "lookalike_colors_merged": 0,
+    "shade_regions_merged": 0,
+    "areas_returned_to_art_colour": 0,
+    "slivers_absorbed": 5,
+    "ink_pixels_restored": 1700,
+    "black_fill_pixels": 0,
+    "dash_pixels_dropped": 2483,
+    "lost_part_pixels_reclaimed": 0,
+    "overmerged_colors_split": 0,
+    "mixed_regions_divided": 0,
+    "fixed_detail_pixels": 186,
+    "small_numbers": 7,
+    "fixed_detail_fraction_of_subject": 0.0005,
+    "pixels_changed_fraction": 0.0017,
+    "numbers": 19
+  },
+  "image_sha256": "2c7708eea988d708d117f96024847188518a8abf30d09d83b2b79097dee4f35b",
+  "video_sha256": "2293792ec2913626d11040bcfb90980136bbf4a7a03c2e71c48e2419cb4e1f29",
+  "playable_sha256": "4ed58341cc1bfaf22f02a9f81283f57210ffc41690f6cd7e3095fd039f2458b6",
+  "bundle_sha256": "72af35560d1aae98c1c91b4ba0b0bfaafd31366068ef29272c948813706ea79e",
+  "files": {
+    "data.json": "d3ed86440addb8f818c903aca91e27437b3097614ecbd3ad7d33961717c61ea5",
+    "original.png": "bdf38aa5c137f1ae4e4a9b928e492be48ad970110724d55ba12a9b77820c4167",
+    "lines.png": "212856751babaeec8d106d5aacb45dba7700768266a38187569e3dac9fef6d87",
+    "map.png": "106b292d80b9c04bf9a5c935bb1a76fdf524ee97f526d585c4d489ba258b1ab3",
+    "reward.mp4": "2293792ec2913626d11040bcfb90980136bbf4a7a03c2e71c48e2419cb4e1f29"
+  },
+  "bytes": {
+    "data.json": 2116,
+    "original.png": 43823,
+    "lines.png": 27333,
+    "map.png": 14811,
+    "reward.mp4": 815335
+  },
+  "reviews": {
+    "image": {
+      "reviewer": "Claude vision review of review-image.jpg",
+      "sha256": "b50edae060b127787945e45400907c9c51341b6df126a477f716284ca0a5feed"
+    },
+    "video": {
+      "reviewer": "Claude vision review of review-video.jpg",
+      "sha256": "3344d396fe7c9a0e2c1e1a783876559d2762f37bb018f9a561a123061fafa26f"
+    }
+  }
+}

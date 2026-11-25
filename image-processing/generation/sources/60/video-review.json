@@ -1,0 +1,20 @@
+{
+  "id": "60",
+  "stage": "video",
+  "verdict": "PASS",
+  "reviewer": "Claude vision review of review-video.jpg",
+  "notes": [
+    "Fox turns its head and blinks beside the mushroom; same fox, nothing new appears"
+  ],
+  "checklist": [
+    "The subject moves in a charming, readable way and stays the same character throughout",
+    "No extra or missing limbs, melting, morphing or flicker in any sampled frame",
+    "No new objects, text or faces appear; objects still have no faces",
+    "Subject stays inside the frame on a white background with a locked camera",
+    "Nothing a parent would find odd or unsettling"
+  ],
+  "image_sha256": "80c371d9adc74fa4c4a2f88508fe14f641918221b923a69690f6f6ac83fbbded",
+  "sheet_sha256": "dd04e5701911fbf3cfada0a3c21ec465542108beac25b02f493102c96a19eb34",
+  "reviewed_at": "2026-11-25T17:28:17Z",
+  "video_sha256": "ae2f8333f879669c1795f8fd81ccde8eecb985e9a35772e8ab1462dcfa71d72b"
+}

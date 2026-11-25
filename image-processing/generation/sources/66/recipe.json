@@ -1,0 +1,49 @@
+{
+  "id": "66",
+  "slug": "castle",
+  "title": "Castle",
+  "category": "fantasy",
+  "kind": "object",
+  "factory": 1,
+  "added": "2026-11-23",
+  "seed": 2026115366,
+  "subject": "A fairy-tale toy castle with sandy yellow stone walls, three round towers with purple cone roofs and a red flag on each, a large brown arched door and two blue arched windows, standing on one small rounded green mound only a little wider than the castle. Every wall, tower, roof, flag, door and window is drawn with a bold black outline",
+  "motion": "The three red flags wave strongly in the wind and a few small white clouds drift past behind the towers, while the castle, its walls, door and windows stay exactly as drawn",
+  "image_prompt": "Flat vector art, children's coloring book style, A fairy-tale toy castle with sandy yellow stone walls, three round towers with purple cone roofs and a red flag on each, a large brown arched door and two blue arched windows, standing on one small rounded green mound only a little wider than the castle. Every wall, tower, roof, flag, door and window is drawn with a bold black outline. A real object drawn as the thing itself. Large clear shapes, simple shapes, bold black outlines of one even medium weight around every shape, vibrant solid flat colors, white background, minimalist, high contrast, 2d game asset. Every named color fills a substantial clearly enclosed area, some colors repeated in separate areas. Everything fully visible with a generous white margin.",
+  "video_prompt": "A charming flat 2D cartoon animation for young children. The three red flags wave strongly in the wind and a few small white clouds drift past behind the towers, while the castle, its walls, door and windows stay exactly as drawn. Preserve the exact subject, proportions, bright solid colors and thick black outlines of the input picture. Keep the entire subject visible. Locked camera, plain white background, gentle smooth readable motion, no cuts, no camera zoom, no text, no new objects. End near the starting pose. No speech.",
+  "history": [
+    {
+      "at": "2026-11-23T17:51:50Z",
+      "stage": "image",
+      "seed_was": 2026112366,
+      "reason": "Check: hill and path run off the bottom edge"
+    },
+    {
+      "at": "2026-11-23T17:59:56Z",
+      "stage": "image",
+      "seed_was": 2026112366,
+      "reason": "Check: drawn as a sticker on a black background"
+    },
+    {
+      "at": "2026-11-25T15:49:43Z",
+      "stage": "image",
+      "seed_was": 2026113366,
+      "reason": "Restyle on Qwen-Image 2.1 to match the earlier levels, approved by Lewis"
+    },
+    {
+      "at": "2026-11-25T16:07:39Z",
+      "stage": "image",
+      "seed_was": 2026114366,
+      "reason": "Near-white walls with hairline outlines numbered raggedly"
+    },
+    {
+      "at": "2026-11-25T17:28:04Z",
+      "stage": "video",
+      "seed_was": 2026115366,
+      "reason": "Hardly anything moved"
+    }
+  ],
+  "image_negative": "frame, border, rounded box, colour swatches, paint blobs, confetti, decorations, patterned background, coloured background, scenery, sky, sticker outline, gradients, soft shadows, highlights, texture, realistic, photography, 3d, rendering, fuzzy, sketch, coloured outlines, lineless art, watermark, text, numerals, greyscale, extra limbs, cropped subject, face on an object, eyes, mouth, arms, legs",
+  "image_model": "qwen-image-2.1",
+  "video_seed": 2026116366
+}

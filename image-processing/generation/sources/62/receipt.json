@@ -1,0 +1,63 @@
+{
+  "id": "62",
+  "title": "Whale",
+  "factory_revision": 1,
+  "integrated_at": "2026-11-25T17:29:22Z",
+  "models": {
+    "image": "qwen-image-2.1",
+    "video": "wan2.2-i2v"
+  },
+  "code": {
+    "process.py": "3aea2e76f4e65f0531aba61faa0f7e1d4f0d08d6707f679da33db1ea2822a1a6",
+    "finish.py": "50ecb34cfd4176056daac9194676d64e6d21b3c87688a606a3ddf91cab35fc80",
+    "checks.py": "b1b6e78e0e821ec02ff5a480824f6845091b18cfb6ca99f4298e5a2dc0b032c6"
+  },
+  "finish": {
+    "finish_revision": 11,
+    "palette_before": 17,
+    "palette_after": 7,
+    "lookalike_colors_merged": 0,
+    "shade_regions_merged": 3,
+    "areas_returned_to_art_colour": 0,
+    "slivers_absorbed": 69,
+    "ink_pixels_restored": 1496,
+    "black_fill_pixels": 0,
+    "dash_pixels_dropped": 5692,
+    "lost_part_pixels_reclaimed": 28869,
+    "overmerged_colors_split": 0,
+    "mixed_regions_divided": 0,
+    "fixed_detail_pixels": 0,
+    "small_numbers": 3,
+    "fixed_detail_fraction_of_subject": 0.0,
+    "pixels_changed_fraction": 0.0351,
+    "numbers": 11
+  },
+  "image_sha256": "74712f93b95c0d71fc9a5b5fe96af2103d098fd0cf803e81b6f712fe55c04958",
+  "video_sha256": "e427575ed76bfdbffe01de6a19a13ebdc8f9c3f0c47da37352ac76a83ad74709",
+  "playable_sha256": "393f4893bec3945e9cfcf8d22cafef1076b0043f06ea22912f41d7ca70b6d332",
+  "bundle_sha256": "ef61e29c3c1288c1a2ad392acde08feb8403c9c500e3507381a6adb75cc3bce4",
+  "files": {
+    "data.json": "d115f1f83d9ffe585801a7133c33281a9218c301e780e602733b77b946141776",
+    "original.png": "3f0f875909af27364b8a042bc56919f1ebaac768c31cebb66d4d28c66127822b",
+    "lines.png": "a3e7dcf9c721c6cc1cacbbef5dea8137af61cad95b512607eb55fd09f95537a1",
+    "map.png": "76f125b871182c17756560ed1a0121b93d28c7887810b9fbbad2bb5b3bc9a093",
+    "reward.mp4": "e427575ed76bfdbffe01de6a19a13ebdc8f9c3f0c47da37352ac76a83ad74709"
+  },
+  "bytes": {
+    "data.json": 1283,
+    "original.png": 31706,
+    "lines.png": 20990,
+    "map.png": 13404,
+    "reward.mp4": 583671
+  },
+  "reviews": {
+    "image": {
+      "reviewer": "Claude vision review of review-image.jpg",
+      "sha256": "4e9426f4013fbbee5535f6493a540f07c5cc34fc5897f73bb221b7a8e848a99d"
+    },
+    "video": {
+      "reviewer": "Claude vision review of review-video.jpg",
+      "sha256": "2b4776478eb6c9db387bbf28e53a488eeea2ebfd2ed3b5105b1e843715a17970"
+    }
+  }
+}

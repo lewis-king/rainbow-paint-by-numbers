@@ -1,0 +1,26 @@
+{
+  "id": "67",
+  "stage": "video",
+  "model": "wan2.2-i2v",
+  "prompt_id": "dca870c8-f149-4630-84d6-ceddcdbe7a71",
+  "status": "completed",
+  "graph_sha256": "6e988957354ee2c8828a688a51f84251df09b04daf2e33fa151ac11779f99d9c",
+  "seed": 2026119367,
+  "submitted_at": "2026-11-25T16:33:49Z",
+  "comfy_output": {
+    "filename": "67-birthday-cake_00002_.mp4",
+    "subfolder": "rainbow-paint-by-numbers/video",
+    "type": "output",
+    "metadata": {
+      "kind": "video",
+      "width": 640,
+      "height": 640,
+      "duration": 5.0625,
+      "fps": 16.0,
+      "frame_count": 81
+    }
+  },
+  "comfy_sha256": "d745273c2b74786521691818dede70665328b6580733bed6af8076d1d627f6ee",
+  "finished_at": "2026-11-25T17:22:20Z",
+  "sha256": "d745273c2b74786521691818dede70665328b6580733bed6af8076d1d627f6ee"
+}

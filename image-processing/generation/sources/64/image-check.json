@@ -1,0 +1,18 @@
+{
+  "verdict": "PASS",
+  "failures": [],
+  "warnings": [],
+  "metrics": {
+    "width": 1024,
+    "height": 1024,
+    "border_white": 255.0,
+    "border_dark_fraction": 0.0,
+    "subject_margin_px": 56,
+    "subject_bbox_fraction": 0.37,
+    "ink_fraction": 0.0281,
+    "colorful_fraction": 0.191,
+    "frame_coverage": 0.4,
+    "pieces": 2,
+    "outlined_fraction": 0.78
+  }
+}

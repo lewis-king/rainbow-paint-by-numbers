@@ -1,0 +1,24 @@
+{
+  "id": "68",
+  "stage": "image",
+  "model": "qwen-image-2.1",
+  "prompt_id": "38c81a1e-4e26-4c30-8c3a-2884cbca74b2",
+  "status": "completed",
+  "graph_sha256": "670692d5a4c3ca45b32f67e3f558c565ed7a3f2a0600b69de328a923c5f5c309",
+  "seed": 2026121368,
+  "submitted_at": "2026-11-25T16:02:35Z",
+  "comfy_output": {
+    "filename": "68-bee_00010_.png",
+    "subfolder": "rainbow-paint-by-numbers/image",
+    "type": "output",
+    "metadata": {
+      "kind": "image",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "comfy_sha256": "a9772eb83596652302a23eacdfa12313276493c7d4faf463ca30fff0f6128256",
+  "reframed": true,
+  "finished_at": "2026-11-25T16:03:45Z",
+  "sha256": "74be244be18e385fe0926c850048e716c7f72c61f6ad6f38fce67787d8874ef9"
+}

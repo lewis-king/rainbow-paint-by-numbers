@@ -230,5 +230,45 @@
   "58": {
     "title": "Acorn",
     "category": "nature"
+  },
+  "59": {
+    "title": "Kitten",
+    "category": "animals"
+  },
+  "60": {
+    "title": "Fox",
+    "category": "animals"
+  },
+  "61": {
+    "title": "Frog",
+    "category": "animals"
+  },
+  "62": {
+    "title": "Whale",
+    "category": "animals"
+  },
+  "63": {
+    "title": "Parrot",
+    "category": "animals"
+  },
+  "64": {
+    "title": "Fire Engine",
+    "category": "vehicles"
+  },
+  "65": {
+    "title": "Sailing Boat",
+    "category": "vehicles"
+  },
+  "66": {
+    "title": "Castle",
+    "category": "fantasy"
+  },
+  "67": {
+    "title": "Birthday Cake",
+    "category": "treats"
+  },
+  "68": {
+    "title": "Bee",
+    "category": "animals"
   }
 }

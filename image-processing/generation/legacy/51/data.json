@@ -1,0 +1,137 @@
+{
+  "id": "51",
+  "palette": [
+    "#040402",
+    "#3b1f01",
+    "#086b00",
+    "#2c2643",
+    "#0dc400",
+    "#9e5301",
+    "#584d55",
+    "#f80600",
+    "#09818a",
+    "#5b23a8",
+    "#777777",
+    "#f37200",
+    "#a5448b",
+    "#0189fc",
+    "#8832f9",
+    "#9c9c9c",
+    "#fcf800",
+    "#00fdf9",
+    "#fd60d6",
+    "#c8c8c8",
+    "#fbfdfd"
+  ],
+  "numbers": [
+    {
+      "number": 2,
+      "x": 816,
+      "y": 756,
+      "color_index": 1
+    },
+    {
+      "number": 2,
+      "x": 751,
+      "y": 758,
+      "color_index": 1
+    },
+    {
+      "number": 3,
+      "x": 603,
+      "y": 674,
+      "color_index": 2
+    },
+    {
+      "number": 5,
+      "x": 657,
+      "y": 682,
+      "color_index": 4
+    },
+    {
+      "number": 8,
+      "x": 270,
+      "y": 340,
+      "color_index": 7
+    },
+    {
+      "number": 12,
+      "x": 136,
+      "y": 495,
+      "color_index": 11
+    },
+    {
+      "number": 14,
+      "x": 645,
+      "y": 339,
+      "color_index": 13
+    },
+    {
+      "number": 14,
+      "x": 584,
+      "y": 381,
+      "color_index": 13
+    },
+    {
+      "number": 14,
+      "x": 650,
+      "y": 438,
+      "color_index": 13
+    },
+    {
+      "number": 15,
+      "x": 85,
+      "y": 220,
+      "color_index": 14
+    },
+    {
+      "number": 15,
+      "x": 775,
+      "y": 896,
+      "color_index": 14
+    },
+    {
+      "number": 17,
+      "x": 260,
+      "y": 399,
+      "color_index": 16
+    },
+    {
+      "number": 17,
+      "x": 809,
+      "y": 507,
+      "color_index": 16
+    },
+    {
+      "number": 18,
+      "x": 316,
+      "y": 73,
+      "color_index": 17
+    },
+    {
+      "number": 19,
+      "x": 804,
+      "y": 442,
+      "color_index": 18
+    },
+    {
+      "number": 21,
+      "x": 274,
+      "y": 133,
+      "color_index": 20
+    },
+    {
+      "number": 21,
+      "x": 94,
+      "y": 271,
+      "color_index": 20
+    }
+  ],
+  "dimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "has_reward": true,
+  "background_id": 255,
+  "line_id": 254
+}
