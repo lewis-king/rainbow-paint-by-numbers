@@ -41,6 +41,7 @@ interface GameCanvasProps {
 export interface GameCanvasHandle {
   getPaintedPixels: () => Set<number>;
   getCanvasSnapshot: () => string | null;
+  getProgress: () => number;
 }
 
 const SMALL_NUMBER_SIZES = [4, 5, 6, 7, 8, 9];
@@ -145,6 +146,11 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       // No pixels to return
       return new Set();
     },
+    getProgress: () => (
+      totalPaintablePixelsRef.current > 0
+        ? (paintedPixelsRef.current.size / totalPaintablePixelsRef.current) * 100
+        : 0
+    ),
     getCanvasSnapshot: () => {
       if (!userCanvasImage || !linesImage) return null;
       try {

@@ -273,6 +273,9 @@ const LevelCard = memo(function LevelCard({ level, index, isComplete, progressPe
         contentFit="cover"
         recyclingKey={level.id}
         transition={0}
+        // Bundled pictures keep their file name when their content changes, so a copy cached
+        // on disk by an earlier version of the app would be shown instead of the new picture.
+        cachePolicy="memory"
       />
 
       {/* Progress bar for in-progress levels */}

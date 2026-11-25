@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { encodeRuns, migrateStoredLevels } from '@/utils/painted-pixels';
 
 // Wrap AsyncStorage to handle errors gracefully
 const safeAsyncStorage = {
@@ -31,8 +32,9 @@ const safeAsyncStorage = {
 interface LevelProgress {
   progress: number;
   isComplete: boolean;
-  // Store painted pixel indices for restoration (only saved on exit)
-  paintedPixels?: number[];
+  // Painted pixels as [start, length, ...] runs for restoration (only saved on exit).
+  // See utils/painted-pixels.ts for why this is not a list of every pixel.
+  paintedRuns?: number[];
   // Timestamp for cache-busting preview images
   lastUpdated: number;
 }
@@ -101,7 +103,7 @@ export const useLevelProgressStore = create<LevelProgressState>()(
               progress,
               isComplete,
               // Don't store pixels for completed levels - they show victory screen anyway
-              paintedPixels: isComplete ? undefined : Array.from(paintedPixels),
+              paintedRuns: isComplete ? undefined : encodeRuns(paintedPixels),
               lastUpdated: Date.now(),
             },
           },
@@ -127,6 +129,12 @@ export const useLevelProgressStore = create<LevelProgressState>()(
     {
       name: 'level-progress-storage',
       storage: createJSONStorage(() => safeAsyncStorage),
+      // Version 1 stores painted pixels as runs. Earlier saves are converted, not dropped.
+      version: 1,
+      migrate: (persisted, version) => {
+        const state = (persisted ?? {}) as { levels?: Record<string, LevelProgress> };
+        return version < 1 ? { ...state, levels: migrateStoredLevels(state.levels) } : state;
+      },
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true);
       },

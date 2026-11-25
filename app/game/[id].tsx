@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useState, useCallback, useRef } from 'react';
 import { View, StyleSheet, ActivityIndicator, AppState, AppStateStatus } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useFocusEffect } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKeepAwake } from 'expo-keep-awake';
@@ -16,6 +16,7 @@ import { useGameStore } from '@/store/game-store';
 import { useLevelProgressStore } from '@/store/level-progress-store';
 import { useReviewStore } from '@/store/review-store';
 import { savePreview, deletePreview } from '@/utils/preview-manager';
+import { decodeRuns } from '@/utils/painted-pixels';
 
 export default function GameScreen() {
   useKeepAwake();
@@ -38,6 +39,7 @@ export default function GameScreen() {
   // Store latest snapshot and pixels for cleanup (since canvasRef may be null during unmount)
   const latestSnapshotRef = useRef<string | null>(null);
   const latestPaintedPixelsRef = useRef<Set<number>>(new Set());
+  const latestProgressRef = useRef(0);
   // Track if any painting happened this session (to avoid overwriting completed levels on unmount)
   const hasPaintedRef = useRef<boolean>(false);
 
@@ -50,6 +52,7 @@ export default function GameScreen() {
 
     // Reset painting tracker for new level
     hasPaintedRef.current = false;
+    latestProgressRef.current = 0;
 
     setLoading(true);
 
@@ -57,11 +60,12 @@ export default function GameScreen() {
     const savedProgress = getLevelProgress(id);
     if (savedProgress) {
       setProgress(savedProgress.progress);
-      setInitialPaintedPixels(savedProgress.paintedPixels);
+      const savedPixels = savedProgress.paintedRuns ? decodeRuns(savedProgress.paintedRuns) : undefined;
+      setInitialPaintedPixels(savedPixels);
       lastSavedProgressRef.current = savedProgress.progress;
       // Pre-populate cache with saved data so it's available even if canvas unmounts before we can read it
-      if (savedProgress.paintedPixels && savedProgress.paintedPixels.length > 0) {
-        latestPaintedPixelsRef.current = new Set(savedProgress.paintedPixels);
+      if (savedPixels && savedPixels.length > 0) {
+        latestPaintedPixelsRef.current = new Set(savedPixels);
       }
       // Only show victory if this level is actually complete
       setShowVictory(savedProgress.isComplete);
@@ -95,11 +99,18 @@ export default function GameScreen() {
     if (!canvasRef.current) return;
 
     latestPaintedPixelsRef.current = canvasRef.current.getPaintedPixels();
+    latestProgressRef.current = canvasRef.current.getProgress();
     const snapshot = canvasRef.current.getCanvasSnapshot();
     if (snapshot) {
       latestSnapshotRef.current = snapshot;
     }
   }, []);
+
+  // Leaving the picture: take the painted pixels and the preview while the canvas is
+  // still mounted. By the time the unmount save below runs, the canvas is gone, and a
+  // cache that was last refreshed before the final strokes would save without them.
+  useFocusEffect(useCallback(() => () => updateCachedData(), [updateCachedData]));
+  useLayoutEffect(() => () => updateCachedData(), [updateCachedData]);
 
   // Full save with pixel data - only called on exit
   const saveFullProgress = useCallback(() => {
@@ -109,7 +120,12 @@ export default function GameScreen() {
     // This prevents overwriting completed levels when just viewing them
     if (!hasPaintedRef.current) return;
 
-    const currentProgress = useGameStore.getState().progress;
+    // The progress shown on screen trails the painting by a fraction of a second;
+    // the canvas knows the exact figure.
+    const currentProgress = Math.max(
+      useGameStore.getState().progress,
+      canvasRef.current ? canvasRef.current.getProgress() : latestProgressRef.current
+    );
     const complete = currentProgress >= 99;
 
     // Try to get fresh data from canvas, fall back to cached refs
@@ -211,6 +227,7 @@ export default function GameScreen() {
     // Clear cached snapshot and pixels
     latestSnapshotRef.current = null;
     latestPaintedPixelsRef.current = new Set();
+    latestProgressRef.current = 0;
     // Reset painting tracker since we're starting fresh
     hasPaintedRef.current = false;
     // Force re-mount of canvas by toggling loading
