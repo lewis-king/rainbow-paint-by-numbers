@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Bee above a pink flower; only the bee has a face, stripes and wings numbered, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -15,7 +15,7 @@
     "Painted picture matches the source: no lost features, ragged edges or wrong colours"
   ],
   "image_sha256": "74be244be18e385fe0926c850048e716c7f72c61f6ad6f38fce67787d8874ef9",
-  "sheet_sha256": "9c0e7441f7c9b02044ca255834c76320e0e0c6e4d2fabdf9383ac1b829164cc8",
-  "reviewed_at": "2026-11-25T16:33:35Z",
-  "playable_sha256": "07c3919bac69eb302ef7071a3fbf99008a9bd4854aa3ebc7a8e57cd67c3ba769"
+  "sheet_sha256": "1e354f3e794da7cd3f6d7ace85e73329eae11bca5e24f4aa5ab5efd00b823b1d",
+  "reviewed_at": "2026-11-25T19:30:04Z",
+  "playable_sha256": "3c2b181582df840a014c63a41277792f94c99a99bebed945c10ae55f5a3460df"
 }

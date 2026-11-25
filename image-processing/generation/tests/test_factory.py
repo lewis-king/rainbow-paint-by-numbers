@@ -452,13 +452,17 @@ class FinishingPass(Scratch):
         self.assertEqual(after['metrics']['labels'], 8)
         self.assertEqual(after['metrics']['dead_colors'], [])
 
-    def test_eye_sparkle_is_printed_white(self):
+    def test_eye_sparkle_shows_the_canvas_and_is_never_printed(self):
         folder = self.raw_level()
         finish.finish_level(folder)
         level_map = cv2.imread(str(folder / 'map.png'), cv2.IMREAD_UNCHANGED)
         lines = cv2.imread(str(folder / 'lines.png'), cv2.IMREAD_UNCHANGED)
-        self.assertEqual(level_map[640, 680], 254)
-        self.assertEqual(lines[640, 680].tolist(), [255, 255, 255, 255])
+        self.assertEqual(level_map[640, 680], 254)             # not an area to paint
+        self.assertEqual(lines[640, 680, 3], 0)                # a hole in the ink, not white paint
+        opaque = lines[..., 3] > 0
+        self.assertEqual(int(lines[opaque][:, :3].max()), 0)   # everything printed is black
+        painted = cv2.imread(str(folder / 'original.png'))
+        self.assertEqual(painted[640, 680].tolist(), [255, 255, 255])   # white in the finished picture
 
     def test_finishing_is_deterministic_and_idempotent(self):
         first = self.raw_level()
@@ -749,6 +753,43 @@ class FactoryGates(Scratch):
         self.ship()
         with self.assertRaisesRegex(factory.Blocked, 'factory level'):
             factory.refinish('900')
+
+    def reviewer_says(self, answer):
+        self.addCleanup(setattr, factory, 'ask_reviewer', factory.ask_reviewer)
+        factory.ask_reviewer = lambda views, prompt, model, keep_loaded=True: answer
+
+    def answer(self, verdict, failing=()):
+        count = len(factory.REVIEW_CHECKLIST['image'])
+        return json.dumps({'verdict': verdict, 'summary': 'looked', 'items': [
+            {'check': n, 'pass': n not in failing, 'seen': 'a shape'} for n in range(1, count + 1)]})
+
+    def test_local_reviewer_passes_only_on_a_complete_clean_answer(self):
+        self.generate('image')
+        factory.check_image(self.level)
+        self.reviewer_says(self.answer('PASS', failing=(3,)))        # says PASS but lists a fault
+        self.assertEqual(factory.auto_review(self.level, 'image'), 'UNSURE')
+        self.assertIsNone(self.level.review('image'))                # nothing recorded; a person looks
+        self.reviewer_says('I think it looks nice')
+        self.assertEqual(factory.auto_review(self.level, 'image'), 'UNSURE')
+        self.reviewer_says(self.answer('PASS'))
+        self.assertEqual(factory.auto_review(self.level, 'image'), 'PASS')
+        self.assertTrue(self.level.review('image')['reviewer'].startswith('ollama:'))
+        self.level.image_gate()
+
+    def test_local_reviewer_rejection_closes_the_gate(self):
+        self.generate('image')
+        factory.check_image(self.level)
+        self.reviewer_says(self.answer('FAIL', failing=(2,)))
+        self.assertEqual(factory.auto_review(self.level, 'image'), 'FAIL')
+        with self.assertRaisesRegex(factory.Blocked, 'rejected in review'):
+            self.level.image_gate()
+
+    def test_local_reviewer_never_sees_a_picture_that_failed_its_checks(self):
+        self.generate('image', shapes=[('red', 'circle', (512, 512, 300))])
+        factory.check_image(self.level)
+        self.reviewer_says(self.answer('PASS'))
+        with self.assertRaisesRegex(factory.Blocked, 'measured checks'):
+            factory.auto_review(self.level, 'image')
 
     def test_manifest_rejects_duplicate_titles_and_bad_recipes(self):
         factory.CATALOG.write_text(json.dumps({'7': {'title': 'Shapes', 'category': 'toys'}}))

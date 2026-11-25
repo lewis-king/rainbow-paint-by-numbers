@@ -24,6 +24,28 @@ venv/bin/python generation/factory.py status
 review, then stops and says which sheet to look at. Ids are a list (`59 61`) or
 a range (`59-68`).
 
+### Batches with a local reviewer
+
+`run 69-78 --auto-review --wait-gpu 30` works through a batch without a person:
+
+1. draws every picture, then checks them all;
+2. hands the GPU to a local vision model in Ollama (`qwen3.8:27b` unless
+   `--model` or `FACTORY_VISION_MODEL` says otherwise), which goes through the
+   review checklist for every picture in one sitting;
+3. redraws the rejects on a new seed and repeats, at most twice;
+4. does the same for the reward videos, then integrates what passed.
+
+Pictures and reviews run in separate sittings because the picture models and
+the reviewer do not fit on the GPU together. The reviewer only passes a level
+when it answers every checklist item and all of them pass. If it is unsure,
+its answer cannot be read, or a level is still rejected after two redraws, the
+level is listed under `NEEDS A PERSON` with the sheet to look at.
+`autoreview image 69` runs the reviewer on its own.
+
+`reviewer_trial.py MODEL...` measures a model against sheets whose verdict is
+known (the levels in the app and the archived rejects). Run it before trusting
+a new model: one that passes a known reject is not fit for the line.
+
 Other commands: `retry ID image|video --reason "..."` archives an attempt under
 `runs/ID/attempts/` and moves to a new seed (`--subject`/`--motion` rewrite the
 recipe, `--keep-seed` repeats it). `cancel` takes this factory's unfinished
@@ -110,11 +132,12 @@ levels and, without redrawing anything:
   black area to paint;
 - numbers the areas, each number centred where the digit fits.
 
-Revision 11 keeps the picture's detail while it simplifies:
+Revision 12 keeps the picture's detail while it simplifies:
 
-- **The canvas starts blank.** Nothing is printed in colour. The child can
-  pinch to zoom, and the rainbow brush is there when an area is fiddly. The
-  one printed detail is the white sparkle in an eye.
+- **The canvas starts blank.** Nothing is printed in colour or in white. The
+  child can pinch to zoom, and the rainbow brush is there when an area is
+  fiddly. The sparkle in an eye is a hole in the ink that shows the canvas
+  tint; printed white, it glared out of the unpainted picture.
 - **Small details are painted.** A stripe, spot or tassel at least 5 map px
   wide and 60 px in area stays an area to paint. Its number is drawn smaller
   to fit: `size` (font px, 4 to 9) in `data.json`, which `GameCanvas.tsx`
@@ -144,7 +167,7 @@ Revision 11 keeps the picture's detail while it simplifies:
   subject does not reach is given back as an area to paint in the art's
   colour, and the level check fails if a part is still lost.
 
-Outlines, strokes and eye sparkles live in `lines.png`, which the game draws on
+Outlines and strokes live in `lines.png`, which the game draws on
 top. The one app change is the optional `size` on a number.
 `factory.py audit` lists what the checks find in the shipped levels.
 
@@ -174,7 +197,7 @@ October. `process.py` runs on four threads behind a cross-process lock.
 image-processing/venv/bin/python -m unittest discover -s image-processing/generation/tests
 ```
 
-Sixty-three tests plant one fault at a time (a dead swatch, a number on the wrong
+Sixty-six tests plant one fault at a time (a dead swatch, a number on the wrong
 colour, a cut in the video, an edited `data.json`) and prove the matching gate
 catches it. The last ones drive a picture through the whole line with ComfyUI
 replaced by files, then tamper with the result to show `verify` notices.

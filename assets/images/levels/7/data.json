@@ -187,5 +187,6 @@
   },
   "has_reward": true,
   "background_id": 255,
-  "line_id": 254
+  "line_id": 254,
+  "finish_revision": 12
 }

@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Parrot on a branch; wing bands and leaves numbered, small claws carry small numbers, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -16,6 +16,6 @@
   ],
   "image_sha256": "8bbfd646934b095d758cc420cc1c705347de9dc059d7aa839c206dc6a3c15fe2",
   "sheet_sha256": "5c9373f043fb9d1a36b011c6684b985f43f3e16adfe67651b894e33ba6e30c1a",
-  "reviewed_at": "2026-11-25T16:33:34Z",
+  "reviewed_at": "2026-11-25T19:30:02Z",
   "playable_sha256": "239977d48873e8f42767a539adbd6439a50fb6ca08422cc924202ac3e47f2389"
 }

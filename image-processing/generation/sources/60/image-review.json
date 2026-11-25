@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Fox with scarf beside a red mushroom; face and paws right, cream chest and tail tip kept, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -15,7 +15,7 @@
     "Painted picture matches the source: no lost features, ragged edges or wrong colours"
   ],
   "image_sha256": "80c371d9adc74fa4c4a2f88508fe14f641918221b923a69690f6f6ac83fbbded",
-  "sheet_sha256": "4ddb7eff2235046b26ebeecde05fe44dfd60a0babcde88c57850e8910e69515f",
-  "reviewed_at": "2026-11-25T16:33:33Z",
-  "playable_sha256": "869ed54b4cd42a47a85857a48a08dbeb3a496736ab41006f764ab889ff5c2a6c"
+  "sheet_sha256": "24f432f4d64cf47e2a1209354790ce9dd850d460eecac65140e2206f09a29940",
+  "reviewed_at": "2026-11-25T19:30:02Z",
+  "playable_sha256": "5b364bce1e5ed2b9926679ab877b46720108c5e383d13b121cbbe49ebca3692f"
 }

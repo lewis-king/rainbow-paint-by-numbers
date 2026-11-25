@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Two-tier cake with three candles on a stand; white icing paintable, no face, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -16,6 +16,6 @@
   ],
   "image_sha256": "fb9ac92c29d4ec122ad8243180cd8a236052fe7a561f30e2538ae0fd18435942",
   "sheet_sha256": "8aa1cbb6baf8baeac1072c95fe1e748b27d33df57ed04c30df00cbe5535f3f4c",
-  "reviewed_at": "2026-11-25T16:33:35Z",
+  "reviewed_at": "2026-11-25T19:30:03Z",
   "playable_sha256": "3312e58d2b48ffcd5b57b25fc41ca2853e78e5257d4d31697fdf53621c2d6e77"
 }

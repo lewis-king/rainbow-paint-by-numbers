@@ -44,6 +44,9 @@ export interface GameCanvasHandle {
 }
 
 const SMALL_NUMBER_SIZES = [4, 5, 6, 7, 8, 9];
+const PROGRESS_INTERVAL = 250;
+// Saved previews are shown as thumbnails; half size is a quarter of the encoding work.
+const SNAPSHOT_SIZE = 512;
 const fontFamily = Platform.select({ ios: 'Helvetica', default: 'sans-serif' });
 const fontStyle = {
   fontFamily,
@@ -57,7 +60,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
 ) {
   const linesImage = useImage(linesUri);
   const mapImage = useImage(mapUri);
-  const font = matchFont(fontStyle);
+  const font = useMemo(() => matchFont(fontStyle), []);
   // Narrow regions carry a smaller number (size in data.json); it reads clearly once zoomed in.
   const smallFonts = useMemo(
     () => new Map(SMALL_NUMBER_SIZES.map((size) => [size, matchFont({ ...fontStyle, fontSize: size })])),
@@ -101,6 +104,20 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
 
   const [pendingStrokes, setPendingStrokes] = useState<Array<{x: number, y: number, color: string, radius: number}>>([]);
   const pendingStrokesCountRef = useRef(0);
+  // Strokes arrive with every touch event; they reach React state once per frame.
+  const strokeBufferRef = useRef<Array<{x: number, y: number, color: string, radius: number}>>([]);
+  const strokeFrameRef = useRef<number | null>(null);
+  const progressTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lastProgressTimeRef = useRef(0);
+
+  // Palette as numbers, parsed once instead of once per painted pixel.
+  const paletteRgb = useMemo(
+    () => levelData.palette.map((hex): [number, number, number] => {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : [0, 0, 0];
+    }),
+    [levelData.palette]
+  );
 
   const mapPixelDataRef = useRef<Uint8Array | null>(null);
   const [mapReady, setMapReady] = useState(false);
@@ -131,9 +148,11 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     getCanvasSnapshot: () => {
       if (!userCanvasImage || !linesImage) return null;
       try {
-        const surface = Skia.Surface.Make(imgWidth, imgHeight);
+        const shrink = Math.min(1, SNAPSHOT_SIZE / Math.max(imgWidth, imgHeight));
+        const surface = Skia.Surface.Make(Math.round(imgWidth * shrink), Math.round(imgHeight * shrink));
         if (!surface) return null;
         const canvas = surface.getCanvas();
+        canvas.scale(shrink, shrink);
         canvas.drawImage(userCanvasImage, 0, 0);
         canvas.drawImage(linesImage, 0, 0);
         const compositeImage = surface.makeImageSnapshot();
@@ -175,6 +194,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
         }
         lastUpdateTimeRef.current = Date.now();
         pendingImageUpdateRef.current = false;
+        strokeBufferRef.current = [];
         setPendingStrokes([]);
         pendingStrokesCountRef.current = 0;
       } catch (error) {
@@ -301,24 +321,39 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       if (imageUpdateTimeoutRef.current) {
         clearTimeout(imageUpdateTimeoutRef.current);
       }
+      if (progressTimerRef.current) {
+        clearTimeout(progressTimerRef.current);
+      }
+      if (strokeFrameRef.current !== null) {
+        cancelAnimationFrame(strokeFrameRef.current);
+      }
     };
   }, []);
 
-  const hexToRgb = useCallback((hex: string): [number, number, number] => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    if (!result) return [0, 0, 0];
-    return [
-      parseInt(result[1], 16),
-      parseInt(result[2], 16),
-      parseInt(result[3], 16),
-    ];
-  }, []);
-
-  const updateProgress = useCallback(() => {
+  const reportProgress = useCallback(() => {
     if (totalPaintablePixelsRef.current === 0) return;
+    lastProgressTimeRef.current = Date.now();
     const progress = (paintedPixelsRef.current.size / totalPaintablePixelsRef.current) * 100;
     onProgressChange(progress, 'paint');
   }, [onProgressChange]);
+
+  // Progress re-renders the whole screen, so while a finger is moving it is
+  // reported a few times a second, and once more when the stroke stops.
+  const updateProgress = useCallback((immediate = false) => {
+    if (progressTimerRef.current) {
+      clearTimeout(progressTimerRef.current);
+      progressTimerRef.current = null;
+    }
+    const wait = PROGRESS_INTERVAL - (Date.now() - lastProgressTimeRef.current);
+    if (immediate || wait <= 0) {
+      reportProgress();
+    } else {
+      progressTimerRef.current = setTimeout(() => {
+        progressTimerRef.current = null;
+        reportProgress();
+      }, wait);
+    }
+  }, [reportProgress]);
 
   const paintBrush = useCallback((
     canvasX: number,
@@ -364,13 +399,8 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
         const dataIdx = (py * imgWidth + px) * 4;
         const pixelKey = py * imgWidth + px;
 
-        let color: [number, number, number];
-        if (isMagicBrush) {
-          if (mapColorIdx !== currentSelectedColorIndex) continue;
-          color = hexToRgb(palette[currentSelectedColorIndex]);
-        } else {
-          color = hexToRgb(palette[mapColorIdx]);
-        }
+        if (isMagicBrush && mapColorIdx !== currentSelectedColorIndex) continue;
+        const color = paletteRgb[mapColorIdx];
 
         if (userCanvasData[dataIdx] !== color[0] ||
             userCanvasData[dataIdx + 1] !== color[1] ||
@@ -380,9 +410,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
           userCanvasData[dataIdx + 2] = color[2];
           userCanvasData[dataIdx + 3] = 255;
 
-          if (!paintedPixelsRef.current.has(pixelKey)) {
-            paintedPixelsRef.current.add(pixelKey);
-          }
+          paintedPixelsRef.current.add(pixelKey);
           painted = true;
         }
       }
@@ -401,12 +429,13 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
         const strokeColor = isMagicBrush ? palette[currentSelectedColorIndex] : palette[centerColorIdx];
         const newStroke = { x: adjustedX, y: adjustedY, color: strokeColor, radius: radius * scale };
 
-        if (needsFlush) {
-          setPendingStrokes([newStroke]);
-          pendingStrokesCountRef.current = 1;
-        } else {
-          setPendingStrokes(prev => [...prev, newStroke]);
-          pendingStrokesCountRef.current++;
+        strokeBufferRef.current.push(newStroke);
+        pendingStrokesCountRef.current = strokeBufferRef.current.length;
+        if (strokeFrameRef.current === null) {
+          strokeFrameRef.current = requestAnimationFrame(() => {
+            strokeFrameRef.current = null;
+            setPendingStrokes(strokeBufferRef.current.slice());
+          });
         }
       }
 
@@ -415,7 +444,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       }
       updateProgress();
     }
-  }, [mapReady, scale, brushSize, levelData.palette, hexToRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, canvasWidth, canvasHeight, zoomScale, translateX, translateY]);
+  }, [mapReady, scale, brushSize, levelData.palette, paletteRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, canvasWidth, canvasHeight, zoomScale, translateX, translateY]);
 
   const floodFill = useCallback((
     canvasX: number,
@@ -450,10 +479,10 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       return;
     }
 
-    const fillColor = hexToRgb(levelData.palette[currentSelectedColorIndex]);
+    const fillColor = paletteRgb[currentSelectedColorIndex];
 
     const stack: number[] = [startX, startY];
-    const visited = new Set<number>();
+    const visited = new Uint8Array(imgWidth * imgHeight);
     let iterations = 0;
     
     // Increased Iteration Limit for High Res
@@ -462,15 +491,14 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     while (stack.length > 0 && iterations < maxIterationsPerFrame) {
       const y = stack.pop()!;
       const x = stack.pop()!;
-      const key = y * imgWidth + x;
-
-      if (visited.has(key)) continue;
       if (x < 0 || x >= imgWidth || y < 0 || y >= imgHeight) continue;
+      const key = y * imgWidth + x;
+      if (visited[key]) continue;
 
       const mapIdx = (y * imgWidth + x) * 4;
       if (mapPixelData[mapIdx] !== targetColorIndex) continue;
 
-      visited.add(key);
+      visited[key] = 1;
 
       const dataIdx = (y * imgWidth + x) * 4;
       userCanvasData[dataIdx] = fillColor[0];
@@ -478,9 +506,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
       userCanvasData[dataIdx + 2] = fillColor[2];
       userCanvasData[dataIdx + 3] = 255;
 
-      if (!paintedPixelsRef.current.has(key)) {
-        paintedPixelsRef.current.add(key);
-      }
+      paintedPixelsRef.current.add(key);
 
       stack.push(
         x + 1, y,     
@@ -496,8 +522,8 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     }
 
     createCanvasImage(userCanvasData, true); 
-    updateProgress();
-  }, [mapReady, scale, levelData.palette, hexToRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, canvasWidth, canvasHeight, zoomScale, translateX, translateY]);
+    updateProgress(true);
+  }, [mapReady, scale, levelData.palette, paletteRgb, createCanvasImage, updateProgress, imgWidth, imgHeight, canvasWidth, canvasHeight, zoomScale, translateX, translateY]);
 
   const handlePan = useCallback((x: number, y: number) => {
     const tool = useGameStore.getState().selectedTool;
@@ -582,6 +608,22 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
     }));
   }, [levelData.numbers, scale]);
 
+  // The numbers never change while painting; build them once, not on every stroke.
+  const numberLabels = useMemo(() => (
+    <Group>
+      {scaledNumbers.map((n, i) => (
+        <Text
+          key={`${n.x}-${n.y}-${i}`}
+          x={n.displayX - 4 * (n.size ? n.size / 10 : 1)}
+          y={n.displayY + 3 * (n.size ? n.size / 10 : 1)}
+          text={String(n.number)}
+          font={(n.size && smallFonts.get(n.size)) || font}
+          color="#666666"
+        />
+      ))}
+    </Group>
+  ), [scaledNumbers, smallFonts, font]);
+
   if (!linesImage || !userCanvasImage) {
     return <View style={[styles.container, { width: canvasWidth, height: canvasHeight }]} />;
   }
@@ -616,19 +658,7 @@ export const GameCanvas = forwardRef<GameCanvasHandle, GameCanvasProps>(function
               height={canvasHeight}
               fit="fill"
             />
-            {/* UPDATED: Only rendering the single text element now */}
-            <Group>
-              {scaledNumbers.map((n, i) => (
-                <Text
-                  key={`${n.x}-${n.y}-${i}`}
-                  x={n.displayX - 4 * (n.size ? n.size / 10 : 1)}
-                  y={n.displayY + 3 * (n.size ? n.size / 10 : 1)}
-                  text={String(n.number)}
-                  font={(n.size && smallFonts.get(n.size)) || font}
-                  color="#666666" 
-                />
-              ))}
-            </Group>
+            {numberLabels}
           </Canvas>
         </Animated.View>
       </View>

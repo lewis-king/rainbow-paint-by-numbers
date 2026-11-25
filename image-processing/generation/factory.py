@@ -10,6 +10,7 @@ One level moves through these stages. Each command is safe to repeat.
     collect image  download the finished picture
     check image    source checks, build the numbered level, playability checks, review sheet
     review image   a person or vision model looks at the sheet and records PASS/FAIL
+                   (`autoreview image` asks the local Ollama vision model instead)
     submit video   queue the reward animation (needs the image gates)
     collect video
     check video    technical and motion checks, frame sheet
@@ -60,6 +61,10 @@ from processing_resources import heavy_work_slot  # noqa: E402
 
 FACTORY_REVISION = 1
 COMFY_URL = os.environ.get('COMFYUI_URL', 'http://127.0.0.1:8188').rstrip('/')
+OLLAMA_URL = os.environ.get('OLLAMA_URL', 'http://127.0.0.1:11434').rstrip('/')
+VISION_MODEL = os.environ.get('FACTORY_VISION_MODEL', 'qwen3.8:27b')
+VISION_VRAM_GIB = 22        # the reviewer and ComfyUI's models do not fit on the GPU together
+AUTO_ROUNDS = 2             # redraws the local reviewer may ask for before a person looks
 MANIFEST = ROOT / 'manifest.json'
 RUNS = ROOT / 'runs'
 SOURCES = ROOT / 'sources'
@@ -760,6 +765,208 @@ def review(level, stage, verdict, reviewer, notes):
     save_json(level.run / f'{stage}-review.json', saved)
 
 
+# --------------------------------------------------------------------------
+# Review by a local vision model
+# --------------------------------------------------------------------------
+
+REVIEWER_BRIEF = """You are checking artwork for a paint-by-numbers game for children aged 4 and up.
+The picture is "{title}" ({kind}). It was drawn from this description: {subject}.
+{views}
+Go through every check below. Look carefully; small faults matter (an extra paw, a face on a
+flower, a stray blob, lettering). Say what you actually see, not what the description promises.
+
+{checks}
+
+Answer with JSON only:
+{{"items": [{{"check": 1, "pass": true, "seen": "what you saw"}}, ...],
+  "verdict": "PASS" or "FAIL" or "UNSURE", "summary": "one sentence"}}
+PASS only if every check passes. FAIL if any check clearly fails. UNSURE if you cannot tell."""
+VIEWS = {
+    'image': 'Image 1 is the picture. Image 2 is the blank canvas with its numbers, as the child first sees it. '
+             'Image 3 is the picture once painted.',
+    'video': 'Image 1 is the picture. Images 2 and 3 are 15 frames of its short reward animation, in order, '
+             'four to a row, each labelled with its frame number.',
+}
+
+
+def review_views(sheet, stage):
+    """The review sheet cut into views a vision model can take in, as PNG bytes."""
+    image = cv2.imread(str(sheet), cv2.IMREAD_COLOR)
+    if stage == 'image':
+        side = image.shape[1] // 3
+        tiles = [image[:side, index * side:(index + 1) * side] for index in range(3)]
+    else:
+        half = image.shape[0] // 2
+        tiles = [image[:half // 2, :image.shape[1] // 4], image[:half], image[half:]]
+    views = []
+    for tile in tiles:
+        scale = 1024 / max(tile.shape[:2])
+        if scale < 1:
+            tile = cv2.resize(tile, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+        views.append(cv2.imencode('.png', tile)[1].tobytes())
+    return views
+
+
+def ask_reviewer(views, prompt, model, keep_loaded=True):
+    import base64
+    body = {'model': model, 'stream': False, 'format': 'json', 'think': False,
+            'keep_alive': '5m' if keep_loaded else 0, 'options': {'temperature': 0, 'num_ctx': 16384},
+            'messages': [{'role': 'user', 'content': prompt,
+                          'images': [base64.b64encode(view).decode() for view in views]}]}
+    request = urllib.request.Request(OLLAMA_URL + '/api/chat', data=json.dumps(body).encode(),
+                                     headers={'Content-Type': 'application/json'})
+    with urllib.request.urlopen(request, timeout=900) as reply:
+        return json.loads(reply.read())['message']['content']
+
+
+def read_verdict(answer, checks):
+    """(verdict, notes). Anything short of a complete, consistent answer is UNSURE: a person looks."""
+    try:
+        data = json.loads(answer)
+        items = {int(item['check']): item for item in data['items']}
+        verdict = str(data['verdict']).upper()
+    except (ValueError, KeyError, TypeError):
+        return 'UNSURE', ['The reviewer did not give a readable answer']
+    notes = [f"{number}. {'ok' if items[number].get('pass') is True else 'FAULT'}: {str(items[number].get('seen', ''))[:200]}"
+             for number in sorted(items)]
+    if data.get('summary'):
+        notes.append(str(data['summary'])[:300])
+    complete = set(items) == set(range(1, len(checks) + 1))
+    all_pass = complete and all(item.get('pass') is True for item in items.values())
+    if verdict == 'PASS' and all_pass:
+        return 'PASS', notes
+    if verdict == 'FAIL' and complete and not all_pass:
+        return 'FAIL', notes
+    return 'UNSURE', notes
+
+
+def reviewer_gpu(wait_minutes):
+    """The reviewer loads only when ComfyUI is idle and has given the GPU back."""
+    deadline = time.time() + wait_minutes * 60
+    while True:
+        queue = comfy('/queue')
+        busy = bool(queue['queue_running'] or queue['queue_pending'])
+        if not busy and gpu_headroom_gib() >= VISION_VRAM_GIB:
+            return
+        if time.time() >= deadline:
+            raise Blocked('GPU is busy; the local reviewer needs it free. Retry later or pass --wait-gpu MINUTES.')
+        time.sleep(30)
+
+
+def auto_review(level, stage, model=None, keep_loaded=True):
+    """A local vision model goes through the checklist. Returns PASS, FAIL or UNSURE.
+
+    PASS and FAIL are recorded like any review. UNSURE records nothing: the level
+    waits for a person, as it does when the model's answer cannot be read.
+    """
+    model = model or VISION_MODEL
+    current = level.review(stage)
+    if current:
+        return current['verdict']
+    gates = [level.check_current('image'), level.check_current('level')] if stage == 'image' else [level.check_current('video')]
+    if any(gate is None or gate['verdict'] != 'PASS' for gate in gates):
+        raise Blocked(f'{level.id}: {stage} has not passed its measured checks; nothing to review')
+    sheet = level.run / f'review-{stage}.jpg'
+    checks = REVIEW_CHECKLIST[stage]
+    prompt = REVIEWER_BRIEF.format(
+        title=level.recipe['title'], kind=level.recipe['kind'], views=VIEWS[stage],
+        subject=level.recipe.get('subject') or level.recipe['image_prompt'],
+        checks='\n'.join(f'{number}. {check}' for number, check in enumerate(checks, 1)))
+    verdict, notes = read_verdict(ask_reviewer(review_views(sheet, stage), prompt, model, keep_loaded), checks)
+    if verdict != 'UNSURE':
+        review(level, stage, verdict, f'ollama:{model}', notes)
+    save_json(level.run / f'{stage}-auto-review.json', {
+        'id': level.id, 'stage': stage, 'model': model, 'verdict': verdict, 'notes': notes, 'at': now()})
+    return verdict
+
+
+def auto_rounds(level, stage):
+    return sum(1 for entry in level.recipe.get('history', [])
+               if entry['stage'] == stage and entry['reason'].startswith('Local review'))
+
+
+def run_batch(ids, wait_gpu, model=None):
+    """Draw every picture, review them all together, redraw the rejects, then the same for videos.
+
+    Generating in one go and reviewing in one go means the picture models and the
+    reviewer swap on the GPU once per round, not once per picture. After AUTO_ROUNDS
+    redraws, or whenever the reviewer is unsure, the level is left for a person.
+    """
+    waiting = {}
+    for stage in ('image', 'video'):
+        for _ in range(AUTO_ROUNDS + 1):
+            manifest = load_manifest()
+            levels = [Level(recipe) for recipe in factory_levels(manifest, ids)]
+            todo = []
+            for level in levels:
+                if level.integrated() or level.id in waiting:
+                    continue
+                try:
+                    (level.image_gate if stage == 'image' else level.video_gate)()
+                except Blocked:
+                    if stage == 'video':
+                        try:
+                            level.image_gate()
+                        except Blocked as reason:
+                            waiting[level.id] = str(reason)
+                            continue
+                    todo.append(level)
+            if not todo:
+                break
+            ready, rejected = [], {}
+            for level in todo:                       # every picture first...
+                try:
+                    if not level.generated(stage):
+                        submit(level, stage, wait_gpu)
+                except Blocked as reason:
+                    waiting[level.id] = str(reason)
+            for level in todo:
+                if level.id in waiting:
+                    continue
+                try:
+                    if not collect(level, stage, wait_minutes=90):
+                        waiting[level.id] = f'{level.id}: {stage} still generating; run again later'
+                        continue
+                    ok, failures = (check_image if stage == 'image' else check_video)(level)
+                    print(f"{level.id}: {stage} check {'PASS' if ok else 'FAIL: ' + '; '.join(failures)}", flush=True)
+                    if ok:
+                        ready.append(level)
+                    else:
+                        rejected[level.id] = 'Check: ' + '; '.join(failures)
+                except Blocked as reason:
+                    waiting[level.id] = str(reason)
+            if ready:                                # ...then every review
+                reviewer_gpu(wait_gpu)
+                for index, level in enumerate(ready):
+                    verdict = auto_review(level, stage, model, keep_loaded=index < len(ready) - 1)
+                    print(f'{level.id}: {stage} local review {verdict}', flush=True)
+                    if verdict == 'FAIL':
+                        notes = level.review(stage)['notes']
+                        rejected[level.id] = 'Local review: ' + ' '.join(note for note in notes if 'FAULT' in note)
+                    elif verdict == 'UNSURE':
+                        waiting[level.id] = f'{level.id}: the local reviewer could not decide; look at {level.run / ("review-" + stage + ".jpg")}'
+            for level in todo:
+                if level.id not in rejected:
+                    continue
+                tries = sum(1 for entry in level.recipe.get('history', []) if entry['stage'] == stage)
+                if auto_rounds(level, stage) >= AUTO_ROUNDS or tries >= 3 * AUTO_ROUNDS:
+                    waiting[level.id] = (f'{level.id}: still rejected after {tries} redraws ({rejected[level.id][:160]}); '
+                                         f'a person should look or rewrite the recipe')
+                else:
+                    retry(manifest, level, stage, None, rejected[level.id][:300])
+    blocked = 0
+    for level in [Level(recipe) for recipe in factory_levels(load_manifest(), ids)]:
+        if level.integrated():
+            continue
+        try:
+            level.video_gate()
+            integrate(level)
+        except Blocked as reason:
+            blocked += 1
+            print(f'NEEDS A PERSON {waiting.get(level.id, reason)}', flush=True)
+    return blocked
+
+
 def retry(manifest, level, stage, seed, reason, keep_seed=False, subject=None, motion=None):
     """Archive this attempt (and what depended on it) and move to a new seed."""
     with file_lock(RUNS / '.manifest.lock'), file_lock(level.run / '.lock'):
@@ -1153,7 +1360,14 @@ def main(argv=None):
     add('verify')
     add('audit')
     add('gallery', ids=False, help='write one HTML page showing every level in the app').add_argument('--output')
-    add('run').add_argument('--wait-gpu', type=float, default=0, metavar='MINUTES')
+    sub = add('run')
+    sub.add_argument('--wait-gpu', type=float, default=0, metavar='MINUTES')
+    sub.add_argument('--auto-review', action='store_true',
+                     help='review with the local vision model, redraw rejects, stop for a person when unsure')
+    sub.add_argument('--model', default=None, help=f'Ollama vision model (default {VISION_MODEL})')
+    sub = add('autoreview', stage=True, help='review with the local vision model')
+    sub.add_argument('--model', default=None)
+    sub.add_argument('--wait-gpu', type=float, default=0, metavar='MINUTES')
     sub = add('add', ids=False, help='add a new picture recipe to manifest.json')
     sub.add_argument('--title', required=True)
     sub.add_argument('--category', required=True, choices=CATEGORIES)
@@ -1255,6 +1469,14 @@ def main(argv=None):
             blocked = 0
         elif args.command == 'integrate':
             blocked = each(levels, lambda level: integrate(level, args.replace))
+        elif args.command == 'autoreview':
+            reviewer_gpu(args.wait_gpu)
+            def judge(level):
+                last = level is levels[-1]
+                print(f'{level.id}: {args.stage} local review {auto_review(level, args.stage, args.model, keep_loaded=not last)}', flush=True)
+            blocked = each(levels, judge)
+        elif args.auto_review:
+            blocked = run_batch(wanted, args.wait_gpu, args.model)
         else:
             blocked = run(levels, args.wait_gpu)
     except Blocked as reason:

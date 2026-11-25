@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Fire engine with ladder and bucket; two wheels, white stripe paintable, no face, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -16,6 +16,6 @@
   ],
   "image_sha256": "9f0e50d00f73ec56742988ba062870fab381641a5251db45db64179d6fbc4400",
   "sheet_sha256": "db101de7bfe45d982d10ac9980452e7ce419477d590be337b4ec7a4a4a7813c2",
-  "reviewed_at": "2026-11-25T16:33:34Z",
+  "reviewed_at": "2026-11-25T19:30:03Z",
   "playable_sha256": "0f26dc16c08b10cd34b4058869e9deccdfa8681af3bda9c42482a1aeda0dc758"
 }

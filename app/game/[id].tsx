@@ -146,11 +146,13 @@ export default function GameScreen() {
       clearTimeout(saveTimeoutRef.current);
     }
 
+    // Saving rewrites the stored progress and encodes a preview image, both on the
+    // thread that paints. Wait for a real pause so it never lands mid-stroke.
     saveTimeoutRef.current = setTimeout(() => {
       saveQuickProgress();
       // Update cached snapshot whenever we save progress
       updateCachedData();
-    }, 500);
+    }, 2000);
 
     return () => {
       if (saveTimeoutRef.current) {

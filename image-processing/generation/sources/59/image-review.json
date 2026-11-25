@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Kitten with wool ball, toy mouse and cushion; anatomy right, canvas blank, collar and bell small but numbered, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -15,7 +15,7 @@
     "Painted picture matches the source: no lost features, ragged edges or wrong colours"
   ],
   "image_sha256": "2c7708eea988d708d117f96024847188518a8abf30d09d83b2b79097dee4f35b",
-  "sheet_sha256": "ca4158d9d2987d5b5eb38e8a42cfbdab5d33e520d81471aba7956a5c280b8c0c",
-  "reviewed_at": "2026-11-25T16:33:33Z",
-  "playable_sha256": "4ed58341cc1bfaf22f02a9f81283f57210ffc41690f6cd7e3095fd039f2458b6"
+  "sheet_sha256": "778d031d4f547a0133bf2c57eec81de54b330ab1861972718273017f64d28ac2",
+  "reviewed_at": "2026-11-25T19:30:01Z",
+  "playable_sha256": "c2a01f77cc53dcbdd4b9676f4a9ea5e5f478d5d71ea8c31f2ffc0699674af029"
 }

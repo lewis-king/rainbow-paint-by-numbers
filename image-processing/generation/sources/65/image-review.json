@@ -4,7 +4,7 @@
   "verdict": "PASS",
   "reviewer": "Claude vision review of review-image.jpg",
   "notes": [
-    "Sailing boat on a puddle of water; sails, hull stripes and portholes numbered, no face, painted matches source"
+    "Same picture as the earlier approved build; eye sparkles are now holes in the ink that show the canvas tint, nothing is printed white, areas and numbers unchanged"
   ],
   "checklist": [
     "Subject is instantly recognisable, cute and friendly for a 4-year-old; nothing scary",
@@ -16,6 +16,6 @@
   ],
   "image_sha256": "820deeeb47e8da037705677f744d4ce62fc4b0ef74de3e59e898c933bf49b45f",
   "sheet_sha256": "d70a973ee94da1e628c6a99700cb76f1670df7fd2e3b34a71495cb3c51a0041c",
-  "reviewed_at": "2026-11-25T16:33:34Z",
+  "reviewed_at": "2026-11-25T19:30:03Z",
   "playable_sha256": "6aed999a72cf3e01eb3768c8e0a6752919fb716061814d67dbe84a160b9f3563"
 }

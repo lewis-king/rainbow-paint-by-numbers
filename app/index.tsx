@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { View, Text, StyleSheet, Pressable, Dimensions, ActivityIndicator, ScrollView } from 'react-native';
+import { memo, useState, useEffect, useRef, useCallback } from 'react';
+import { View, Text, StyleSheet, Pressable, Dimensions, ActivityIndicator, FlatList } from 'react-native';
 import { Image } from 'expo-image';
 import { router, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -89,10 +89,19 @@ function RainbowTitle() {
   );
 }
 
+const LEVELS = getLevelPreviews();
+const levelKey = (level: LevelPreview) => level.id;
+// With numColumns the list measures rows, each one card and one gap tall.
+const rowLayout = (_: unknown, index: number) => ({
+  length: CARD_SIZE + GRID_GAP,
+  offset: GRID_PADDING + (CARD_SIZE + GRID_GAP) * index,
+  index,
+});
+
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
-  const levels = getLevelPreviews();
-  const { isLevelComplete, getLevelProgress, _hasHydrated, forceHydrated } = useLevelProgressStore();
+  const levels = LEVELS;
+  const { isLevelComplete, getLevelProgress, _hasHydrated, forceHydrated, levels: progressByLevel } = useLevelProgressStore();
   const { shouldShowReview, _hasHydrated: reviewHydrated } = useReviewStore();
   const [hydrationTimeout, setHydrationTimeout] = useState(false);
   const [showReviewPrompt, setShowReviewPrompt] = useState(false);
@@ -122,10 +131,24 @@ export default function HomeScreen() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleLevelPress = (levelId: string) => {
+  const handleLevelPress = useCallback((levelId: string) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     router.push(`/game/${levelId}`);
-  };
+  }, []);
+
+  const renderLevel = useCallback(({ item, index }: { item: LevelPreview; index: number }) => {
+    const savedProgress = getLevelProgress(item.id);
+    return (
+      <LevelCard
+        level={item}
+        index={index}
+        isComplete={isLevelComplete(item.id)}
+        progressPercent={savedProgress?.progress ?? 0}
+        lastUpdated={savedProgress?.lastUpdated}
+        onPress={handleLevelPress}
+      />
+    );
+  }, [getLevelProgress, isLevelComplete, handleLevelPress]);
 
   // Wait for store to hydrate from AsyncStorage
   if (!_hasHydrated && !hydrationTimeout) {
@@ -146,29 +169,21 @@ export default function HomeScreen() {
         <RainbowTitle />
       </Animated.View>
 
-      <ScrollView
+      {/* Only the cards near the screen are mounted; 68 full pictures at once made scrolling stutter. */}
+      <FlatList
+        data={levels}
+        renderItem={renderLevel}
+        keyExtractor={levelKey}
+        extraData={progressByLevel}
+        numColumns={COLUMNS}
+        columnWrapperStyle={styles.row}
         contentContainerStyle={[styles.grid, { paddingBottom: Math.max(insets.bottom, GRID_PADDING) }]}
         showsVerticalScrollIndicator={false}
-      >
-        {levels.map((level, index) => {
-          const savedProgress = getLevelProgress(level.id);
-          const isComplete = isLevelComplete(level.id);
-          const progressPercent = savedProgress?.progress ?? 0;
-          const lastUpdated = savedProgress?.lastUpdated;
-
-          return (
-            <LevelCard
-              key={level.id}
-              level={level}
-              index={index}
-              isComplete={isComplete}
-              progressPercent={progressPercent}
-              lastUpdated={lastUpdated}
-              onPress={() => handleLevelPress(level.id)}
-            />
-          );
-        })}
-      </ScrollView>
+        initialNumToRender={8}
+        maxToRenderPerBatch={6}
+        windowSize={7}
+        getItemLayout={rowLayout}
+      />
 
       {/* Review Prompt - shown on dashboard, not during victory */}
       <ReviewPrompt
@@ -185,10 +200,10 @@ interface LevelCardProps {
   isComplete: boolean;
   progressPercent: number;
   lastUpdated?: number;
-  onPress: () => void;
+  onPress: (levelId: string) => void;
 }
 
-function LevelCard({ level, index, isComplete, progressPercent, lastUpdated, onPress }: LevelCardProps) {
+const LevelCard = memo(function LevelCard({ level, index, isComplete, progressPercent, lastUpdated, onPress }: LevelCardProps) {
   const [hasPreview, setHasPreview] = useState(false);
   const [previewPath, setPreviewPath] = useState<string | null>(null);
   const scale = useSharedValue(1);
@@ -245,15 +260,19 @@ function LevelCard({ level, index, isComplete, progressPercent, lastUpdated, onP
   return (
     <AnimatedPressable
       style={[styles.card, animatedStyle, { borderColor }]}
-      onPress={onPress}
+      onPress={() => onPress(level.id)}
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
-      entering={FadeIn.delay(150 + index * 100).duration(400)}
+      // Only the first screenful fades in. A delay per card left the last ones
+      // animating seven seconds after launch, and again whenever they scrolled in.
+      entering={index < 8 ? FadeIn.delay(150 + index * 60).duration(400) : undefined}
     >
       <Image
         source={imageSource}
         style={styles.thumbnail}
         contentFit="cover"
+        recyclingKey={level.id}
+        transition={0}
       />
 
       {/* Progress bar for in-progress levels */}
@@ -279,7 +298,7 @@ function LevelCard({ level, index, isComplete, progressPercent, lastUpdated, onP
       )}
     </AnimatedPressable>
   );
-}
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -333,11 +352,12 @@ const styles = StyleSheet.create({
     height: 80,
   },
   grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
     padding: GRID_PADDING,
+  },
+  row: {
+    justifyContent: 'center',
     gap: GRID_GAP,
+    marginBottom: GRID_GAP,
   },
   card: {
     width: CARD_SIZE,

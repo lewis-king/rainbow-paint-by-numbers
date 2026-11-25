@@ -2,18 +2,18 @@
   "id": "61",
   "title": "Frog",
   "factory_revision": 1,
-  "integrated_at": "2026-11-25T17:29:06Z",
+  "integrated_at": "2026-11-25T19:30:50Z",
   "models": {
     "image": "qwen-image-2.1",
     "video": "wan2.2-i2v"
   },
   "code": {
     "process.py": "3aea2e76f4e65f0531aba61faa0f7e1d4f0d08d6707f679da33db1ea2822a1a6",
-    "finish.py": "50ecb34cfd4176056daac9194676d64e6d21b3c87688a606a3ddf91cab35fc80",
-    "checks.py": "b1b6e78e0e821ec02ff5a480824f6845091b18cfb6ca99f4298e5a2dc0b032c6"
+    "finish.py": "404f9a2c9478090be2f439d297918e5a5d2d89b60350805fb62afe52d721a2e3",
+    "checks.py": "faac83f9bc9bc85729b86e5994ab37479b87961c1d3babe67f10803265ffaaf7"
   },
   "finish": {
-    "finish_revision": 11,
+    "finish_revision": 12,
     "palette_before": 17,
     "palette_after": 7,
     "lookalike_colors_merged": 0,
@@ -34,26 +34,26 @@
   },
   "image_sha256": "bb7d4cbfd905d0dfa9c356e7a218f960980e927bfd6135d15f032a255aa0a2bd",
   "video_sha256": "44eaf3d851c8448788efbd848aa087a10c8e7b78891c696b095e3da193e7aa04",
-  "playable_sha256": "c1cc7fd75e268107c8d86f098740523d596f9c2af92fadeb0a3d0d91895b23dc",
-  "bundle_sha256": "5ad55bb9f3b9d165cf702dc7f9228047f215b14c5dee9a271dcf089d159ad4c5",
+  "playable_sha256": "9ad2968be8f2fc6f8159c578a534b37c07a8645cf452b825a1ddc856d4d8fde7",
+  "bundle_sha256": "fe4c41715f4e3db6fae42f13c2b802198b0eec1723ae1fa61bf9eb62640a580f",
   "files": {
-    "data.json": "ba2f70fddb1f802e3a5a86f4cc1cf6a4d3918b1045d76fbd8e66a6e900fb297c",
+    "data.json": "f27e1dac9733b44d23f38273605eef2cd10d8be07ac6121fc8e5fe1aca87a5a7",
     "original.png": "d965106eb65eae1689aec7d9742e4d607c9a7b1c7771f6f15865e95568ef5f5e",
-    "lines.png": "595e6a42b16155a915d6dd97e630db977ec2b14fa137ca16f82bcfd3a5c207b6",
+    "lines.png": "ed9e20af4cafcaf60d593f14c9f5bec26bf18d34d5f2343eec9fb346e28e5542",
     "map.png": "dadb199c26eaa12a94f3a1ff3f640c6bad4c6141d41ac8f7f6fdd510ae415f68",
     "reward.mp4": "44eaf3d851c8448788efbd848aa087a10c8e7b78891c696b095e3da193e7aa04"
   },
   "bytes": {
-    "data.json": 1179,
+    "data.json": 1204,
     "original.png": 33900,
-    "lines.png": 22326,
+    "lines.png": 22297,
     "map.png": 11661,
     "reward.mp4": 445323
   },
   "reviews": {
     "image": {
       "reviewer": "Claude vision review of review-image.jpg",
-      "sha256": "71b809cfb7913637e2a27aa6d72ed085602c59752323fcbad513e2e8762e4641"
+      "sha256": "1873c9417348395ef3c92a69662628f2fece7ccbbc171951596da61008fd4abb"
     },
     "video": {
       "reviewer": "Claude vision review of review-video.jpg",

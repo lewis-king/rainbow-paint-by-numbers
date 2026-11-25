@@ -36,7 +36,7 @@ from scipy import ndimage
 from checks import (BACKGROUND_ID, LINE_ID, SCREEN, GLYPH_ADVANCE, GLYPH_LEFT,
                     GLYPH_BASELINE, GLYPH_HEIGHT, NEIGHBOR_GAP, _lab, _hex_rgb, lost_parts, page_of)
 
-REVISION = 11
+REVISION = 12
 # A region must hold a circle this wide (map px) to carry a legible number:
 # 3.9 screen px radius on the narrowest phone, so a digit sits clear of the outline.
 MIN_RADIUS = 11.5
@@ -612,14 +612,16 @@ def finish_level(folder, source=None):
             _, nearest = ndimage.distance_transform_edt(around == 0, return_indices=True)
             level_map[mask] = level_map[nearest[0][mask], nearest[1][mask]]
 
-    # The canvas starts blank. Only the white sparkle in an eye is printed.
-    fixed_rgba = np.zeros((*level_map.shape, 4), np.uint8)
+    # The canvas starts blank and nothing is printed on it. The sparkle in an eye is a hole in
+    # the ink: it shows the canvas, the same pale tint as every unpainted area, and cannot be
+    # painted. Printed white, it glared out of the unpainted picture.
     earlier = cv2.imread(str(folder / 'lines.png'), cv2.IMREAD_UNCHANGED)
-    if earlier is not None and earlier.ndim == 3 and earlier.shape[2] == 4:
-        kept = true_lines & (earlier[..., 3] > 0) & (earlier[..., :3].min(axis=2) > 225)
-        fixed_rgba[kept] = earlier[kept]
     enclosed = sparkles
-    fixed_rgba[enclosed] = (255, 255, 255, 255)
+    if earlier is not None and earlier.ndim == 3 and earlier.shape[2] == 4:
+        # sparkles an earlier pass left: printed white (to revision 11) or already a hole
+        enclosed = enclosed | (true_lines & (earlier[..., 3] > 0) & (earlier[..., :3].min(axis=2) > 225))
+        if data.get('finish_revision', 0) >= 12:
+            enclosed = enclosed | (true_lines & (earlier[..., 3] == 0))
     level_map[enclosed] = LINE_ID
     # Background a merge has cut off from the outside could never be painted: ink it.
     outside, _ = ndimage.label(level_map == BACKGROUND_ID, structure=EIGHT)
@@ -666,9 +668,10 @@ def finish_level(folder, source=None):
         numbers.extend(sorted(found, key=lambda label: (label['y'], label['x'])))
 
     gradient = cv2.morphologyEx(level_map, cv2.MORPH_GRADIENT, np.ones((3, 3), np.uint8)) > 0
-    lines = fixed_rgba.copy()
-    lines[even_lines(gradient, true_lines & (fixed_rgba[..., 3] == 0), fixed_rgba[..., 3] > 0)] = (0, 0, 0, 255)
+    lines = np.zeros((*level_map.shape, 4), np.uint8)
+    lines[even_lines(gradient, true_lines & ~enclosed, enclosed)] = (0, 0, 0, 255)
     lines[strokes] = (0, 0, 0, 255)
+    lines[enclosed] = 0
 
     picture = original.copy()
     for index, color in enumerate(new_palette):
@@ -677,6 +680,7 @@ def finish_level(folder, source=None):
     picture[level_map == BACKGROUND_ID] = background_bgr
     printed = lines[..., 3] > 0
     picture[printed] = lines[printed][:, :3]
+    picture[enclosed] = (255, 255, 255)   # the finished picture shows the sparkle white
 
     preview = picture.copy()
     for label in numbers:
@@ -684,7 +688,7 @@ def finish_level(folder, source=None):
             cv2.putText(preview, str(label['number']), (label['x'] - 5, label['y'] + 3),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, weight)
 
-    data.update(palette=new_palette, numbers=numbers)
+    data.update(palette=new_palette, numbers=numbers, finish_revision=REVISION)
     cv2.imwrite(str(folder / 'map.png'), level_map)
     cv2.imwrite(str(folder / 'lines.png'), lines)
     cv2.imwrite(str(folder / 'original.png'), picture)

@@ -64,7 +64,7 @@ LIMITS = {
         'label_clearance_min_screen_px': 3.0,
         'label_inside_min_fraction': 0.6,
         'tight_labels_max_fraction': 0.25,  # labels with < 4 screen px clearance
-        'precolored_max_fraction': 0.01,    # the canvas starts blank; only eye sparkles are printed
+        'precolored_max_fraction': 0.0,     # the canvas starts blank; nothing is printed in colour or white
         'overflow_labels_max_fraction': 0.4,  # numbers at the smallest size, allowed to sit over the lines
         'unnumbered_max_fraction': 0.006,   # paintable pixels no number points at
         'unnumbered_region_max_px': 900,

@@ -69,7 +69,7 @@
     "regions_without_own_number": 2,
     "enclosed_background_px": 0,
     "line_halfwidth_max_px": 13.8,
-    "precolored_fraction_of_subject": 0.0003,
+    "precolored_fraction_of_subject": 0.0,
     "colors": [
       {
         "number": 1,

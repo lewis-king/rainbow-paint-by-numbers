@@ -1,15 +1,15 @@
 {
   "1": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:28:59Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:22:49Z",
     "source_sha256": "38380d234643d89da2da7ee626b0a147f2a9349a2c7ecfd55b93b6a3a6d7e66e",
     "files": {
-      "data.json": "0d760c0c228eeee1fe676f1d17e32d3f6e9d29904841b589ae42826a245581a3",
+      "data.json": "dd42b4d99e26e5e9b3cb30445b8e2a7f815e609a180b0a7ea0c7384aa8d08e42",
       "original.png": "1c66bbe78fa7eb901d1d26978da74910c6ba3629906d8840e0ba3108aaf318d6",
-      "lines.png": "e5218a3980547b76184f0fba573d1cc92865d42cff7502064ca02b84cc805b1c",
+      "lines.png": "ef8206cd7ff953bbc8f509ce1d208c45f5e7c9c9a4e836a08d563807fb3c2396",
       "map.png": "f3c00a4b7c8997adbcb0ad5e6db0543b00221697afc407d72490ac305e002639"
     },
-    "playable_sha256": "51ecc838816bbe5a6f889ebb6045db6be225e604f2df24aee41bb49f70c0e281",
+    "playable_sha256": "ef90dcfa6e416fa0f9c8382b68f10347676b1d4d7bcb43dce2f4d1d48df91c19",
     "numbers": [
       30,
       32
@@ -21,7 +21,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 11,
       "lookalike_colors_merged": 1,
@@ -42,16 +42,16 @@
     }
   },
   "2": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:02Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:22:53Z",
     "source_sha256": "be765f4847670f2ed4325b3f402c12301a41dbce1039436b798069563f299df2",
     "files": {
-      "data.json": "d1c4654173ab2fe6bd5f122e517b62f920e7ba719ae5c6adf8e7b05510882767",
+      "data.json": "d4e33a556ece22a4beced6dba1642bf46886d709e9fe16695d8b0af1cf411a08",
       "original.png": "12e01df6ba6cc647e0e1c865916fd78ae0013f3cc4307ef34c0f8f1b8f0cf473",
-      "lines.png": "0bd318f2edac4cd7c0c6167192602916f9be05718b47be0e76ac0bfb74a5daa0",
+      "lines.png": "1241705672cd08aea69690e0a2b4b4d007d3c4852acec8443d807633e2aa18a2",
       "map.png": "0dda01dfb41cc62f522fce511fb59466ef614f093393062e359f3f507094efe1"
     },
-    "playable_sha256": "7de38c08cad11e7b2ec3573a3d4298f38ebdd3cff83f611150344543e1f3bfc1",
+    "playable_sha256": "2141ffea4a3af41e6b2b9d5817df2e9d53f2a205191f6c4169f195f3b35ea5f7",
     "numbers": [
       28,
       18
@@ -63,7 +63,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 8,
       "lookalike_colors_merged": 2,
@@ -84,16 +84,16 @@
     }
   },
   "3": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:06Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:22:56Z",
     "source_sha256": "15f59277926e94ef31dd52dab955e8d4037a8d9666ee62e459d8bdc1ea0fb63c",
     "files": {
-      "data.json": "c6dfc4cf77bc9db0fa91f8bb5043678735a39b89aa52f5d5b9ed2e6cc47e940d",
+      "data.json": "19bc82a55882e23b3f68f24bd530f6c1adef7f1570e1f068d96fac53de3302bb",
       "original.png": "13d7191a53a7f6045a9d5f194855e35882f2b7d582841fb941c2c1b684c9ce59",
-      "lines.png": "d02ee0eab939455885c8d9c0b87d446f7175d7862a0b74bbea0e268ffdc44962",
+      "lines.png": "3726a883a5e840ad09176981dabf64b448f881962803c6e0acda503af45e506c",
       "map.png": "5062619b84005c134e62286d9859a8f0a45c98029ff3a60a7bc36f8720c8202e"
     },
-    "playable_sha256": "97a8094d203ded734d04a26d1b6460c93697d54b98523bae59e193dc03f23c05",
+    "playable_sha256": "ead1920ba055ecb0b4f7df0866735d688566440f99e29390dbc8d0af0f848315",
     "numbers": [
       16,
       17
@@ -105,7 +105,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 12,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -126,11 +126,11 @@
     }
   },
   "4": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:08Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:22:59Z",
     "source_sha256": "ec9dcc77d7f2a18b864c3eb3fc9f206993e45c247f94d77e1512aeed868d1b84",
     "files": {
-      "data.json": "3a33d49e497b39104880b07d37bc7fbe689ab3f3cc759201f43f9926846ae0d5",
+      "data.json": "900eed251875aca4f7a2646a34c2d73682542eb3733345ff91a98d17f9a0b7b4",
       "original.png": "f69d1013afb74a6043a42b1e16f2b0433f688f8597cdbe6651e95bc7c36edfa8",
       "lines.png": "226102b2347fce54c034afccd498d1c3273190667d0cd1b2ed4e6bbe0effe293",
       "map.png": "50ae6ac474c475a746a9196ff23067eaeea16fc9e27338d28d139d11990db473"
@@ -149,7 +149,7 @@
       "Only 4 colours with a real area to paint; need 5+"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 13,
       "palette_after": 5,
       "lookalike_colors_merged": 1,
@@ -170,16 +170,16 @@
     }
   },
   "5": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:12Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:03Z",
     "source_sha256": "e729ff6e5e260c85c6f33df665e5e670d1cf3d3695994712f1a4bc9da84b6bf2",
     "files": {
-      "data.json": "c5b25b92f3aa6e6a68b9badbfa8cd41026628aee368cfb9240fc51a311b2e013",
+      "data.json": "33a6a9bd88815f7d3df47e286b0a0a62f5bb8003414b17bfda38a17e08c48ce3",
       "original.png": "873f05ae968ff20e1056ca1981e91d320160a5556de39493b0b895cfe037b13c",
-      "lines.png": "38182d6cf301d76602ecd0bf0144b438a20fae09f38d7cac803c2fdb68f3a37a",
+      "lines.png": "3f7d085f2d07ca8e9d02ad46dbde31ea09517748d09f8fc52eecde64d6aa538c",
       "map.png": "6f5add770df193165bb805461c4c9d7a09e97737e9e14389e7ac238b5903bd6d"
     },
-    "playable_sha256": "772294d4ba3294f360aa0c0fe847c7304f6d875f9377533db7e9cf770a407b3f",
+    "playable_sha256": "1ef3203d43e98ec17ddb212f59b4cb36bcc44bfd4b4cdd790d12e6e701a2d575",
     "numbers": [
       25,
       23
@@ -191,7 +191,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 13,
       "palette_after": 9,
       "lookalike_colors_merged": 0,
@@ -212,16 +212,16 @@
     }
   },
   "6": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:17Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:09Z",
     "source_sha256": "c6f72d461cec75b5de7e3510a16729b35476d72a33a61ff8dc7e4a64839755de",
     "files": {
-      "data.json": "7e294538c164c8132eb0903019470bb933e0ecaf99fcc06baae177d9f4203219",
+      "data.json": "1d9a8dafa60b7292372f08f887e16f71997ece933fd008a13a0afa425c0100e5",
       "original.png": "b0dd1de5240b0133c476f9c8dbf9f7d506e84dc8795b9ea75e8e261699b1cfc4",
-      "lines.png": "64a72bcf1308bbd6828c6f7cc7ab6d65f5ae703d04214b0141b3778aec6c114b",
+      "lines.png": "863c496bdfd7d573a64dc671b4091aa77c03380cc732a70611dfa485afe0af97",
       "map.png": "fd30d0bf1db069e0bb3380e91d42bd1d4bd3681c3b8a92c2e2a573e5b91eb9ea"
     },
-    "playable_sha256": "1a32438237a60b54bb788bb0cb3eda9d38e554da09ca7747cae8d71ff79640d3",
+    "playable_sha256": "25ee58f7a955b5db86c0ab94b7fab69149205bf4b05eaabbf8c5f168205b01e4",
     "numbers": [
       64,
       32
@@ -237,7 +237,7 @@
       "Subject is cropped or touches the edge (0px margin)"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 12,
       "lookalike_colors_merged": 1,
@@ -258,11 +258,11 @@
     }
   },
   "7": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:22Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:15Z",
     "source_sha256": "e34800950ba7eea59f3351d3ccde8071046068a4c31bd2ff31d1034746eab03c",
     "files": {
-      "data.json": "4cadddab7f73cfff94d6a49b4630549b393183fcfb659d0bfacf81feefea3577",
+      "data.json": "0661f7e548891f22f359af211d0b5f52ae4f0330209ef1cdce4b7637a523020c",
       "original.png": "6b5e00b34482ba13c63a89b252a4ad157036c56eb560c62b8b7694667d3e2155",
       "lines.png": "c5f38957b8db430dd02dffd7a722629145ce5fce8cb1844e3ce8c07cbe377e85",
       "map.png": "49b4f8e916236b9140265bc87208bdffb87400ffa7770077c65c1e799d3c8344"
@@ -281,7 +281,7 @@
       "14 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 14,
       "lookalike_colors_merged": 1,
@@ -302,11 +302,11 @@
     }
   },
   "8": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:26Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:19Z",
     "source_sha256": "435e88ed49b105e569f0bb0fe2f14ad5b3f43896960a732bf232cfa4f676b3b2",
     "files": {
-      "data.json": "05e229e872c59e126faffc3b4f91e3a15563f7311108311ef4dbd9a3ecad1e1c",
+      "data.json": "0f1048b5acee56916d6e99d6d2367989a30038bddba8b5be8acdee91344a710a",
       "original.png": "0c265d7d428182a2d91e871f822ff1e4633b53bf56eae7c6732dffe5ca3dd457",
       "lines.png": "1c32afa4811d44b760185bfda6d16dba1b871896f2b096f6068f5bdb78a533ca",
       "map.png": "4a35551b49d91877b96eda072a84cfcf241e61081715b45397451727379831fe"
@@ -326,7 +326,7 @@
       "Subject is cropped or touches the edge (0px margin)"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 14,
       "palette_after": 7,
       "lookalike_colors_merged": 0,
@@ -347,11 +347,11 @@
     }
   },
   "9": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:30Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:24Z",
     "source_sha256": "e3ba273d6e1e7903ef5b3aff0be373addc833252ee1a226dc85b986e7064ae2e",
     "files": {
-      "data.json": "3487aac837728c38e1db541d3d2b8e406d70b924aa82a631c541f4f98fe4c47e",
+      "data.json": "77d33e86645b27806d4c092f4ab627792215ba3037238639f1c9cb36241d117f",
       "original.png": "9dcd4da91804dd03eaefbcb5bff0a76f2d2c8c9e933a1c2ca0afc02a09383fcc",
       "lines.png": "51bccebc85212b3c2081193f9cf207baef601dc4f7ef2b6637ffb42fba114f09",
       "map.png": "ba6b041032144032c87df03dcbda98af46890d1d98de24d59e46fcc02a6dab04"
@@ -368,7 +368,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 15,
       "palette_after": 11,
       "lookalike_colors_merged": 0,
@@ -389,11 +389,11 @@
     }
   },
   "10": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:37Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:31Z",
     "source_sha256": "1ca777813f640f1fce01e222f9ed4736688e2ff4f5828d357cd2e6736f83beda",
     "files": {
-      "data.json": "0ab7e8c76b1d80532756daecc3df25cba3ab55f305d4ca2860e545e5e0ba9f81",
+      "data.json": "bda296deea9501eeda123d9542901079d9716146df63b4fe817488073e4e25fe",
       "original.png": "373f10419732a6aa8db7afdef94ad50cf2c43e2bff110f7eb927fd46c9395658",
       "lines.png": "98cd2a7e11c16c0436f1148b4970a7273c0e710c9706b1c9f07561e1f74fcc18",
       "map.png": "ceb62affa69cd432325dffdd857a7143b340529ecb00393b21a1a41561d77efe"
@@ -413,7 +413,7 @@
       "Flattened colours drift from the source art (mean delta E 9.91); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 22,
       "palette_after": 16,
       "lookalike_colors_merged": 1,
@@ -434,16 +434,16 @@
     }
   },
   "11": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:40Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:34Z",
     "source_sha256": "93d362aff16e30e9985813ff1f614de07d686322e68d7956a06d20e68c7b251e",
     "files": {
-      "data.json": "ade98157ee3731fc412be265eec19c62dc93b270b3c122b48278e2e795b4c1c9",
+      "data.json": "3167c677632ad12991c661ea540212e2c8b3e2e1dc36944f6b9365bc5d930f11",
       "original.png": "f1f592e938f068a9f81bbed54ac292af242884472bcf7216d49ad3b9d221a722",
-      "lines.png": "a3fe52775b6da7fbc4291af881aec81bf7fa7813e64954f51811647138cea5c5",
+      "lines.png": "c37f2056f0849dbd15032d4e96ffb4386786aaaf5fbc500bb8fc06daaf24b519",
       "map.png": "a50c3b8a7fccdb38ac19cf1dff1cffcdd22e1567bfe3269d9b4c5d62de07ce86"
     },
-    "playable_sha256": "e29b9a3de2ae19d50c44a9057d1c8016ab427c219f203df5099e62c2ed4913ad",
+    "playable_sha256": "214e44f43ce43bea6d2add439521642ed980eb080f0ea55c3c859c88fc6029d0",
     "numbers": [
       56,
       23
@@ -457,7 +457,7 @@
       "Only 3 colours with a real area to paint; need 5+"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 12,
       "palette_after": 6,
       "lookalike_colors_merged": 1,
@@ -478,16 +478,16 @@
     }
   },
   "12": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:43Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:37Z",
     "source_sha256": "27884343083a407674c1b074429556d1efd79517c9d80e00787575615d01dd9c",
     "files": {
-      "data.json": "d20f45bdf521262d1245a589c1138d48385520e26fd6eb0325a8df0a68da5db5",
-      "original.png": "56d5d7bd8308d957dabd8313aa0d24b1b9aa0b3a09e445f4a155dc598b61ad80",
-      "lines.png": "b4d8953b97bbfec9abe513b6d9d59c08ef725e0f87092ee10df504de5e9af8cd",
+      "data.json": "600dfaf20cdfbed0b44979559293bac83b1567af9b1c5d60d45411b8a0bdea6a",
+      "original.png": "f76c16f67b088895491726808bc3ba8033ad9eec7f53c858adb1ffe3158042ef",
+      "lines.png": "85ac83b2de45dbc6b453a03d8eb177298fa8738d8caaaa18d0c444206149068b",
       "map.png": "5a85fd71560c0b0e362852973bdaf0ad7f0b8d14861c79edaf6ccfd9a0eb4311"
     },
-    "playable_sha256": "aa566d0c4dcfa7c10306db1acbd7b569b1fa00aa2dd0affa76e4a3a69a7e82ae",
+    "playable_sha256": "ee92343450747eecef8ed282d46d6087d6f47cfed8e7ef0e3d3bd2bd379b3ac8",
     "numbers": [
       40,
       38
@@ -502,7 +502,7 @@
       "Flattened colours drift from the source art (mean delta E 9.34); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 9,
       "palette_after": 6,
       "lookalike_colors_merged": 0,
@@ -523,11 +523,11 @@
     }
   },
   "13": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:46Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:40Z",
     "source_sha256": "7286633e407f26ba4e76c56c0f76791da95a8720e6331ff418ffbad09b32b539",
     "files": {
-      "data.json": "fbd867d3dee8971cd73eef273c6b630503f7b01861a00f3cd82f5d1a868f0293",
+      "data.json": "9d04388c694f04673fe34fd19d25bd5decef211806b78c1e1852880afe989707",
       "original.png": "5a942252f501e185267a8fda6577a52cd09516981444c305d78f1da680821c30",
       "lines.png": "86d692f5e79b11d869053a27cab0ddde797b0b36289a0c02c09f8cb048d7c588",
       "map.png": "110a3408c8f8bca95fac11d362020b84e025505b3464c194215a1bb8776ed32b"
@@ -544,7 +544,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 15,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -565,11 +565,11 @@
     }
   },
   "14": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:49Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:44Z",
     "source_sha256": "5d833cfcb2ef3789f72c7637b75b23cec22caccd3dcfffded400d0201ee11152",
     "files": {
-      "data.json": "f21228d8285aff3dec9476343e3f1cc45c7548b675d61c88dff45fc0094b18d1",
+      "data.json": "9ed41edb4a992fd890cd46653a026157458242cd5c1367a536c387509c062e2b",
       "original.png": "d51b4ba18f5dba5363a03100972567f646d8dad0be94b29fdf5d9d9e6bd98cb6",
       "lines.png": "7cf4fba36b4cfdc5d52a05be63c90f4cf4bd784d68b469e7faddab359d175572",
       "map.png": "c853a67eb43bb1ee90624252ecaf0abb4b5db41cf8ac961ee354c36dcf1f1ca9"
@@ -586,7 +586,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 15,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -607,16 +607,16 @@
     }
   },
   "15": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:52Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:47Z",
     "source_sha256": "f4e9bc5066170eb99c9286953e027ed5fcb9a43c284f5995eb5750a13a1f796f",
     "files": {
-      "data.json": "33147fc0294aa4c6d08dc96b78f0b5b1b9bcb82c5ec68dcd7c59ee69a07d5d79",
+      "data.json": "ac4ffe671cab5e8c20df1a617f708bc22e81fa99cbd6e3f674c82585357183cd",
       "original.png": "986d1f99aa763ca335129ec15866210000319d996499a35201cfb75c77e8389c",
-      "lines.png": "af59b1ab7c3ee12155dc65d318280d153297214983e5046a0d7f61bfe4e2e8f9",
+      "lines.png": "894e3e513af5218c66b4d96e3d8930018430a96b36e7a9efcc5379f8b9f596cf",
       "map.png": "90e843d6cb7c7a649c923111c3cb1744dce97f6b4c87726f275424fb7c9c14b4"
     },
-    "playable_sha256": "15be67667a4144d81882e8afd816986f2631ce3d3dae31504bcb8fe2123a1f97",
+    "playable_sha256": "453c8bb60d89b1c8836162c1bfa535ca65b47589075217a6c11bc3cb64d5391c",
     "numbers": [
       24,
       17
@@ -630,7 +630,7 @@
       "Only 4 colours with a real area to paint; need 5+"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 10,
       "palette_after": 6,
       "lookalike_colors_merged": 2,
@@ -651,16 +651,16 @@
     }
   },
   "16": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:29:58Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:53Z",
     "source_sha256": "fb7ddaeec15c9b9df6700dce6771dd2d87398c397492ddc93049a76ab4b7a64b",
     "files": {
-      "data.json": "a4c7507286185bcac91fe37586e30d7ce43c5ef442438e4b0e17d62336907140",
+      "data.json": "82d20008d004baf3edfe2141d442ead9f7056b0035eb56ba25652df1c840973a",
       "original.png": "a20c248da294b85e150b7c1b4f22529f3dce8b2d50b67e678f35a3102e1028d9",
-      "lines.png": "2c9349e5f88bbca027e2f6648300d518f2d6636f67e02257a3441cef84d6000b",
+      "lines.png": "7ddff7200ae6c8ecb1c0a262eabe2f795c73365bd9d7d378733980b4facad992",
       "map.png": "d91954640f8779a796c13844622d7e9526b4202dff5e0c6bb6dfc0d9750daeae"
     },
-    "playable_sha256": "a22cd756185109843a05ce02bc7d28bb904d782a85f5a688d94a64a62bd140f0",
+    "playable_sha256": "fcdefbe8ef191190ac6eacde79ea29fd8202247dd3880d3730be7ceeacd20e03",
     "numbers": [
       45,
       33
@@ -676,7 +676,7 @@
       "Flattened colours drift from the source art (mean delta E 15.93); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 25,
       "palette_after": 14,
       "lookalike_colors_merged": 4,
@@ -697,16 +697,16 @@
     }
   },
   "17": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:04Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:23:59Z",
     "source_sha256": "7c3ac0a154abc341ca82cfb3c6a77c33c60d85cc8004559db120bee74d3a1ed9",
     "files": {
-      "data.json": "a4de82a2db88184138f2cf6185bfeb423177870d30796e3cce2defe4c6d64637",
+      "data.json": "ff698568c685006fe6a9cd0cdf91324e5b316926161490e6fa24c48f5db45b6d",
       "original.png": "26c5b8db92639e0a57572ef4379552c2c35812dbf162086419a99c0d61814e32",
-      "lines.png": "8807398f002819ec124b842225f291ab7dddbb821384ed4fb9daafe71aa16733",
+      "lines.png": "42032ce3642ede26bc5b0945fa6efd589a23ad7edfc5fab88ca70e6382359ec6",
       "map.png": "b643b38c63de4e602e86cdaba5f2922d1262ed85d20f1a1a89df3322f3cfe17d"
     },
-    "playable_sha256": "dd96276142d6cc1967fd19d04cd4b1cb4bf6e8ed7082dd941b60bd7fe050464f",
+    "playable_sha256": "855560565bf5ae7016644ec4b160d7e3e867bc88709f751094f18d89cb319a45",
     "numbers": [
       32,
       24
@@ -720,7 +720,7 @@
       "13 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 22,
       "palette_after": 13,
       "lookalike_colors_merged": 3,
@@ -741,16 +741,16 @@
     }
   },
   "18": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:07Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:01Z",
     "source_sha256": "c0529f2107cdfc4a8dfbccc1dbce05da3ae8b953af92bc32baeb3a65007eff59",
     "files": {
-      "data.json": "5f2ff116ed3312e4b0ec64d0ed0109ad26339e3244d10a9a388c9f0cc595b4d3",
+      "data.json": "b083a9a9f148efb03011c44774b9111c1a7d7ce1865467fef1f170fb889bbe8f",
       "original.png": "8c2cdce33a21d720ad4fc6817f4abe0e82a2db0bcec52c87923dc87fcca5d71e",
-      "lines.png": "fb0133b9232b0089206c8de3ba8b83a9b7058021409dd1153da4cdbb0cfbdd2a",
+      "lines.png": "ec8feea753fee2ca3eacd504844fc3fe16b8a67cf8683598e4afe4edd02f1c35",
       "map.png": "0d87ed1f512fced5abd59073f5007bd30d28794d6fdc936a7b7625d9be48c800"
     },
-    "playable_sha256": "c96f9edb5b72dfda842c59be3cfed0a8fdfb73d792860cca504045c61cd13fd5",
+    "playable_sha256": "9d2011313a42ef2ef70d03039ccc0eece95b8ca57caffa30b3297e1b91424243",
     "numbers": [
       17,
       8
@@ -765,7 +765,7 @@
       "Only 3 colours with a real area to paint; need 5+"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 17,
       "palette_after": 4,
       "lookalike_colors_merged": 0,
@@ -786,16 +786,16 @@
     }
   },
   "19": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:10Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:05Z",
     "source_sha256": "dff4c6e9f9be7128a7f81f632f68310d31d98982a8cd80807ae70ad639c0407c",
     "files": {
-      "data.json": "7d417900b714a5aeeeac0fce8d4740c0a9295617f3f795c648e5a17b4b4c091d",
+      "data.json": "25074c180de6816e38dc437c4478026173de9dead7fc08b6fe06c3938c5cab90",
       "original.png": "dcf805360021f8f91ab5f2cdaed3c9c6a428f6dcbf15782c1fcf832260bd11da",
-      "lines.png": "b1a00f7e5e2cf05bdc07d13d29bc89bbec87e90269ec5da4e4f2a96d10c33b28",
+      "lines.png": "40d2629722db199d9b34806edffaac9cd0ff170638a791936dac040027df8b38",
       "map.png": "c03f40135d3f4e65b0a6bebf4959ef7b0a41d3450b471d688d7b044d07aa11ea"
     },
-    "playable_sha256": "75ebd3257baa28bacb5fa090f17ed7d597fa20999cebfc89921212e32313d934",
+    "playable_sha256": "57ae64dc162ab75b1de6fed0f9823c70d2405e3e6fd848d7204c5a1120fea64e",
     "numbers": [
       28,
       18
@@ -807,7 +807,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 16,
       "palette_after": 7,
       "lookalike_colors_merged": 1,
@@ -828,16 +828,16 @@
     }
   },
   "20": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:15Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:09Z",
     "source_sha256": "d13654d48ed68d377dee4f0091dfa7b938ee06a519a7ef315727c4739d152525",
     "files": {
-      "data.json": "88b5c09b40461ef6a855166082323b15f151c567d031e55d463a384fb3e084b5",
+      "data.json": "5ff32ce4472b85df69c51b402b0f483b84ea1b85a55edb3aa1ee4339350c9cfc",
       "original.png": "13fd4c41088976734f3ec4bfbe09af91dc7dc9c664a0f56117cd84b6c97cd17a",
-      "lines.png": "ac32c373fcfbc7a3cdf7e5d18ca875e11ea11774d3e8e73ac8b451998358f1b5",
+      "lines.png": "17f9dc9a3f0e7daff4604c9cf40a5d720e3ef4dd19bf09a463b5f0c646abfbad",
       "map.png": "f28bc8b6e8b1041fc61ffed0f3f55c97f5a02caf70a69021b5fda55433e81c83"
     },
-    "playable_sha256": "e2861dbd8a2cd147ada25ab81365ae5e6f807f1ba0506b96a9f01e61ae7fd523",
+    "playable_sha256": "d5c9e414628f1785bcf711ad1c2f42877c14326e7f0dd3d7164df2c6c3083a43",
     "numbers": [
       28,
       20
@@ -851,7 +851,7 @@
       "Flattened colours drift from the source art (mean delta E 13.21); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 10,
       "lookalike_colors_merged": 0,
@@ -872,16 +872,16 @@
     }
   },
   "21": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:17Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:12Z",
     "source_sha256": "e225af02418e732feb1bc7473dd20c936e6c6e807092f7a974d7723ae45ed505",
     "files": {
-      "data.json": "b26bbd980df5db0ec9977d1bec4482601a1377a1519091c7cf00b9f1ff05c744",
+      "data.json": "baa356c884ed213a7f4cd6e6dda45755332f02e38db17f02051617e7e86d4ce8",
       "original.png": "a0ff3ff7f41c4e59167d9d2d4ba78330302d58805a563621aff09315904f94fc",
-      "lines.png": "ab72845c9f03ce54b081a645a12c04460874f4e65f4fff662933fcaece1d02b9",
+      "lines.png": "c97b3626ba845722813c6fa8224743d645df3fb189d56827243cc9c7f832e3e5",
       "map.png": "e74cc65d9f0afa09b03153fbde552f94675283b1746794454debfd2faace0801"
     },
-    "playable_sha256": "6ee547af62daa7705e8064b9f223304a157a02260621bbdc9124a3e45e66d435",
+    "playable_sha256": "9fbd2e52d24d463383251196eb9157fdf4435dcd7b576cdf69ba2922060ec67c",
     "numbers": [
       19,
       5
@@ -897,7 +897,7 @@
       "5 numbered areas; need 8-50"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 13,
       "palette_after": 4,
       "lookalike_colors_merged": 0,
@@ -918,11 +918,11 @@
     }
   },
   "22": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:21Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:16Z",
     "source_sha256": "cf041c658cfb86a7773b37b0f5f3f2de0a6926707972894b18433926cb383ac5",
     "files": {
-      "data.json": "00e37c01d4d4724383215ad9f7a7514b509bc91591142d59cc5eae6f73ccff2d",
+      "data.json": "9decbf8fef2bddfe3b7ba0c2708ff36b7d4b17f8c34bb5390c697b8d90c5814d",
       "original.png": "3746e6d31d006e1ea328c13d5276688fda1f036d7193e356bbaa4b9466fef1a2",
       "lines.png": "4b9a4b55b1cdc01d3731074d0ce0fdcf407f62af437ee6ec94a48bdee40bb915",
       "map.png": "070d5f3cb5a9dbfda75e7c7732a440cbab4c41369ab0ec4dd46ed3ce9ad1e3f8"
@@ -941,7 +941,7 @@
       "A number spills out of its region (59% inside): [{'number': 10, 'x': 563, 'y': 719, 'inside': 0.59, 'clearance_screen_px': 3.66}, {'number': 9, 'x': 513, 'y': 553, 'inside': 0.91, 'clearance_screen_px': 3.36}, {'number': 8, 'x': 693, 'y': 736, 'inside': 0.99, 'clearance_screen_px': 4.03}]"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 17,
       "palette_after": 10,
       "lookalike_colors_merged": 3,
@@ -962,11 +962,11 @@
     }
   },
   "23": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:24Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:20Z",
     "source_sha256": "fec0b821b17ead6c219fa62044ef229a5585fed58414e0d2efce3591a6eae9c0",
     "files": {
-      "data.json": "c58338faa9bc42f5e05fab5cdb287c6e50ef24e5cb6b24abffde5a7a7d5384b7",
+      "data.json": "9526ca9796257b70cc5b2a11e6620bc42a4729ea372014f8e1216b65ccb62e18",
       "original.png": "a6f73623e0f2b24004b45f7e5481e20a9798fc5eddeba3e1c1a156092ca682a0",
       "lines.png": "61d1f952474700dc4abb9f4c1a315b25f0fe02967562ab3abce6605fbad917ee",
       "map.png": "a4c5b0f8d10caf35e0f3f5f38dd6566a4726989ceda14fce6d61656b87e551ac"
@@ -983,7 +983,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 19,
       "palette_after": 7,
       "lookalike_colors_merged": 0,
@@ -1004,11 +1004,11 @@
     }
   },
   "24": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:28Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:24Z",
     "source_sha256": "b6801f0d6713def09e7f77aba64a275fbf179f1f0bd420264f888941cf8bdab7",
     "files": {
-      "data.json": "b40e0e9b54ec57da45436e2a4125df24d878c4e838621bb278820040258ef3a2",
+      "data.json": "b07a24467a3d72fc9f83c274cf8d6aef60c04af49581872f5c637b7c522e76e5",
       "original.png": "b366f9d7ea7d712fbe16c9be8e120393c8f8b79ac5d10190f9a925e07b2f6444",
       "lines.png": "74742f350e8fe53fd5d1fd4ab1dcbb358bb77066dc5c8ced085e6a49263e0bf4",
       "map.png": "97ab1d7f4843d672b99372c73fffb793d46e537ff01d49dc619acbd8d66eab5e"
@@ -1027,7 +1027,7 @@
       "Only 3 colours with a real area to paint; need 5+"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 12,
       "palette_after": 7,
       "lookalike_colors_merged": 2,
@@ -1048,16 +1048,16 @@
     }
   },
   "25": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:34Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:30Z",
     "source_sha256": "49c8717cf9d1c79a7ae95c8f4ef4662962b3960a3ab667b71fb6caede1200a3d",
     "files": {
-      "data.json": "734ce1927d5e16382a23130783e1212ac84e368642f7d4314ef940d286fa7600",
+      "data.json": "be21051d188c4efd9751783c038be995a36d30ba1e70fcef26747b52c63d4ac9",
       "original.png": "216b0a24bd780daa8bdf078c49060a7d642043e67f88a46994c16cd6edfea359",
-      "lines.png": "29e5e1a34261431aae2566ca215c83dbd8b478eef90e32844390709ca06d7e8b",
+      "lines.png": "b4c9d3939dfd1fa8c0bf11351cb83b923158696ebf33d1e0a556ea2a26930dbc",
       "map.png": "ec28b7f50bb3b2f9a2d5b8710e725341cf32a8ddcbfecf8e2844b460f9b58478"
     },
-    "playable_sha256": "e139dcc8ca0efd6498da641d229deeaed8ab67f8a8edbf5a440c843603d9820b",
+    "playable_sha256": "092be83ebc9075fcb003b5c4b2ec6cc23f8b54b71472fe115ae544fab1ade8ee",
     "numbers": [
       67,
       55
@@ -1071,7 +1071,7 @@
       "55 numbered areas; need 8-50"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 21,
       "palette_after": 10,
       "lookalike_colors_merged": 1,
@@ -1092,11 +1092,11 @@
     }
   },
   "26": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:40Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:36Z",
     "source_sha256": "819c419c023b364579a8c2ad45abe30db6ec2a1fbe9898351faddff5ee530857",
     "files": {
-      "data.json": "5f405f46e363756f1c0584047a45a83f842d626b9f9204078d991a12a49ec1d2",
+      "data.json": "a54fcd5038b25c454a5fb23a0c38a21acaba32ec1aed7a4d15be89520a9ce236",
       "original.png": "04601e29e834138e262472d08c20f21232ee1dc1f72170584d4815feae65cb07",
       "lines.png": "08a517ac01fe458bac4d40b2a21bf3ef95c1472cc17a3ad6bbb5dce13c8340db",
       "map.png": "6631c67caa0397d2f60e96c474f2535df9f79c495ea56b49f99980a42aa0bfea"
@@ -1116,7 +1116,7 @@
       "Flattened colours drift from the source art (mean delta E 10.45); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 23,
       "palette_after": 17,
       "lookalike_colors_merged": 1,
@@ -1137,16 +1137,16 @@
     }
   },
   "27": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:43Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:40Z",
     "source_sha256": "547845cfa1df7b859d91a390a4c43e1db0593c60676b6fceb47871e6e117f03d",
     "files": {
-      "data.json": "2fed1ab98ecc57a7231bd7fb631bf3ef1f56296b7677a6eea93bf7b613cd631a",
+      "data.json": "2658d59618984bea5f3c53c7b2298a4878b6695dd7bde034ab0514dbecb47dc7",
       "original.png": "6303d6ec7dcfccb4db8e9b7f2f63f377b2e738f943364062d4893e99e2285f58",
-      "lines.png": "2a25922db1fefdfc584c870421d91ed9d82113796ef823daf5db69cec55f1412",
+      "lines.png": "02068a5302189b72fe2d38295d81a0e440b9e39f765b35cb4ec20f4dbbf2fe54",
       "map.png": "9e2812a65b6ae0d7f5677e697a802b0cde2a70749ccb735e267b40ef2ed0506d"
     },
-    "playable_sha256": "2cd36b86a94c217a22d4ce9765673d70cd9f622c27c4a15ab3b76df42369ac23",
+    "playable_sha256": "d6ba8133f7f518106b873a7211cc495ce4968118ab1afbbdfbda87871454c04e",
     "numbers": [
       51,
       27
@@ -1163,7 +1163,7 @@
       "Flattened colours drift from the source art (mean delta E 13.02); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 11,
       "palette_after": 7,
       "lookalike_colors_merged": 1,
@@ -1184,16 +1184,16 @@
     }
   },
   "28": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:46Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:43Z",
     "source_sha256": "808c8c76e9a13ae4a2988656a9f0259cb25cee7e91c3e234042712dc4d24b8fd",
     "files": {
-      "data.json": "c3738f1c41da2fd247e8ecdbb706806f19284458d66e141032e1d2e6042945e9",
+      "data.json": "b8690a3b4df58ec52a5ad4bc5771e24d8a5f5cfda05dcb0813e95022f56d89a8",
       "original.png": "365b68e1cb748f1b5d9b712ca1cd5eb36180d8ef42f79b1a5ae1e851b48c8618",
-      "lines.png": "5311ed274e5a011c565734b72b700e364c90be2fd7cea6f8085bc66062448dc0",
+      "lines.png": "09d84aa7ebd9855214b73fbacab66a76f28e6e8d4c5b6142a3d31e16578bc9b8",
       "map.png": "dac40cef0f1b7c124b9685984bd79e96db4081bf65a3f2221427d522ef6d8337"
     },
-    "playable_sha256": "5a622f8705e75a4cf35455a114493c415ea75c835a334f0a74bd2e5ce83cc42a",
+    "playable_sha256": "58b46daf497e1aed4b27b3b6567b2c9e64e9b9876227d4d3e6c94da6a427c690",
     "numbers": [
       29,
       25
@@ -1209,7 +1209,7 @@
       "Only 13% of the canvas is paintable"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 13,
       "palette_after": 5,
       "lookalike_colors_merged": 0,
@@ -1230,16 +1230,16 @@
     }
   },
   "29": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:51Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:48Z",
     "source_sha256": "6c3e431c4f4556b1583f440b4364405b5d900429c47467d84bb59905d4bce4cd",
     "files": {
-      "data.json": "8bea69d08c02384dfc86ab6019d9e816cb5de7116c89a827554e2e5008ab01e7",
+      "data.json": "2e55ad90fab28825cb808af74af4510697784babeb65ed8af9d38247f6ca946c",
       "original.png": "0292e99e7d0d1aa2cb111f42f520e65c2c59fbbd8b7db11aa1862fae40f14728",
-      "lines.png": "8209be79c4d8e04ba9395b6db4409e7586da8c5aa8f869a67709328a67ed922f",
+      "lines.png": "c0ae6abcd338b9ee56dc1ba24632b6947157cee473ab404430413a7143493e5f",
       "map.png": "d4b83f4db8dfc2de7adc4b1025e6a8d69b550aa223803964822971323edc22e7"
     },
-    "playable_sha256": "dc23261b49340ea06a1feee00d63bc9a5ecbf9e481fe85e1953283a46a6d8e2d",
+    "playable_sha256": "b74a0100d131e7f64b1640365d0fec03b7fd5dbf386f74a943c1ebb504575fae",
     "numbers": [
       21,
       17
@@ -1251,7 +1251,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 16,
       "palette_after": 12,
       "lookalike_colors_merged": 0,
@@ -1272,11 +1272,11 @@
     }
   },
   "30": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:30:56Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:24:53Z",
     "source_sha256": "61483c92ad243f2a2a482569e5cafc9cfe35c857c0c864c5dc6d6ad611dc7657",
     "files": {
-      "data.json": "7b743339be822d3a3d633cf0b52d36df045c5fab18b4b2b0f4a674b7f8678f0b",
+      "data.json": "0ff4ae498fecc7c57b53dfcaa16c0a73a8dc74f94368d13cebcb8f17ab1bd6fa",
       "original.png": "ab7608ac0709ce824dda66a917027f67c2e709eeb98eac8f6ade21929c543306",
       "lines.png": "90ad4daacd415cf80623d5832de3f10bea697b7c96e8fed682958b6428dc7695",
       "map.png": "02cc42cd0be3b8eb49559ac352d6a009c396510c999620fe6653a781a1a1d38c"
@@ -1293,7 +1293,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 11,
       "lookalike_colors_merged": 0,
@@ -1314,11 +1314,11 @@
     }
   },
   "31": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:02Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:00Z",
     "source_sha256": "bb620ce157ce0432d07d8380c6622bf3a24c34458077b599cc0bbef98d8bde5a",
     "files": {
-      "data.json": "2a4393fb4edecaf7fce4b7b3da0870b7d44e3baf3e356482183c04a04e354315",
+      "data.json": "b29ec639cd04eb5a6964a12cc3e2a5f3d0a26ae8406e33d7d9d257b80fd1386b",
       "original.png": "f14391833c167b242956647a217e898c6c24a57ad04595b9f2dfc7f1cc202c88",
       "lines.png": "d037b14f78078971d9c59c6a9b34fbe2d4f38e87f6bb1b2db90be4293ac48843",
       "map.png": "2c83d08030db10c563f743ef02368973940fd3867d14d718d7f916e5256d01e4"
@@ -1338,7 +1338,7 @@
       "Flattened colours drift from the source art (mean delta E 15.13); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 16,
       "lookalike_colors_merged": 0,
@@ -1359,11 +1359,11 @@
     }
   },
   "32": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:08Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:05Z",
     "source_sha256": "c08a20508b6ebdf37c360980c17086db11e99f8780773572ecdd3f5093415ffc",
     "files": {
-      "data.json": "9dbfe5627238c0749a053d1339479d53d997905239cd309986852bea559e7349",
+      "data.json": "edbcabee837bb023edf5133480ddb0e96986aa90f4146fe0104d2af1505d8957",
       "original.png": "86af2f4d0c76cb50b3a62d22137417f3facd12a20d3041a39bc73756be3fc696",
       "lines.png": "bf1570c523c3701a3177bda762ef1d854792e3d3be0295a2d5600813f74edc88",
       "map.png": "48957f739c91ac26494fff4cbdbabdb1ba137f148af7970faca20e868d2656ff"
@@ -1383,7 +1383,7 @@
       "1 pairs of numbers are drawn on top of each other"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 19,
       "palette_after": 14,
       "lookalike_colors_merged": 0,
@@ -1404,16 +1404,16 @@
     }
   },
   "33": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:12Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:10Z",
     "source_sha256": "99d8fae4d95cd6d0f4b4172c7be61fd7fdf8048517be61d905c8f22bd7248b18",
     "files": {
-      "data.json": "1f93344d546b8d8db6b961b7e0f5a98e24d7f65438c2ebe4a0e8060cdf9cebdc",
+      "data.json": "4e5886df8ce43f2c632a0677f85ec2a878873eb94957a2d258b2d7048d2d9340",
       "original.png": "a693d2f4b731de6904d7a64dc5f2f4e336af40a1a22eb658549c95701f638811",
-      "lines.png": "39cddc0db58b2b5ade1f8bbf346c7c7158f5ddabfded0f2890e7dc898dc51ca4",
+      "lines.png": "948b721b0393524824b2b2c57a8656f8b3f44f23ea186abe4b1122a7523ccf29",
       "map.png": "0d7b69cca436924c0c0030fc3dec42e90c589ccd5fc8dac1f4b5e8d4e37c91c0"
     },
-    "playable_sha256": "1b69d64a466e520cda7d813c08c3b754c70f2fc6619d7ef0384f7a5a4d9ac51c",
+    "playable_sha256": "f4712fc599c947b902b3da3a8b1972e06c1a95c6cde62654e18ca888fcc5878d",
     "numbers": [
       83,
       14
@@ -1425,7 +1425,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 19,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -1446,11 +1446,11 @@
     }
   },
   "34": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:16Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:14Z",
     "source_sha256": "63afb532bd58c1835211baa492396b2c157f4db8f52f64ad7ca65d2a630b18e2",
     "files": {
-      "data.json": "df3005daf6ffbbe064c5646809071ce40127a22387b6ed0c2f2eb49d9ddd3e9d",
+      "data.json": "bf970b6554f705bcc3476c0d8d4dfcc0a11ecf786f4d5ecd580e479269003913",
       "original.png": "19dc14f0d83972fb4ae95119f0a8033cfae15d3293a32ffb9293988186e37b84",
       "lines.png": "e4c4e8edece6a93c4345f10c0c6ad2b20728c91c4fc4d031e98f5cf0ab448839",
       "map.png": "9337ffd4e9ae2bef6e9f4cc3b75bbc55fee1b0450f50e3fd9d1c47ed5b98e876"
@@ -1467,7 +1467,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 19,
       "palette_after": 9,
       "lookalike_colors_merged": 0,
@@ -1488,16 +1488,16 @@
     }
   },
   "35": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:19Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:17Z",
     "source_sha256": "9c0b7b1a58966518d15018eaa65ff1fd5656e2510f34c75b5f417d70dafb617f",
     "files": {
-      "data.json": "8777204891c6db386578a13be76f78ab542fcca967ef3f1f9d841841c7d569dc",
+      "data.json": "c017173f4b259ad821f77fb21e72f8fdd3af9cde698d103b85337a0f5ee5e7cd",
       "original.png": "253b5b4c7004f022c8ade80ffaa761f0897c9a0e91d70360240b71f19cae97eb",
-      "lines.png": "eac38630d3c6d4ef2af93f5f00190262e5dd92d30d2d40d887679032f2f623e8",
+      "lines.png": "a33a420f78158ea943805d9c3ed22032c2106d3e190bd710bb4bb8ee908ac4ca",
       "map.png": "df2d009fe0a14029de619868bfcafeda64ea685d8be95e3ece2984eafcf4202c"
     },
-    "playable_sha256": "c32c12961c41ab42f275e90fc3a8fed5becf8435f39220b5d51f4c9a5fab3c6b",
+    "playable_sha256": "0ccae3e52acf00f07ba1066f06bdbc1f6c57cfedea4e4055b2c9569abf16f36b",
     "numbers": [
       14,
       14
@@ -1509,7 +1509,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 13,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -1530,16 +1530,16 @@
     }
   },
   "36": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:24Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:22Z",
     "source_sha256": "dde738aece9c7d75c713c48d52b7489857a0cbcf28cb38a882b9ecc9578590f6",
     "files": {
-      "data.json": "6465407d4f7e634bfd1634d126dfa365e049bc09bcce7452fc97d9e6bd5d7c9d",
+      "data.json": "32d56ce8931920d14549f1597601d268e2d4573c39fe85f629a8d865f156ba88",
       "original.png": "04cebe86d563e02d577878bb0c089cce80566e183b1fdea099948f1c4c888e38",
-      "lines.png": "c645ab757076683e7c1033240d852226dd49a607f1168f24613901c6daab1690",
+      "lines.png": "c342ef90d36a41c2d88e56ac7776702ebd8207342e948a64c77c5c575bfc1716",
       "map.png": "5a9d115be69f143cf06e016009cfe85ea6d70f15471089f7911482bbca25c3cf"
     },
-    "playable_sha256": "0074498a84b3c6fbe5ac6506b94770bc0363cdfadaef52c82677ed15b7d30a83",
+    "playable_sha256": "fb752ebd30534c52e4937c2219416cc210afe63db750b25484009f2be8b50d05",
     "numbers": [
       29,
       25
@@ -1551,7 +1551,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 17,
       "palette_after": 11,
       "lookalike_colors_merged": 1,
@@ -1572,11 +1572,11 @@
     }
   },
   "37": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:27Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:25Z",
     "source_sha256": "7d7c4880c89959f3f1487a8c2d2b98a17a6492cc7a700fd91cf82f53ea20a243",
     "files": {
-      "data.json": "5f952d2c016e6d12dc8b21b00897de15fe534f0a2eb9441e5027d805fc23f087",
+      "data.json": "3e552a8f513ad0484156e9c4778e54ff5bae56eff2e0c68acc79ecb3a44721eb",
       "original.png": "bb8121caba7bd54736d331436e42c01ba69cc9ffa94b6bd95e3e50f76de14d5e",
       "lines.png": "153e31498642b917310c0e5f946760667f8b102973233587a0a92bb97e35ce15",
       "map.png": "60434701016eaa061a43ed33fe1d9231b48b1d143ff65ae3b43cf12c495f2808"
@@ -1593,7 +1593,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 11,
       "palette_after": 7,
       "lookalike_colors_merged": 1,
@@ -1614,11 +1614,11 @@
     }
   },
   "38": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:32Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:30Z",
     "source_sha256": "9cf1d40bf412cd278785362cba7d41c07242e4f29e11e32cdfd6374c69d9f650",
     "files": {
-      "data.json": "42c55080535dddfa9c68122d8288804bd5cc4de463b020ed653b52f7b9fdad35",
+      "data.json": "3313e8adde52e0f3a0b7121aa2accf898ab896c9e091daca406576e33af14e38",
       "original.png": "77a8ee18a8e77126551484cc93bd600066c2f3379310c53e1f8c8054bc8bb75c",
       "lines.png": "580e5368bd639adf1b5cd0c52a3c10a725a1c92faaa52e2bb28c5d83df247c06",
       "map.png": "01454f9e24ceb3592514c07c3d6a8a921301c9e4d3f8ff69959faa1f532b32ca"
@@ -1635,7 +1635,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 17,
       "palette_after": 12,
       "lookalike_colors_merged": 0,
@@ -1656,11 +1656,11 @@
     }
   },
   "39": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:38Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:35Z",
     "source_sha256": "1efd263db07846ddde2386e0f0348ebcc0955df8afc198e647a2403804d9da2d",
     "files": {
-      "data.json": "96dd2d412268ff61805d0013497dc2e890bd302097048caae72c8b8bdd6ed186",
+      "data.json": "31251db76b9e7414fecdf47be93467371139e5027e07382dc4efcbdb3b63b786",
       "original.png": "e2e68dfe05cc9cfb0abd0fe27a9fd56e46037a2d0c3dfd22600739c108972ac9",
       "lines.png": "b80951530bba03ed5cf6996c96e174b4201ec823592e88c0c7ceb2c53466733f",
       "map.png": "38295197b45b3cf58be7917aaf97727f229c2d58eae7546d6f8eed6a5f1c0274"
@@ -1677,7 +1677,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 10,
       "lookalike_colors_merged": 0,
@@ -1698,11 +1698,11 @@
     }
   },
   "40": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:42Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:39Z",
     "source_sha256": "2fd2163d25a74af55e9c87d9b865eebd0a36ef6830cd2c6d052040060530b712",
     "files": {
-      "data.json": "9a637c219d75dcca0beb3a1a79d2e39417a67d46aac344339c1443e19b949f4f",
+      "data.json": "9182b5603830cee11b6f23ea74fc417eb13ecb9de1826ae9ef3be1b9b6ed1439",
       "original.png": "d1c1a0958ddf319ec04396a96e12a435153881517d005fb404994008cb859f3d",
       "lines.png": "39850b8e56ca8a5d1f6809ed454650fd0018b6500dc9160a3896e372994003e8",
       "map.png": "3e5cb082aa76d7fb5e78836babe086ac90fea0e34bda0f414cada4ae250a49f5"
@@ -1719,7 +1719,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 21,
       "palette_after": 9,
       "lookalike_colors_merged": 0,
@@ -1740,11 +1740,11 @@
     }
   },
   "41": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:48Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:45Z",
     "source_sha256": "4554b24697a920bc9f6249b911b9f004be6ba9413c9d4542699c60e0db7c5990",
     "files": {
-      "data.json": "1999370f157435584900946ecabc549357103021206b1aacc05076c779c1e7fc",
+      "data.json": "4614e038d3f77370efcea72492056a23252dc427099495560e0dbfb96bc1a707",
       "original.png": "2e84c9ec4dd309cc744babe564cb53e5d7ac2dc01de0d26253666166f8dfb6cf",
       "lines.png": "7df633b97c5fceec8c92f8cdc4ad23ca158b60a9643783395e70f28b8fbdf3ea",
       "map.png": "009e32d59e99b02c4190d2dfb903ca31ac5fa45829914149637e3f09e1ec4255"
@@ -1763,7 +1763,7 @@
       "14 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 14,
       "lookalike_colors_merged": 0,
@@ -1784,11 +1784,11 @@
     }
   },
   "42": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:52Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:49Z",
     "source_sha256": "111f74fbd6ca3442ea2ed01307a3cb4ef4d9b2c9dc7c5471ba8264189bda00f4",
     "files": {
-      "data.json": "7ef50a55be2f6f1e2a697796af7d5d81906439f923561344f64306c4de3160ca",
+      "data.json": "014ffaac15e71d2c9268fa0564878e1d7c422841d4ba47010afdae4678acb869",
       "original.png": "0c3a34ddf1abe967011de5697554cbde1fab3553b56c2c085a7573ed9fc5d0e8",
       "lines.png": "54be8e1ef07b0437b99a2c4059f07506b30bedeab62f819ca0cdc89286c1516a",
       "map.png": "02e7ab2155f1f6a654ce377a03b376c7287ac0fce60cf608a5ae71c75467cf03"
@@ -1805,7 +1805,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -1826,11 +1826,11 @@
     }
   },
   "43": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:31:56Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:53Z",
     "source_sha256": "4c8c710e6d42f19566482cd3f120b35fd123b7994016aed28a4106f6456736dd",
     "files": {
-      "data.json": "23bce054cdd3505343438466e53e0fe66b110af6aac128bea34c677225c822b4",
+      "data.json": "310b2852d5ae208bcf60d155bd8e239ecfaa670d7186ec5e4de27845f650f4b8",
       "original.png": "726624a58c774ce4c05f3dc35cdc099ee382a20e2c394397f2349268da60d337",
       "lines.png": "29c4e5c6cf90bb68fb6d616d9dfeea5b74954edebb2667510f20eaa32d6792a8",
       "map.png": "eef8ee8d1f227078fc117fcfd8df77ed10e8137c90ddcee4506e9f39023582e8"
@@ -1847,7 +1847,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 16,
       "palette_after": 9,
       "lookalike_colors_merged": 1,
@@ -1868,11 +1868,11 @@
     }
   },
   "44": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:01Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:25:59Z",
     "source_sha256": "38b02eb9e7809c4b8e16783cf4b3d860ae9396cf684f73a2c9fd24c9614be7e1",
     "files": {
-      "data.json": "e58692b1c7dd9f218c2a520b9e0512745b7bf02e4734032e4419d2c2ae492c00",
+      "data.json": "49b82366c35dc1a2622888e659833ef3bc1d77419d7f6e0e57791d59e29c9e7d",
       "original.png": "3bbca14a1fd644779295145ab06a1791b3a8e2b6d320e2593a37dfe700f26578",
       "lines.png": "1031957f14987822c88ea44ffb5e00865bcd56c97ac23a5c256c7aaf7810c0a7",
       "map.png": "d4e00dd5e05bde3c5d9386df6c6a7e78bf2bb950ae9c622141eb5ecd930183c2"
@@ -1892,7 +1892,7 @@
       "1 pairs of numbers are drawn on top of each other"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 13,
       "lookalike_colors_merged": 0,
@@ -1913,11 +1913,11 @@
     }
   },
   "45": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:05Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:03Z",
     "source_sha256": "932dd4214fd263333a3b19bb4b1b7e5b8d1fb6d08883a900538516b5b94db9bd",
     "files": {
-      "data.json": "4c9cf7ce5d9cded15e41c01296907be9d36084f1d4bcdc8c781c7def32d3b648",
+      "data.json": "ada074edac38f9104dfc6d11c36629a4b183a42de3a748314f5bcd65f229745b",
       "original.png": "fc9bdef2801af7340657bb94a460e175edd98965b9bdd0cb006bbdc0db95494e",
       "lines.png": "e9e56dadf72f496758b8709fe47dc22c1ddf647460787e70999f5558100304bd",
       "map.png": "e32e53d9b028ebee1bbc0b0dbd04a73eeb3ebfeb0082381219189a3d33218d00"
@@ -1934,7 +1934,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 17,
       "palette_after": 8,
       "lookalike_colors_merged": 0,
@@ -1955,11 +1955,11 @@
     }
   },
   "46": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:10Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:08Z",
     "source_sha256": "00b8584bae3ffd81eab52d036e86cc398ce2089d1f1b42cbaa52c53728d5bcb7",
     "files": {
-      "data.json": "ce3f95262faea5b93da0e6b7a24000d565a6972243e1f9ca49ad7cf5ea281694",
+      "data.json": "764640058ddfdda62d36852f1cfa6d8687cf7ee0ecae2fbbfc6cef5147ccae48",
       "original.png": "2db093cb9adf5e83d2c2a2316dfd009cfb00d2ab43a60b1e7142dfc32c9d2ef0",
       "lines.png": "2ce9c92ae7c7ff903352fe200b6844bdeae7ebe148d44e5abd812b0b065035bb",
       "map.png": "59e91223dabcae496c8e90e61de2619d02f01d34b8d4e1a51c99b2262b9e34e6"
@@ -1976,7 +1976,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 19,
       "palette_after": 11,
       "lookalike_colors_merged": 0,
@@ -1997,11 +1997,11 @@
     }
   },
   "47": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:15Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:14Z",
     "source_sha256": "85ff301cd542cb64f1a2d17ff4d2a48e53b7a385770b6cf491636639bc690f07",
     "files": {
-      "data.json": "1f6b9a2abfb7de9d5cedac5f08303df709bcf78e768c27fc540cdaab01a9caf5",
+      "data.json": "0b6d5b3390e3835c4df1ed02a15501ad7e131830b4cf8218bee8cb5cc6be2730",
       "original.png": "e506d918eebf50f0335961399a5bc53e2d3d429936765a22dbe43defecb62ae0",
       "lines.png": "243a3231db2fa7789740e073d1bec1c7fa9d86d3ce5d6b7c111d0fc12d38c77e",
       "map.png": "8ca50b3ce62c3494426a0f020cba05610dbd5eaac91fcc6088b4aa0f9fc6ea43"
@@ -2020,7 +2020,7 @@
       "13 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 21,
       "palette_after": 13,
       "lookalike_colors_merged": 0,
@@ -2041,11 +2041,11 @@
     }
   },
   "48": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:20Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:19Z",
     "source_sha256": "d0a0a17ce72707007e02a1d4e3f154f742dfac45a5549e0e61b70d750887eead",
     "files": {
-      "data.json": "5380b9d1f8cd9febe964a051b94972db4f789502ce5631138901b168aafa4145",
+      "data.json": "79aaac059a3afa555d8b926ab82e97e5271ae4ad26752ceca40ae3901a4d7a49",
       "original.png": "7fc5944f5795bf2f3ee51db8f8157b469117cedc7b2999b60196b1542306eab5",
       "lines.png": "820b56ae01d781cbf6b1fd548cc268834a2ecb9e4cac33b5573fe7dfa6f3ec95",
       "map.png": "6bb2eeda114e6df57d82408f7a40cc2284a8b599dd44cb6a6ce31f478e39505c"
@@ -2062,7 +2062,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 11,
       "lookalike_colors_merged": 0,
@@ -2083,11 +2083,11 @@
     }
   },
   "49": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:26Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:24Z",
     "source_sha256": "2950e069d4c9f49dac6314a509a15b4cb5d100d0984b4147841f60f1d4f7eeff",
     "files": {
-      "data.json": "be7ac42645772707314b026502f8c6aca9bf41900f34719df32107d2c18bdf78",
+      "data.json": "fac637ee3e95f0847b5a50762fc656f95cb8bfaf886ab372b9c67776c7803841",
       "original.png": "a51a3db9f9a6d3808f714e704996d6fa41ea60d71c7a7725db1fae0a6f988d49",
       "lines.png": "84396af2775aa9f047b888d90a7ca01d56e59cd19f2bf981398e36a48b3cf398",
       "map.png": "7d2326eef5925f6d4844b82356dcfef7727788462503d388e2e9325f524b1540"
@@ -2106,7 +2106,7 @@
       "14 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 14,
       "lookalike_colors_merged": 0,
@@ -2127,11 +2127,11 @@
     }
   },
   "50": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:31Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:30Z",
     "source_sha256": "4869a3d34d7de21c0cb8b65275c1a16328e7595d406a2a755da46361531daac1",
     "files": {
-      "data.json": "b0c55b84875e32eff7f22aed4b90a25a3e67c54634fecbfe54853e1788769b0f",
+      "data.json": "ae021fc563f0c7b86317ae150dc73de162987c01a3ca3a8f9337b1f7b0fca20b",
       "original.png": "6371736f9cfb6992173790578337eb52702818085aabb1094a3ea2791186a71a",
       "lines.png": "e2a0c72740766e77975e0ee89d508a8cda780fe733320a10827427f85e64eac1",
       "map.png": "51a9cd0e2169d523f5a7c1e9bd0ea7eaea85f32970f6c33e1795f3018017c395"
@@ -2148,7 +2148,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 20,
       "palette_after": 11,
       "lookalike_colors_merged": 0,
@@ -2169,11 +2169,11 @@
     }
   },
   "51": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:35Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:34Z",
     "source_sha256": "28e6656bdfb0049adfe17ece78a8a7554f4800322afcf7a5d3cac16a7fa87b82",
     "files": {
-      "data.json": "f77fad0973bb43f6b71a3e40b9e1819babdfca15a25a772a386ff9c3dcfa7f3c",
+      "data.json": "a60c9e02841f185ae79fcbd5b677690ec0e43e03bb2fe343680d1ddf671392be",
       "original.png": "aa63b6a766fae498a2bb103593ca39824f792825990c5c25c4bc7aa961719b56",
       "lines.png": "a7384b71774a5471bfee3cafe666fca0817186d5ad573220b689d30294886761",
       "map.png": "085b37e54da084c7a83d96b820500b8fd93d6c662ffcac0ae8f2c6e7200deaf4"
@@ -2190,7 +2190,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 21,
       "palette_after": 10,
       "lookalike_colors_merged": 0,
@@ -2211,11 +2211,11 @@
     }
   },
   "52": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:40Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:40Z",
     "source_sha256": "259b49bd6135b796663898034d80024b088ae8d52c400e388244684b7e2dd8bf",
     "files": {
-      "data.json": "9396f2334104149003bd5004b4f92a03f72e5bbc5c41a4458c5d2fc808367ad6",
+      "data.json": "ea96e6e94d59e33f8635a6d11d3acbe7dff375ecd98e58db525d538418573cb9",
       "original.png": "b83f18751312cdbdf514558128bce75b157849919a05ac1cc56835716599f2cd",
       "lines.png": "aa2e15a31c9f3a854ecb57919f9bb743c2e70c141c71c05d4b09a3408247a019",
       "map.png": "0b873fc3feb897ca3938df266c346c137adca2b9f62f53088a5b74e0a9281aab"
@@ -2234,7 +2234,7 @@
       "14 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 23,
       "palette_after": 14,
       "lookalike_colors_merged": 0,
@@ -2255,11 +2255,11 @@
     }
   },
   "53": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:44Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:44Z",
     "source_sha256": "60d1a7dee351cc4435eab26e542aaba9b4608d5f3611850cbc72100fb6fb951c",
     "files": {
-      "data.json": "ec8b03ad79c478d949f6328901f2c4dd4e5e09a8eeab67df92bdd33afb675eab",
+      "data.json": "e37eea070e11783fb079e8f2a02a05813931f8eca5946076d8a38a31bce8d316",
       "original.png": "4e9ea97ebb83ddc9adeb318fb41945fae42ee327bfe4c8a7213c7036a1300f27",
       "lines.png": "d4db6fc3a6943c9936e7d9e7c8b695098965c7b358b70d65ccf77f6c67b59ea1",
       "map.png": "94114a96442578bd4771276e07fce3d98f27ee60b673c5b90f0a50f3f238525b"
@@ -2276,7 +2276,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 9,
       "lookalike_colors_merged": 0,
@@ -2297,11 +2297,11 @@
     }
   },
   "54": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:48Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:47Z",
     "source_sha256": "4e996467f19b05fc523779b60acd47f78791562b8c81e377150eac95e5efb967",
     "files": {
-      "data.json": "912559d9cbde9767f40b689363846bda13f7072b33660b23a145cb7f8ae740c8",
+      "data.json": "2db87a3004c3ae1bac4aba52b54453f9dbfd5160e6f4a28d9eb9dc30a9e96371",
       "original.png": "8901c89b890ef0b8a0305dc4b3f6b4fc21e6a153def4d593e719113d2390b3df",
       "lines.png": "650ab2a323d107bd8a0768d4da9a89687bb747bca93c133304b0e2e305c39da5",
       "map.png": "0e4e3efa9bd5b131f93ddfdd46ccc3256e6c07ad9dec0ca110788e424a214da8"
@@ -2318,7 +2318,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 16,
       "palette_after": 7,
       "lookalike_colors_merged": 0,
@@ -2339,11 +2339,11 @@
     }
   },
   "55": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:53Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:52Z",
     "source_sha256": "66385f972997b487705a4f5edccc6900f80fc2def7ff99ad13a6288edadee6bc",
     "files": {
-      "data.json": "5c80b437677e9fb444462617d62175ce1edc0f35a00875dd2e81537c612c7e89",
+      "data.json": "26c6434dbbce111d74f8ee5f81617c6c9ffb791bf4665ce702d63aa6aa99d371",
       "original.png": "fd817f43a57d2ae7dc45485e2f093bb3fedddd066070fa8e7ff21b795ae2dda5",
       "lines.png": "0e857b1376d008dae01299ac6c3a8b9837a1e2dc90fb98fcad749c95b2433395",
       "map.png": "38d30fb3dc60bf5898e5bf9fab742e21b2ada5f578dc1879f2ad719946ea0204"
@@ -2360,7 +2360,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 18,
       "palette_after": 11,
       "lookalike_colors_merged": 1,
@@ -2381,11 +2381,11 @@
     }
   },
   "56": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:32:59Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:26:56Z",
     "source_sha256": "22ecbd3e2e7640f0685c068282bfbebb7d33150f702bf00f4060e67a8892ef0e",
     "files": {
-      "data.json": "58b5ded631e388cd9f71c1e3dc5536a51f40159dc1374038ecae6d39b82f3510",
+      "data.json": "0b0b6ddf358d1e51ea477d0a21002f9a018e162cdd7b3bd766790b113da7119e",
       "original.png": "25cc02336dd457c88773a1fb3316aeb7230d3d94e68a0d7b9ecf3fa24ba44868",
       "lines.png": "887faf17b3b53aa2c7f567c1b404f99d892994a134eb21b75fac46f818faace4",
       "map.png": "2da8cab5b69aee4b75de2a636773f21c3df2d21a235e5b3283139963381c63ef"
@@ -2405,7 +2405,7 @@
       "Flattened colours drift from the source art (mean delta E 11.0); the source has gradients or shading"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 16,
       "palette_after": 10,
       "lookalike_colors_merged": 1,
@@ -2426,11 +2426,11 @@
     }
   },
   "57": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:33:06Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:27:04Z",
     "source_sha256": "70f081afac007c432125595fea10ad7abba85ff77f0ccb5095dd87599b384455",
     "files": {
-      "data.json": "ceb536e4c9ba9068b8890629dd8f46a9964c8c6ca8198b38268e3db6f0d34369",
+      "data.json": "28c03d4a0695af9c0716b37229069d88e21ebb7f563f4a35710280b0489351c5",
       "original.png": "0f31cc78ae3d1ff1a3ea79f3108b9f431f4ca077a9f884e8bf48496a290e3a85",
       "lines.png": "79f05921ded8199b37563c4a6b9cc07fecf6abb4117eb76c5802371e0404d862",
       "map.png": "08331203b4137582a0f4a93dcd7f74eb31385feb3469812d71d338387acad290"
@@ -2449,7 +2449,7 @@
       "18 colours in the palette; ages 4+ need 5-12"
     ],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 22,
       "palette_after": 18,
       "lookalike_colors_merged": 0,
@@ -2470,11 +2470,11 @@
     }
   },
   "58": {
-    "finish_revision": 11,
-    "refinished_at": "2026-11-25T16:33:12Z",
+    "finish_revision": 12,
+    "refinished_at": "2026-11-25T19:27:09Z",
     "source_sha256": "e0570a0ca3e6356c5619c3abe105b6ec97aaea2189b78223dd7d24abcb2b8295",
     "files": {
-      "data.json": "aae925e0ca0c95851d551e52cb54b6f09d17cb90d05a1a0e8e11829e6a9ca659",
+      "data.json": "ca223725881f4786f6bda91aa6d19422a49ed859b90a4afb3c95bf2c4fbb7c27",
       "original.png": "d75093def07340aa297e2e536894e4e1c1cc76588a6afbfa8f5efad3327fbdb7",
       "lines.png": "1ff35f90b1ef450609f59d836849f03c4cf82d1a4a2c4314a374c9ca11d1b39f",
       "map.png": "34b781d8124e4a9cd18649c19910cc1b2d93b72726b2c9112420e95094b3d966"
@@ -2491,7 +2491,7 @@
     "verdict": "PASS",
     "failures": [],
     "finish": {
-      "finish_revision": 11,
+      "finish_revision": 12,
       "palette_before": 19,
       "palette_after": 12,
       "lookalike_colors_merged": 1,
